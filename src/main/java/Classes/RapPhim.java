@@ -11,14 +11,19 @@ import java.util.*;
  * @author Lenovo
  */
 public class RapPhim {
+
     private String tenRap;
     private List<Phong> dsPhong = new ArrayList<>();
     private List<Khach> dsKhach = new ArrayList<>();
     private List<HoiVien> dsHoiVien = new ArrayList<>();
+    private List<SuatChieu> dsSuatChieu = new ArrayList<>();
     private Set<String> dsLoaiGhe = new HashSet<>();
     private int sucChua;
 
     public RapPhim() {
+        dsLoaiGhe.add("Ghe thuong");
+        dsLoaiGhe.add("Ghe Vip");
+        dsLoaiGhe.add("Ghe Doi");
     }
 
     public String getTenRap() {
@@ -36,11 +41,11 @@ public class RapPhim {
     public List<Phong> getDsPhong() {
         return dsPhong;
     }
-    
+
     public String inDsPhong() {
         String ds = "";
-        for (Phong p: dsPhong) {
-            ds += p.getId();
+        for (Phong p : dsPhong) {
+            ds += p.getId() + ", ";
         }
         return ds;
     }
@@ -52,11 +57,11 @@ public class RapPhim {
     public List<Khach> getDsKhach() {
         return dsKhach;
     }
-    
+
     public String inDsKhach() {
         String ds = "";
-        for (Khach k: dsKhach) {
-            ds += k.getHoTen();
+        for (Khach k : dsKhach) {
+            ds += k.toString() + "\n";
         }
         return ds;
     }
@@ -71,10 +76,10 @@ public class RapPhim {
     public List<HoiVien> getDsHoiVien() {
         return dsHoiVien;
     }
-    
+
     public String inDsHoiVien() {
         String ds = "";
-        for (Khach k: dsHoiVien) {
+        for (Khach k : dsHoiVien) {
             ds += k.getHoTen();
         }
         return ds;
@@ -87,7 +92,23 @@ public class RapPhim {
     public void themLoaiGhe(String loai) {
         this.dsLoaiGhe.add(loai);
     }
-    
+
+    public List<SuatChieu> getDsSuatChieu() {
+        return dsSuatChieu;
+    }
+
+    public void themSuatChieu(SuatChieu suatChieu) {
+        this.dsSuatChieu.add(suatChieu);
+    }
+
+    public String inDsSuatChieu() {
+        String ds = "";
+        for (SuatChieu sch : dsSuatChieu) {
+            ds += sch.toString() + "\n";
+        }
+        return ds;
+    }
+
     public String timKhach(String ten) {
         for (Khach k : dsKhach) {
             if (k.getHoTen().contains(ten)) {
@@ -96,7 +117,7 @@ public class RapPhim {
         }
         return "Khong tim thay";
     }
-    
+
     public String timIdKhach(int id) {
         for (Khach k : dsKhach) {
             if (k.getId() == id) {
@@ -105,9 +126,10 @@ public class RapPhim {
         }
         return "Khong tim thay";
     }
+
     public int getSucChua() {
         int tong = 0;
-        for (Phong p: dsPhong) {
+        for (Phong p : dsPhong) {
             tong += p.getSlDoi() + p.getSlThuong() + p.getSlVip();
         }
         return tong;
@@ -117,6 +139,5 @@ public class RapPhim {
     public String toString() {
         return "RapPhim{" + "tenRap=" + tenRap + ", soPhong=" + getSoPhong() + ", dsPhong=" + inDsPhong() + ", dsKhach=" + inDsKhach() + ", dsHoiVien=" + inDsHoiVien() + ", dsLoaiGhe=" + dsLoaiGhe + ", sucChua=" + getSucChua() + '}';
     }
-    
-    
+
 }

@@ -12,7 +12,7 @@ public class Ve {
     private static int currId;
     private int id;
     private Ghe ghe;
-    private XuatChieu xuat;
+    private SuatChieu suat;
 
     public Ve() {
         currId++;
@@ -31,18 +31,18 @@ public class Ve {
         this.ghe = ghe;
     }
 
-    public XuatChieu getXuat() {
-        return xuat;
+    public SuatChieu getSuat() {
+        return suat;
     }
 
-    public void setXuat(XuatChieu xuat) {
-        this.xuat = xuat;
+    public void setSuat(SuatChieu suat) {
+        this.suat = suat;
     }
 
     @Override
     public String toString() {
-        String veStr = ghe.toString();
-        return "Ve{" + "id=" + id + veStr  + "\n, xuat=" + xuat.toString() + '}';
+        String veStr = ghe.viTri;
+        return "Ve{" + "id=" + id + veStr  + "\n, xuat=" + suat.toString() + '}';
     }
     
 }

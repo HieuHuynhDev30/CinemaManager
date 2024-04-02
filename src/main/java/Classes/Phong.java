@@ -14,10 +14,10 @@ public class Phong {
 
     private static int currId;
     private int id, slVip, slThuong, slDoi;
-    private Map<Ghe, Khach> dsGhe = new HashMap<>();
-    private List<String> gheIds = new ArrayList<>();
+    private Map<String, Ghe> dsGhe = new HashMap<>();
+    public List<Ghe> GheList = new ArrayList<>();
     private boolean isFull;
-    private XuatChieu xuatChieu;
+    private SuatChieu xuatChieu;
     private boolean isPlaying;
 
     public Phong() {
@@ -53,7 +53,7 @@ public class Phong {
         this.slDoi = slDoi;
     }
 
-    public Map<Ghe, Khach> getDsGhe() {
+    public Map<String, Ghe> getDsGhe() {
         return dsGhe;
     }
 
@@ -66,9 +66,9 @@ public class Phong {
         } else {
             key = "C";
         }
-        ghe.setViTri(String.format("%s%s%d", this.getId(), key, this.gheIds.size() + 1));
-        this.gheIds.add(ghe.getViTri());
-        dsGhe.put(ghe, khach);
+        ghe.setViTri(String.format("%s%s%d", this.getId(), key, this.dsGhe.size() + 1));
+        this.GheList.add(ghe);
+        dsGhe.put(ghe.getViTri(), ghe);
     }
 
     public boolean isIsFull() {
@@ -79,11 +79,11 @@ public class Phong {
         this.isFull = isFull;
     }
 
-    public XuatChieu getXuatChieu() {
+    public SuatChieu getXuatChieu() {
         return xuatChieu;
     }
 
-    public void setXuatChieu(XuatChieu xuatChieu) {
+    public void setXuatChieu(SuatChieu xuatChieu) {
         this.xuatChieu = xuatChieu;
     }
 
@@ -97,7 +97,7 @@ public class Phong {
 
     public int inTongTrong() {
         int tong = 0;
-        for (Ghe ghe : dsGhe.keySet()) {
+        for (Ghe ghe : GheList) {
             if (!ghe.IsTaken) {
                 tong++;
             }
@@ -111,7 +111,7 @@ public class Phong {
 
     public String inThuongDat() {
         String dsThuongDat = "";
-        for (Ghe ghe : dsGhe.keySet()) {
+        for (Ghe ghe : GheList) {
             if ("thuong".equals(ghe.getLoai().toLowerCase()) && ghe.IsTaken) {
                 dsThuongDat += ghe.getViTri() + ", ";
             }
@@ -121,7 +121,7 @@ public class Phong {
 
     public String inVipDat() {
         String dsVipDat = "";
-        for (Ghe ghe : dsGhe.keySet()) {
+        for (Ghe ghe : GheList) {
             if ("vip".equals(ghe.getLoai().toLowerCase()) && ghe.IsTaken) {
                 dsVipDat += ghe.getViTri() + ", ";
             }
@@ -131,7 +131,7 @@ public class Phong {
 
     public String inDoiDat() {
         String dsDoiDat = "";
-        for (Ghe ghe : dsGhe.keySet()) {
+        for (Ghe ghe : GheList) {
             if ("doi".equals(ghe.getLoai().toLowerCase()) && ghe.IsTaken) {
                 dsDoiDat += ghe.getViTri() + ", ";
             }
@@ -143,7 +143,7 @@ public class Phong {
         String dsTrongThuong = "";
         String dsTrongVip = "";
         String dsTrongDoi = "";
-        for (Ghe ghe : dsGhe.keySet()) {
+        for (Ghe ghe : GheList) {
             if (!ghe.IsTaken) {
                 switch (ghe.getLoai().toLowerCase()) {
                     case "thuong":
@@ -160,8 +160,8 @@ public class Phong {
 
     public String inDsGhe() {
         String dsGheStr = "";
-        for (int i = 0; i < gheIds.size(); i++) {
-            dsGheStr += gheIds.get(i) + ", ";
+        for (int i = 0; i < GheList.size(); i++) {
+            dsGheStr += GheList.get(i).InVitri() + ", ";
         }
         return dsGheStr;
     }

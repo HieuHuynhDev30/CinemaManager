@@ -17,7 +17,7 @@ import java.util.List;
 public class Khach {
 
     private static int currId;
-    private int id, tuoi, slVeDat, tongTien;
+    private int id, slVeDat, tongTien;
     private String hoTen, gioiTinh;
     private LocalDate ngaySinh;
     public static final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy");
@@ -42,8 +42,10 @@ public class Khach {
 
     public int getTongTien() {
         int tong = 0;
-        for (int i = 0; i < this.dsVe.size(); i++) {
-            tong += this.dsVe.get(i).getGhe().getGia();
+        if (!this.dsVe.isEmpty()) {
+            for (int i = 0; i < this.dsVe.size(); i++) {
+                tong += this.dsVe.get(i).getGhe().getGia();
+            }
         }
         return tong;
     }
@@ -70,7 +72,7 @@ public class Khach {
 
     public void setNgaySinh(CharSequence ngay) {
         try {
-           this.ngaySinh = LocalDate.parse(ngay, dateFormat);
+            this.ngaySinh = LocalDate.parse(ngay, dateFormat);
         } catch (Exception e) {
             System.out.println("Nhap sai dinh dang ngay");
         }
@@ -91,8 +93,10 @@ public class Khach {
 
     public String inDsVe() {
         String dsve = "";
-        for (int i = 0; i < this.dsVe.size(); i++) {
-            dsve += this.dsVe.get(i).toString() + "\n";
+        if (!this.dsVe.isEmpty()) {
+            for (int i = 0; i < this.dsVe.size(); i++) {
+                dsve += this.dsVe.get(i).toString() + "\n";
+            }
         }
         return dsve;
     }
@@ -119,7 +123,6 @@ public class Khach {
 
     @Override
     public String toString() {
-        String ve = dsVe.get(0).toString();
-        return "Khach{" + "id=" + id + ", tuoi=" + tuoi + ", slVeDat=" + slVeDat + ", tongTien=" + getTongTien() + ", hoTen=" + hoTen + ", gioiTinh=" + gioiTinh + ", ngaySinh=" + toStringNS() + "\n, dsVe=" + ve + '}';
+        return "Khach{" + "id=" + id + ", tuoi=" + getTuoi() + ", slVeDat=" + slVeDat + ", tongTien=" + getTongTien() + ", hoTen=" + hoTen + ", gioiTinh=" + gioiTinh + ", ngaySinh=" + toStringNS() + "\n, dsVe=" + inDsVe() + '}';
     }
 }

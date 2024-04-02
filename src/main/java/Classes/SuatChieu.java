@@ -12,15 +12,15 @@ import java.time.format.DateTimeFormatter;
  *
  * @author Lenovo
  */
-public class XuatChieu {
+public class SuatChieu {
     private static int currId;
     private int id;
     private String phim;
     private Phong phong;
     LocalDateTime thoiGianChieu;
-    public final static DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+    public final static DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
 
-    public XuatChieu() {
+    public SuatChieu() {
         currId++;
         this.id = currId;
     }
@@ -41,6 +41,10 @@ public class XuatChieu {
         this.phong = phong;
     }
     
+    public String inPhong() {
+        return this.phong.getId();
+    }
+    
     public LocalDateTime getThoiGianChieu() {
         return thoiGianChieu;
     }
@@ -59,6 +63,6 @@ public class XuatChieu {
 
     @Override
     public String toString() {
-        return "XuatChieu{" + "id=" + id + ", phim=" + phim + "\n, phong=" + phong.toString() + ", thoiGianChieu=" + inThoiGianChieu() + '}' + '\n';
+        return "XuatChieu{" + "id=" + id + ", phim=" + phim + "\n, phong=" + inPhong() + ", thoiGianChieu=" + inThoiGianChieu() + '}' + '\n';
     }
 }

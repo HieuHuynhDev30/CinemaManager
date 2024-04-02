@@ -8,7 +8,7 @@ import java.time.*;
 import java.time.format.DateTimeFormatter;
 
 
-public class Ghe {
+public abstract class Ghe {
 
     
     String loai;
@@ -20,7 +20,6 @@ public class Ghe {
     public final static DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
 
     public Ghe() {
-        this.IsTaken = true;
     }
 
     public void setLoai(String Loai) {
@@ -36,6 +35,11 @@ public class Ghe {
         this.gia = Gia;
     }
 
+    public void setIsTaken() {
+        this.IsTaken = !this.IsTaken;
+    }
+
+    
     public void setKhach(Khach khach) {
         this.khach = khach;
     }
