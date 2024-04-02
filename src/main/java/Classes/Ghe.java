@@ -10,46 +10,30 @@ import java.time.format.DateTimeFormatter;
 
 public class Ghe {
 
-    String Loai;
-    Phong Phong;
-    String ViTri;
-    Double Gia;
+    
+    String loai;
+    String viTri;
+    double gia;
     boolean IsTaken;
     Khach khach;
-    LocalDateTime ThoiGianDat;
-    final static DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+    LocalDateTime thoiGianDat;
+    public final static DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
 
     public Ghe() {
-    }
-
-    public Ghe(String Loai, Phong Phong, String ViTri, double Gia, boolean IsTaken, Khach khach, CharSequence ngaygio) {
-        this.Loai = Loai;
-        this.Phong = Phong;
-        this.ViTri = ViTri;
-        this.Gia = Gia;
-        this.IsTaken = IsTaken;
-        this.khach = khach;
-        setThoiGianDat(ngaygio);
+        this.IsTaken = true;
     }
 
     public void setLoai(String Loai) {
-        this.Loai = Loai;
+        this.loai = Loai;
     }
 
-    public void setPhong(Phong Phong) {
-        this.Phong = Phong;
-    }
 
     public void setViTri(String ViTri) {
-        this.ViTri = ViTri;
+        this.viTri = ViTri;
     }
 
-    public void setGia(Double Gia) {
-        this.Gia = Gia;
-    }
-
-    public void setIsTaken(boolean IsTaken) {
-        this.IsTaken = IsTaken;
+    public void setGia(double Gia) {
+        this.gia = Gia;
     }
 
     public void setKhach(Khach khach) {
@@ -58,30 +42,31 @@ public class Ghe {
 
     public void setThoiGianDat(CharSequence ngayGio) {
         try {
-            this.ThoiGianDat = LocalDateTime.parse(ngayGio, myFormatObj);
+            this.thoiGianDat = LocalDateTime.parse(ngayGio, formatDateTime);
         } catch (Exception e) {
             System.out.println("Nhap sai dinh dang ngay hoac gio");
         }
     }
 
     public String getLoai() {
-        return Loai;
+        return loai;
     }
 
-    public Phong getPhong() {
-        return Phong;
-    }
 
     public String getViTri() {
-        return ViTri;
+        return viTri;
     }
 
     public Double getGia() {
-        return Gia;
+        return gia;
     }
 
-    public boolean isIsTaken() {
+    public boolean getIsTaken() {
         return IsTaken;
+    }
+    
+    public void setTrong () {
+        this.IsTaken = false;
     }
 
     public Khach getKhach() {
@@ -90,15 +75,22 @@ public class Ghe {
 
     public LocalDateTime getThoiGianDat() {
 
-        return ThoiGianDat;
+        return thoiGianDat;
+    }
+    
+    public String inThoiGianDat() {
+
+        return LocalDateTime.now().format(formatDateTime);
     }
 
-    public void InVitri() {
-        System.out.println("Vi tri ghe: " + this.ViTri);
+    public String InVitri() {
+        return "Vi tri ghe: " + this.viTri;
     }
 
     @Override
     public String toString() {
-        return "Ghe{" + "Loai= " + Loai + ", Phong= " + Phong + ", ViTri= " + ViTri + ", Gia= " + Gia + ", IsTaken= " + IsTaken + ", khach=" + khach + ", ThoiGianDat= " + ThoiGianDat + '}';
+        return "Ghe{" + "loai=" + loai + ", viTri=" + viTri + ", gia=" + gia + ", isTaken=" + IsTaken  + ", thoiGianDat=" + inThoiGianDat() + '}' + '\n';
     }
+
+   
 }

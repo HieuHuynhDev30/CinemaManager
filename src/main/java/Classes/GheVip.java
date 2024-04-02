@@ -11,25 +11,19 @@ package Classes;
 public class GheVip extends Ghe {
 
     public GheVip() {
+        super.setGia(120000);
+        super.setLoai("Vip");
     }
 
-    public GheVip(String Loai, Phong Phong, String ViTri, Float Gia, boolean IsTaken, Khach khach, CharSequence ngaygio) {
-        super(Loai, Phong, ViTri, Gia, IsTaken, khach, ngaygio);
-    }
-    
-    public void setLoai() {
-        this.Loai = "VIP";
-    }
-
-    public void setGia() {
-        this.Gia = (float) 120.000;
+    public GheVip(Khach khach) {
+        super.setKhach(khach);
+        super.setGia(120000);
+        super.setLoai("Vip");
     }
 
     @Override
     public String toString() {
-        setLoai();
-        setGia();
-        return "GheVip{" + "Loai= " + Loai + ", Phong= " + Phong + ", ViTri= " + ViTri + ", Gia= " + Gia + ", IsTaken= " + IsTaken + ", khach=" + khach + ", ThoiGianDat= " + ThoiGianDat + '}';
+        return super.toString() + "khach: " + super.getKhach().getHoTen();
     }
     
 }

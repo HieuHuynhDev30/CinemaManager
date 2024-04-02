@@ -1,6 +1,11 @@
-Classes\HoiVien.class
 Classes\Ve.class
+Classes\GheDoi.class
+Classes\GheThuong.class
+Classes\RapPhim.class
+Classes\GheVip.class
+com\mycompany\cinemamanager\CinemaManager.class
+Classes\HoiVien.class
+Classes\Phong.class
 Classes\Ghe.class
 Classes\Khach.class
 Classes\XuatChieu.class
-com\mycompany\cinemamanager\CinemaManager.class

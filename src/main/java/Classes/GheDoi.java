@@ -4,32 +4,55 @@
  */
 package Classes;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  *
  * @author Lenovo
  */
 public class GheDoi extends Ghe {
 
-    public GheDoi() {
-    }
+    private final Set<Khach> khachDoi = new HashSet<>();
 
-    public GheDoi(String Loai, Phong Phong, String ViTri, double Gia, boolean IsTaken, Khach khach, CharSequence ngaygio) {
-        super(Loai, Phong, ViTri, Gia, IsTaken, khach, ngaygio);
+    public GheDoi() {
+        super.setGia(200000);
+        super.setLoai("Doi");
     }
     
-    public void setLoai() {
-        this.Loai = "Doi";
+    public GheDoi(Khach khach) {
+        super.setKhach(khach);
+        this.setKhachDoi(khach);
+        super.setGia(200000);
+        super.setLoai("Doi");
     }
 
-    public void setGia() {
-        this.Gia = 200.000;
+    public Set<Khach> getKhachDoi() {
+        return khachDoi;
+    }
+
+    public final String setKhachDoi(Khach khach) {
+        for (int i = 0; i < 2; i++) {
+            try {
+                khachDoi.add(khach);
+                return "Da them khach vao ghe doi";
+            } catch(Exception e) {
+                return "Them vao ghe doi khong thanh cong";
+            }
+        }
+        return "";
+    }
+    
+    public String inKhachDoi() {
+        String dsKhach = "";
+        for (Khach khachOb : khachDoi) {
+            dsKhach += khachOb.getHoTen() + ", ";
+        }
+        return dsKhach;
     }
 
     @Override
     public String toString() {
-        setLoai();
-        setGia();
-        return "GheDoi {" + "Loai= " + Loai + ", Phong= " + Phong + ", ViTri= " + ViTri + ", Gia= " + Gia + ", IsTaken= " + IsTaken + ", khach=" + khach + ", ThoiGianDat= " + ThoiGianDat + '}';
+        return super.toString() + "khach=" + inKhachDoi() + '}';
     }
-    
 }

@@ -33,11 +33,7 @@ public class Khach {
     }
 
     public int getTuoi() {
-        return tuoi;
-    }
-
-    public void setTuoi(int tuoi) {
-        this.tuoi = tuoi;
+        return LocalDate.now().getYear() - ngaySinh.getYear();
     }
 
     public int getSlVeDat() {
@@ -118,12 +114,12 @@ public class Khach {
 
     public void chinhSuaTk(String hoTen, int tuoi, CharSequence ns) {
         this.setHoTen(hoTen);
-        this.setTuoi(tuoi);
         this.setNgaySinh(ns);
     }
 
     @Override
     public String toString() {
-        return "Khach{" + "id=" + id + ", tuoi=" + tuoi + ", slVeDat=" + slVeDat + ", tongTien=" + tongTien + ", hoTen=" + hoTen + ", gioiTinh=" + gioiTinh + ", ngaySinh=" + toStringNS() + ", dsVe=" + dsVe + '}' + "\n";
+        String ve = dsVe.get(0).toString();
+        return "Khach{" + "id=" + id + ", tuoi=" + tuoi + ", slVeDat=" + slVeDat + ", tongTien=" + getTongTien() + ", hoTen=" + hoTen + ", gioiTinh=" + gioiTinh + ", ngaySinh=" + toStringNS() + "\n, dsVe=" + ve + '}';
     }
 }
