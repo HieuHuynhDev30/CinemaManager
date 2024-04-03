@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<phims>
+    <phims>
+        <id>Ph1</id>
+        <ten>Batman Begin</ten>
+        <theLoai>Hanh dong</theLoai>
+        <doTuoi>16</doTuoi>
+        <thoiLuong/>
+    </phims>
+</phims>

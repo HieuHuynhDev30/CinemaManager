@@ -4,9 +4,15 @@
 package com.mycompany.cinemamanager;
 
 import Classes.*;
+import Functions.PhimFunc;
+import java.io.File;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Scanner;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 
 /**
  *
@@ -16,7 +22,7 @@ public class CinemaManager {
 
     public static Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         in("TAO RAP PHIM");
         RapPhim rp = new RapPhim();
         in("Nhap ten rap:");
@@ -82,6 +88,8 @@ public class CinemaManager {
 
         in("Danh sach phim hien co:");
         in(rp.inDsPhim());
+        PhimFunc phimfunc = new PhimFunc();
+        phimfunc.writeListPhims(rp.getDsPhim());
 
         done = false;
         while (!done) {
@@ -225,4 +233,11 @@ public class CinemaManager {
         in("Khach hang da mua:");
         in(khachP.toString());
     }
+
+//    public static void marshal(Phim phim) throws JAXBException, IOException {
+//        JAXBContext context = JAXBContext.newInstance(Phim.class);
+//        Marshaller mar= context.createMarshaller();
+//        mar.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+//        mar.marshal(phim, new File("C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\Phim.xml"));
+//    }
 }
