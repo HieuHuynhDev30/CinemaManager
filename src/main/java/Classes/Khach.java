@@ -17,7 +17,8 @@ import java.util.List;
 public class Khach {
 
     private static int currId;
-    private int id, slVeDat, tongTien;
+    private int slVeDat, tongTien;
+    private String id;
     private String hoTen, gioiTinh;
     private LocalDate ngaySinh;
     public static final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy");
@@ -25,12 +26,17 @@ public class Khach {
 
     public Khach() {
         currId++;
-        this.id = currId;
+        this.id = "K" + currId;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+    
 
     public int getTuoi() {
         return LocalDate.now().getYear() - ngaySinh.getYear();
@@ -72,7 +78,7 @@ public class Khach {
 
     public void setNgaySinh(CharSequence ngay) {
         try {
-            this.ngaySinh = LocalDate.parse(ngay, dateFormat);
+            ngaySinh = LocalDate.parse(ngay, dateFormat);
         } catch (Exception e) {
             System.out.println("Nhap sai dinh dang ngay");
         }
@@ -123,6 +129,6 @@ public class Khach {
 
     @Override
     public String toString() {
-        return "Khach{" + "id=" + id + ", tuoi=" + getTuoi() + ", slVeDat=" + slVeDat + ", tongTien=" + getTongTien() + ", hoTen=" + hoTen + ", gioiTinh=" + gioiTinh + ", ngaySinh=" + toStringNS() + "\n, dsVe=" + inDsVe() + '}';
+        return "Khach{" + "id=" + id + ", tuoi=" + getTuoi() + ", slVeDat=" + getSlVeDat() + ", tongTien=" + getTongTien() + ", hoTen=" + hoTen + ", gioiTinh=" + gioiTinh + ", ngaySinh=" + toStringNS() + "\n, dsVe=" + inDsVe() + '}';
     }
 }

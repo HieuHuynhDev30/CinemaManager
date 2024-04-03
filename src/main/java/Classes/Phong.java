@@ -13,7 +13,8 @@ import java.util.*;
 public class Phong {
 
     private static int currId;
-    private int id, slVip, slThuong, slDoi;
+    private int slVip, slThuong, slDoi;
+    private String id;
     private Map<String, Ghe> dsGhe = new HashMap<>();
     public List<Ghe> GheList = new ArrayList<>();
     private boolean isFull;
@@ -22,11 +23,11 @@ public class Phong {
 
     public Phong() {
         currId++;
-        this.id = currId;
+        this.id = "P" + currId;
     }
 
     public String getId() {
-        return "P" + id;
+        return id;
     }
 
     public int getSlVip() {
@@ -57,7 +58,7 @@ public class Phong {
         return dsGhe;
     }
 
-    public void themGhe(Ghe ghe, Khach khach) {
+    public void themGhe(Ghe ghe) {
         String key = "";
         if (ghe instanceof GheThuong) {
             key = "A";

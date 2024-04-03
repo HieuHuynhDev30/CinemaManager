@@ -13,9 +13,9 @@ import java.util.Scanner;
  * @author Lenovo
  */
 public class CinemaManager {
-    
+
     public static Scanner sc = new Scanner(System.in);
-    
+
     public static void main(String[] args) {
         in("TAO RAP PHIM");
         RapPhim rp = new RapPhim();
@@ -27,28 +27,23 @@ public class CinemaManager {
             in("Tao phong:");
             Phong p = new Phong();
             in("Tao ghe:");
-            Khach khachAo = new Khach();
-            khachAo.setHoTen("empty");
             in("Nhap so ghe thuong:");
             p.setSlThuong(Integer.parseInt(sc.nextLine()));
             for (int i = 0; i < p.getSlThuong(); i++) {
                 GheThuong gt = new GheThuong();
-                gt.setKhach(khachAo);
-                p.themGhe(gt, khachAo);
+                p.themGhe(gt);
             }
             in("Nhap so ghe Vip:");
             p.setSlVip(Integer.parseInt(sc.nextLine()));
             for (int i = 0; i < p.getSlVip(); i++) {
                 GheVip gv = new GheVip();
-                gv.setKhach(khachAo);
-                p.themGhe(gv, khachAo);
+                p.themGhe(gv);
             }
             in("Nhap so ghe doi:");
             p.setSlDoi(Integer.parseInt(sc.nextLine()));
             for (int i = 0; i < p.getSlDoi(); i++) {
                 GheDoi gd = new GheDoi();
-                gd.setKhach(khachAo);
-                p.themGhe(gd, khachAo);
+                p.themGhe(gd);
             }
             in("Thong tin phong:");
             in(p.toString());
@@ -87,7 +82,7 @@ public class CinemaManager {
         }
         in("Cac suat chieu hien co:");
         in(rp.inDsSuatChieu());
-        
+
         done = false;
         while (!done) {
             in("**************************************");
@@ -102,7 +97,7 @@ public class CinemaManager {
             k.setNgaySinh(sc.nextLine());
             in("Thong tin khach hang:");
             in(k.toString());
-            rp.getDsKhach().add(k);
+            rp.themKhach(k);
             in("Tiep tuc nhap thong tin khach hang?(y/n):");
             String next = sc.nextLine();
             if ("n".equals(next)) {
@@ -111,27 +106,82 @@ public class CinemaManager {
         }
         in("Danh sach khach hang:");
         in(rp.inDsKhach());
-        
+
         done = false;
         Khach khachP;
-        Ghe gheP;
-        SuatChieu schP;
-        Phong phongP;
+        HoiVien HvP;
+
         while (!done) {
             in("**************************************");
             in("Thuc hien giao dich ban ve:");
-            in("Khach hang mua ve:");
+            in("Chon doi tuong mua ve: 0. Khach hang\t1. Hoi vien");
+            int choice = Integer.parseInt(sc.nextLine());
+            switch (choice) {
+                case 0 -> {
+                    in(rp.inDsKhach());
+                    try {
+                        khachP = rp.getDsKhach().get(Integer.parseInt(sc.nextLine()));
+                    } catch (NumberFormatException e) {
+                        throw e;
+                    }   giaoDich(khachP, rp);
+                }
+                case 1 -> {
+                    in(rp.inDsHoiVien());
+                    try {
+                        HvP = rp.getDsHoiVien().get(Integer.parseInt(sc.nextLine()));
+                    } catch (NumberFormatException e) {
+                        throw e;
+                    }   giaoDich(HvP, rp);
+                }
+                default -> in("Sai lua chon");
+            }
+            in("Tiep tuc giao dich?(y/n):");
+            String next = sc.nextLine();
+            if ("n".equals(next)) {
+                done = true;
+            }
+        }
+
+        done = false;
+        while (!done) {
+            in("Nang cap hoi vien");
+            in("Lua chon khach hang de nang cap:");
             in(rp.inDsKhach());
             khachP = rp.getDsKhach().get(Integer.parseInt(sc.nextLine()));
-            in("Cac suat chieu hien co:");
-            in(rp.inDsSuatChieu());
-            schP = rp.getDsSuatChieu().get(Integer.parseInt(sc.nextLine()));
-            inf("Suat chieu %s co tai phong chieu %s", schP.getPhim(), schP.getPhong());
-            phongP = schP.getPhong();
-            in("Chon vi tri:");
-            in(phongP.inDsGheTrong());
-            String vtchoice = sc.nextLine();
-            gheP = phongP.getDsGhe().get(vtchoice);
+            in(rp.nangCapHV(khachP.getId()));
+            in("Danh sach khach hang:");
+            in(rp.inDsKhach());
+            in("Danh sach hoi vien:");
+            in(rp.inDsHoiVien());
+            in("Tiep tuc nang cap?(y/n):");
+            String next = sc.nextLine();
+            if ("n".equals(next)) {
+                done = true;
+            }
+        }
+    }
+
+    public static void in(Object item) {
+        System.out.println(item);
+    }
+
+    public static void inf(String format, Object... items) {
+        System.out.printf(format, items);
+    }
+
+    public static void giaoDich(Khach khachP, RapPhim rp) {
+        in("Cac suat chieu hien co:");
+        in(rp.inDsSuatChieu());
+        SuatChieu schP = rp.getDsSuatChieu().get(Integer.parseInt(sc.nextLine()));
+        inf("Suat chieu %s co tai phong chieu %s", schP.getPhim(), schP.getPhong());
+        Phong phongP = schP.getPhong();
+        in("Chon vi tri:");
+        in(phongP.inDsGheTrong());
+        String vtchoice = sc.nextLine();
+        Ghe gheP = phongP.getDsGhe().get(vtchoice);
+        if (gheP.getIsTaken()) {
+            in("Ghe da duoc mua, vui long chon ghe khac");
+        } else {
             gheP.setIsTaken();
             Ve ve = new Ve();
             ve.setGhe(gheP);
@@ -139,21 +189,9 @@ public class CinemaManager {
             khachP.muaVe(ve);
             in("Thong tin ve:");
             in(ve.toString());
-            in("Khach hang da mua:");
-            in(khachP.toString());
-            in("Tiep tuc giao dich?(y/n):");
-            String next = sc.nextLine();
-            if ("n".equals(next)) {
-                done = true;
-            }
-        }   
-    }
-    
-    public static void in(Object item) {
-        System.out.println(item);
-    }
+        }
 
-    public static void inf(String format, Object... items) {
-        System.out.printf(format, items);
+        in("Khach hang da mua:");
+        in(khachP.toString());
     }
 }

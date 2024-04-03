@@ -88,7 +88,7 @@ public abstract class Ghe {
     }
 
     public String InVitri() {
-        return "Vi tri ghe: " + this.viTri;
+        return this.viTri;
     }
 
     @Override

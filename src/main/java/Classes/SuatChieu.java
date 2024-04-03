@@ -4,7 +4,6 @@
  */
 package Classes;
 
-import static Classes.Ghe.formatDateTime;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -14,7 +13,7 @@ import java.time.format.DateTimeFormatter;
  */
 public class SuatChieu {
     private static int currId;
-    private int id;
+    private String id;
     private String phim;
     private Phong phong;
     LocalDateTime thoiGianChieu;
@@ -22,7 +21,7 @@ public class SuatChieu {
 
     public SuatChieu() {
         currId++;
-        this.id = currId;
+        this.id = "SCH" + currId;
     }
 
     public String getPhim() {
@@ -63,6 +62,6 @@ public class SuatChieu {
 
     @Override
     public String toString() {
-        return "XuatChieu{" + "id=" + id + ", phim=" + phim + "\n, phong=" + inPhong() + ", thoiGianChieu=" + inThoiGianChieu() + '}' + '\n';
+        return "SuatChieu{" + "id=" + id + ", phim=" + phim + "\n, phong=" + inPhong() + ", thoiGianChieu=" + inThoiGianChieu() + '}' + '\n';
     }
 }

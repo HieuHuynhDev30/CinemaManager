@@ -57,6 +57,7 @@ public class RapPhim {
     public List<Khach> getDsKhach() {
         return dsKhach;
     }
+    
 
     public String inDsKhach() {
         String ds = "";
@@ -68,9 +69,6 @@ public class RapPhim {
 
     public void themKhach(Khach k) {
         this.dsKhach.add(k);
-        if (k instanceof HoiVien) {
-            this.dsHoiVien.add((HoiVien) k);
-        }
     }
 
     public List<HoiVien> getDsHoiVien() {
@@ -80,7 +78,7 @@ public class RapPhim {
     public String inDsHoiVien() {
         String ds = "";
         for (Khach k : dsHoiVien) {
-            ds += k.getHoTen();
+            ds += k.toString() + "\n";
         }
         return ds;
     }
@@ -118,9 +116,9 @@ public class RapPhim {
         return "Khong tim thay";
     }
 
-    public String timIdKhach(int id) {
+    public String timIdKhach(String id) {
         for (Khach k : dsKhach) {
-            if (k.getId() == id) {
+            if (k.getId() == null ? id == null : k.getId().equals(id)) {
                 return k.toString();
             }
         }
@@ -135,6 +133,22 @@ public class RapPhim {
         return tong;
     }
 
+    public String nangCapHV(String id){
+        for (Khach k : this.getDsKhach()) {
+            if (k.getId() == null ? id == null : k.getId().equals(id)) {
+                HoiVien hv = new HoiVien();
+                hv.setHoTen(k.getHoTen());
+                hv.setGioiTinh(k.getGioiTinh());
+                hv.setNgaySinh(k.getNgaySinh().format(k.dateFormat));
+                hv.setDsVe(k.getDsVe());
+                this.getDsHoiVien().add(hv);
+                this.getDsKhach().remove(k);
+                return "Nang cap hoi vien thanh cong";
+            }
+        }
+        return "Nang cap hoi vien khong thanh cong";
+    }
+    
     @Override
     public String toString() {
         return "RapPhim{" + "tenRap=" + tenRap + ", soPhong=" + getSoPhong() + ", dsPhong=" + inDsPhong() + ", dsKhach=" + inDsKhach() + ", dsHoiVien=" + inDsHoiVien() + ", dsLoaiGhe=" + dsLoaiGhe + ", sucChua=" + getSucChua() + '}';

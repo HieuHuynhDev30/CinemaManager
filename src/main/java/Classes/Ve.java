@@ -10,16 +10,16 @@ package Classes;
  */
 public class Ve {
     private static int currId;
-    private int id;
+    private String id;
     private Ghe ghe;
     private SuatChieu suat;
 
     public Ve() {
         currId++;
-        this.id = currId;
+        this.id = "V" + currId;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
@@ -42,7 +42,7 @@ public class Ve {
     @Override
     public String toString() {
         String veStr = ghe.viTri;
-        return "Ve{" + "id=" + id + veStr  + "\n, xuat=" + suat.toString() + '}';
+        return "Ve{" + "id=" + id + " ghe=" + veStr  + " suat=" + suat.toString() + '}';
     }
     
 }

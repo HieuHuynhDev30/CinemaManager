@@ -5,6 +5,7 @@ Classes\RapPhim.class
 Classes\GheVip.class
 com\mycompany\cinemamanager\CinemaManager.class
 Classes\HoiVien.class
+Classes\Phim.class
 Classes\Phong.class
 Classes\Ghe.class
 Classes\Khach.class
