@@ -20,10 +20,14 @@ public class Phong {
     private boolean isFull;
     private SuatChieu xuatChieu;
     private boolean isPlaying;
+    private int columns;
+    private char rows;
 
     public Phong() {
         currId++;
         this.id = "P" + currId;
+        rows = 'A';
+        columns = 1;
     }
 
     public String getId() {
@@ -59,17 +63,15 @@ public class Phong {
     }
 
     public void themGhe(Ghe ghe) {
-        String key = "";
-        if (ghe instanceof GheThuong) {
-            key = "A";
-        } else if (ghe instanceof GheVip) {
-            key = "B";
-        } else {
-            key = "C";
-        }
-        ghe.setViTri(String.format("%s%s%d", this.getId(), key, this.dsGhe.size() + 1));
+        ghe.setViTri(String.format("%s%s%d", this.getId(), rows, columns));
         this.GheList.add(ghe);
         dsGhe.put(ghe.getViTri(), ghe);
+        if (columns < 10) {
+            columns++;
+        } else {
+            columns = 1;
+            rows++;
+        }
     }
 
     public boolean isIsFull() {
@@ -166,10 +168,14 @@ public class Phong {
         }
         return dsGheStr;
     }
+    
+    public int getSucChua(){
+        return this.getSlThuong() + this.getSlVip() + this.getSlDoi();
+    }
 
     @Override
     public String toString() {
-        return "Phong{" + "id=" + getId() + ", slVip=" + slVip + ", slThuong=" + slThuong + ", slDoi=" + slDoi + ", dsGhe=" + inDsGhe() + ", isFull=" + isFull + ", xuatChieu=" + xuatChieu + ", isPlaying=" + isPlaying + '}' + '\n';
+        return "Phong{" + "id=" + getId() + ", slVip=" + slVip + ", slThuong=" + slThuong + ", slDoi=" + slDoi + ", sucChua=" + getSucChua() + ", dsGhe=" + inDsGhe() + ", isFull=" + isFull + ", xuatChieu=" + xuatChieu + ", isPlaying=" + isPlaying + '}' + '\n';
     }
 
 }

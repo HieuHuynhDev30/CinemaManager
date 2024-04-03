@@ -14,7 +14,7 @@ import java.time.format.DateTimeFormatter;
 public class SuatChieu {
     private static int currId;
     private String id;
-    private String phim;
+    private Phim phim;
     private Phong phong;
     LocalDateTime thoiGianChieu;
     public final static DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
@@ -24,11 +24,15 @@ public class SuatChieu {
         this.id = "SCH" + currId;
     }
 
-    public String getPhim() {
+    public Phim getPhim() {
         return phim;
     }
+    
+    public String inPhim() {
+        return this.phim.toString();
+    }
 
-    public void setPhim(String phim) {
+    public void setPhim(Phim phim) {
         this.phim = phim;
     }
 
@@ -62,6 +66,6 @@ public class SuatChieu {
 
     @Override
     public String toString() {
-        return "SuatChieu{" + "id=" + id + ", phim=" + phim + "\n, phong=" + inPhong() + ", thoiGianChieu=" + inThoiGianChieu() + '}' + '\n';
+        return "SuatChieu{" + "id=" + id + ", phim=" + phim.getTen() + ", phong=" + inPhong() + ", thoiGianChieu=" + inThoiGianChieu() + '}' + '\n';
     }
 }

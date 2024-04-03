@@ -4,6 +4,7 @@
  */
 package Classes;
 
+import java.time.Duration;
 import java.util.*;
 
 /**
@@ -17,6 +18,7 @@ public class RapPhim {
     private List<Khach> dsKhach = new ArrayList<>();
     private List<HoiVien> dsHoiVien = new ArrayList<>();
     private List<SuatChieu> dsSuatChieu = new ArrayList<>();
+    private List<Phim> dsPhim = new ArrayList<>();
     private Set<String> dsLoaiGhe = new HashSet<>();
     private int sucChua;
 
@@ -95,8 +97,37 @@ public class RapPhim {
         return dsSuatChieu;
     }
 
-    public void themSuatChieu(SuatChieu suatChieu) {
+    public String themSuatChieu(SuatChieu suatChieu) {
+       for (SuatChieu sc : this.getDsSuatChieu()) {
+           if(sc.getPhong().getId() == null ? suatChieu.getPhong().getId() == null : sc.getPhong().getId().equals(suatChieu.getPhong().getId())) {
+               Duration interval = Duration.between(sc.getThoiGianChieu(), suatChieu.getThoiGianChieu());
+               if (interval.toMinutes() <= suatChieu.getPhim().getThoiLuong().toMinutes() + 30 || interval.toMinutes() <= sc.getPhim().getThoiLuong().toMinutes() + 30) {
+                   return "Suat chieu sau can bat dau sau khi suat chieu truoc ket thuc it nhat 30 phut";
+               } 
+           }
+       }
         this.dsSuatChieu.add(suatChieu);
+        return "Them suat chieu thanh cong";
+    }
+
+    public List<Phim> getDsPhim() {
+        return dsPhim;
+    }
+
+    public void setDsPhim(List<Phim> dsPhim) {
+        this.dsPhim = dsPhim;
+    }
+    
+    public String inDsPhim() {
+        String ds = "";
+        for (Phim ph : dsPhim) {
+            ds += ph.toString() + "\n";
+        }
+        return ds;
+    }
+    
+    public void themPhim(Phim phim) {
+        this.dsPhim.add(phim);
     }
 
     public String inDsSuatChieu() {
@@ -128,7 +159,7 @@ public class RapPhim {
     public int getSucChua() {
         int tong = 0;
         for (Phong p : dsPhong) {
-            tong += p.getSlDoi() + p.getSlThuong() + p.getSlVip();
+            tong += p.getSlDoi() * 2 + p.getSlThuong() + p.getSlVip();
         }
         return tong;
     }

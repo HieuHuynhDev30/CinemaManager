@@ -56,13 +56,41 @@ public class CinemaManager {
         }
         in("Thong tin rap phim:");
         in(rp);
+
+        done = false;
+        while (!done) {
+            in("**************************************");
+            in("Tao phim");
+            in("Nhap ten phim:");
+            String ten = sc.nextLine();
+            in("Nhap thoi luong phim:");
+            long thoiLuong = Long.parseLong(sc.nextLine());
+            in("Nhap the loai:");
+            String theLoai = sc.nextLine();
+            in("Nhap do tuoi:");
+            int doTuoi = Integer.parseInt(sc.nextLine());
+            Phim ph = new Phim(ten, thoiLuong, theLoai, doTuoi);
+            in("Thong tin phim:");
+            in(ph.toString());
+            rp.themPhim(ph);
+            in("Tiep tuc tao phim?(y/n):");
+            String next = sc.nextLine();
+            if ("n".equals(next)) {
+                done = true;
+            }
+        }
+
+        in("Danh sach phim hien co:");
+        in(rp.inDsPhim());
+
         done = false;
         while (!done) {
             in("**************************************");
             in("Tao suat chieu:");
             SuatChieu sch = new SuatChieu();
             in("Them phim duoc chieu:");
-            sch.setPhim(sc.nextLine().toUpperCase());
+            in(rp.inDsPhim());
+            sch.setPhim(rp.getDsPhim().get(Integer.parseInt(sc.nextLine())));
             in("Chon phong chieu:");
             for (int i = 0; i < rp.getDsPhong().size(); i++) {
                 in(i + ". " + rp.getDsPhong().get(i).getId() + " - Suc chua: " + rp.getDsPhong().get(i).getDsGhe().size());
@@ -71,9 +99,9 @@ public class CinemaManager {
             sch.setPhong(rp.getDsPhong().get(pchoice));
             in("Dat thoi gian chieu (dd-MM-yyyy HH:mm):");
             sch.setThoiGianChieu(sc.nextLine());
+            in(rp.themSuatChieu(sch));
             in("In thong tin suat chieu:");
             in(sch.toString());
-            rp.themSuatChieu(sch);
             in("Tiep tuc tao suat chieu?(y/n):");
             String next = sc.nextLine();
             if ("n".equals(next)) {
@@ -123,7 +151,8 @@ public class CinemaManager {
                         khachP = rp.getDsKhach().get(Integer.parseInt(sc.nextLine()));
                     } catch (NumberFormatException e) {
                         throw e;
-                    }   giaoDich(khachP, rp);
+                    }
+                    giaoDich(khachP, rp);
                 }
                 case 1 -> {
                     in(rp.inDsHoiVien());
@@ -131,9 +160,11 @@ public class CinemaManager {
                         HvP = rp.getDsHoiVien().get(Integer.parseInt(sc.nextLine()));
                     } catch (NumberFormatException e) {
                         throw e;
-                    }   giaoDich(HvP, rp);
+                    }
+                    giaoDich(HvP, rp);
                 }
-                default -> in("Sai lua chon");
+                default ->
+                    in("Sai lua chon");
             }
             in("Tiep tuc giao dich?(y/n):");
             String next = sc.nextLine();
