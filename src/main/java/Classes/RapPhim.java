@@ -47,7 +47,7 @@ public class RapPhim {
     public String inDsPhong() {
         String ds = "";
         for (Phong p : dsPhong) {
-            ds += p.getId() + ", ";
+            ds += p.getId() + " sucChua: " + p.getSucChua() + "\n";
         }
         return ds;
     }
@@ -105,6 +105,11 @@ public class RapPhim {
     public List<SuatChieu> getDsSuatChieu() {
         return dsSuatChieu;
     }
+
+    public void setDsSuatChieu(List<SuatChieu> dsSuatChieu) {
+        this.dsSuatChieu = dsSuatChieu;
+    }
+    
 
     public String themSuatChieu(SuatChieu suatChieu) {
        for (SuatChieu sc : this.getDsSuatChieu()) {

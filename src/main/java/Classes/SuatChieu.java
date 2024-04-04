@@ -4,18 +4,31 @@
  */
 package Classes;
 
+import Classes.Adaptaters.LocalDateTimeAdapter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  *
  * @author Lenovo
  */
+@XmlRootElement(name = "suatChieu")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class SuatChieu {
     private static int currId;
+    @XmlAttribute
     private String id;
     private Phim phim;
+    private String phongId;
+    @XmlTransient
     private Phong phong;
+    @XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
     LocalDateTime thoiGianChieu;
     public final static DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
 
@@ -42,11 +55,22 @@ public class SuatChieu {
 
     public void setPhong(Phong phong) {
         this.phong = phong;
+        this.setPhongId();
     }
     
     public String inPhong() {
         return this.phong.getId();
     }
+
+    public String getPhongId() {
+        return phongId;
+    }
+
+    public void setPhongId() {
+        this.phongId = phong.getId();
+    }
+    
+    
     
     public LocalDateTime getThoiGianChieu() {
         return thoiGianChieu;

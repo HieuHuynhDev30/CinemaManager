@@ -7,6 +7,7 @@ XML\VeListXML.class
 Classes\Phong.class
 XML\PhimListXML.class
 Classes\Khach.class
+XML\SuatChieuListXML.class
 Classes\SuatChieu.class
 Classes\Ve.class
 Classes\Adaptaters\LocalDateTimeAdapter.class

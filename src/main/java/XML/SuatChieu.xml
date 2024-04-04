@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<suatChieus>
+    <suatChieu id="SCH1">
+        <phim>
+            <ten>Napoleon</ten>
+            <theLoai>Lich su</theLoai>
+            <doTuoi>18</doTuoi>
+            <thoiLuong>PT2H20M</thoiLuong>
+            <TgKhoiChieu>2024-05-11</TgKhoiChieu>
+        </phim>
+        <phongId>P1</phongId>
+        <thoiGianChieu>15-04-2024 10:30</thoiGianChieu>
+    </suatChieu>
+</suatChieus>

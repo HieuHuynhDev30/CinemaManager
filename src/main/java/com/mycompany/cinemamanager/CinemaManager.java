@@ -31,6 +31,7 @@ public class CinemaManager {
         rp.setDsPhim(func.readListPhims());
         rp.setDsKhach(func.readListKhachs());
         rp.setDsPhong(func.readListPhongs());
+//        rp.setDsSuatChieu(func.readListSuatChieus());
         boolean done = false;
         while (!done) {
             in("Menu:");
@@ -47,6 +48,7 @@ public class CinemaManager {
                     func.writeListKhachs(rp.getDsKhach());
                     func.writeListPhims(rp.getDsPhim());
                     func.writeListPhongs(rp.getDsPhong());
+                    func.writeListSuatChieus(rp.getDsSuatChieu());
                     done = true;
                 }
             }
