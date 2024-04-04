@@ -19,7 +19,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlRootElement(name = "phim")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Phim {
-
     private static int currId;
     private String id, ten, theLoai;
     private int doTuoi;
@@ -44,6 +43,11 @@ public class Phim {
         this.doTuoi = doTuoi;
     }
 
+    public void setId(int id) {
+        this.id = "Ph" + id;
+    }
+
+    
     public String getId() {
         return id;
     }

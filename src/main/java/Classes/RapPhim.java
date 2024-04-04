@@ -59,6 +59,10 @@ public class RapPhim {
     public List<Khach> getDsKhach() {
         return dsKhach;
     }
+
+    public void setDsKhach(List<Khach> dsKhach) {
+        this.dsKhach = dsKhach;
+    }
     
 
     public String inDsKhach() {

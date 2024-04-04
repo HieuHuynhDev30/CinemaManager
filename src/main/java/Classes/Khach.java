@@ -4,22 +4,29 @@
  */
 package Classes;
 
+import Classes.Adaptaters.LocalDateAdapter;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  *
  * @author Lenovo
  */
+@XmlRootElement(name = "khach")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Khach {
-
     private static int currId;
     private int slVeDat, tongTien;
     private String id;
     private String hoTen, gioiTinh;
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
     private LocalDate ngaySinh;
     public static final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy");
     private List<Ve> dsVe = new ArrayList<>();

@@ -4,7 +4,7 @@
 package com.mycompany.cinemamanager;
 
 import Classes.*;
-import Functions.PhimFunc;
+import Functions.Func;
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
@@ -27,6 +27,34 @@ public class CinemaManager {
         RapPhim rp = new RapPhim();
         in("Nhap ten rap:");
         rp.setTenRap(sc.nextLine().toUpperCase());
+        Func func = new Func();
+        boolean done = false;
+        while (!done) {
+            in("Menu:");
+            in("1. Tao phong\t2. Tao phim\t3. Tao suat chieu\t4. Nhap thong tin khach hang\t5. Thuc hien giao dich ban ve\t6. Nang cap hoi vien\t7. Exit");
+            String option = sc.nextLine();
+            switch (option) {
+                case "1" -> taoPhong(rp);
+                case "2" -> taoPhim(rp, func);
+                case "3" -> taoSuatChieu(rp);
+                case "4" -> nhapKhachHang(rp, func);
+                case "5" -> giaoDichBanVe(rp);
+                case "6" -> nangCapHoiVien(rp);
+                default -> done = true;
+            }
+        }
+
+    }
+
+    public static void in(Object item) {
+        System.out.println(item);
+    }
+
+    public static void inf(String format, Object... items) {
+        System.out.printf(format, items);
+    }
+
+    public static void taoPhong(RapPhim rp) {
         boolean done = false;
         while (done == false) {
             in("**************************************");
@@ -62,8 +90,13 @@ public class CinemaManager {
         }
         in("Thong tin rap phim:");
         in(rp);
+    }
 
-        done = false;
+    private static void taoPhim(RapPhim rp, Func func) {
+        in("Tai phim tu co so du lieu");
+        rp.setDsPhim(func.readListPhims());
+        in(rp.inDsPhim());
+        boolean done = false;
         while (!done) {
             in("**************************************");
             in("Tao phim");
@@ -76,6 +109,7 @@ public class CinemaManager {
             in("Nhap do tuoi:");
             int doTuoi = Integer.parseInt(sc.nextLine());
             Phim ph = new Phim(ten, thoiLuong, theLoai, doTuoi);
+            ph.setId(rp.getDsPhim().size() + 1);
             in("Nhap thoi gian khoi chieu(dd-MM-yyyy):");
             ph.setTgKhoiChieu(sc.nextLine());
             in("Thong tin phim:");
@@ -90,10 +124,11 @@ public class CinemaManager {
 
         in("Danh sach phim hien co:");
         in(rp.inDsPhim());
-        PhimFunc phimfunc = new PhimFunc();
-        phimfunc.writeListPhims(rp.getDsPhim());
+        func.writeListPhims(rp.getDsPhim());
+    }
 
-        done = false;
+    private static void taoSuatChieu(RapPhim rp) {
+        boolean done = false;
         while (!done) {
             in("**************************************");
             in("Tao suat chieu:");
@@ -120,13 +155,19 @@ public class CinemaManager {
         }
         in("Cac suat chieu hien co:");
         in(rp.inDsSuatChieu());
+    }
 
-        done = false;
+    private static void nhapKhachHang(RapPhim rp, Func func) {
+        in("Nhap danh sach khach hang tu co so du lieu");
+        rp.setDsKhach(func.readListKhachs());
+        in(rp.inDsKhach());
+        boolean done = false;
         while (!done) {
             in("**************************************");
             in("Nhap thong tin khach hang:");
             in("Tao tai khoan khach hang:");
             Khach k = new Khach();
+            k.setId("K" + rp.getDsKhach().size() + 1);
             in("Nhap ho va ten:");
             k.setHoTen(sc.nextLine());
             in("Nhap gioi tinh:");
@@ -144,11 +185,13 @@ public class CinemaManager {
         }
         in("Danh sach khach hang:");
         in(rp.inDsKhach());
+        func.writeListKhachs(rp.getDsKhach());
+    }
 
-        done = false;
+    private static void giaoDichBanVe(RapPhim rp) {
         Khach khachP;
         HoiVien HvP;
-
+        boolean done = false;
         while (!done) {
             in("**************************************");
             in("Thuc hien giao dich ban ve:");
@@ -182,32 +225,6 @@ public class CinemaManager {
                 done = true;
             }
         }
-
-        done = false;
-        while (!done) {
-            in("Nang cap hoi vien");
-            in("Lua chon khach hang de nang cap:");
-            in(rp.inDsKhach());
-            khachP = rp.getDsKhach().get(Integer.parseInt(sc.nextLine()));
-            in(rp.nangCapHV(khachP.getId()));
-            in("Danh sach khach hang:");
-            in(rp.inDsKhach());
-            in("Danh sach hoi vien:");
-            in(rp.inDsHoiVien());
-            in("Tiep tuc nang cap?(y/n):");
-            String next = sc.nextLine();
-            if ("n".equals(next)) {
-                done = true;
-            }
-        }
-    }
-
-    public static void in(Object item) {
-        System.out.println(item);
-    }
-
-    public static void inf(String format, Object... items) {
-        System.out.printf(format, items);
     }
 
     public static void giaoDich(Khach khachP, RapPhim rp) {
@@ -236,10 +253,25 @@ public class CinemaManager {
         in(khachP.toString());
     }
 
-//    public static void marshal(Phim phim) throws JAXBException, IOException {
-//        JAXBContext context = JAXBContext.newInstance(Phim.class);
-//        Marshaller mar= context.createMarshaller();
-//        mar.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-//        mar.marshal(phim, new File("C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\Phim.xml"));
-//    }
+    private static void nangCapHoiVien(RapPhim rp) {
+        Khach khachP;
+        boolean done = false;
+        while (!done) {
+            in("Nang cap hoi vien");
+            in("Lua chon khach hang de nang cap:");
+            in(rp.inDsKhach());
+            khachP = rp.getDsKhach().get(Integer.parseInt(sc.nextLine()));
+            in(rp.nangCapHV(khachP.getId()));
+            in("Danh sach khach hang:");
+            in(rp.inDsKhach());
+            in("Danh sach hoi vien:");
+            in(rp.inDsHoiVien());
+            in("Tiep tuc nang cap?(y/n):");
+            String next = sc.nextLine();
+            if ("n".equals(next)) {
+                done = true;
+            }
+        }
+    }
+
 }

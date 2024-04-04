@@ -1,5 +1,5 @@
 Classes\GheThuong.class
-Functions\SapXep.class
+XML\KhachListXML.class
 utils\FileUtils.class
 Classes\GheVip.class
 Classes\HoiVien.class
@@ -12,7 +12,7 @@ Classes\GheDoi.class
 Classes\RapPhim.class
 Classes\Adaptaters\DurationAdapter.class
 com\mycompany\cinemamanager\CinemaManager.class
-Functions\PhimFunc.class
 Classes\Phim.class
+Functions\Func.class
 Classes\Ghe.class
 Classes\Adaptaters\LocalDateAdapter.class
