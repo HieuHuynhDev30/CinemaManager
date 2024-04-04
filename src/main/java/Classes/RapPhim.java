@@ -52,6 +52,11 @@ public class RapPhim {
         return ds;
     }
 
+    public void setDsPhong(List<Phong> dsPhong) {
+        this.dsPhong = dsPhong;
+    }
+    
+
     public void themPhong(Phong p) {
         this.dsPhong.add(p);
     }

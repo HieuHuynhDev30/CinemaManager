@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <khachs>
-    <khach>
+    <khach id="K1">
         <slVeDat>0</slVeDat>
         <tongTien>0</tongTien>
-        <id>K01</id>
         <hoTen>Huynh Van Minh</hoTen>
         <gioiTinh>Nam</gioiTinh>
         <ngaySinh>2001-06-12</ngaySinh>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <phims>
     <phim>
-        <id>Ph1</id>
         <ten>Spider-man</ten>
         <theLoai>Khoa hoc vien tuong</theLoai>
         <doTuoi>16</doTuoi>
@@ -9,7 +8,6 @@
         <TgKhoiChieu>2024-04-10</TgKhoiChieu>
     </phim>
     <phim>
-        <id>Ph2</id>
         <ten>Batman Begin</ten>
         <theLoai>Hanh dong</theLoai>
         <doTuoi>16</doTuoi>
@@ -17,7 +15,6 @@
         <TgKhoiChieu>2024-04-08</TgKhoiChieu>
     </phim>
     <phim>
-        <id>Ph3</id>
         <ten>Titanic</ten>
         <theLoai>Tinh cam</theLoai>
         <doTuoi>18</doTuoi>
@@ -25,7 +22,6 @@
         <TgKhoiChieu>2024-04-04</TgKhoiChieu>
     </phim>
     <phim>
-        <id>Ph4</id>
         <ten>IT</ten>
         <theLoai>Kinh di</theLoai>
         <doTuoi>18</doTuoi>
@@ -33,7 +29,6 @@
         <TgKhoiChieu>2024-05-01</TgKhoiChieu>
     </phim>
     <phim>
-        <id>Ph5</id>
         <ten>Kungfu Panda</ten>
         <theLoai>Hai huoc</theLoai>
         <doTuoi>12</doTuoi>
@@ -41,7 +36,6 @@
         <TgKhoiChieu>2024-03-06</TgKhoiChieu>
     </phim>
     <phim>
-        <id>Ph6</id>
         <ten>Napoleon</ten>
         <theLoai>Lich su</theLoai>
         <doTuoi>18</doTuoi>
@@ -49,7 +43,6 @@
         <TgKhoiChieu>2024-05-11</TgKhoiChieu>
     </phim>
     <phim>
-        <id>Ph7</id>
         <ten>Kong vs Godzilla</ten>
         <theLoai>Hanh dong</theLoai>
         <doTuoi>16</doTuoi>
@@ -57,7 +50,6 @@
         <TgKhoiChieu>2024-04-12</TgKhoiChieu>
     </phim>
     <phim>
-        <id>Ph8</id>
         <ten>Deadpool</ten>
         <theLoai>Hanh dong</theLoai>
         <doTuoi>18</doTuoi>
@@ -65,7 +57,6 @@
         <TgKhoiChieu>2024-04-16</TgKhoiChieu>
     </phim>
     <phim>
-        <id>Ph9</id>
         <ten>Mai</ten>
         <theLoai>Tinh cam</theLoai>
         <doTuoi>18</doTuoi>
@@ -73,7 +64,6 @@
         <TgKhoiChieu>2024-05-23</TgKhoiChieu>
     </phim>
     <phim>
-        <id>Ph10</id>
         <ten>Mission Impossible</ten>
         <theLoai>Hanh dong</theLoai>
         <doTuoi>16</doTuoi>

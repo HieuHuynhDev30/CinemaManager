@@ -10,6 +10,7 @@ import Classes.Phong;
 import Classes.Ve;
 import XML.KhachListXML;
 import XML.PhimListXML;
+import XML.PhongListXML;
 import XML.VeListXML;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +25,7 @@ public class Func {
     private static final String PHIM_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\Phim.xml";
     private static final String KHACH_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\Khach.xml";
     private static final String VE_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\Ve.xml";
+    private static final String PHONG_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\Phong.xml";
 
     public Func() {
     }
@@ -77,17 +79,20 @@ public class Func {
     }
     
     public void writeListPhongs(List<Phong> phongs) {
-        PhongListXML veXML = new PhongListXML();
-        veXML.setVe(ves);
-        FileUtils.writeXMLtoFile(VE_FILE_NAME, veXML);
+        PhongListXML phongXML = new PhongListXML();
+        phongXML.setPhong(phongs);
+        FileUtils.writeXMLtoFile(PHONG_FILE_NAME, phongXML);
     }
 
-    public List<Ve> readListVes() {
-        List<Ve> list = new ArrayList<>();
-        VeListXML veListXML = (VeListXML) FileUtils.readXMLFile(
-                VE_FILE_NAME, VeListXML.class);
-        if (veListXML != null) {
-            list = veListXML.getVe();
+    public List<Phong> readListPhongs() {
+        List<Phong> list = new ArrayList<>();
+        PhongListXML phongListXML = (PhongListXML) FileUtils.readXMLFile(
+                PHONG_FILE_NAME, PhongListXML.class);
+        if (phongListXML != null) {
+            list = phongListXML.getPhong();
+            for (Phong phong : list) {
+                phong.setDsGhe();
+            }
         }
         return list;
     }

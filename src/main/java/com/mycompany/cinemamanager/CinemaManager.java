@@ -30,6 +30,7 @@ public class CinemaManager {
         rp.setTenRap(sc.nextLine().toUpperCase());
         rp.setDsPhim(func.readListPhims());
         rp.setDsKhach(func.readListKhachs());
+        rp.setDsPhong(func.readListPhongs());
         boolean done = false;
         while (!done) {
             in("Menu:");
@@ -45,6 +46,7 @@ public class CinemaManager {
                 default ->{ 
                     func.writeListKhachs(rp.getDsKhach());
                     func.writeListPhims(rp.getDsPhim());
+                    func.writeListPhongs(rp.getDsPhong());
                     done = true;
                 }
             }
@@ -61,6 +63,7 @@ public class CinemaManager {
     }
 
     public static void taoPhong(RapPhim rp) {
+        in(rp.inDsPhong());
         boolean done = false;
         while (done == false) {
             in("**************************************");

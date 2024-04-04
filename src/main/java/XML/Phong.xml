@@ -1,3 +1,72 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
-
+<phongs>
+    <phong id="P1">
+        <slVip>5</slVip>
+        <slThuong>5</slThuong>
+        <slDoi>5</slDoi>
+        <GheList>
+            <loai>Thuong</loai>
+            <viTri>P1A1</viTri>
+        </GheList>
+        <GheList>
+            <loai>Thuong</loai>
+            <viTri>P1A2</viTri>
+        </GheList>
+        <GheList>
+            <loai>Thuong</loai>
+            <viTri>P1A3</viTri>
+        </GheList>
+        <GheList>
+            <loai>Thuong</loai>
+            <viTri>P1A4</viTri>
+        </GheList>
+        <GheList>
+            <loai>Thuong</loai>
+            <viTri>P1A5</viTri>
+        </GheList>
+        <GheList>
+            <loai>Vip</loai>
+            <viTri>P1A6</viTri>
+        </GheList>
+        <GheList>
+            <loai>Vip</loai>
+            <viTri>P1A7</viTri>
+        </GheList>
+        <GheList>
+            <loai>Vip</loai>
+            <viTri>P1A8</viTri>
+        </GheList>
+        <GheList>
+            <loai>Vip</loai>
+            <viTri>P1A9</viTri>
+        </GheList>
+        <GheList>
+            <loai>Vip</loai>
+            <viTri>P1A10</viTri>
+        </GheList>
+        <GheList>
+            <loai>Doi</loai>
+            <viTri>P1B1</viTri>
+        </GheList>
+        <GheList>
+            <loai>Doi</loai>
+            <viTri>P1B2</viTri>
+        </GheList>
+        <GheList>
+            <loai>Doi</loai>
+            <viTri>P1B3</viTri>
+        </GheList>
+        <GheList>
+            <loai>Doi</loai>
+            <viTri>P1B4</viTri>
+        </GheList>
+        <GheList>
+            <loai>Doi</loai>
+            <viTri>P1B5</viTri>
+        </GheList>
+        <isFull>false</isFull>
+        <isPlaying>false</isPlaying>
+        <columns>6</columns>
+        <rows>66</rows>
+    </phong>
+</phongs>
