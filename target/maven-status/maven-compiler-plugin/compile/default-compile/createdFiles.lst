@@ -4,13 +4,15 @@ utils\FileUtils.class
 Classes\GheVip.class
 Classes\HoiVien.class
 Classes\Phong.class
-XML\PhimXML.class
+XML\PhimListXML.class
 Classes\Khach.class
 Classes\SuatChieu.class
 Classes\Ve.class
 Classes\GheDoi.class
 Classes\RapPhim.class
+Classes\Adaptaters\DurationAdapter.class
 com\mycompany\cinemamanager\CinemaManager.class
 Functions\PhimFunc.class
 Classes\Phim.class
 Classes\Ghe.class
+Classes\Adaptaters\LocalDateAdapter.class

@@ -5,7 +5,7 @@
 package Functions;
 
 import Classes.Phim;
-import XML.PhimXML;
+import XML.PhimListXML;
 import java.util.List;
 import utils.FileUtils;
 
@@ -19,15 +19,8 @@ public class PhimFunc {
     public PhimFunc() {
     }
 
-      
-
-    /**
-     * Lưu các đối tượng student vào file student.xml
-     * 
-     * @param phims
-     */
     public void writeListPhims(List<Phim> phims) {
-        PhimXML phimXML = new PhimXML();
+        PhimListXML phimXML = new PhimListXML();
         phimXML.setPhims(phims);
         FileUtils.writeXMLtoFile(PHIM_FILE_NAME, phimXML);
     }

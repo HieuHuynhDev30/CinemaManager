@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <phims>
-    <phims>
+    <phim>
         <id>Ph1</id>
-        <ten>Batman Begin</ten>
+        <ten>Spider-man</ten>
         <theLoai>Hanh dong</theLoai>
         <doTuoi>16</doTuoi>
-        <thoiLuong/>
-    </phims>
+        <thoiLuong>PT2H5M</thoiLuong>
+        <TgKhoiChieu>2024-04-10</TgKhoiChieu>
+    </phim>
 </phims>

@@ -4,12 +4,14 @@
  */
 package Classes;
 
+import Classes.Adaptaters.DurationAdapter;
+import Classes.Adaptaters.LocalDateAdapter;
 import static Classes.Khach.dateFormat;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import javax.xml.bind.annotation.*;
-
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 /**
  *
  * @author Lenovo
@@ -17,10 +19,13 @@ import javax.xml.bind.annotation.*;
 @XmlRootElement(name = "phim")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Phim {
+
     private static int currId;
     private String id, ten, theLoai;
     private int doTuoi;
+    @XmlJavaTypeAdapter(DurationAdapter.class)
     private Duration thoiLuong;
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
     private LocalDate TgKhoiChieu;
     public static final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy");
     public static final String[] dsTheLoai = {"Hai huoc", "Hanh dong", "Khoa hoc vien tuong", "Kinh di", "Tinh cam", "Lich su"};
@@ -29,7 +34,6 @@ public class Phim {
     public Phim() {
     }
 
-    
     public Phim(String ten, long thoiLuong, String theLoai, int doTuoi) {
         currId++;
         id = "Ph" + currId;
@@ -43,13 +47,11 @@ public class Phim {
     public String getId() {
         return id;
     }
-    
 
     public String getTen() {
         return ten;
     }
-    
-  
+
     public void setTen(String ten) {
         this.ten = ten;
     }
@@ -58,10 +60,8 @@ public class Phim {
         return theLoai;
     }
 
-
-  
     public final String setTheLoai(String theLoai) {
-         for (String dsTheLoai1 : dsTheLoai) {
+        for (String dsTheLoai1 : dsTheLoai) {
             if (theLoai == null ? dsTheLoai1 == null : theLoai.equals(dsTheLoai1)) {
                 this.theLoai = theLoai;
                 return "Da thay doi the loai";
@@ -74,24 +74,18 @@ public class Phim {
         return doTuoi;
     }
 
-    
-   
     public void setDoTuoi(int doTuoi) {
         this.doTuoi = doTuoi;
     }
 
-
     public Duration getThoiLuong() {
         return thoiLuong;
     }
-    
 
-    public long inThoiLuong() {
+    public final long inThoiLuong() {
         return thoiLuong.toMinutes();
     }
 
-    
-    
     public final void setThoiLuong(long duration) {
         try {
             this.thoiLuong = Duration.ofMinutes(duration);
@@ -100,12 +94,10 @@ public class Phim {
         }
     }
 
-
     public LocalDate getTgKhoiChieu() {
         return TgKhoiChieu;
     }
-    
-    
+
     public void setTgKhoiChieu(CharSequence ngay) {
         try {
             TgKhoiChieu = LocalDate.parse(ngay, dateFormat);
@@ -113,16 +105,14 @@ public class Phim {
             System.out.println("Nhap sai dinh dang ngay");
         }
     }
-    
-  
+
     public String inTgKhoiChieu() {
         return TgKhoiChieu.format(dateFormat);
-    } 
+    }
 
     @Override
     public String toString() {
-        return "Phim{" + "id=" + id + ", ten=" + ten + ", theLoai=" + theLoai + ", doTuoi=" + doTuoi + ", thoiLuong=" + inThoiLuong() + ", TgKhoiChieu=" + TgKhoiChieu + '}';
+        return "Phim{" + "id=" + id + ", ten=" + ten + ", theLoai=" + theLoai + ", doTuoi=" + doTuoi + ", thoiLuong=" + inThoiLuong() + ", TgKhoiChieu=" + inTgKhoiChieu() + '}';
     }
-    
-    
+
 }

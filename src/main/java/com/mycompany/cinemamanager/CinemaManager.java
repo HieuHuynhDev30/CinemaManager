@@ -76,6 +76,8 @@ public class CinemaManager {
             in("Nhap do tuoi:");
             int doTuoi = Integer.parseInt(sc.nextLine());
             Phim ph = new Phim(ten, thoiLuong, theLoai, doTuoi);
+            in("Nhap thoi gian khoi chieu(dd-MM-yyyy):");
+            ph.setTgKhoiChieu(sc.nextLine());
             in("Thong tin phim:");
             in(ph.toString());
             rp.themPhim(ph);

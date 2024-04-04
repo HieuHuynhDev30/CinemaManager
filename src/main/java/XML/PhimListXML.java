@@ -9,6 +9,7 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 
@@ -18,18 +19,18 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement(name = "phims")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class PhimXML {
-    private List<Phim> phims;
+public class PhimListXML {
+    private List<Phim> phim;
 
-    public PhimXML() {
+    public PhimListXML() {
     }
-
+    
     public List<Phim> getPhims() {
-        return phims;
+        return phim;
     }
 
     public void setPhims(List<Phim> phims) {
-        this.phims = phims;
+        this.phim = phims;
     }
     
     
