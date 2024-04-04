@@ -4,10 +4,21 @@
  */
 package Classes.Adaptaters;
 
-/**
- *
- * @author Lenovo
- */
-public class LocalDateTimeAdapter {
-    
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class LocalDateTimeAdapter extends XmlAdapter<String, LocalDateTime> {
+    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
+
+    @Override
+    public String marshal(LocalDateTime v) throws Exception {
+        return v.format(formatter);
+    }
+
+    @Override
+    public LocalDateTime unmarshal(String v) throws Exception {
+        return LocalDateTime.parse(v, formatter);
+    }
 }
+

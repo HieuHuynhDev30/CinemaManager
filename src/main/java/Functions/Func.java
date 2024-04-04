@@ -6,8 +6,11 @@ package Functions;
 
 import Classes.Khach;
 import Classes.Phim;
+import Classes.Phong;
+import Classes.Ve;
 import XML.KhachListXML;
 import XML.PhimListXML;
+import XML.VeListXML;
 import java.util.ArrayList;
 import java.util.List;
 import utils.FileUtils;
@@ -20,8 +23,8 @@ public class Func {
 
     private static final String PHIM_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\Phim.xml";
     private static final String KHACH_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\Khach.xml";
-    
-    
+    private static final String VE_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\Ve.xml";
+
     public Func() {
     }
 
@@ -40,6 +43,7 @@ public class Func {
         }
         return list;
     }
+
     public void writeListKhachs(List<Khach> khachs) {
         KhachListXML khachXML = new KhachListXML();
         khachXML.setKhach(khachs);
@@ -52,6 +56,38 @@ public class Func {
                 KHACH_FILE_NAME, KhachListXML.class);
         if (khachListXML != null) {
             list = khachListXML.getKhach();
+        }
+        return list;
+    }
+
+    public void writeListVes(List<Ve> ves) {
+        VeListXML veXML = new VeListXML();
+        veXML.setVe(ves);
+        FileUtils.writeXMLtoFile(VE_FILE_NAME, veXML);
+    }
+
+    public List<Ve> readListVes() {
+        List<Ve> list = new ArrayList<>();
+        VeListXML veListXML = (VeListXML) FileUtils.readXMLFile(
+                VE_FILE_NAME, VeListXML.class);
+        if (veListXML != null) {
+            list = veListXML.getVe();
+        }
+        return list;
+    }
+    
+    public void writeListPhongs(List<Phong> phongs) {
+        PhongListXML veXML = new PhongListXML();
+        veXML.setVe(ves);
+        FileUtils.writeXMLtoFile(VE_FILE_NAME, veXML);
+    }
+
+    public List<Ve> readListVes() {
+        List<Ve> list = new ArrayList<>();
+        VeListXML veListXML = (VeListXML) FileUtils.readXMLFile(
+                VE_FILE_NAME, VeListXML.class);
+        if (veListXML != null) {
+            list = veListXML.getVe();
         }
         return list;
     }

@@ -21,13 +21,15 @@ import javax.xml.bind.Marshaller;
 public class CinemaManager {
 
     public static Scanner sc = new Scanner(System.in);
+    public static Func func = new Func();
 
     public static void main(String[] args) throws Exception {
         in("TAO RAP PHIM");
         RapPhim rp = new RapPhim();
         in("Nhap ten rap:");
         rp.setTenRap(sc.nextLine().toUpperCase());
-        Func func = new Func();
+        rp.setDsPhim(func.readListPhims());
+        rp.setDsKhach(func.readListKhachs());
         boolean done = false;
         while (!done) {
             in("Menu:");
@@ -40,7 +42,11 @@ public class CinemaManager {
                 case "4" -> nhapKhachHang(rp, func);
                 case "5" -> giaoDichBanVe(rp);
                 case "6" -> nangCapHoiVien(rp);
-                default -> done = true;
+                default ->{ 
+                    func.writeListKhachs(rp.getDsKhach());
+                    func.writeListPhims(rp.getDsPhim());
+                    done = true;
+                }
             }
         }
 
@@ -93,8 +99,6 @@ public class CinemaManager {
     }
 
     private static void taoPhim(RapPhim rp, Func func) {
-        in("Tai phim tu co so du lieu");
-        rp.setDsPhim(func.readListPhims());
         in(rp.inDsPhim());
         boolean done = false;
         while (!done) {
@@ -109,7 +113,8 @@ public class CinemaManager {
             in("Nhap do tuoi:");
             int doTuoi = Integer.parseInt(sc.nextLine());
             Phim ph = new Phim(ten, thoiLuong, theLoai, doTuoi);
-            ph.setId(rp.getDsPhim().size() + 1);
+            int newId = rp.getDsPhim().size() + 1;
+            ph.setId(newId);
             in("Nhap thoi gian khoi chieu(dd-MM-yyyy):");
             ph.setTgKhoiChieu(sc.nextLine());
             in("Thong tin phim:");
@@ -124,7 +129,6 @@ public class CinemaManager {
 
         in("Danh sach phim hien co:");
         in(rp.inDsPhim());
-        func.writeListPhims(rp.getDsPhim());
     }
 
     private static void taoSuatChieu(RapPhim rp) {
@@ -158,8 +162,6 @@ public class CinemaManager {
     }
 
     private static void nhapKhachHang(RapPhim rp, Func func) {
-        in("Nhap danh sach khach hang tu co so du lieu");
-        rp.setDsKhach(func.readListKhachs());
         in(rp.inDsKhach());
         boolean done = false;
         while (!done) {
@@ -167,7 +169,8 @@ public class CinemaManager {
             in("Nhap thong tin khach hang:");
             in("Tao tai khoan khach hang:");
             Khach k = new Khach();
-            k.setId("K" + rp.getDsKhach().size() + 1);
+            int newId = rp.getDsKhach().size() + 1;
+            k.setId("K" + newId);
             in("Nhap ho va ten:");
             k.setHoTen(sc.nextLine());
             in("Nhap gioi tinh:");
@@ -185,7 +188,7 @@ public class CinemaManager {
         }
         in("Danh sach khach hang:");
         in(rp.inDsKhach());
-        func.writeListKhachs(rp.getDsKhach());
+        
     }
 
     private static void giaoDichBanVe(RapPhim rp) {
@@ -245,6 +248,7 @@ public class CinemaManager {
             ve.setGhe(gheP);
             ve.setSuat(schP);
             khachP.muaVe(ve);
+            func.writeListVes(khachP.getDsVe());
             in("Thong tin ve:");
             in(ve.toString());
         }

@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
@@ -24,6 +25,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 public class Khach {
     private static int currId;
     private int slVeDat, tongTien;
+    @XmlAttribute
     private String id;
     private String hoTen, gioiTinh;
     @XmlJavaTypeAdapter(LocalDateAdapter.class)

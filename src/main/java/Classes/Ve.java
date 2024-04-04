@@ -4,10 +4,16 @@
  */
 package Classes;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author Lenovo
  */
+@XmlRootElement(name = "ve")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Ve {
     private static int currId;
     private String id;

@@ -20,7 +20,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Phim {
     private static int currId;
-    private String id, ten, theLoai;
+    @XmlAttribute
+    private String id;
+    private String ten, theLoai;
     private int doTuoi;
     @XmlJavaTypeAdapter(DurationAdapter.class)
     private Duration thoiLuong;

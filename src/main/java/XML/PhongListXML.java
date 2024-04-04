@@ -4,7 +4,7 @@
  */
 package XML;
 
-import Classes.Ve;
+import Classes.Phong;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -14,19 +14,19 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author Lenovo
  */
-@XmlRootElement(name = "ves")
+@XmlRootElement(name = "phongs")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class VeListXML {
-    private List<Ve> ve;
+public class PhongListXML {
+    private List<Phong> phong;
 
-    public VeListXML() {
+    public PhongListXML() {
     }
 
-    public List<Ve> getVe() {
-        return ve;
+    public List<Phong> getPhong() {
+        return phong;
     }
 
-    public void setVe(List<Ve> ve) {
-        this.ve = ve;
-    }  
+    public void setPhong(List<Phong> phong) {
+        this.phong = phong;
+    }
 }

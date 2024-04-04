@@ -5,16 +5,25 @@
 package Classes;
 
 import java.util.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Lenovo
  */
+@XmlRootElement(name = "phong")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Phong {
 
     private static int currId;
     private int slVip, slThuong, slDoi;
+    @XmlAttribute
     private String id;
+    @XmlTransient
     private Map<String, Ghe> dsGhe = new HashMap<>();
     public List<Ghe> GheList = new ArrayList<>();
     private boolean isFull;
@@ -61,6 +70,13 @@ public class Phong {
     public Map<String, Ghe> getDsGhe() {
         return dsGhe;
     }
+
+    public void setDsGhe() {
+        for (Ghe ghe : this.GheList) {
+            this.dsGhe.put(ghe.viTri, ghe);
+        }
+    }
+    
 
     public void themGhe(Ghe ghe) {
         ghe.setViTri(String.format("%s%s%d", this.getId(), rows, columns));
