@@ -1,22 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ves>
-    <ve id="V4">
+    <ve id="V1">
         <ghe>
-            <gia>120000.0</gia>
-            <khachId>K2</khachId>
-            <loai>Vip</loai>
-            <viTri>P3A4</viTri>
+            <gia>80000.0</gia>
+            <khachId>K1</khachId>
+            <loai>Thuong</loai>
+            <viTri>P1A1</viTri>
         </ghe>
-        <suat id="SCH7">
-            <phim id="Ph3">
-                <ten>Batman Begin</ten>
-                <theLoai>Hanh dong</theLoai>
-                <doTuoi>16</doTuoi>
+        <suat id="SCH1">
+            <phim id="Ph1">
+                <ten>Killer</ten>
+                <theLoai>Kinh di</theLoai>
+                <doTuoi>18</doTuoi>
                 <thoiLuong>PT2H5M</thoiLuong>
-                <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+                <TgKhoiChieu>2024-05-16</TgKhoiChieu>
             </phim>
-            <phongId>P3</phongId>
-            <thoiGianChieu>30-06-2024 16:30</thoiGianChieu>
+            <phongId>P1</phongId>
+            <thoiGianChieu>20-07-2024 15:45</thoiGianChieu>
+        </suat>
+    </ve>
+    <ve id="V3">
+        <ghe>
+            <gia>80000.0</gia>
+            <khachId>K1</khachId>
+            <loai>Thuong</loai>
+            <viTri>P1A2</viTri>
+        </ghe>
+        <suat id="SCH1">
+            <phim id="Ph1">
+                <ten>Killer</ten>
+                <theLoai>Kinh di</theLoai>
+                <doTuoi>18</doTuoi>
+                <thoiLuong>PT2H5M</thoiLuong>
+                <TgKhoiChieu>2024-05-16</TgKhoiChieu>
+            </phim>
+            <phongId>P1</phongId>
+            <thoiGianChieu>20-07-2024 15:45</thoiGianChieu>
+        </suat>
+    </ve>
+    <ve id="V5">
+        <ghe>
+            <gia>80000.0</gia>
+            <khachId>K1</khachId>
+            <loai>Thuong</loai>
+            <viTri>P1A2</viTri>
+        </ghe>
+        <suat id="SCH1">
+            <phim id="Ph1">
+                <ten>Killer</ten>
+                <theLoai>Kinh di</theLoai>
+                <doTuoi>18</doTuoi>
+                <thoiLuong>PT2H5M</thoiLuong>
+                <TgKhoiChieu>2024-05-16</TgKhoiChieu>
+            </phim>
+            <phongId>P1</phongId>
+            <thoiGianChieu>20-07-2024 15:45</thoiGianChieu>
+        </suat>
+    </ve>
+    <ve id="V7">
+        <ghe>
+            <gia>80000.0</gia>
+            <khachId>K1</khachId>
+            <loai>Thuong</loai>
+            <viTri>P1A5</viTri>
+        </ghe>
+        <suat id="SCH1">
+            <phim id="Ph1">
+                <ten>Killer</ten>
+                <theLoai>Kinh di</theLoai>
+                <doTuoi>18</doTuoi>
+                <thoiLuong>PT2H5M</thoiLuong>
+                <TgKhoiChieu>2024-05-16</TgKhoiChieu>
+            </phim>
+            <phongId>P1</phongId>
+            <thoiGianChieu>20-07-2024 15:45</thoiGianChieu>
         </suat>
     </ve>
 </ves>

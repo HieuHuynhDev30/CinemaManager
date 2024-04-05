@@ -19,6 +19,7 @@ public class RapPhim {
     private List<HoiVien> dsHoiVien = new ArrayList<>();
     private List<SuatChieu> dsSuatChieu = new ArrayList<>();
     private List<Phim> dsPhim = new ArrayList<>();
+    private List<Ve> dsVe = new ArrayList<>();
     private Set<String> dsLoaiGhe = new HashSet<>();
     private int sucChua;
 
@@ -42,6 +43,18 @@ public class RapPhim {
 
     public List<Phong> getDsPhong() {
         return dsPhong;
+    }
+
+    public List<Ve> getDsVe() {
+        return dsVe;
+    }
+
+    public void setDsVe(List<Ve> dsVe) {
+        this.dsVe = dsVe;
+    }
+    
+    public void themVe(Ve ve) {
+        this.dsVe.add(ve);
     }
 
     public String inDsPhong() {

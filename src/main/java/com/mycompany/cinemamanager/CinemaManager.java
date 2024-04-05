@@ -22,22 +22,23 @@ public class CinemaManager {
 
     public static Scanner sc = new Scanner(System.in);
     public static Func func = new Func();
+    public static RapPhim rp = new RapPhim();
 
     public static void main(String[] args) throws Exception {
         in("TAO RAP PHIM");
-        RapPhim rp = new RapPhim();
         in("Nhap ten rap:");
         rp.setTenRap(sc.nextLine().toUpperCase());
         rp.setDsPhim(func.readListPhims());
         rp.setDsKhach(func.readListKhachs());
         rp.setDsPhong(func.readListPhongs());
         rp.setDsSuatChieu(func.readListSuatChieus());
+        rp.setDsVe(func.readListVes());
         in("Thong tin rap phim:");
         in(rp.toString());
         boolean done = false;
         while (!done) {
             in("Menu:");
-            in("1. Tao phong\t2. Tao phim\t3. Tao suat chieu\t4. Nhap thong tin khach hang\t5. Thuc hien giao dich ban ve\t6. Nang cap hoi vien\t7. Exit");
+            in("1. Tao phong\t2. Tao phim\t3. Tao suat chieu\t4. Nhap thong tin khach hang\t5. Thuc hien giao dich ban ve\t6. Nang cap hoi vien\t7.Save and Exit\t8. Exit without Save");
             String option = sc.nextLine();
             switch (option) {
                 case "1" ->
@@ -52,13 +53,17 @@ public class CinemaManager {
                     giaoDichBanVe(rp);
                 case "6" ->
                     nangCapHoiVien(rp);
-                default -> {
+                case "7" -> {
                     func.writeListKhachs(rp.getDsKhach());
                     func.writeListPhims(rp.getDsPhim());
+                    in(rp.getDsPhong().get(0).getDsGheThuong().get("P1A2").getKhachId());
                     func.writeListPhongs(rp.getDsPhong());
                     func.writeListSuatChieus(rp.getDsSuatChieu());
+                    func.writeListVes(rp.getDsVe());
                     done = true;
                 }
+                default ->
+                    done = true;
             }
         }
 
@@ -155,9 +160,12 @@ public class CinemaManager {
             sch.setPhim(rp.getDsPhim().get(Integer.parseInt(sc.nextLine())));
             in("Chon phong chieu:");
             for (int i = 0; i < rp.getDsPhong().size(); i++) {
-                in(i + ". " + rp.getDsPhong().get(i).getId() + " - Suc chua: " + rp.getDsPhong().get(i).getDsGheTrong().size());
+                if (rp.getDsPhong().get(i).getSuatChieu() == null) {
+                    in(i + ". " + rp.getDsPhong().get(i).getId() + " - Suc chua: " + rp.getDsPhong().get(i).getDsGheTrong().size());
+                }
             }
             int pchoice = Integer.parseInt(sc.nextLine());
+            rp.getDsPhong().get(pchoice).setSuatChieu(sch);
             sch.setPhong(rp.getDsPhong().get(pchoice));
             in("Dat thoi gian chieu (dd-MM-yyyy HH:mm):");
             sch.setThoiGianChieu(sc.nextLine());
@@ -264,16 +272,23 @@ public class CinemaManager {
             GheDoi gheP = phongP.getDsGheDoi().get(vtchoice);
             xuLyVe(gheP, schP, khachP);
         }
-        func.writeListVes(khachP.getDsVe());
         in("Khach hang da mua:");
         in(khachP.toString());
+        in(phongP.getDsGheThuong().get("P1A2").getKhachId());
+        for (Phong ph : rp.getDsPhong()) {
+            if (ph.getId() == null ? phongP.getId() == null : ph.getId().equals(phongP.getId())) {
+                ph.setDsGheThuong(phongP.getDsGheThuong());
+                ph.setDsGheVip(phongP.getDsGheVip());
+                ph.setDsGheDoi(phongP.getDsGheDoi());
+                break;
+            }
+        }
     }
 
     public static void xuLyVe(Ghe gheP, SuatChieu schP, Khach khachP) {
-        if (gheP.getIsTaken()) {
+        if (gheP.getKhachId() != null) {
             in("Ghe da duoc mua, vui long chon ghe khac");
         } else {
-            gheP.setIsTaken();
             gheP.setThoiGianDat(LocalDateTime.now());
             gheP.setKhachId(khachP.getId());
             Ve ve = new Ve();
@@ -282,6 +297,7 @@ public class CinemaManager {
             in("Thong tin ve:");
             in(ve.toString());
             khachP.muaVe(ve);
+            rp.themVe(ve);
         }
     }
 

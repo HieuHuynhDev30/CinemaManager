@@ -43,12 +43,6 @@ public class GheVip extends Ghe {
     }
 
     @Override
-    @XmlElement
-    public boolean getIsTaken() {
-        return IsTaken;
-    }
-
-    @Override
     public String getKhachId() {
         return khachId;
     }

@@ -17,13 +17,11 @@ public class Ghe{
     String loai;
     String viTri;
     double gia;
-    boolean IsTaken;
     String khachId;
     LocalDateTime thoiGianDat;
     public final static DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
 
     public Ghe() {
-        this.IsTaken = false;
     }
 
     public void setLoai(String Loai) {
@@ -38,15 +36,6 @@ public class Ghe{
     public void setGia(double Gia) {
         this.gia = Gia;
     }
-
-    public void setIsTaken() {
-        this.IsTaken = true;
-    }
-
-    public boolean getIsTaken() {
-        return IsTaken;
-    }
-
 
     public void setThoiGianDat(LocalDateTime thoiGianDat) {
         this.thoiGianDat = thoiGianDat;
@@ -66,9 +55,6 @@ public class Ghe{
         return gia;
     }
     
-    public void setTrong () {
-        this.IsTaken = false;
-    }
 
     
      public String getKhachId() {
@@ -97,7 +83,7 @@ public class Ghe{
 
     @Override
     public String toString() {
-        return "Ghe{" + "loai=" + loai + ", viTri=" + viTri + ", gia=" + gia + ", isTaken=" + IsTaken  + ", thoiGianDat=" + inThoiGianDat() + '}' + '\n';
+        return "Ghe{" + "loai=" + loai + ", viTri=" + viTri + ", gia=" + gia + ", thoiGianDat=" + inThoiGianDat() + '}' + '\n';
     }
 
    

@@ -9,9 +9,9 @@
                 <key>P1A5</key>
                 <value>
                     <gia>80000.0</gia>
+                    <khachId>K1</khachId>
                     <loai>Thuong</loai>
                     <viTri>P1A5</viTri>
-                    <isTaken>false</isTaken>
                 </value>
             </entry>
             <entry>
@@ -20,16 +20,15 @@
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
                     <viTri>P1A4</viTri>
-                    <isTaken>false</isTaken>
                 </value>
             </entry>
             <entry>
                 <key>P1A1</key>
                 <value>
                     <gia>80000.0</gia>
+                    <khachId>K1</khachId>
                     <loai>Thuong</loai>
                     <viTri>P1A1</viTri>
-                    <isTaken>false</isTaken>
                 </value>
             </entry>
             <entry>
@@ -38,16 +37,15 @@
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
                     <viTri>P1A3</viTri>
-                    <isTaken>false</isTaken>
                 </value>
             </entry>
             <entry>
                 <key>P1A2</key>
                 <value>
                     <gia>80000.0</gia>
+                    <khachId>K1</khachId>
                     <loai>Thuong</loai>
                     <viTri>P1A2</viTri>
-                    <isTaken>false</isTaken>
                 </value>
             </entry>
         </dsGheThuong>
@@ -58,17 +56,14 @@
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
                     <viTri>P1A10</viTri>
-                    <isTaken>false</isTaken>
                 </value>
             </entry>
             <entry>
                 <key>P1A7</key>
                 <value>
                     <gia>120000.0</gia>
-                    <khachId>K1</khachId>
                     <loai>Vip</loai>
                     <viTri>P1A7</viTri>
-                    <isTaken>false</isTaken>
                 </value>
             </entry>
             <entry>
@@ -77,7 +72,6 @@
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
                     <viTri>P1A6</viTri>
-                    <isTaken>false</isTaken>
                 </value>
             </entry>
             <entry>
@@ -86,17 +80,14 @@
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
                     <viTri>P1A9</viTri>
-                    <isTaken>false</isTaken>
                 </value>
             </entry>
             <entry>
                 <key>P1A8</key>
                 <value>
                     <gia>120000.0</gia>
-                    <khachId>K1</khachId>
                     <loai>Vip</loai>
                     <viTri>P1A8</viTri>
-                    <isTaken>false</isTaken>
                 </value>
             </entry>
         </dsGheVip>
@@ -107,7 +98,6 @@
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
                     <viTri>P1B5</viTri>
-                    <isTaken>false</isTaken>
                 </value>
             </entry>
             <entry>
@@ -116,7 +106,6 @@
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
                     <viTri>P1B2</viTri>
-                    <isTaken>false</isTaken>
                 </value>
             </entry>
             <entry>
@@ -125,7 +114,6 @@
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
                     <viTri>P1B1</viTri>
-                    <isTaken>false</isTaken>
                 </value>
             </entry>
             <entry>
@@ -134,7 +122,6 @@
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
                     <viTri>P1B4</viTri>
-                    <isTaken>false</isTaken>
                 </value>
             </entry>
             <entry>
@@ -143,85 +130,23 @@
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
                     <viTri>P1B3</viTri>
-                    <isTaken>false</isTaken>
                 </value>
             </entry>
         </dsGheDoi>
         <isFull>false</isFull>
+        <suatChieu id="SCH10">
+            <phim id="Ph3">
+                <ten>Batman Begin</ten>
+                <theLoai>Hanh dong</theLoai>
+                <doTuoi>16</doTuoi>
+                <thoiLuong>PT2H5M</thoiLuong>
+                <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+            </phim>
+            <phongId>P1</phongId>
+            <thoiGianChieu>16-05-2024 19:00</thoiGianChieu>
+        </suatChieu>
         <isPlaying>false</isPlaying>
         <columns>6</columns>
         <rows>66</rows>
-    </phong>
-    <phong id="P3">
-        <slVip>2</slVip>
-        <slThuong>2</slThuong>
-        <slDoi>2</slDoi>
-        <dsGheThuong>
-            <entry>
-                <key>P3A2</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P3A2</viTri>
-                    <isTaken>false</isTaken>
-                </value>
-            </entry>
-            <entry>
-                <key>P3A1</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <khachId>K1</khachId>
-                    <loai>Thuong</loai>
-                    <viTri>P3A1</viTri>
-                    <isTaken>false</isTaken>
-                </value>
-            </entry>
-        </dsGheThuong>
-        <dsGheVip>
-            <entry>
-                <key>P3A3</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P3A3</viTri>
-                    <isTaken>false</isTaken>
-                </value>
-            </entry>
-            <entry>
-                <key>P3A4</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <khachId>K2</khachId>
-                    <loai>Vip</loai>
-                    <viTri>P3A4</viTri>
-                    <isTaken>true</isTaken>
-                    <thoiGianDat>05-04-2024 20:30</thoiGianDat>
-                </value>
-            </entry>
-        </dsGheVip>
-        <dsGheDoi>
-            <entry>
-                <key>P3A5</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
-                    <viTri>P3A5</viTri>
-                    <isTaken>false</isTaken>
-                </value>
-            </entry>
-            <entry>
-                <key>P3A6</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
-                    <viTri>P3A6</viTri>
-                    <isTaken>false</isTaken>
-                </value>
-            </entry>
-        </dsGheDoi>
-        <isFull>false</isFull>
-        <isPlaying>false</isPlaying>
-        <columns>7</columns>
-        <rows>65</rows>
     </phong>
 </phongs>

@@ -31,7 +31,7 @@ public class Phong {
     private Map<String, GheDoi> dsGheDoi = new HashMap<>();
 //    public List<Ghe> GheList = new ArrayList<>();
     private boolean isFull;
-    private SuatChieu xuatChieu;
+    private SuatChieu suatChieu;
     private boolean isPlaying;
     private int columns;
     private char rows;
@@ -133,12 +133,12 @@ public class Phong {
         this.isFull = isFull;
     }
 
-    public SuatChieu getXuatChieu() {
-        return xuatChieu;
+    public SuatChieu getSuatChieu() {
+        return suatChieu;
     }
 
-    public void setXuatChieu(SuatChieu xuatChieu) {
-        this.xuatChieu = xuatChieu;
+    public void setSuatChieu(SuatChieu xuatChieu) {
+        this.suatChieu = xuatChieu;
     }
 
     public boolean isIsPlaying() {
@@ -152,17 +152,17 @@ public class Phong {
     public int inTongTrong() {
         int tong = 0;
         for (Entry<String, GheThuong> g : this.dsGheThuong.entrySet()) {
-            if (!g.getValue().getIsTaken()) {
+            if (g.getValue().getKhachId() == null) {
                 tong++;
             }
         }
         for (Entry<String, GheVip> g : this.dsGheVip.entrySet()) {
-            if (!g.getValue().getIsTaken()) {
+            if (g.getValue().getKhachId() == null) {
                 tong++;
             }
         }
         for (Entry<String, GheDoi> g : this.dsGheDoi.entrySet()) {
-            if (!g.getValue().getIsTaken()) {
+            if (g.getValue().getKhachId() == null) {
                 tong++;
             }
         }
@@ -176,7 +176,7 @@ public class Phong {
     public String inThuongDat() {
         String dsThuongDat = "";
         for (GheThuong ghe : dsGheThuong.values()) {
-            if ("thuong".equals(ghe.getLoai().toLowerCase()) && ghe.IsTaken) {
+            if ("thuong".equals(ghe.getLoai().toLowerCase()) && ghe.getKhachId() != null) {
                 dsThuongDat += ghe.getViTri() + ", ";
             }
         }
@@ -186,7 +186,7 @@ public class Phong {
     public String inVipDat() {
         String dsVipDat = "";
         for (GheVip ghe : dsGheVip.values()) {
-            if ("vip".equals(ghe.getLoai().toLowerCase()) && ghe.IsTaken) {
+            if ("vip".equals(ghe.getLoai().toLowerCase()) && ghe.getKhachId() != null) {
                 dsVipDat += ghe.getViTri() + ", ";
             }
         }
@@ -196,7 +196,7 @@ public class Phong {
     public String inDoiDat() {
         String dsDoiDat = "";
         for (GheDoi ghe : dsGheDoi.values()) {
-            if ("doi".equals(ghe.getLoai().toLowerCase()) && ghe.IsTaken) {
+            if ("doi".equals(ghe.getLoai().toLowerCase()) && ghe.getKhachId() != null) {
                 dsDoiDat += ghe.getViTri() + ", ";
             }
         }
@@ -234,17 +234,17 @@ public class Phong {
     public List<Ghe> getDsGheTrong() {
         List<Ghe> ds = new ArrayList<>();
         for (Entry<String, GheThuong> g : this.dsGheThuong.entrySet()) {
-            if (!g.getValue().getIsTaken()) {
+            if (g.getValue().getKhachId() == null) {
                 ds.add(g.getValue());
             }
         }
         for (Entry<String, GheVip> g : this.dsGheVip.entrySet()) {
-            if (!g.getValue().getIsTaken()) {
+            if (g.getValue().getKhachId() == null) {
                 ds.add(g.getValue());
             }
         }
         for (Entry<String, GheDoi> g : this.dsGheDoi.entrySet()) {
-            if (!g.getValue().getIsTaken()) {
+            if (g.getValue().getKhachId() == null) {
                 ds.add(g.getValue());
             }
         }
@@ -264,7 +264,7 @@ public class Phong {
 
     @Override
     public String toString() {
-        return "Phong{" + "id=" + getId() + ", slVip=" + slVip + ", slThuong=" + slThuong + ", slDoi=" + slDoi + ", sucChua=" + getSucChua() + ", dsGhe=" + inDsGheTrong() + ", isFull=" + isFull + ", xuatChieu=" + xuatChieu + ", isPlaying=" + isPlaying + '}' + '\n';
+        return "Phong{" + "id=" + getId() + ", slVip=" + slVip + ", slThuong=" + slThuong + ", slDoi=" + slDoi + ", sucChua=" + getSucChua() + ", dsGhe=" + inDsGheTrong() + ", isFull=" + isFull + ", suatChieu=" + suatChieu + ", isPlaying=" + isPlaying + '}' + '\n';
     }
 
 }
