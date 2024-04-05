@@ -5,6 +5,7 @@
 package Classes.Adaptaters;
 
 import java.time.*;
+import java.time.format.DateTimeFormatter;
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
@@ -14,6 +15,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * @author Lenovo
  */
 public class LocalDateAdapter extends XmlAdapter<javax.xml.datatype.XMLGregorianCalendar, LocalDate> {
+//    public static final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
     @Override
     public LocalDate unmarshal(XMLGregorianCalendar dayInXML) throws Exception {

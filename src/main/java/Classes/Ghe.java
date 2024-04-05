@@ -4,22 +4,26 @@
  */
 package Classes;
 
+import Classes.Adaptaters.LocalDateTimeAdapter;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
-public class Ghe {
+public class Ghe{
 
     
     String loai;
     String viTri;
     double gia;
     boolean IsTaken;
-    Khach khach;
+    String khachId;
     LocalDateTime thoiGianDat;
     public final static DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
 
     public Ghe() {
+        this.IsTaken = false;
     }
 
     public void setLoai(String Loai) {
@@ -36,21 +40,18 @@ public class Ghe {
     }
 
     public void setIsTaken() {
-        this.IsTaken = !this.IsTaken;
+        this.IsTaken = true;
     }
 
-    
-    public void setKhach(Khach khach) {
-        this.khach = khach;
+    public boolean getIsTaken() {
+        return IsTaken;
     }
 
-    public void setThoiGianDat(CharSequence ngayGio) {
-        try {
-            this.thoiGianDat = LocalDateTime.parse(ngayGio, formatDateTime);
-        } catch (Exception e) {
-            System.out.println("Nhap sai dinh dang ngay hoac gio");
-        }
+
+    public void setThoiGianDat(LocalDateTime thoiGianDat) {
+        this.thoiGianDat = thoiGianDat;
     }
+
 
     public String getLoai() {
         return loai;
@@ -61,22 +62,25 @@ public class Ghe {
         return viTri;
     }
 
-    public Double getGia() {
+    public double getGia() {
         return gia;
-    }
-
-    public boolean getIsTaken() {
-        return IsTaken;
     }
     
     public void setTrong () {
         this.IsTaken = false;
     }
 
-    public Khach getKhach() {
-        return khach;
+    
+     public String getKhachId() {
+        return khachId;
     }
 
+    public void setKhachId(String khachId) {
+        this.khachId = khachId;
+    }
+
+
+    @XmlTransient
     public LocalDateTime getThoiGianDat() {
 
         return thoiGianDat;

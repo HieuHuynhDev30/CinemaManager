@@ -90,6 +90,6 @@ public class SuatChieu {
 
     @Override
     public String toString() {
-        return "SuatChieu{" + "id=" + id + ", phim=" + phim.getTen() + ", phong=" + inPhong() + ", thoiGianChieu=" + inThoiGianChieu() + '}' + '\n';
+        return "SuatChieu{" + "id=" + id + ", phim=" + phim.getTen() + ", phong=" + this.getPhongId() + ", thoiGianChieu=" + inThoiGianChieu() + '}' + '\n';
     }
 }

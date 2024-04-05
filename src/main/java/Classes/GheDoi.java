@@ -4,13 +4,22 @@
  */
 package Classes;
 
+import Classes.Adaptaters.LocalDateTimeAdapter;
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  *
  * @author Lenovo
  */
+@XmlRootElement(name = "gheDoi")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class GheDoi extends Ghe {
 
     private final Set<Khach> khachDoi = new HashSet<>();
@@ -19,9 +28,9 @@ public class GheDoi extends Ghe {
         super.setGia(200000);
         super.setLoai("Doi");
     }
-    
+
     public GheDoi(Khach khach) {
-        super.setKhach(khach);
+        super.setKhachId(super.getKhachId() + khach.getId());
         this.setKhachDoi(khach);
         super.setGia(200000);
         super.setLoai("Doi");
@@ -36,13 +45,13 @@ public class GheDoi extends Ghe {
             try {
                 khachDoi.add(khach);
                 return "Da them khach vao ghe doi";
-            } catch(Exception e) {
+            } catch (Exception e) {
                 return "Them vao ghe doi khong thanh cong";
             }
         }
         return "";
     }
-    
+
     public String inKhachDoi() {
         String dsKhach = "";
         for (Khach khachOb : khachDoi) {
@@ -50,6 +59,31 @@ public class GheDoi extends Ghe {
         }
         return dsKhach;
     }
+
+    @Override
+    public double getGia() {
+        return gia;
+    }
+
+    @Override
+    @XmlElement
+    public boolean getIsTaken() {
+        return IsTaken;
+    }
+
+    @Override
+    public String getKhachId() {
+        return khachId;
+    }
+
+    @XmlElement
+    @XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
+    @Override
+    public LocalDateTime getThoiGianDat() {
+        return thoiGianDat;
+    }
+    
+    
 
     @Override
     public String toString() {

@@ -4,25 +4,58 @@
  */
 package Classes;
 
+import Classes.Adaptaters.LocalDateTimeAdapter;
+import java.time.LocalDateTime;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
 /**
  *
  * @author Lenovo
  */
+@XmlRootElement(name = "gheThuong")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class GheThuong extends Ghe {
 
     public GheThuong() {
         super.setGia(80000);
         super.setLoai("Thuong");
     }
-    
+
     public GheThuong(Khach khach) {
-        super.setKhach(khach);
+        super.setKhachId(khach.getId());
         super.setGia(80000);
         super.setLoai("Thuong");
     }
 
     @Override
+    public double getGia() {
+        return gia;
+    }
+
+    @Override
+    @XmlElement
+    public boolean getIsTaken() {
+        return IsTaken;
+    }
+
+    @Override
+    public String getKhachId() {
+        return khachId;
+    }
+
+    @Override
+    @XmlElement
+    @XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
+    public LocalDateTime getThoiGianDat() {
+        return thoiGianDat;
+    }
+
+    @Override
     public String toString() {
-        return super.toString() + "khach:" + super.getKhach().getHoTen();
+        return super.toString() + "khach:" + super.getKhachId();
     }
 }

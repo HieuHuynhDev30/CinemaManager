@@ -5,11 +5,14 @@
 package Classes;
 
 import java.util.*;
+import java.util.Map.Entry;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+import java.util.Arrays;
+import javax.xml.bind.annotation.XmlElement;
 
 /**
  *
@@ -23,9 +26,10 @@ public class Phong {
     private int slVip, slThuong, slDoi;
     @XmlAttribute
     private String id;
-    @XmlTransient
-    private Map<String, Ghe> dsGhe = new HashMap<>();
-    public List<Ghe> GheList = new ArrayList<>();
+    private Map<String, GheThuong> dsGheThuong = new HashMap<>();
+    private Map<String, GheVip> dsGheVip = new HashMap<>();
+    private Map<String, GheDoi> dsGheDoi = new HashMap<>();
+//    public List<Ghe> GheList = new ArrayList<>();
     private boolean isFull;
     private SuatChieu xuatChieu;
     private boolean isPlaying;
@@ -67,21 +71,52 @@ public class Phong {
         this.slDoi = slDoi;
     }
 
-    public Map<String, Ghe> getDsGhe() {
-        return dsGhe;
+    public Map<String, GheThuong> getDsGheThuong() {
+        return dsGheThuong;
     }
 
-    public void setDsGhe() {
-        for (Ghe ghe : this.GheList) {
-            this.dsGhe.put(ghe.viTri, ghe);
-        }
+    public void setDsGheThuong(Map<String, GheThuong> dsGheThuong) {
+        this.dsGheThuong = dsGheThuong;
     }
-    
 
+    public Map<String, GheVip> getDsGheVip() {
+        return dsGheVip;
+    }
+
+    public void setDsGheVip(Map<String, GheVip> dsGheVip) {
+        this.dsGheVip = dsGheVip;
+    }
+
+    public Map<String, GheDoi> getDsGheDoi() {
+        return dsGheDoi;
+    }
+
+    public void setDsGheDoi(Map<String, GheDoi> dsGheDoi) {
+        this.dsGheDoi = dsGheDoi;
+    }
+
+//    public Map<String, Ghe> getDsGhe() {
+//        return dsGhe;
+//    }
+//
+//    public void setDsGhe() {
+//        for (Ghe ghe : this.GheList) {
+//            this.dsGhe.put(ghe.viTri, ghe);
+//        }
+//    }
+//
     public void themGhe(Ghe ghe) {
         ghe.setViTri(String.format("%s%s%d", this.getId(), rows, columns));
-        this.GheList.add(ghe);
-        dsGhe.put(ghe.getViTri(), ghe);
+//        this.GheList.add(ghe);
+        if (ghe instanceof GheThuong gheThuong) {
+            dsGheThuong.put(ghe.getViTri(), gheThuong);
+        }
+        if (ghe instanceof GheVip gheVip) {
+            dsGheVip.put(ghe.getViTri(), gheVip);
+        }
+        if (ghe instanceof GheDoi gheDoi) {
+            dsGheDoi.put(ghe.getViTri(), gheDoi);
+        }
         if (columns < 10) {
             columns++;
         } else {
@@ -116,8 +151,18 @@ public class Phong {
 
     public int inTongTrong() {
         int tong = 0;
-        for (Ghe ghe : GheList) {
-            if (!ghe.IsTaken) {
+        for (Entry<String, GheThuong> g : this.dsGheThuong.entrySet()) {
+            if (!g.getValue().getIsTaken()) {
+                tong++;
+            }
+        }
+        for (Entry<String, GheVip> g : this.dsGheVip.entrySet()) {
+            if (!g.getValue().getIsTaken()) {
+                tong++;
+            }
+        }
+        for (Entry<String, GheDoi> g : this.dsGheDoi.entrySet()) {
+            if (!g.getValue().getIsTaken()) {
                 tong++;
             }
         }
@@ -125,12 +170,12 @@ public class Phong {
     }
 
     public int inTongDat() {
-        return dsGhe.size() - inTongTrong();
+        return dsGheThuong.size() + dsGheVip.size() + dsGheDoi.size() - inTongTrong();
     }
 
     public String inThuongDat() {
         String dsThuongDat = "";
-        for (Ghe ghe : GheList) {
+        for (GheThuong ghe : dsGheThuong.values()) {
             if ("thuong".equals(ghe.getLoai().toLowerCase()) && ghe.IsTaken) {
                 dsThuongDat += ghe.getViTri() + ", ";
             }
@@ -140,7 +185,7 @@ public class Phong {
 
     public String inVipDat() {
         String dsVipDat = "";
-        for (Ghe ghe : GheList) {
+        for (GheVip ghe : dsGheVip.values()) {
             if ("vip".equals(ghe.getLoai().toLowerCase()) && ghe.IsTaken) {
                 dsVipDat += ghe.getViTri() + ", ";
             }
@@ -150,7 +195,7 @@ public class Phong {
 
     public String inDoiDat() {
         String dsDoiDat = "";
-        for (Ghe ghe : GheList) {
+        for (GheDoi ghe : dsGheDoi.values()) {
             if ("doi".equals(ghe.getLoai().toLowerCase()) && ghe.IsTaken) {
                 dsDoiDat += ghe.getViTri() + ", ";
             }
@@ -162,36 +207,64 @@ public class Phong {
         String dsTrongThuong = "";
         String dsTrongVip = "";
         String dsTrongDoi = "";
-        for (Ghe ghe : GheList) {
-            if (!ghe.IsTaken) {
-                switch (ghe.getLoai().toLowerCase()) {
-                    case "thuong":
-                        dsTrongThuong += ghe.getViTri() + ", ";
-                    case "vip":
-                        dsTrongVip += ghe.getViTri() + ", ";
-                    case "doi":
-                        dsTrongDoi += ghe.getViTri() + ", ";
-                }
+        for (Entry<String, GheThuong> g : this.dsGheThuong.entrySet()) {
+            if (g.getValue().getKhachId() == null) {
+                dsTrongThuong += g.getKey() + ", ";
             }
         }
-        return dsTrongThuong + dsTrongVip + dsTrongDoi;
+        for (Entry<String, GheVip> g : this.dsGheVip.entrySet()) {
+            if (g.getValue().getKhachId() == null) {
+                dsTrongVip += g.getKey() + ", ";
+            }
+        }
+        for (Entry<String, GheDoi> g : this.dsGheDoi.entrySet()) {
+            if (g.getValue().getKhachId() == null) {
+                dsTrongDoi += g.getKey() + ", ";
+            }
+        }
+        String[] thuongArr = dsTrongThuong.split(",");
+        String[] vipArr = dsTrongVip.split(",");
+        String[] doiArr = dsTrongDoi.split(",");
+        Arrays.sort(thuongArr);
+        Arrays.sort(vipArr);
+        Arrays.sort(doiArr);
+        return "DsGheThuong= " + Arrays.toString(thuongArr) + "\n" + "DsGheVip= " + Arrays.toString(vipArr) + "\n" + "DsGheDoi= " + Arrays.toString(doiArr) + "\n";
     }
 
-    public String inDsGhe() {
-        String dsGheStr = "";
-        for (int i = 0; i < GheList.size(); i++) {
-            dsGheStr += GheList.get(i).InVitri() + ", ";
+    public List<Ghe> getDsGheTrong() {
+        List<Ghe> ds = new ArrayList<>();
+        for (Entry<String, GheThuong> g : this.dsGheThuong.entrySet()) {
+            if (!g.getValue().getIsTaken()) {
+                ds.add(g.getValue());
+            }
         }
-        return dsGheStr;
+        for (Entry<String, GheVip> g : this.dsGheVip.entrySet()) {
+            if (!g.getValue().getIsTaken()) {
+                ds.add(g.getValue());
+            }
+        }
+        for (Entry<String, GheDoi> g : this.dsGheDoi.entrySet()) {
+            if (!g.getValue().getIsTaken()) {
+                ds.add(g.getValue());
+            }
+        }
+        return ds;
     }
-    
-    public int getSucChua(){
-        return this.getSlThuong() + this.getSlVip() + this.getSlDoi();
+
+//    public String inDsGhe() {
+//        String dsGheStr = "";
+//        for (int i = 0; i < GheList.size(); i++) {
+//            dsGheStr += GheList.get(i).InVitri() + ", ";
+//        }
+//        return dsGheStr;
+//    }
+    public int getSucChua() {
+        return this.inTongTrong() + this.inTongDat();
     }
 
     @Override
     public String toString() {
-        return "Phong{" + "id=" + getId() + ", slVip=" + slVip + ", slThuong=" + slThuong + ", slDoi=" + slDoi + ", sucChua=" + getSucChua() + ", dsGhe=" + inDsGhe() + ", isFull=" + isFull + ", xuatChieu=" + xuatChieu + ", isPlaying=" + isPlaying + '}' + '\n';
+        return "Phong{" + "id=" + getId() + ", slVip=" + slVip + ", slThuong=" + slThuong + ", slDoi=" + slDoi + ", sucChua=" + getSucChua() + ", dsGhe=" + inDsGheTrong() + ", isFull=" + isFull + ", xuatChieu=" + xuatChieu + ", isPlaying=" + isPlaying + '}' + '\n';
     }
 
 }

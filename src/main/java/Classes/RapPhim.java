@@ -55,7 +55,6 @@ public class RapPhim {
     public void setDsPhong(List<Phong> dsPhong) {
         this.dsPhong = dsPhong;
     }
-    
 
     public void themPhong(Phong p) {
         this.dsPhong.add(p);
@@ -68,7 +67,6 @@ public class RapPhim {
     public void setDsKhach(List<Khach> dsKhach) {
         this.dsKhach = dsKhach;
     }
-    
 
     public String inDsKhach() {
         String ds = "";
@@ -109,17 +107,20 @@ public class RapPhim {
     public void setDsSuatChieu(List<SuatChieu> dsSuatChieu) {
         this.dsSuatChieu = dsSuatChieu;
     }
-    
 
     public String themSuatChieu(SuatChieu suatChieu) {
-       for (SuatChieu sc : this.getDsSuatChieu()) {
-           if(sc.getPhong().getId() == null ? suatChieu.getPhong().getId() == null : sc.getPhong().getId().equals(suatChieu.getPhong().getId())) {
-               Duration interval = Duration.between(sc.getThoiGianChieu(), suatChieu.getThoiGianChieu());
-               if (interval.toMinutes() <= suatChieu.getPhim().getThoiLuong().toMinutes() + 30 || interval.toMinutes() <= sc.getPhim().getThoiLuong().toMinutes() + 30) {
-                   return "Suat chieu sau can bat dau sau khi suat chieu truoc ket thuc it nhat 30 phut";
-               } 
-           }
-       }
+        for (SuatChieu sc : this.getDsSuatChieu()) {
+            if (sc.getPhong().getId() == null ? suatChieu.getPhong().getId() == null : sc.getPhong().getId().equals(suatChieu.getPhong().getId())) {
+                Duration interval = Duration.between(sc.getThoiGianChieu(), suatChieu.getThoiGianChieu());
+                long intervalAbs = Math.abs(interval.toMinutes());
+                if (intervalAbs <= suatChieu.getPhim().getThoiLuong().toMinutes() + 30 || intervalAbs <= sc.getPhim().getThoiLuong().toMinutes() + 30) {
+                    System.out.println(interval.toMinutes());
+                    System.out.println(suatChieu.getPhim().getThoiLuong().toMinutes() + 30);
+                    System.out.println(sc.getPhim().getThoiLuong().toMinutes() + 30);
+                    return "Suat chieu sau can bat dau sau khi suat chieu truoc ket thuc it nhat 30 phut";
+                }
+            }
+        }
         this.dsSuatChieu.add(suatChieu);
         return "Them suat chieu thanh cong";
     }
@@ -131,7 +132,7 @@ public class RapPhim {
     public void setDsPhim(List<Phim> dsPhim) {
         this.dsPhim = dsPhim;
     }
-    
+
     public String inDsPhim() {
         String ds = "";
         for (Phim ph : dsPhim) {
@@ -139,7 +140,7 @@ public class RapPhim {
         }
         return ds;
     }
-    
+
     public void themPhim(Phim phim) {
         this.dsPhim.add(phim);
     }
@@ -178,7 +179,7 @@ public class RapPhim {
         return tong;
     }
 
-    public String nangCapHV(String id){
+    public String nangCapHV(String id) {
         for (Khach k : this.getDsKhach()) {
             if (k.getId() == null ? id == null : k.getId().equals(id)) {
                 HoiVien hv = new HoiVien();
@@ -193,7 +194,7 @@ public class RapPhim {
         }
         return "Nang cap hoi vien khong thanh cong";
     }
-    
+
     @Override
     public String toString() {
         return "RapPhim{" + "tenRap=" + tenRap + ", soPhong=" + getSoPhong() + ", dsPhong=" + inDsPhong() + ", dsKhach=" + inDsKhach() + ", dsHoiVien=" + inDsHoiVien() + ", dsLoaiGhe=" + dsLoaiGhe + ", sucChua=" + getSucChua() + '}';

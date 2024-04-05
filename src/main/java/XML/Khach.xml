@@ -1,10 +1,93 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <khachs>
     <khach id="K1">
-        <slVeDat>0</slVeDat>
-        <tongTien>0</tongTien>
-        <hoTen>Huynh Van Minh</hoTen>
+        <slVeDat>3</slVeDat>
+        <tongTien>320000</tongTien>
+        <hoTen>Huynh Van Tai</hoTen>
         <gioiTinh>Nam</gioiTinh>
-        <ngaySinh>2001-06-12</ngaySinh>
+        <ngaySinh>1996-05-20</ngaySinh>
+        <dsVe id="V1">
+            <ghe>
+                <gia>120000.0</gia>
+                <khachId>K1</khachId>
+                <loai>Vip</loai>
+                <viTri>P1A7</viTri>
+            </ghe>
+            <suat id="SCH1">
+                <phim id="Ph1">
+                    <ten>Killer</ten>
+                    <theLoai>Kinh di</theLoai>
+                    <doTuoi>18</doTuoi>
+                    <thoiLuong>PT2H5M</thoiLuong>
+                    <TgKhoiChieu>2024-05-16</TgKhoiChieu>
+                </phim>
+                <phongId>P1</phongId>
+                <thoiGianChieu>19-06-2024 15:00</thoiGianChieu>
+            </suat>
+        </dsVe>
+        <dsVe id="V2">
+            <ghe>
+                <gia>120000.0</gia>
+                <khachId>K1</khachId>
+                <loai>Vip</loai>
+                <viTri>P1A8</viTri>
+            </ghe>
+            <suat id="SCH3">
+                <phim id="Ph2">
+                    <ten>Spider-man</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>18</doTuoi>
+                    <thoiLuong>PT2H</thoiLuong>
+                    <TgKhoiChieu>2024-05-23</TgKhoiChieu>
+                </phim>
+                <phongId>P1</phongId>
+                <thoiGianChieu>10-06-2024 16:00</thoiGianChieu>
+            </suat>
+        </dsVe>
+        <dsVe id="V3">
+            <ghe>
+                <gia>80000.0</gia>
+                <khachId>K1</khachId>
+                <loai>Thuong</loai>
+                <viTri>P3A1</viTri>
+            </ghe>
+            <suat id="SCH5">
+                <phim id="Ph1">
+                    <ten>Killer</ten>
+                    <theLoai>Kinh di</theLoai>
+                    <doTuoi>18</doTuoi>
+                    <thoiLuong>PT2H5M</thoiLuong>
+                    <TgKhoiChieu>2024-05-16</TgKhoiChieu>
+                </phim>
+                <phongId>P3</phongId>
+                <thoiGianChieu>15-09-2024 15:00</thoiGianChieu>
+            </suat>
+        </dsVe>
+    </khach>
+    <khach id="K2">
+        <slVeDat>1</slVeDat>
+        <tongTien>120000</tongTien>
+        <hoTen>Nguyen Thi Le</hoTen>
+        <gioiTinh>Nu</gioiTinh>
+        <ngaySinh>1990-06-15</ngaySinh>
+        <dsVe id="V4">
+            <ghe>
+                <gia>120000.0</gia>
+                <khachId>K2</khachId>
+                <loai>Vip</loai>
+                <viTri>P3A4</viTri>
+            </ghe>
+            <suat id="SCH7">
+                <phim id="Ph3">
+                    <ten>Batman Begin</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>16</doTuoi>
+                    <thoiLuong>PT2H5M</thoiLuong>
+                    <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+                </phim>
+                <phongId>P3</phongId>
+                <thoiGianChieu>30-06-2024 16:30</thoiGianChieu>
+            </suat>
+        </dsVe>
     </khach>
 </khachs>

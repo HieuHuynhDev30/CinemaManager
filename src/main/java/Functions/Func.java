@@ -94,9 +94,6 @@ public class Func {
                 PHONG_FILE_NAME, PhongListXML.class);
         if (phongListXML != null) {
             list = phongListXML.getPhong();
-            for (Phong phong : list) {
-                phong.setDsGhe();
-            }
         }
         return list;
     }

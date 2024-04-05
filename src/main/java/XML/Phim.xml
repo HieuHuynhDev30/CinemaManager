@@ -1,73 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <phims>
-    <phim>
-        <ten>Spider-man</ten>
-        <theLoai>Khoa hoc vien tuong</theLoai>
-        <doTuoi>16</doTuoi>
+    <phim id="Ph1">
+        <ten>Killer</ten>
+        <theLoai>Kinh di</theLoai>
+        <doTuoi>18</doTuoi>
         <thoiLuong>PT2H5M</thoiLuong>
-        <TgKhoiChieu>2024-04-10</TgKhoiChieu>
+        <TgKhoiChieu>2024-05-16</TgKhoiChieu>
     </phim>
-    <phim>
+    <phim id="Ph2">
+        <ten>Spider-man</ten>
+        <theLoai>Hanh dong</theLoai>
+        <doTuoi>18</doTuoi>
+        <thoiLuong>PT2H</thoiLuong>
+        <TgKhoiChieu>2024-05-23</TgKhoiChieu>
+    </phim>
+    <phim id="Ph3">
         <ten>Batman Begin</ten>
         <theLoai>Hanh dong</theLoai>
         <doTuoi>16</doTuoi>
-        <thoiLuong>PT2H10M</thoiLuong>
-        <TgKhoiChieu>2024-04-08</TgKhoiChieu>
-    </phim>
-    <phim>
-        <ten>Titanic</ten>
-        <theLoai>Tinh cam</theLoai>
-        <doTuoi>18</doTuoi>
-        <thoiLuong>PT2H20M</thoiLuong>
-        <TgKhoiChieu>2024-04-04</TgKhoiChieu>
-    </phim>
-    <phim>
-        <ten>IT</ten>
-        <theLoai>Kinh di</theLoai>
-        <doTuoi>18</doTuoi>
-        <thoiLuong>PT1H30M</thoiLuong>
-        <TgKhoiChieu>2024-05-01</TgKhoiChieu>
-    </phim>
-    <phim>
-        <ten>Kungfu Panda</ten>
-        <theLoai>Hai huoc</theLoai>
-        <doTuoi>12</doTuoi>
-        <thoiLuong>PT1H45M</thoiLuong>
-        <TgKhoiChieu>2024-03-06</TgKhoiChieu>
-    </phim>
-    <phim>
-        <ten>Napoleon</ten>
-        <theLoai>Lich su</theLoai>
-        <doTuoi>18</doTuoi>
-        <thoiLuong>PT2H20M</thoiLuong>
-        <TgKhoiChieu>2024-05-11</TgKhoiChieu>
-    </phim>
-    <phim>
-        <ten>Kong vs Godzilla</ten>
-        <theLoai>Hanh dong</theLoai>
-        <doTuoi>16</doTuoi>
-        <thoiLuong>PT2H</thoiLuong>
-        <TgKhoiChieu>2024-04-12</TgKhoiChieu>
-    </phim>
-    <phim>
-        <ten>Deadpool</ten>
-        <theLoai>Hanh dong</theLoai>
-        <doTuoi>18</doTuoi>
-        <thoiLuong>PT2H10M</thoiLuong>
-        <TgKhoiChieu>2024-04-16</TgKhoiChieu>
-    </phim>
-    <phim>
-        <ten>Mai</ten>
-        <theLoai>Tinh cam</theLoai>
-        <doTuoi>18</doTuoi>
-        <thoiLuong>PT1H40M</thoiLuong>
-        <TgKhoiChieu>2024-05-23</TgKhoiChieu>
-    </phim>
-    <phim>
-        <ten>Mission Impossible</ten>
-        <theLoai>Hanh dong</theLoai>
-        <doTuoi>16</doTuoi>
-        <thoiLuong>PT4H10M</thoiLuong>
-        <TgKhoiChieu>2024-04-25</TgKhoiChieu>
+        <thoiLuong>PT2H5M</thoiLuong>
+        <TgKhoiChieu>2024-06-21</TgKhoiChieu>
     </phim>
 </phims>

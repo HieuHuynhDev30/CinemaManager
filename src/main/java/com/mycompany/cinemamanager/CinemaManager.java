@@ -31,20 +31,28 @@ public class CinemaManager {
         rp.setDsPhim(func.readListPhims());
         rp.setDsKhach(func.readListKhachs());
         rp.setDsPhong(func.readListPhongs());
-//        rp.setDsSuatChieu(func.readListSuatChieus());
+        rp.setDsSuatChieu(func.readListSuatChieus());
+        in("Thong tin rap phim:");
+        in(rp.toString());
         boolean done = false;
         while (!done) {
             in("Menu:");
             in("1. Tao phong\t2. Tao phim\t3. Tao suat chieu\t4. Nhap thong tin khach hang\t5. Thuc hien giao dich ban ve\t6. Nang cap hoi vien\t7. Exit");
             String option = sc.nextLine();
             switch (option) {
-                case "1" -> taoPhong(rp);
-                case "2" -> taoPhim(rp, func);
-                case "3" -> taoSuatChieu(rp);
-                case "4" -> nhapKhachHang(rp, func);
-                case "5" -> giaoDichBanVe(rp);
-                case "6" -> nangCapHoiVien(rp);
-                default ->{ 
+                case "1" ->
+                    taoPhong(rp);
+                case "2" ->
+                    taoPhim(rp, func);
+                case "3" ->
+                    taoSuatChieu(rp);
+                case "4" ->
+                    nhapKhachHang(rp, func);
+                case "5" ->
+                    giaoDichBanVe(rp);
+                case "6" ->
+                    nangCapHoiVien(rp);
+                default -> {
                     func.writeListKhachs(rp.getDsKhach());
                     func.writeListPhims(rp.getDsPhim());
                     func.writeListPhongs(rp.getDsPhong());
@@ -147,7 +155,7 @@ public class CinemaManager {
             sch.setPhim(rp.getDsPhim().get(Integer.parseInt(sc.nextLine())));
             in("Chon phong chieu:");
             for (int i = 0; i < rp.getDsPhong().size(); i++) {
-                in(i + ". " + rp.getDsPhong().get(i).getId() + " - Suc chua: " + rp.getDsPhong().get(i).getDsGhe().size());
+                in(i + ". " + rp.getDsPhong().get(i).getId() + " - Suc chua: " + rp.getDsPhong().get(i).getDsGheTrong().size());
             }
             int pchoice = Integer.parseInt(sc.nextLine());
             sch.setPhong(rp.getDsPhong().get(pchoice));
@@ -193,7 +201,7 @@ public class CinemaManager {
         }
         in("Danh sach khach hang:");
         in(rp.inDsKhach());
-        
+
     }
 
     private static void giaoDichBanVe(RapPhim rp) {
@@ -244,22 +252,37 @@ public class CinemaManager {
         in("Chon vi tri:");
         in(phongP.inDsGheTrong());
         String vtchoice = sc.nextLine();
-        Ghe gheP = phongP.getDsGhe().get(vtchoice);
+        if (phongP.getDsGheThuong().containsKey(vtchoice)) {
+            GheThuong gheP = phongP.getDsGheThuong().get(vtchoice);
+            xuLyVe(gheP, schP, khachP);
+        }
+        if (phongP.getDsGheVip().containsKey(vtchoice)) {
+            GheVip gheP = phongP.getDsGheVip().get(vtchoice);
+            xuLyVe(gheP, schP, khachP);
+        }
+        if (phongP.getDsGheDoi().containsKey(vtchoice)) {
+            GheDoi gheP = phongP.getDsGheDoi().get(vtchoice);
+            xuLyVe(gheP, schP, khachP);
+        }
+        func.writeListVes(khachP.getDsVe());
+        in("Khach hang da mua:");
+        in(khachP.toString());
+    }
+
+    public static void xuLyVe(Ghe gheP, SuatChieu schP, Khach khachP) {
         if (gheP.getIsTaken()) {
             in("Ghe da duoc mua, vui long chon ghe khac");
         } else {
             gheP.setIsTaken();
+            gheP.setThoiGianDat(LocalDateTime.now());
+            gheP.setKhachId(khachP.getId());
             Ve ve = new Ve();
             ve.setGhe(gheP);
             ve.setSuat(schP);
-            khachP.muaVe(ve);
-            func.writeListVes(khachP.getDsVe());
             in("Thong tin ve:");
             in(ve.toString());
+            khachP.muaVe(ve);
         }
-
-        in("Khach hang da mua:");
-        in(khachP.toString());
     }
 
     private static void nangCapHoiVien(RapPhim rp) {

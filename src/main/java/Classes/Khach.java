@@ -55,7 +55,20 @@ public class Khach {
         return this.dsVe.size();
     }
 
+    public void setSlVeDat(int slVeDat) {
+        this.slVeDat = slVeDat;
+    }
+
+    public void setTongTien(int tongTien) {
+        this.tongTien = tongTien;
+    }
+
     public int getTongTien() {
+        return tongTien;
+    }
+    
+
+    public int inTongTien() {
         int tong = 0;
         if (!this.dsVe.isEmpty()) {
             for (int i = 0; i < this.dsVe.size(); i++) {
@@ -104,6 +117,8 @@ public class Khach {
 
     public void muaVe(Ve ve) {
         this.dsVe.add(ve);
+        this.slVeDat++;
+        this.tongTien += ve.getGhe().getGia();
     }
 
     public String inDsVe() {
@@ -130,6 +145,7 @@ public class Khach {
         }
         return dsXoa;
     }
+    
 
     public void chinhSuaTk(String hoTen, int tuoi, CharSequence ns) {
         this.setHoTen(hoTen);
