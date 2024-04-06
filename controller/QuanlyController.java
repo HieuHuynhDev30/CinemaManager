@@ -28,6 +28,7 @@ public class QuanlyController {
         quanly.addClearListener(new ClearKhachListener());
         quanly.addListKhachSelectionListener(new ListKhachSelectionListener());
         quanly.addDeleteKhachListener(new DeleteKhachListener());
+        quanly.addEditKhachListener(new EditKhachListener());
     }
     
     
@@ -78,6 +79,26 @@ public class QuanlyController {
                 quanly.clearKhachInfo();
                 quanly.showListKhach(khachDao.getListKhach());
                 quanly.showMessage("Xóa thành công!");
+            }
+        }
+    }
+    
+    
+    
+    /**
+     * Lớp EditStudentListener 
+     * chứa cài đặt cho sự kiện click button "Edit"
+     * 
+     * @author viettuts.vn
+     */
+    class EditKhachListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            Khach khach = quanly.getKhachInfo();
+            if (khach != null) {
+                khachDao.edit(khach);
+                quanly.showKhach(khach);
+                quanly.showListKhach(khachDao.getListKhach());
+                quanly.showMessage("Cập nhật thành công!");
             }
         }
     }

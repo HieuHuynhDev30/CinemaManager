@@ -9,11 +9,19 @@
         <ngaySinh>2003-08-22</ngaySinh>
     </khach>
     <khach>
-        <slVeDat>2</slVeDat>
+        <slVeDat>9</slVeDat>
         <tongTien>0</tongTien>
         <id>K2</id>
         <hoTen>Nguyễn Thủy Ngân</hoTen>
         <gioiTinh>Nữ</gioiTinh>
         <ngaySinh>2003-03-15</ngaySinh>
+    </khach>
+    <khach>
+        <slVeDat>3</slVeDat>
+        <tongTien>0</tongTien>
+        <id>K3</id>
+        <hoTen>Huỳnh Ngọc Hiệu</hoTen>
+        <gioiTinh>Nam</gioiTinh>
+        <ngaySinh>1996-04-12</ngaySinh>
     </khach>
 </khachs>

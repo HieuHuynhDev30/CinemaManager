@@ -70,6 +70,20 @@ public final class KhachDao {
      //   return false;
     }
     
+    public void edit(Khach khach) {
+        int size = listKhach.size();
+        for (int i = 0; i < size; i++) {
+            if (listKhach.get(i).getId().equals(khach.getId())) {
+                listKhach.get(i).setHoTen(khach.getHoTen());
+                listKhach.get(i).setGioiTinh(khach.getGioiTinh());
+                //listKhach.get(i).setNgaySinh(khach.getNgaySinh().toString());
+                listKhach.get(i).setSLV(khach.getSlVeDat());
+                writeListKhachs(listKhach);
+                break;
+            }
+        }
+    }
+    
     public void writeListKhachs(List<Khach> khachs) {
         KhachListXML khachXML = new KhachListXML();
         khachXML.setKhach(khachs);
