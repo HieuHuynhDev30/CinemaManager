@@ -6,6 +6,7 @@ package Classes;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 /**
  *
@@ -13,11 +14,15 @@ import java.time.format.DateTimeFormatter;
  */
 public class HoiVien extends Khach {
 
+    private static int currId;
     private double diem;
     private LocalDateTime ngayDk;
-    private static final DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+    private static final DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
 
     public HoiVien() {
+        this.currId++;
+        super.setId("HV" + this.currId);
+        this.ngayDk = LocalDateTime.now();
     }
 
     public double getDiem() {
@@ -30,6 +35,12 @@ public class HoiVien extends Khach {
 
     public LocalDateTime getNgayDk() {
         return ngayDk;
+    }
+    
+    public void setDsVe(List<Ve> ves) {
+        for (Ve ve : ves) {
+            super.muaVe(ve);
+        }
     }
 
     public void setNgayDk(CharSequence ngayGio) {
@@ -45,16 +56,22 @@ public class HoiVien extends Khach {
         return formatNS;
     }
     
+    @Override
+    public void muaVe(Ve ve) {
+        super.muaVe(ve);
+        this.tichDiem(ve.getGhe().getGia());
+    }
+    
     public String doiVe(Ve ...ves) {
         int ve = 0;
         String dsMua = "";
         while (ve < ves.length) {
             try {
                 super.getDsVe().add(ves[ve]);
-                dsMua += String.format("Mua ve %d thanh cong\n", ves[ve].getId());
+                dsMua += String.format("Mua ve %s thanh cong\n", ves[ve].getId());
                 this.tichDiem(-ves[ve].getGhe().getGia());
             } catch (Exception e) {
-                dsMua += String.format("Mua ve %d khong thanh cong\n", ves[ve].getId());
+                dsMua += String.format("Mua ve %s khong thanh cong\n", ves[ve].getId());
             }
             ve++;
         }

@@ -4,6 +4,8 @@
  */
 package Classes;
 
+import java.time.LocalDateTime;
+
 /**
  *
  * @author Lenovo
@@ -13,23 +15,23 @@ public class GheVip extends Ghe {
     public GheVip() {
     }
 
-    public GheVip(String Loai, Phong Phong, String ViTri, Float Gia, boolean IsTaken, Khach khach, CharSequence ngaygio) {
-        super(Loai, Phong, ViTri, Gia, IsTaken, khach, ngaygio);
+    public GheVip(String loai, String viTri, double gia, boolean IsTaken, Khach khach, LocalDateTime thoiGianDat) {
+        super(loai, viTri, gia, IsTaken, khach, thoiGianDat);
     }
     
     public void setLoai() {
-        this.Loai = "VIP";
+        this.loai = "VIP";
     }
 
     public void setGia() {
-        this.Gia = (float) 120.000;
+        this.gia =  120.000;
     }
 
     @Override
     public String toString() {
         setLoai();
         setGia();
-        return "GheVip{" + "Loai= " + Loai + ", Phong= " + Phong + ", ViTri= " + ViTri + ", Gia= " + Gia + ", IsTaken= " + IsTaken + ", khach=" + khach + ", ThoiGianDat= " + ThoiGianDat + '}';
+        return "GheVip{" + "Loai= " + loai + ", ViTri= " + viTri + ", Gia= " + gia + ", IsTaken= " + IsTaken + ", khach=" + khach + ", ThoiGianDat= " + thoiGianDat + '}';
     }
     
 }

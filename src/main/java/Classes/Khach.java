@@ -4,50 +4,65 @@
  */
 package Classes;
 
+import Classes.Adaptaters.LocalDateAdapter;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  *
  * @author Lenovo
  */
+@XmlRootElement(name = "khach")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Khach {
-
     private static int currId;
-    private int id, tuoi, slVeDat, tongTien;
+    private int slVeDat, tongTien;
+    private String id;
     private String hoTen, gioiTinh;
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
     private LocalDate ngaySinh;
     public static final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy");
     private List<Ve> dsVe = new ArrayList<>();
 
     public Khach() {
         currId++;
-        this.id = currId;
+        this.id = "K" + currId;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public int getTuoi() {
-        return tuoi;
+    public void setId(String id) {
+        this.id = id;
     }
+    
+    public void setSLV(int slVe){
+        this.slVeDat = slVe;
+    }
+    
 
-    public void setTuoi(int tuoi) {
-        this.tuoi = tuoi;
+    public int getTuoi() {
+        return LocalDate.now().getYear() - ngaySinh.getYear();
     }
 
     public int getSlVeDat() {
-        return this.dsVe.size();
+        return this.slVeDat;
     }
 
     public int getTongTien() {
         int tong = 0;
-        for (int i = 0; i < this.dsVe.size(); i++) {
-            tong += this.dsVe.get(i).getGhe().getGia();
+        if (!this.dsVe.isEmpty()) {
+            for (int i = 0; i < this.dsVe.size(); i++) {
+                tong += this.dsVe.get(i).getGhe().getGia();
+            }
         }
         return tong;
     }
@@ -74,7 +89,7 @@ public class Khach {
 
     public void setNgaySinh(CharSequence ngay) {
         try {
-           this.ngaySinh = LocalDate.parse(ngay, dateFormat);
+            ngaySinh = LocalDate.parse(ngay, dateFormat);
         } catch (Exception e) {
             System.out.println("Nhap sai dinh dang ngay");
         }
@@ -95,8 +110,10 @@ public class Khach {
 
     public String inDsVe() {
         String dsve = "";
-        for (int i = 0; i < this.dsVe.size(); i++) {
-            dsve += this.dsVe.get(i).toString() + "\n";
+        if (!this.dsVe.isEmpty()) {
+            for (int i = 0; i < this.dsVe.size(); i++) {
+                dsve += this.dsVe.get(i).toString() + "\n";
+            }
         }
         return dsve;
     }
@@ -118,12 +135,11 @@ public class Khach {
 
     public void chinhSuaTk(String hoTen, int tuoi, CharSequence ns) {
         this.setHoTen(hoTen);
-        this.setTuoi(tuoi);
         this.setNgaySinh(ns);
     }
 
     @Override
     public String toString() {
-        return "Khach{" + "id=" + id + ", tuoi=" + tuoi + ", slVeDat=" + slVeDat + ", tongTien=" + tongTien + ", hoTen=" + hoTen + ", gioiTinh=" + gioiTinh + ", ngaySinh=" + toStringNS() + ", dsVe=" + dsVe + '}' + "\n";
+        return "Khach{" + "id=" + id + ", tuoi=" + getTuoi() + ", slVeDat=" + getSlVeDat() + ", tongTien=" + getTongTien() + ", hoTen=" + hoTen + ", gioiTinh=" + gioiTinh + ", ngaySinh=" + toStringNS() + ", dsVe=" + inDsVe() + '}';
     }
 }

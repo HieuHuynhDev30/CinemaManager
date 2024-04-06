@@ -11,23 +11,18 @@ package Classes;
 public class GheThuong extends Ghe {
 
     public GheThuong() {
+        super.setGia(80000);
+        super.setLoai("Thuong");
     }
-
-    public GheThuong(String Loai, Phong Phong, String ViTri, boolean IsTaken, Khach khach, CharSequence ngaygio) {
-        super(Loai, Phong, ViTri, 80000, IsTaken, khach, ngaygio);
-    }
-
-    public void setLoai() {
-        this.Loai = "Thuong";
-    }
-
-    public void setGia(double gia) {
-        this.Gia = gia;
+    
+    public GheThuong(Khach khach) {
+        super.setKhach(khach);
+        super.setGia(80000);
+        super.setLoai("Thuong");
     }
 
     @Override
     public String toString() {
-        setLoai();
-        super.getGia();
-        return "GheThuong{" + "Loai= " + Loai + ", Phong= " + Phong + ", ViTri= " + ViTri + ", Gia= " + Gia + ", IsTaken= " + IsTaken + ", khach=" + khach + ", ThoiGianDat= " + ThoiGianDat + '}';
+        return super.toString() + "khach:" + super.getKhach().getHoTen();
     }
+}

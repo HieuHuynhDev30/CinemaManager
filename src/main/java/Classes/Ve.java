@@ -8,29 +8,19 @@ package Classes;
  *
  * @author Lenovo
  */
-class Ve {
-    private int id;
-    private Khach khach;
+public class Ve {
+    private static int currId;
+    private String id;
     private Ghe ghe;
-    private XuatChieu xuat;
+    private SuatChieu suat;
 
     public Ve() {
+        currId++;
+        this.id = "V" + currId;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Khach getKhach() {
-        return khach;
-    }
-
-    public void setKhach(Khach khach) {
-        this.khach = khach;
     }
 
     public Ghe getGhe() {
@@ -41,17 +31,18 @@ class Ve {
         this.ghe = ghe;
     }
 
-    public XuatChieu getXuat() {
-        return xuat;
+    public SuatChieu getSuat() {
+        return suat;
     }
 
-    public void setXuat(XuatChieu xuat) {
-        this.xuat = xuat;
+    public void setSuat(SuatChieu suat) {
+        this.suat = suat;
     }
 
     @Override
     public String toString() {
-        return "Ve{" + "id=" + id + ", khach=" + khach + ", ghe=" + ghe + ", xuat=" + xuat + '}';
+        String veStr = ghe.viTri;
+        return "Ve{" + "id=" + id + " ghe=" + veStr  + " suat=" + suat.toString() + '}';
     }
     
 }
