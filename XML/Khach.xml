@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<khachs>
+    <khach>
+        <slVeDat>2</slVeDat>
+        <tongTien>0</tongTien>
+        <id>K1</id>
+        <hoTen>Thành An</hoTen>
+        <gioiTinh>Nam</gioiTinh>
+        <ngaySinh>2003-08-22</ngaySinh>
+    </khach>
+    <khach>
+        <slVeDat>2</slVeDat>
+        <tongTien>0</tongTien>
+        <id>K2</id>
+        <hoTen>Nguyễn Thủy Ngân</hoTen>
+        <gioiTinh>Nữ</gioiTinh>
+        <ngaySinh>2003-03-15</ngaySinh>
+    </khach>
+</khachs>
