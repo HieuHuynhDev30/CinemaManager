@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <khachs>
     <khach id="K1">
-        <slVeDat>4</slVeDat>
-        <tongTien>320000</tongTien>
-        <hoTen>Nguyen A</hoTen>
-        <gioiTinh>Nam</gioiTinh>
-        <ngaySinh>2000-06-16</ngaySinh>
+        <slVeDat>3</slVeDat>
+        <tongTien>360000</tongTien>
+        <hoTen>Nguyen Tuyet Mai</hoTen>
+        <gioiTinh>Nu</gioiTinh>
+        <ngaySinh>2003-09-15</ngaySinh>
         <dsVe id="V1">
             <ghe>
-                <gia>80000.0</gia>
+                <gia>120000.0</gia>
                 <khachId>K1</khachId>
-                <loai>Thuong</loai>
-                <viTri>P1A1</viTri>
+                <loai>Vip</loai>
+                <viTri>P1A6</viTri>
             </ghe>
             <suat id="SCH1">
                 <phim id="Ph1">
@@ -22,15 +22,15 @@
                     <TgKhoiChieu>2024-05-16</TgKhoiChieu>
                 </phim>
                 <phongId>P1</phongId>
-                <thoiGianChieu>20-07-2024 15:45</thoiGianChieu>
+                <thoiGianChieu>12-12-2024 15:45</thoiGianChieu>
             </suat>
         </dsVe>
         <dsVe id="V3">
             <ghe>
-                <gia>80000.0</gia>
+                <gia>120000.0</gia>
                 <khachId>K1</khachId>
-                <loai>Thuong</loai>
-                <viTri>P1A2</viTri>
+                <loai>Vip</loai>
+                <viTri>P1A7</viTri>
             </ghe>
             <suat id="SCH1">
                 <phim id="Ph1">
@@ -41,45 +41,52 @@
                     <TgKhoiChieu>2024-05-16</TgKhoiChieu>
                 </phim>
                 <phongId>P1</phongId>
-                <thoiGianChieu>20-07-2024 15:45</thoiGianChieu>
+                <thoiGianChieu>12-12-2024 15:45</thoiGianChieu>
             </suat>
         </dsVe>
-        <dsVe id="V5">
+        <dsVe id="V4">
             <ghe>
-                <gia>80000.0</gia>
+                <gia>120000.0</gia>
                 <khachId>K1</khachId>
-                <loai>Thuong</loai>
-                <viTri>P1A2</viTri>
+                <loai>Vip</loai>
+                <viTri>P3A9</viTri>
             </ghe>
-            <suat id="SCH1">
-                <phim id="Ph1">
-                    <ten>Killer</ten>
-                    <theLoai>Kinh di</theLoai>
+            <suat id="SCH7">
+                <phim id="Ph2">
+                    <ten>Spider-man</ten>
+                    <theLoai>Hanh dong</theLoai>
                     <doTuoi>18</doTuoi>
-                    <thoiLuong>PT2H5M</thoiLuong>
-                    <TgKhoiChieu>2024-05-16</TgKhoiChieu>
+                    <thoiLuong>PT2H</thoiLuong>
+                    <TgKhoiChieu>2024-05-23</TgKhoiChieu>
                 </phim>
-                <phongId>P1</phongId>
-                <thoiGianChieu>20-07-2024 15:45</thoiGianChieu>
+                <phongId>P3</phongId>
+                <thoiGianChieu>16-08-2024 15:45</thoiGianChieu>
             </suat>
         </dsVe>
+    </khach>
+    <khach id="K2">
+        <slVeDat>1</slVeDat>
+        <tongTien>120000</tongTien>
+        <hoTen>Pham Minh Duy</hoTen>
+        <gioiTinh>Nam</gioiTinh>
+        <ngaySinh>2003-03-03</ngaySinh>
         <dsVe id="V7">
             <ghe>
-                <gia>80000.0</gia>
-                <khachId>K1</khachId>
-                <loai>Thuong</loai>
-                <viTri>P1A5</viTri>
+                <gia>120000.0</gia>
+                <khachId>K2</khachId>
+                <loai>Vip</loai>
+                <viTri>P3A8</viTri>
             </ghe>
-            <suat id="SCH1">
-                <phim id="Ph1">
-                    <ten>Killer</ten>
-                    <theLoai>Kinh di</theLoai>
+            <suat id="SCH7">
+                <phim id="Ph2">
+                    <ten>Spider-man</ten>
+                    <theLoai>Hanh dong</theLoai>
                     <doTuoi>18</doTuoi>
-                    <thoiLuong>PT2H5M</thoiLuong>
-                    <TgKhoiChieu>2024-05-16</TgKhoiChieu>
+                    <thoiLuong>PT2H</thoiLuong>
+                    <TgKhoiChieu>2024-05-23</TgKhoiChieu>
                 </phim>
-                <phongId>P1</phongId>
-                <thoiGianChieu>20-07-2024 15:45</thoiGianChieu>
+                <phongId>P3</phongId>
+                <thoiGianChieu>16-08-2024 15:45</thoiGianChieu>
             </suat>
         </dsVe>
     </khach>

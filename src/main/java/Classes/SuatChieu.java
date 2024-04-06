@@ -21,6 +21,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlRootElement(name = "suatChieu")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SuatChieu {
+
     private static int currId;
     @XmlAttribute
     private String id;
@@ -40,7 +41,11 @@ public class SuatChieu {
     public Phim getPhim() {
         return phim;
     }
-    
+
+    public String getId() {
+        return id;
+    }
+
     public String inPhim() {
         return this.phim.toString();
     }
@@ -57,7 +62,7 @@ public class SuatChieu {
         this.phong = phong;
         this.setPhongId();
     }
-    
+
     public String inPhong() {
         return this.phong.getId();
     }
@@ -69,9 +74,7 @@ public class SuatChieu {
     public void setPhongId() {
         this.phongId = phong.getId();
     }
-    
-    
-    
+
     public LocalDateTime getThoiGianChieu() {
         return thoiGianChieu;
     }
@@ -86,6 +89,17 @@ public class SuatChieu {
         } catch (Exception e) {
             System.out.println("Nhap sai dinh dang ngay hoac gio");
         }
+    }
+
+    public int getSlVeDat() {
+        return phong.getSucChua() - phong.getDsGheTrong().size();
+    }
+
+    public double getDoanhThu() {
+        double dtThuong = Double.parseDouble(phong.inThuongDat()) * 80000;
+        double dtVip = Double.parseDouble(phong.inVipDat()) * 120000;
+        double dtDoi = Double.parseDouble(phong.inDoiDat()) * 200000;
+        return dtThuong + dtVip + dtDoi;
     }
 
     @Override

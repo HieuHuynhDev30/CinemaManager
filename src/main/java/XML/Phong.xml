@@ -9,7 +9,6 @@
                 <key>P1A5</key>
                 <value>
                     <gia>80000.0</gia>
-                    <khachId>K1</khachId>
                     <loai>Thuong</loai>
                     <viTri>P1A5</viTri>
                 </value>
@@ -26,7 +25,6 @@
                 <key>P1A1</key>
                 <value>
                     <gia>80000.0</gia>
-                    <khachId>K1</khachId>
                     <loai>Thuong</loai>
                     <viTri>P1A1</viTri>
                 </value>
@@ -43,7 +41,6 @@
                 <key>P1A2</key>
                 <value>
                     <gia>80000.0</gia>
-                    <khachId>K1</khachId>
                     <loai>Thuong</loai>
                     <viTri>P1A2</viTri>
                 </value>
@@ -62,6 +59,7 @@
                 <key>P1A7</key>
                 <value>
                     <gia>120000.0</gia>
+                    <khachId>K1</khachId>
                     <loai>Vip</loai>
                     <viTri>P1A7</viTri>
                 </value>
@@ -70,6 +68,7 @@
                 <key>P1A6</key>
                 <value>
                     <gia>120000.0</gia>
+                    <khachId>K1</khachId>
                     <loai>Vip</loai>
                     <viTri>P1A6</viTri>
                 </value>
@@ -134,16 +133,165 @@
             </entry>
         </dsGheDoi>
         <isFull>false</isFull>
-        <suatChieu id="SCH10">
-            <phim id="Ph3">
-                <ten>Batman Begin</ten>
-                <theLoai>Hanh dong</theLoai>
-                <doTuoi>16</doTuoi>
+        <suatChieu id="SCH1">
+            <phim id="Ph1">
+                <ten>Killer</ten>
+                <theLoai>Kinh di</theLoai>
+                <doTuoi>18</doTuoi>
                 <thoiLuong>PT2H5M</thoiLuong>
-                <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+                <TgKhoiChieu>2024-05-16</TgKhoiChieu>
             </phim>
             <phongId>P1</phongId>
-            <thoiGianChieu>16-05-2024 19:00</thoiGianChieu>
+            <thoiGianChieu>12-12-2024 15:45</thoiGianChieu>
+        </suatChieu>
+        <isPlaying>false</isPlaying>
+        <columns>6</columns>
+        <rows>66</rows>
+    </phong>
+    <phong id="P3">
+        <slVip>5</slVip>
+        <slThuong>5</slThuong>
+        <slDoi>5</slDoi>
+        <dsGheThuong>
+            <entry>
+                <key>P3A3</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P3A3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P3A2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P3A2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P3A5</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P3A5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P3A4</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P3A4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P3A1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P3A1</viTri>
+                </value>
+            </entry>
+        </dsGheThuong>
+        <dsGheVip>
+            <entry>
+                <key>P3A10</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P3A10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P3A7</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P3A7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P3A6</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P3A6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P3A9</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <khachId>K1</khachId>
+                    <loai>Vip</loai>
+                    <viTri>P3A9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P3A8</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <khachId>K2</khachId>
+                    <loai>Vip</loai>
+                    <viTri>P3A8</viTri>
+                    <thoiGianDat>05-04-2024 23:44</thoiGianDat>
+                </value>
+            </entry>
+        </dsGheVip>
+        <dsGheDoi>
+            <entry>
+                <key>P3B4</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P3B4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P3B3</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P3B3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P3B5</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P3B5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P3B2</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P3B2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P3B1</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P3B1</viTri>
+                </value>
+            </entry>
+        </dsGheDoi>
+        <isFull>false</isFull>
+        <suatChieu id="SCH7">
+            <phim id="Ph2">
+                <ten>Spider-man</ten>
+                <theLoai>Hanh dong</theLoai>
+                <doTuoi>18</doTuoi>
+                <thoiLuong>PT2H</thoiLuong>
+                <TgKhoiChieu>2024-05-23</TgKhoiChieu>
+            </phim>
+            <phongId>P3</phongId>
+            <thoiGianChieu>16-08-2024 15:45</thoiGianChieu>
         </suatChieu>
         <isPlaying>false</isPlaying>
         <columns>6</columns>

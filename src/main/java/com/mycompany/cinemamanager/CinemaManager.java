@@ -159,19 +159,23 @@ public class CinemaManager {
             in(rp.inDsPhim());
             sch.setPhim(rp.getDsPhim().get(Integer.parseInt(sc.nextLine())));
             in("Chon phong chieu:");
+            String noPhong = "Khong con phong trong";
             for (int i = 0; i < rp.getDsPhong().size(); i++) {
                 if (rp.getDsPhong().get(i).getSuatChieu() == null) {
-                    in(i + ". " + rp.getDsPhong().get(i).getId() + " - Suc chua: " + rp.getDsPhong().get(i).getDsGheTrong().size());
+                    noPhong = i + ". " + rp.getDsPhong().get(i).getId() + " - Suc chua: " + rp.getDsPhong().get(i).getDsGheTrong().size();
                 }
             }
-            int pchoice = Integer.parseInt(sc.nextLine());
-            rp.getDsPhong().get(pchoice).setSuatChieu(sch);
-            sch.setPhong(rp.getDsPhong().get(pchoice));
-            in("Dat thoi gian chieu (dd-MM-yyyy HH:mm):");
-            sch.setThoiGianChieu(sc.nextLine());
-            in(rp.themSuatChieu(sch));
-            in("In thong tin suat chieu:");
-            in(sch.toString());
+            in(noPhong);
+            if (!"Khong con phong trong".equals(noPhong)) {
+                int pchoice = Integer.parseInt(sc.nextLine());
+                rp.getDsPhong().get(pchoice).setSuatChieu(sch);
+                sch.setPhong(rp.getDsPhong().get(pchoice));
+                in("Dat thoi gian chieu (dd-MM-yyyy HH:mm):");
+                sch.setThoiGianChieu(sc.nextLine());
+                in(rp.themSuatChieu(sch));
+                in("In thong tin suat chieu:");
+                in(sch.toString());
+            }
             in("Tiep tuc tao suat chieu?(y/n):");
             String next = sc.nextLine();
             if ("n".equals(next)) {
@@ -274,7 +278,6 @@ public class CinemaManager {
         }
         in("Khach hang da mua:");
         in(khachP.toString());
-        in(phongP.getDsGheThuong().get("P1A2").getKhachId());
         for (Phong ph : rp.getDsPhong()) {
             if (ph.getId() == null ? phongP.getId() == null : ph.getId().equals(phongP.getId())) {
                 ph.setDsGheThuong(phongP.getDsGheThuong());

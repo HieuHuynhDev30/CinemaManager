@@ -52,7 +52,7 @@ public class RapPhim {
     public void setDsVe(List<Ve> dsVe) {
         this.dsVe = dsVe;
     }
-    
+
     public void themVe(Ve ve) {
         this.dsVe.add(ve);
     }
@@ -206,6 +206,222 @@ public class RapPhim {
             }
         }
         return "Nang cap hoi vien khong thanh cong";
+    }
+
+    public void xoaKhach(String khachId) {
+        for (Khach kh : this.getDsKhach()) {
+            if (kh.getId() == null ? khachId == null : kh.getId().equals(khachId)) {
+                this.getDsKhach().remove(kh);
+                break;
+            }
+        }
+
+    }
+
+    public void xoaPhim(String phimId) {
+        for (Phim ph : this.getDsPhim()) {
+            if (ph.getId() == null ? phimId == null : ph.getId().equals(phimId)) {
+                this.getDsPhim().remove(ph);
+                break;
+            }
+        }
+        for (SuatChieu sch : this.getDsSuatChieu()) {
+            if (sch.getPhim().getId() == null ? phimId == null : sch.getPhim().getId().equals(phimId)) {
+                this.getDsSuatChieu().remove(sch);
+            }
+        }
+    }
+
+    public void xoaSuatChieu(String schId) {
+        for (SuatChieu sch : this.getDsSuatChieu()) {
+            if (sch.getId() == null ? schId == null : sch.getId().equals(schId)) {
+                this.getDsSuatChieu().remove(sch);
+                break;
+            }
+        }
+    }
+
+    public void xoaPhong(String pId) {
+        for (Phong p : this.getDsPhong()) {
+            if (p.getId() == null ? pId == null : p.getId().equals(pId)) {
+                this.getDsPhong().remove(p);
+                break;
+            }
+        }
+        for (SuatChieu sch : this.getDsSuatChieu()) {
+            if (sch.getPhong().getId() == null ? pId == null : sch.getPhong().getId().equals(pId)) {
+                this.getDsSuatChieu().remove(sch);
+            }
+        }
+    }
+
+    public void xoaVe(String veId) {
+        for (Ve ve : this.getDsVe()) {
+            if (ve.getId() == null ? veId == null : ve.getId().equals(veId)) {
+                this.getDsVe().remove(ve);
+                break;
+            }
+        }
+    }
+
+    public void sapXepKhach(ArrayList<Khach> list, String tieuChi, boolean beLon) {
+        if ("id".equals(tieuChi.toLowerCase())) {
+            Collections.sort(list, (Khach o1, Khach o2) -> {
+                int intId1 = Integer.parseInt(o1.getId().substring(1));
+                int intId2 = Integer.parseInt(o1.getId().substring(1));
+                if ((beLon && intId1 < intId2) || (!beLon && intId1 > intId2)) {
+                    return 1;
+                }
+                if ((beLon && intId1 > intId2) || (!beLon && intId1 < intId2)) {
+                    return -1;
+                }
+                return 0;
+            });
+        }
+        if ("tongtien".equals(tieuChi.toLowerCase())) {
+            Collections.sort(list, (Khach o1, Khach o2) -> {
+                int intId1 = o1.getTongTien();
+                int intId2 = o2.getTongTien();
+                if ((beLon && intId1 < intId2) || (!beLon && intId1 > intId2)) {
+                    return 1;
+                }
+                if ((beLon && intId1 > intId2) || (!beLon && intId1 < intId2)) {
+                    return -1;
+                }
+                return 0;
+            });
+        }
+        if ("slvedat".equals(tieuChi.toLowerCase())) {
+            Collections.sort(list, (Khach o1, Khach o2) -> {
+                int intId1 = o1.getSlVeDat();
+                int intId2 = o2.getSlVeDat();
+                if ((beLon && intId1 < intId2) || (!beLon && intId1 > intId2)) {
+                    return 1;
+                }
+                if ((beLon && intId1 > intId2) || (!beLon && intId1 < intId2)) {
+                    return -1;
+                }
+                return 0;
+            });
+        }
+    }
+
+    public void sapXepPhong(ArrayList<Phong> list, String tieuChi, boolean beLon) {
+        if ("id".equals(tieuChi.toLowerCase())) {
+            Collections.sort(list, (Phong o1, Phong o2) -> {
+                int intId1 = Integer.parseInt(o1.getId().substring(1));
+                int intId2 = Integer.parseInt(o1.getId().substring(1));
+                if ((beLon && intId1 < intId2) || (!beLon && intId1 > intId2)) {
+                    return 1;
+                }
+                if ((beLon && intId1 > intId2) || (!beLon && intId1 < intId2)) {
+                    return -1;
+                }
+                return 0;
+            });
+        }
+        if ("succhua".equals(tieuChi.toLowerCase())) {
+            Collections.sort(list, (Phong o1, Phong o2) -> {
+                int intId1 = o1.getSucChua();
+                int intId2 = o2.getSucChua();
+                if ((beLon && intId1 < intId2) || (!beLon && intId1 > intId2)) {
+                    return 1;
+                }
+                if ((beLon && intId1 > intId2) || (!beLon && intId1 < intId2)) {
+                    return -1;
+                }
+                return 0;
+            });
+        }
+    }
+
+    public void sapXepSuatChieu(ArrayList<SuatChieu> list, String tieuChi, boolean beLon) {
+        if ("id".equals(tieuChi.toLowerCase())) {
+            Collections.sort(list, (SuatChieu o1, SuatChieu o2) -> {
+                int intId1 = Integer.parseInt(o1.getId().substring(3));
+                int intId2 = Integer.parseInt(o1.getId().substring(3));
+                if ((beLon && intId1 < intId2) || (!beLon && intId1 > intId2)) {
+                    return 1;
+                }
+                if ((beLon && intId1 > intId2) || (!beLon && intId1 < intId2)) {
+                    return -1;
+                }
+                return 0;
+            });
+        }
+        if ("soluongve".equals(tieuChi.toLowerCase())) {
+            Collections.sort(list, (SuatChieu o1, SuatChieu o2) -> {
+                int intId1 = o1.getSlVeDat();
+                int intId2 = o2.getSlVeDat();
+                if ((beLon && intId1 < intId2) || (!beLon && intId1 > intId2)) {
+                    return 1;
+                }
+                if ((beLon && intId1 > intId2) || (!beLon && intId1 < intId2)) {
+                    return -1;
+                }
+                return 0;
+            });
+        }
+    }
+    
+    public void sapXepPhim(ArrayList<Phim> list, String tieuChi, boolean beLon) {
+        if ("id".equals(tieuChi.toLowerCase())) {
+            Collections.sort(list, (Phim o1, Phim o2) -> {
+                int intId1 = Integer.parseInt(o1.getId().substring(2));
+                int intId2 = Integer.parseInt(o1.getId().substring(2));
+                if ((beLon && intId1 < intId2) || (!beLon && intId1 > intId2)) {
+                    return 1;
+                }
+                if ((beLon && intId1 > intId2) || (!beLon && intId1 < intId2)) {
+                    return -1;
+                }
+                return 0;
+            });
+        }
+        if ("thoiluong".equals(tieuChi.toLowerCase())) {
+            Collections.sort(list, (Phim o1, Phim o2) -> {
+                long intId1 = o1.getThoiLuong().toMinutes();
+                long intId2 = o2.getThoiLuong().toMinutes();
+                if ((beLon && intId1 < intId2) || (!beLon && intId1 > intId2)) {
+                    return 1;
+                }
+                if ((beLon && intId1 > intId2) || (!beLon && intId1 < intId2)) {
+                    return -1;
+                }
+                return 0;
+            });
+        }
+    }
+    
+    public double doanhThu(String tieuChi, Object ...obs){
+        double doanhThu = 0;
+        if ("tong".equals(tieuChi.toLowerCase())) {
+            for (Ve ve : this.getDsVe()) {
+                doanhThu += ve.getGhe().getGia();
+            }
+        }
+        if ("khach".equals(tieuChi.toLowerCase())) {
+            for (Khach ob : (Khach[]) obs) {
+                doanhThu += ob.getTongTien();
+            }
+        }
+        if ("phim".equals(tieuChi.toLowerCase())) {
+            for (Ve ve: this.getDsVe()) {
+                for (String phimId : (String[]) obs) {
+                    if (ve.getSuat().getPhim().getId() == null ? phimId == null : ve.getSuat().getPhim().getId().equals(phimId)) {
+                        doanhThu += ve.getGhe().getGia();
+                    }
+                }
+            }
+        }
+        
+        if ("suatchieu".equals(tieuChi.toLowerCase())) {
+            for (SuatChieu sch : (SuatChieu[]) obs) {
+                doanhThu += sch.getDoanhThu();
+            }
+        }
+        
+        return doanhThu;
     }
 
     @Override
