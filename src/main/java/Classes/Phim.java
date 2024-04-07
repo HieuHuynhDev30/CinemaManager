@@ -24,6 +24,7 @@ public class Phim {
     private String id;
     private String ten, theLoai;
     private int doTuoi;
+    private String posterLink;
     @XmlJavaTypeAdapter(DurationAdapter.class)
     private Duration thoiLuong;
     @XmlJavaTypeAdapter(LocalDateAdapter.class)
@@ -110,6 +111,14 @@ public class Phim {
         } catch (Exception e) {
             System.out.println("Nhap sai dinh dang ngay");
         }
+    }
+
+    public String getPosterLink() {
+        return posterLink;
+    }
+
+    public void setPosterLink(String posterLink) {
+        this.posterLink = posterLink;
     }
 
     public String inTgKhoiChieu() {

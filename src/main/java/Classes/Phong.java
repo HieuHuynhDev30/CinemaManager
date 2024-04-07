@@ -125,7 +125,7 @@ public class Phong {
         }
     }
 
-    public boolean isIsFull() {
+    public boolean getIsFull() {
         return isFull;
     }
 
@@ -141,7 +141,7 @@ public class Phong {
         this.suatChieu = xuatChieu;
     }
 
-    public boolean isIsPlaying() {
+    public boolean getIsPlaying() {
         return isPlaying;
     }
 

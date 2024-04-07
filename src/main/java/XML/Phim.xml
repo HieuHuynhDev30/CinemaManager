@@ -1,23 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <phims>
     <phim id="Ph1">
-        <ten>Killer</ten>
-        <theLoai>Kinh di</theLoai>
+        <ten>Godzilla x Kong: The New Empire</ten>
+        <theLoai>Hanh dong</theLoai>
         <doTuoi>18</doTuoi>
+        <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
         <thoiLuong>PT2H5M</thoiLuong>
         <TgKhoiChieu>2024-05-16</TgKhoiChieu>
     </phim>
     <phim id="Ph2">
-        <ten>Spider-man</ten>
+        <ten>Kung Fu Panda 4</ten>
         <theLoai>Hanh dong</theLoai>
         <doTuoi>18</doTuoi>
+        <posterLink>/Images/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg</posterLink>
         <thoiLuong>PT2H</thoiLuong>
         <TgKhoiChieu>2024-05-23</TgKhoiChieu>
     </phim>
     <phim id="Ph3">
-        <ten>Batman Begin</ten>
+        <ten>Road House</ten>
         <theLoai>Hanh dong</theLoai>
         <doTuoi>16</doTuoi>
+        <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
+        <thoiLuong>PT2H5M</thoiLuong>
+        <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+    </phim> 
+    <phim id="Ph4">
+        <ten>After the Pandemic</ten>
+        <theLoai>Hanh dong</theLoai>
+        <doTuoi>16</doTuoi>
+        <posterLink>/Images/p1LbrdJ53dGfEhRopG71akfzOVu.jpg</posterLink>
+        <thoiLuong>PT2H5M</thoiLuong>
+        <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+    </phim> 
+    <phim id="Ph5">
+        <ten>Madame Web</ten>
+        <theLoai>Hanh dong</theLoai>
+        <doTuoi>16</doTuoi>
+        <posterLink>/Images/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg</posterLink>
+        <thoiLuong>PT2H5M</thoiLuong>
+        <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+    </phim> 
+    <phim id="Ph6">
+        <ten>Creation of Gods</ten>
+        <theLoai>Kinh di</theLoai>
+        <doTuoi>16</doTuoi>
+        <posterLink>/Images/ccJpK0rqzhQeP7Mrs2uKqObFY4L.jpg</posterLink>
+        <thoiLuong>PT2H5M</thoiLuong>
+        <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+    </phim> 
+    <phim id="Ph7">
+        <ten>Migration</ten>
+        <theLoai>Hanh dong</theLoai>
+        <doTuoi>16</doTuoi>
+        <posterLink>/Images/ldfCF9RhR40mppkzmftxapaHeTo.jpg</posterLink>
+        <thoiLuong>PT2H5M</thoiLuong>
+        <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+    </phim> 
+    <phim id="Ph8">
+        <ten>Damsel</ten>
+        <theLoai>Hanh dong</theLoai>
+        <doTuoi>16</doTuoi>
+        <posterLink>/Images/AgHbB9DCE9aE57zkHjSmseszh6e.jpg</posterLink>
+        <thoiLuong>PT2H5M</thoiLuong>
+        <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+    </phim> 
+    <phim id="Ph3">
+        <ten>Hunters</ten>
+        <theLoai>Hanh dong</theLoai>
+        <doTuoi>16</doTuoi>
+        <posterLink>/Images/3UKlVa1CBeQkRksHV5OfFTO52qd.jpg</posterLink>
         <thoiLuong>PT2H5M</thoiLuong>
         <TgKhoiChieu>2024-06-21</TgKhoiChieu>
     </phim>

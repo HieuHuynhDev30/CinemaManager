@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <suatChieus>
     <suatChieu id="SCH1">
-        <phim id="Ph1">
-            <ten>Killer</ten>
-            <theLoai>Kinh di</theLoai>
-            <doTuoi>18</doTuoi>
+        <phim id="Ph4">
+            <ten>After the Pandemic</ten>
+            <theLoai>Hanh dong</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/p1LbrdJ53dGfEhRopG71akfzOVu.jpg</posterLink>
             <thoiLuong>PT2H5M</thoiLuong>
-            <TgKhoiChieu>2024-05-16</TgKhoiChieu>
-        </phim>
+            <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+        </phim> 
         <phongId>P1</phongId>
         <thoiGianChieu>12-12-2024 15:45</thoiGianChieu>
     </suatChieu>
     <suatChieu id="SCH7">
-        <phim id="Ph2">
-            <ten>Spider-man</ten>
+        <phim id="Ph5">
+            <ten>Madame Web</ten>
             <theLoai>Hanh dong</theLoai>
-            <doTuoi>18</doTuoi>
-            <thoiLuong>PT2H</thoiLuong>
-            <TgKhoiChieu>2024-05-23</TgKhoiChieu>
-        </phim>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg</posterLink>
+            <thoiLuong>PT2H5M</thoiLuong>
+            <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+        </phim> 
         <phongId>P3</phongId>
         <thoiGianChieu>16-08-2024 15:45</thoiGianChieu>
     </suatChieu>
