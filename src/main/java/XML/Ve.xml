@@ -8,12 +8,14 @@
             <viTri>P1A6</viTri>
         </ghe>
         <suat id="SCH1">
-            <phim id="Ph1">
-                <ten>Killer</ten>
-                <theLoai>Kinh di</theLoai>
-                <doTuoi>18</doTuoi>
+            <phim id="Ph7">
+                <ten>Migration</ten>
+                <theLoai>Hanh dong</theLoai>
+                <doTuoi>16</doTuoi>
+                <posterLink>/Images/ldfCF9RhR40mppkzmftxapaHeTo.jpg</posterLink>
+                <dt>0</dt>
                 <thoiLuong>PT2H5M</thoiLuong>
-                <TgKhoiChieu>2024-05-16</TgKhoiChieu>
+                <TgKhoiChieu>2024-06-21</TgKhoiChieu>
             </phim>
             <phongId>P1</phongId>
             <thoiGianChieu>12-12-2024 15:45</thoiGianChieu>
@@ -28,9 +30,11 @@
         </ghe>
         <suat id="SCH1">
             <phim id="Ph1">
-                <ten>Killer</ten>
-                <theLoai>Kinh di</theLoai>
+                <ten>Godzilla x Kong: The New Empire</ten>
+                <theLoai>Hanh dong</theLoai>
                 <doTuoi>18</doTuoi>
+                <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
+                <dt>800000</dt>
                 <thoiLuong>PT2H5M</thoiLuong>
                 <TgKhoiChieu>2024-05-16</TgKhoiChieu>
             </phim>
@@ -46,12 +50,14 @@
             <viTri>P3A9</viTri>
         </ghe>
         <suat id="SCH7">
-            <phim id="Ph2">
-                <ten>Spider-man</ten>
+            <phim id="Ph3">
+                <ten>Hunters</ten>
                 <theLoai>Hanh dong</theLoai>
-                <doTuoi>18</doTuoi>
-                <thoiLuong>PT2H</thoiLuong>
-                <TgKhoiChieu>2024-05-23</TgKhoiChieu>
+                <doTuoi>16</doTuoi>
+                <posterLink>/Images/3UKlVa1CBeQkRksHV5OfFTO52qd.jpg</posterLink>
+                <dt>200000</dt>
+                <thoiLuong>PT2H5M</thoiLuong>
+                <TgKhoiChieu>2024-06-21</TgKhoiChieu>
             </phim>
             <phongId>P3</phongId>
             <thoiGianChieu>16-08-2024 15:45</thoiGianChieu>
@@ -65,12 +71,14 @@
             <viTri>P3A8</viTri>
         </ghe>
         <suat id="SCH7">
-            <phim id="Ph2">
-                <ten>Spider-man</ten>
-                <theLoai>Hanh dong</theLoai>
-                <doTuoi>18</doTuoi>
-                <thoiLuong>PT2H</thoiLuong>
-                <TgKhoiChieu>2024-05-23</TgKhoiChieu>
+            <phim id="Ph6">
+                <ten>Creation of Gods</ten>
+                <theLoai>Kinh di</theLoai>
+                <doTuoi>16</doTuoi>
+                <posterLink>/Images/ccJpK0rqzhQeP7Mrs2uKqObFY4L.jpg</posterLink>
+                <dt>50000000</dt>
+                <thoiLuong>PT2H5M</thoiLuong>
+                <TgKhoiChieu>2024-06-21</TgKhoiChieu>
             </phim>
             <phongId>P3</phongId>
             <thoiGianChieu>16-08-2024 15:45</thoiGianChieu>

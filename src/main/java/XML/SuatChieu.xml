@@ -8,20 +8,32 @@
             <posterLink>/Images/p1LbrdJ53dGfEhRopG71akfzOVu.jpg</posterLink>
             <thoiLuong>PT2H5M</thoiLuong>
             <TgKhoiChieu>2024-06-21</TgKhoiChieu>
-        </phim> 
+        </phim>
         <phongId>P1</phongId>
         <thoiGianChieu>12-12-2024 15:45</thoiGianChieu>
     </suatChieu>
-    <suatChieu id="SCH7">
-        <phim id="Ph5">
-            <ten>Madame Web</ten>
+    <suatChieu id="SCH17">
+        <phim id="Ph8">
+            <ten>Damsel</ten>
             <theLoai>Hanh dong</theLoai>
             <doTuoi>16</doTuoi>
-            <posterLink>/Images/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg</posterLink>
+            <posterLink>/Images/AgHbB9DCE9aE57zkHjSmseszh6e.jpg</posterLink>
             <thoiLuong>PT2H5M</thoiLuong>
             <TgKhoiChieu>2024-06-21</TgKhoiChieu>
-        </phim> 
+        </phim>
         <phongId>P3</phongId>
-        <thoiGianChieu>16-08-2024 15:45</thoiGianChieu>
+        <thoiGianChieu>16-08-2024 19:00</thoiGianChieu>
+    </suatChieu>
+    <suatChieu id="SCH19">
+        <phim id="Ph7">
+            <ten>Migration</ten>
+            <theLoai>Hanh dong</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/ldfCF9RhR40mppkzmftxapaHeTo.jpg</posterLink>
+            <thoiLuong>PT2H5M</thoiLuong>
+            <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+        </phim>
+        <phongId>P3</phongId>
+        <thoiGianChieu>18-09-2024 19:30</thoiGianChieu>
     </suatChieu>
 </suatChieus>
