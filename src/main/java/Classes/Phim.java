@@ -52,6 +52,10 @@ public class Phim {
     }
 
     
+    public void setId(String str) {
+        this.id = str;
+    }
+    
     public String getId() {
         return id;
     }

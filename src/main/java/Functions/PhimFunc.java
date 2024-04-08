@@ -147,5 +147,67 @@ public class PhimFunc {
     public void setPhimList(List<Phim> phimList) {
         this.phimList = phimList;
     }
+    
+    // An method
+    
+    public List<Phim> searchTen(String s){
+        List<Phim> list = new ArrayList<>();
+        int size = phimList.size();
+        for (int i = 0; i < size; i++) {
+            if ( phimList.get(i).getTen().contains(s)) {
+                //phim = listPhim.get(i);
+                list.add(phimList.get(i));
+                
+                
+            }
+        }
+        return list;
+    }
+    
+    public List<Phim> searchTheLoai(String s){
+        List<Phim> list = new ArrayList<>();
+        int size = phimList.size();
+        for (int i = 0; i < size; i++) {
+            if ( phimList.get(i).getTheLoai().contains(s)) {
+               // phim = listPhim.get(i);
+                list.add(phimList.get(i));
+                
+                
+            }
+        }
+        return list;
+    }
+    public List<Phim> searchDoTuoi(String s){
+        List<Phim> list = new ArrayList<>();
+        int size = phimList.size();
+        int k = Integer.parseInt(s);
+        for (int i = 0; i < size; i++) {
+            if ( phimList.get(i).getDoTuoi() >= k) {
+               // phim = listPhim.get(i);
+                list.add(phimList.get(i));
+                
+                
+            }
+        }
+        return list;
+    }
+    
+    public void edit(Phim phim) {
+        int size = phimList.size();
+        for (int i = 0; i < size; i++) {
+            if (phimList.get(i).getId().equals(phim.getId())) {
+                phimList.get(i).setTen(phim.getTen());
+                phimList.get(i).setDoTuoi(phim.getDoTuoi());               
+                phimList.get(i).setTheLoai(phim.getTheLoai());
+                phimList.get(i).setThoiLuong(phim.inThoiLuong());
+                phimList.get(i).setTgKhoiChieu(phim.inTgKhoiChieu());
+                writeListPhims(phimList);
+                break;
+            }
+        }
+    }
+    
+    
+    // ket thuc
 
 }

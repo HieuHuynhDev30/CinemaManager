@@ -4,6 +4,7 @@
  */
 package Controllers;
 
+import Classes.Khach;
 import Classes.Phim;
 import Classes.Phong;
 import Classes.SuatChieu;
@@ -15,7 +16,6 @@ import Functions.PhongFunc;
 import Functions.SuatChieuFunc;
 import Functions.VeFunc;
 import Views.ManagerView;
-import Views.QuanLy;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -60,6 +60,15 @@ public class ManagerController {
         managerView.addDeleteSuatChieuListener(new DeleteSuatChieuListener());
         managerView.addSortSuatChieuListener(new SapXepSuatChieuListener());
         managerView.addSortDoanhThuPhimListener(new SapXepDtPhimListener());
+        
+        //An addListener
+        managerView.addAddPhimListener(new AddPhimListener());
+        managerView.addClearPhimListener(new ClearPhimListener());
+        managerView.addListPhimSelectionListener(new ListPhimSelectionListener());
+        managerView.addDeletePhimListener(new DeletePhimListener());
+        managerView.addEditPhimListener(new EditPhimListener());
+        managerView.addSearchPhimListener(new SearchPhimListener());
+        //ket thuc
     }
 
     public void showManagerView() {
@@ -73,6 +82,7 @@ public class ManagerController {
         managerView.setSuatChieuCombo(phimList, phongList);
         managerView.showDoanhThu(doanhThuFunc.doanhThu("tong", (Object) null));
         managerView.showDoanhThuPhim(phimList, veList);
+        managerView.showListPhim(phimList);
     }
 
     class ListSuatChieuSelectionListener implements ListSelectionListener {
@@ -147,4 +157,82 @@ public class ManagerController {
             phimFunc.writeListPhims(phimList);
         }
     }
+    
+    // An listener
+     class AddPhimListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            Phim phim = managerView.getPhimInfo();
+            if (phim != null) {
+               // khachDao = new KhachDao();
+                phimFunc.themPhim(phim);
+                managerView.showPhim(phim);
+                managerView.showListPhim(phimFunc.getPhimList());
+                //studentView.showListStudents(studentDao.getListStudents());
+               managerView.showMessage("Thêm thành công!");
+            }
+        }
+    }
+    
+     class ClearPhimListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            managerView.clearPhimInfo();
+        }
+    }
+     
+     class DeletePhimListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            Phim phim = managerView.getPhimInfo();
+            if (phim != null) {
+                phimFunc.xoaPhim(phim);
+                managerView.clearPhimInfo();
+                managerView.showListPhim(phimFunc.getPhimList());
+                managerView.showMessage("Xóa thành công!");
+            }
+        }
+    }
+     
+     class EditPhimListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            Phim phim = managerView.getPhimInfo();
+            if (phim != null) {
+                phimFunc.edit(phim);
+                managerView.showPhim(phim);
+                managerView.showListPhim(phimFunc.getPhimList());
+                managerView.showMessage("Cập nhật thành công!");
+            }
+        }
+    }
+     
+     class ListPhimSelectionListener implements ListSelectionListener {
+        public void valueChanged(ListSelectionEvent e) {
+            managerView.fillPhimFromSelectedRow();
+        }
+    }
+     
+     class SearchPhimListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            int k = managerView.luachonPhimTK();
+            String s = managerView.inforPhimSearch();
+            switch (k) {
+                case 0:
+                    managerView.showListPhim(phimFunc.searchTen(s));
+                    break;
+                case 1:
+                    managerView.showListPhim(phimFunc.searchTheLoai(s));
+                    break;
+                case -1:
+                    managerView.showListPhim(phimFunc.getPhimList());
+                    break;
+                case 2:
+                    managerView.showListPhim(phimFunc.searchDoTuoi(s));
+                    break;
+                default:
+                    break;
+            }
+                
+        }
+        
+    }
+    
+    //ket thuc
 }
