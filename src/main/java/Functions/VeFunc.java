@@ -80,6 +80,7 @@ public class VeFunc {
         VeListXML veListXML = (VeListXML) FileUtils.readXMLFile(
                 VE_FILE_NAME, VeListXML.class);
         if (veListXML != null) {
+            System.out.println("error");
             list = veListXML.getVe();
         }
         return list;

@@ -40,6 +40,7 @@ public class ManagerController {
     private List<Phong> phongList;
     private ArrayList<SuatChieu> schList;
     private List<Ve> veList;
+    private List<Khach> khachList;
 
     public ManagerController(ManagerView managerView) {
         this.managerView = managerView;
@@ -53,6 +54,7 @@ public class ManagerController {
         this.phongList = phongFunc.getPhongList();
         this.schList = (ArrayList) suatChieuFunc.getSuatChieuList();
         this.veList = veFunc.getVeList();
+        this.khachList = khachFunc.getKhachList();
         managerView.addListSuatChieuSelectionListener(new ListSuatChieuSelectionListener());
         managerView.addEditSuatChieuListener(new EditSuatChieuListener());
         managerView.addAddSuatChieuListener(new AddSuatChieuListener());
@@ -60,7 +62,7 @@ public class ManagerController {
         managerView.addDeleteSuatChieuListener(new DeleteSuatChieuListener());
         managerView.addSortSuatChieuListener(new SapXepSuatChieuListener());
         managerView.addSortDoanhThuPhimListener(new SapXepDtPhimListener());
-        
+
         //An addListener
         managerView.addAddPhimListener(new AddPhimListener());
         managerView.addClearPhimListener(new ClearPhimListener());
@@ -68,6 +70,13 @@ public class ManagerController {
         managerView.addDeletePhimListener(new DeletePhimListener());
         managerView.addEditPhimListener(new EditPhimListener());
         managerView.addSearchPhimListener(new SearchPhimListener());
+
+        managerView.addAddKhachListener(new AddKhachListener());
+        managerView.addClearListener(new ClearKhachListener());
+        managerView.addListKhachSelectionListener(new ListKhachSelectionListener());
+        managerView.addDeleteKhachListener(new DeleteKhachListener());
+        managerView.addEditKhachListener(new EditKhachListener());
+        managerView.addSearchKhachListener(new SearchKhachListener());
         //ket thuc
     }
 
@@ -83,6 +92,8 @@ public class ManagerController {
         managerView.showDoanhThu(doanhThuFunc.doanhThu("tong", (Object) null));
         managerView.showDoanhThuPhim(phimList, veList);
         managerView.showListPhim(phimList);
+        managerView.showListKhach(khachList);
+        managerView.showListVe(veList, khachList);
     }
 
     class ListSuatChieuSelectionListener implements ListSelectionListener {
@@ -141,14 +152,16 @@ public class ManagerController {
     }
 
     class SapXepSuatChieuListener implements ActionListener {
+
         public void actionPerformed(ActionEvent e) {
             schList = suatChieuFunc.sapXepSuatChieu(schList, managerView.getTieuChiSxSch(), managerView.getSchTangDan());
             managerView.showListSuatChieu(schList);
             suatChieuFunc.writeListSuatChieus(schList);
         }
     }
-    
+
     class SapXepDtPhimListener implements ActionListener {
+
         public void actionPerformed(ActionEvent e) {
             phimList = phimFunc.sapXepPhim((ArrayList) phimList, "doanhthu", managerView.getDtPhimTangDan());
             managerView.clearDoanhThuPhim();
@@ -157,29 +170,32 @@ public class ManagerController {
             phimFunc.writeListPhims(phimList);
         }
     }
-    
+
     // An listener
-     class AddPhimListener implements ActionListener {
+    class AddPhimListener implements ActionListener {
+
         public void actionPerformed(ActionEvent e) {
             Phim phim = managerView.getPhimInfo();
             if (phim != null) {
-               // khachDao = new KhachDao();
+                // khachDao = new KhachDao();
                 phimFunc.themPhim(phim);
                 managerView.showPhim(phim);
                 managerView.showListPhim(phimFunc.getPhimList());
                 //studentView.showListStudents(studentDao.getListStudents());
-               managerView.showMessage("Thêm thành công!");
+                managerView.showMessage("Thêm thành công!");
             }
         }
     }
-    
-     class ClearPhimListener implements ActionListener {
+
+    class ClearPhimListener implements ActionListener {
+
         public void actionPerformed(ActionEvent e) {
             managerView.clearPhimInfo();
         }
     }
-     
-     class DeletePhimListener implements ActionListener {
+
+    class DeletePhimListener implements ActionListener {
+
         public void actionPerformed(ActionEvent e) {
             Phim phim = managerView.getPhimInfo();
             if (phim != null) {
@@ -190,8 +206,9 @@ public class ManagerController {
             }
         }
     }
-     
-     class EditPhimListener implements ActionListener {
+
+    class EditPhimListener implements ActionListener {
+
         public void actionPerformed(ActionEvent e) {
             Phim phim = managerView.getPhimInfo();
             if (phim != null) {
@@ -202,14 +219,16 @@ public class ManagerController {
             }
         }
     }
-     
-     class ListPhimSelectionListener implements ListSelectionListener {
+
+    class ListPhimSelectionListener implements ListSelectionListener {
+
         public void valueChanged(ListSelectionEvent e) {
             managerView.fillPhimFromSelectedRow();
         }
     }
-     
-     class SearchPhimListener implements ActionListener {
+
+    class SearchPhimListener implements ActionListener {
+
         public void actionPerformed(ActionEvent e) {
             int k = managerView.luachonPhimTK();
             String s = managerView.inforPhimSearch();
@@ -229,10 +248,103 @@ public class ManagerController {
                 default:
                     break;
             }
+
+        }
+
+    }
+
+    //ket thuc
+    // Khach listner cua An
+    class AddKhachListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            Khach khach = managerView.getKhachInfo();
+            if (khach != null) {
+                // khachDao = new KhachDao();
+                khachFunc.themKhach(khach);
+                managerView.showKhach(khach);
+                managerView.showListKhach(khachFunc.getKhachList());
+                //studentView.showListStudents(studentDao.getListStudents());
+                managerView.showMessage("Thêm thành công!");
+            }
+        }
+    }
+
+    /**
+     * Lớp ClearStudentListener chứa cài đặt cho sự kiện click button "Clear"
+     *
+     * @author viettuts.vn
+     */
+    class ClearKhachListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            managerView.clearKhachInfo();
+        }
+    }
+
+    /**
+     * Lớp DeleteStudentListener chứa cài đặt cho sự kiện click button "Delete"
+     *
+     * @author viettuts.vn
+     */
+    class DeleteKhachListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            Khach khach = managerView.getKhachInfo();
+            if (khach != null) {
+                khachFunc.xoaKhach(khach);
+                managerView.clearKhachInfo();
+                managerView.showListKhach(khachFunc.getKhachList());
+                managerView.showMessage("Xóa thành công!");
+            }
+        }
+    }
+
+    /**
+     * Lớp EditStudentListener chứa cài đặt cho sự kiện click button "Edit"
+     *
+     * @author viettuts.vn
+     */
+    class EditKhachListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            Khach khach = managerView.getKhachInfo();
+            if (khach != null) {
+                khachFunc.edit(khach);
+                managerView.showKhach(khach);
+                managerView.showListKhach(khachFunc.getKhachList());
+                managerView.showMessage("Cập nhật thành công!");
+            }
+        }
+    }
+
+    /**
+     * Lớp ListStudentSelectionListener chứa cài đặt cho sự kiện chọn student
+     * trong bảng student
+     *
+     * @author viettuts.vn
+     */
+    class ListKhachSelectionListener implements ListSelectionListener {
+
+        public void valueChanged(ListSelectionEvent e) {
+            managerView.fillKhachFromSelectedRow();
+        }
+    }
+    
+    class SearchKhachListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            int k = managerView.luachonKhachTK();
+            String s = managerView.inforKhachSearch();
+            if (k == 0){
+                managerView.showListKhach(khachFunc.searchTen(s));
+            } else if (k == 1){
+                managerView.showListKhach(khachFunc.searchSLv(s));
+            } else if (k == -1){
+               managerView.showListKhach(khachFunc.getKhachList());
+            } 
                 
         }
         
     }
-    
-    //ket thuc
+    // ketthuc
 }

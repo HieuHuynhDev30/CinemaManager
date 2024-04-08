@@ -4,6 +4,7 @@
  */
 package Classes;
 
+import Functions.KhachFunc;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -21,10 +22,12 @@ public class Ve {
     private String id;
     private Ghe ghe;
     private SuatChieu suat;
+//    private KhachFunc khachFunc;
 
     public Ve() {
         currId++;
         this.id = "V" + currId;
+//        khachFunc = new KhachFunc();
     }
 
     public String getId() {
@@ -46,6 +49,10 @@ public class Ve {
     public void setSuat(SuatChieu suat) {
         this.suat = suat;
     }
+    
+//    public String getHoTen(){
+//        return khachFunc.searchID(ghe.getKhachId());
+//    }
 
     @Override
     public String toString() {
