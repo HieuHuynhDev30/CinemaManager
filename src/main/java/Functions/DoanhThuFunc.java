@@ -15,11 +15,6 @@ import Classes.Ve;
 public class DoanhThuFunc {
     
     private VeFunc veFunc;
-
-    public DoanhThuFunc() {
-        veFunc = new VeFunc();
-    }
-    
     
     public double doanhThu(String tieuChi, Object ...obs){
         double doanhThu = 0;

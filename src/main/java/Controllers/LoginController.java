@@ -4,6 +4,7 @@ import Classes.Admin;
 import Functions.AdminFunc;
 import Views.LoginView;
 import Views.ManagerView;
+import Views.QuanLy;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 

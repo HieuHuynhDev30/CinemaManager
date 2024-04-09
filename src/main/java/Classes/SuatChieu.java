@@ -46,12 +46,6 @@ public class SuatChieu {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-    
-    
-
     public String inPhim() {
         return this.phim.toString();
     }

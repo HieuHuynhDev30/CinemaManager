@@ -11,7 +11,6 @@ import XML.PhongListXML;
 import XML.SuatChieuListXML;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import utils.FileUtils;
 
@@ -99,52 +98,33 @@ public class SuatChieuFunc {
         return false;
     }
 
-    public class SortIdSch implements Comparator<SuatChieu> {
-
-        private boolean beLon;
-
-        public SortIdSch(boolean beLon) {
-            this.beLon = beLon;
-        }
-
-        @Override
-        public int compare(SuatChieu o1, SuatChieu o2) {
-            if (beLon) {
-                return Integer.parseInt(o1.getId().substring(3)) - Integer.parseInt(o2.getId().substring(3));
-            } else {
-                return Integer.parseInt(o2.getId().substring(3)) - Integer.parseInt(o1.getId().substring(3));
-            }
-        }
-
-    }
-    
-     public class SortSlvSch implements Comparator<SuatChieu> {
-
-        private boolean beLon;
-
-        public SortSlvSch(boolean beLon) {
-            this.beLon = beLon;
-        }
-
-        @Override
-        public int compare(SuatChieu o1, SuatChieu o2) {
-            if (beLon) {
-                return o1.getSlVeDat() - o2.getSlVeDat();
-            } else {
-                return o2.getSlVeDat() - o1.getSlVeDat();
-            }
-        }
-
-    }
-
-    public ArrayList<SuatChieu> sapXepSuatChieu(ArrayList<SuatChieu> list, String tieuChi, boolean beLon) {
+    public void sapXepSuatChieu(ArrayList<SuatChieu> list, String tieuChi, boolean beLon) {
         if ("id".equals(tieuChi.toLowerCase())) {
-            Collections.sort(list, new SortIdSch(beLon));
+            Collections.sort(list, (SuatChieu o1, SuatChieu o2) -> {
+                int intId1 = Integer.parseInt(o1.getId().substring(3));
+                int intId2 = Integer.parseInt(o1.getId().substring(3));
+                if ((beLon && intId1 < intId2) || (!beLon && intId1 > intId2)) {
+                    return 1;
+                }
+                if ((beLon && intId1 > intId2) || (!beLon && intId1 < intId2)) {
+                    return -1;
+                }
+                return 0;
+            });
         }
         if ("soluongve".equals(tieuChi.toLowerCase())) {
-            Collections.sort(list, new SortSlvSch(beLon));
+            Collections.sort(list, (SuatChieu o1, SuatChieu o2) -> {
+                int intId1 = o1.getSlVeDat();
+                int intId2 = o2.getSlVeDat();
+                if ((beLon && intId1 < intId2) || (!beLon && intId1 > intId2)) {
+                    return 1;
+                }
+                if ((beLon && intId1 > intId2) || (!beLon && intId1 < intId2)) {
+                    return -1;
+                }
+                return 0;
+            });
         }
-        return list;
     }
 
     public List<SuatChieu> getSuatChieuList() {

@@ -10,7 +10,6 @@ import Classes.SuatChieu;
 import XML.PhimListXML;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import utils.FileUtils;
 
@@ -84,29 +83,8 @@ public class PhimFunc {
         }
         return false;
     }
-    
-    
-    public class SortDtPhim implements Comparator<Phim> {
 
-        private boolean beLon;
-
-        public SortDtPhim(boolean beLon) {
-            this.beLon = beLon;
-        }
-
-        @Override
-        public int compare(Phim o1, Phim o2) {
-            if (beLon) {
-                return o1.getDt() - o2.getDt();
-            } else {
-                return o2.getDt() - o1.getDt();
-            }
-        }
-
-    }
-
-
-    public ArrayList<Phim> sapXepPhim(ArrayList<Phim> list, String tieuChi, boolean beLon) {
+    public void sapXepPhim(ArrayList<Phim> list, String tieuChi, boolean beLon) {
         if ("id".equals(tieuChi.toLowerCase())) {
             Collections.sort(list, (Phim o1, Phim o2) -> {
                 int intId1 = Integer.parseInt(o1.getId().substring(2));
@@ -133,11 +111,6 @@ public class PhimFunc {
                 return 0;
             });
         }
-        if ("doanhthu".equals(tieuChi.toLowerCase())) {
-            System.out.println("sap xep  dt");
-            Collections.sort(list, new SortDtPhim(beLon));
-        }
-        return list;
     }
 
     public List<Phim> getPhimList() {
@@ -147,67 +120,5 @@ public class PhimFunc {
     public void setPhimList(List<Phim> phimList) {
         this.phimList = phimList;
     }
-    
-    // An method
-    
-    public List<Phim> searchTen(String s){
-        List<Phim> list = new ArrayList<>();
-        int size = phimList.size();
-        for (int i = 0; i < size; i++) {
-            if ( phimList.get(i).getTen().contains(s)) {
-                //phim = listPhim.get(i);
-                list.add(phimList.get(i));
-                
-                
-            }
-        }
-        return list;
-    }
-    
-    public List<Phim> searchTheLoai(String s){
-        List<Phim> list = new ArrayList<>();
-        int size = phimList.size();
-        for (int i = 0; i < size; i++) {
-            if ( phimList.get(i).getTheLoai().contains(s)) {
-               // phim = listPhim.get(i);
-                list.add(phimList.get(i));
-                
-                
-            }
-        }
-        return list;
-    }
-    public List<Phim> searchDoTuoi(String s){
-        List<Phim> list = new ArrayList<>();
-        int size = phimList.size();
-        int k = Integer.parseInt(s);
-        for (int i = 0; i < size; i++) {
-            if ( phimList.get(i).getDoTuoi() >= k) {
-               // phim = listPhim.get(i);
-                list.add(phimList.get(i));
-                
-                
-            }
-        }
-        return list;
-    }
-    
-    public void edit(Phim phim) {
-        int size = phimList.size();
-        for (int i = 0; i < size; i++) {
-            if (phimList.get(i).getId().equals(phim.getId())) {
-                phimList.get(i).setTen(phim.getTen());
-                phimList.get(i).setDoTuoi(phim.getDoTuoi());               
-                phimList.get(i).setTheLoai(phim.getTheLoai());
-                phimList.get(i).setThoiLuong(phim.inThoiLuong());
-                phimList.get(i).setTgKhoiChieu(phim.inTgKhoiChieu());
-                writeListPhims(phimList);
-                break;
-            }
-        }
-    }
-    
-    
-    // ket thuc
 
 }
