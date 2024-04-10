@@ -25,6 +25,7 @@ public class Phim {
     private String ten, theLoai;
     private int doTuoi;
     private String posterLink;
+    private int dt;
     @XmlJavaTypeAdapter(DurationAdapter.class)
     private Duration thoiLuong;
     @XmlJavaTypeAdapter(LocalDateAdapter.class)
@@ -34,6 +35,8 @@ public class Phim {
     public static final DateTimeFormatter timeFormat = DateTimeFormatter.ofPattern("mm");
 
     public Phim() {
+         currId++;
+        id = "Ph" + currId;
     }
 
     public Phim(String ten, long thoiLuong, String theLoai, int doTuoi) {
@@ -50,6 +53,10 @@ public class Phim {
         this.id = "Ph" + id;
     }
 
+    
+    public void setId(String str) {
+        this.id = str;
+    }
     
     public String getId() {
         return id;
@@ -91,6 +98,7 @@ public class Phim {
 
     public final long inThoiLuong() {
         return thoiLuong.toMinutes();
+        
     }
 
     public final void setThoiLuong(long duration) {
@@ -125,6 +133,18 @@ public class Phim {
         return TgKhoiChieu.format(dateFormat);
     }
 
+    public int getDt() {
+        return dt;
+    }
+
+    public void setDt(int dt) {
+        this.dt = dt;
+    }
+
+    
+    public void tangDt(int dt) {
+        this.dt += dt;
+    }
     @Override
     public String toString() {
         return "Phim{" + "id=" + id + ", ten=" + ten + ", theLoai=" + theLoai + ", doTuoi=" + doTuoi + ", thoiLuong=" + inThoiLuong() + ", TgKhoiChieu=" + inTgKhoiChieu() + '}';

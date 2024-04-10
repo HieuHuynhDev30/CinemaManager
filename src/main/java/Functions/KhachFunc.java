@@ -7,6 +7,7 @@ package Functions;
 import Classes.Khach;
 import Classes.Phim;
 import Classes.SuatChieu;
+import Classes.Ve;
 import XML.KhachListXML;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -19,7 +20,7 @@ import utils.FileUtils;
  */
 public class KhachFunc {
 
-    private static final String KHACH_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\Khach.xml";
+    private static final String KHACH_FILE_NAME = "D:\\Downloads\\CinemaManager-master2\\CinemaManager-master2\\src\\main\\java\\XML\\Khach.xml";
     private List<Khach> khachList;
 
     public KhachFunc() {
@@ -52,6 +53,8 @@ public class KhachFunc {
 
     public void themKhach(Khach kh) {
         this.khachList.add(kh);
+        //đã sửa
+        writeListKhachs(khachList);
     }
 
     public void editKhach(Khach p) {
@@ -127,5 +130,93 @@ public class KhachFunc {
     public void setKhachList(List<Khach> khachList) {
         this.khachList = khachList;
     }
+    
+    // Khach method cua An
+    
+    public void edit(Khach khach) {
+        int size = khachList.size();
+        for (int i = 0; i < size; i++) {
+            if (khachList.get(i).getId().equals(khach.getId())) {
+                khachList.get(i).setHoTen(khach.getHoTen());
+                khachList.get(i).setGioiTinh(khach.getGioiTinh());
+                //listKhach.get(i).setNgaySinh(khach.getNgaySinh().toString());
+                khachList.get(i).setSlVeDat(khach.getSlVeDat());
+                writeListKhachs(khachList);
+                break;
+            }
+        }
+    }
+    
+    //
+    public List<Khach> searchTen(String s){
+        List<Khach> list = new ArrayList<>();
+        int size = khachList.size();
+        for (int i = 0; i < size; i++) {
+            if ( khachList.get(i).getHoTen().contains(s)) {
+                //phim = listPhim.get(i);
+                list.add(khachList.get(i));
+                
+                
+            }
+        }
+        return list;
+    }
+    
+    public List<Khach> searchSLv(String s){
+        List<Khach> list = new ArrayList<>();
+        int size = khachList.size();
+        int k = Integer.parseInt(s);
+        for (int i = 0; i < size; i++) {
+            if ( khachList.get(i).getSlVeDat() >= k) {
+               // phim = listPhim.get(i);
+                list.add(khachList.get(i));
+                
+                
+            }
+        }
+        return list;
+    }
+    
+    public String searchID(String s){
+        Khach khach = new Khach();
+        int size = khachList.size();
+        
+        for (int i = 0; i < size; i++) {
+            if ( khachList.get(i).getId().equals(s)) {
+               khach  = khachList.get(i);
+                
+                
+                
+            }
+        }
+        return khach.getHoTen();
+    }
+    
+     public Khach searchID(Khach khach){
+       
+        int size = khachList.size();
+        
+        for (int i = 0; i < size; i++) {
+            if ( khachList.get(i).getId().equals(khach.getId())) {
+               khach  = khachList.get(i);
+                
+                
+                
+            }
+        }
+        return khach;
+    }
+    
+    public void muaVe(Khach khach,Ve ve) {
+//        khach.dsVe.add(ve);
+//        khach.slVeDat++;
+//        khach.tongTien += ve.getGhe().getGia();
+          khach = searchID(khach);
+          xoaKhach(searchID(khach));
+          khach.muaVe(ve);
+          khachList.add(khach);
+          writeListKhachs(khachList);
+    }
+    //ket thuc
 
 }

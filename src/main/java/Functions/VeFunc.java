@@ -22,7 +22,7 @@ import utils.FileUtils;
  */
 public class VeFunc {
 
-    private static final String VE_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\Ve.xml";
+    private static final String VE_FILE_NAME = "D:\\Downloads\\CinemaManager-master2\\CinemaManager-master2\\src\\main\\java\\XML\\Ve.xml";
     private List<Ve> veList;
 
     public VeFunc() {
@@ -58,15 +58,30 @@ public class VeFunc {
         }
     }
 
-    public boolean xoaVe(Ve ve) {
+    public void xoaVe(Ve ve) {
         String veId = ve.getId();
         for (Ve V : this.veList) {
             if (V.getId() == null ? veId == null : V.getId().equals(veId)) {
                 this.veList.remove(V);
-                return true;
+                this.writeListVes(veList);
             }
         }
-        return false;
+        this.writeListVes(veList);
+         
+          
+          
+    }
+    
+    public Ve SearchVe(Ve ve){
+        String vePhongID = ve.getSuat().getPhongId();
+        String veTenPhim = ve.getSuat().inPhim();
+        for (Ve V : this.veList) {
+            if (V.getSuat().getPhongId() == null ? vePhongID == null : V.getSuat().getPhongId().equals(vePhongID) && V.getSuat().inPhim().equals(veTenPhim) ) {
+                
+                return V;
+            }
+        }
+        return null;
     }
 
     public void writeListVes(List<Ve> ves) {
@@ -80,6 +95,7 @@ public class VeFunc {
         VeListXML veListXML = (VeListXML) FileUtils.readXMLFile(
                 VE_FILE_NAME, VeListXML.class);
         if (veListXML != null) {
+            System.out.println("error");
             list = veListXML.getVe();
         }
         return list;
@@ -92,5 +108,7 @@ public class VeFunc {
     public void setVeList(List<Ve> veList) {
         this.veList = veList;
     }
+    
+    
 
 }

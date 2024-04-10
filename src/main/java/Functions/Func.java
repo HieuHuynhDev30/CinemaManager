@@ -24,11 +24,11 @@ import utils.FileUtils;
  */
 public class Func {
 
-    private static final String PHIM_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\Phim.xml";
-    private static final String KHACH_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\Khach.xml";
-    private static final String VE_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\Ve.xml";
-    private static final String PHONG_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\Phong.xml";
-    private static final String SCH_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\SuatChieu.xml";
+    private static final String PHIM_FILE_NAME = "D:\\Downloads\\CinemaManager-master2\\CinemaManager-master2\\src\\main\\java\\XML\\Phim.xml";
+    private static final String KHACH_FILE_NAME = "D:\\Downloads\\CinemaManager-master2\\CinemaManager-master2\\src\\main\\java\\XML\\Khach.xml";
+    private static final String VE_FILE_NAME = "D:\\Downloads\\CinemaManager-master2\\CinemaManager-master2\\src\\main\\java\\XML\\Ve.xml";
+    private static final String PHONG_FILE_NAME = "D:\\Downloads\\CinemaManager-master2\\CinemaManager-master2\\src\\main\\java\\XML\\Phong.xml";
+    private static final String SCH_FILE_NAME = "D:\\Downloads\\CinemaManager-master2\\CinemaManager-master2\\src\\main\\java\\XML\\SuatChieu.xml";
     
     public Func() {
     }

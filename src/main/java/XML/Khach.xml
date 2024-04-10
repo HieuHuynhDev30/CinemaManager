@@ -18,6 +18,7 @@
                     <ten>Killer</ten>
                     <theLoai>Kinh di</theLoai>
                     <doTuoi>18</doTuoi>
+                    <dt>0</dt>
                     <thoiLuong>PT2H5M</thoiLuong>
                     <TgKhoiChieu>2024-05-16</TgKhoiChieu>
                 </phim>
@@ -37,6 +38,7 @@
                     <ten>Killer</ten>
                     <theLoai>Kinh di</theLoai>
                     <doTuoi>18</doTuoi>
+                    <dt>0</dt>
                     <thoiLuong>PT2H5M</thoiLuong>
                     <TgKhoiChieu>2024-05-16</TgKhoiChieu>
                 </phim>
@@ -56,6 +58,7 @@
                     <ten>Spider-man</ten>
                     <theLoai>Hanh dong</theLoai>
                     <doTuoi>18</doTuoi>
+                    <dt>0</dt>
                     <thoiLuong>PT2H</thoiLuong>
                     <TgKhoiChieu>2024-05-23</TgKhoiChieu>
                 </phim>
@@ -64,9 +67,226 @@
             </suat>
         </dsVe>
     </khach>
-    <khach id="K2">
+    <khach id="K3">
         <slVeDat>1</slVeDat>
-        <tongTien>120000</tongTien>
+        <tongTien>80000</tongTien>
+        <hoTen>Bui Quang Huy</hoTen>
+        <gioiTinh>Nam</gioiTinh>
+        <ngaySinh>2003-10-10</ngaySinh>
+        <dsVe id="V25">
+            <ghe>
+                <gia>80000.0</gia>
+                <khachId>K3</khachId>
+                <loai>Thuong</loai>
+                <viTri>P2A5</viTri>
+            </ghe>
+            <suat id="SCH20">
+                <phim id="Ph3">
+                    <ten>Hunters</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>16</doTuoi>
+                    <posterLink>/Images/3UKlVa1CBeQkRksHV5OfFTO52qd.jpg</posterLink>
+                    <dt>200000</dt>
+                    <thoiLuong>PT2H5M</thoiLuong>
+                    <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+                </phim>
+                <phongId>P3</phongId>
+                <thoiGianChieu>08-04-2024 22:00</thoiGianChieu>
+            </suat>
+        </dsVe>
+    </khach>
+    <khach id="K8">
+        <slVeDat>2</slVeDat>
+        <tongTien>400000</tongTien>
+        <hoTen>Thanh An</hoTen>
+        <gioiTinh>Nam</gioiTinh>
+        <ngaySinh>2003-08-22</ngaySinh>
+        <dsVe id="V20">
+            <ghe>
+                <gia>200000.0</gia>
+                <khachId>K8</khachId>
+                <loai>Doi</loai>
+                <viTri>P1B3</viTri>
+            </ghe>
+            <suat id="SCH22">
+                <phim id="Ph2">
+                    <ten>Kung Fu Panda 4</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>18</doTuoi>
+                    <posterLink>/Images/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg</posterLink>
+                    <dt>0</dt>
+                    <thoiLuong>PT2H</thoiLuong>
+                    <TgKhoiChieu>2024-05-23</TgKhoiChieu>
+                </phim>
+                <phongId>P1</phongId>
+                <thoiGianChieu>22-08-2024 22:00</thoiGianChieu>
+            </suat>
+        </dsVe>
+        <dsVe id="V27">
+            <ghe>
+                <gia>200000.0</gia>
+                <khachId>K8</khachId>
+                <loai>Doi</loai>
+                <viTri>P2B5</viTri>
+            </ghe>
+            <suat id="SCH20">
+                <phim id="Ph3">
+                    <ten>Hunters</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>16</doTuoi>
+                    <posterLink>/Images/3UKlVa1CBeQkRksHV5OfFTO52qd.jpg</posterLink>
+                    <dt>200000</dt>
+                    <thoiLuong>PT2H5M</thoiLuong>
+                    <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+                </phim>
+                <phongId>P3</phongId>
+                <thoiGianChieu>08-04-2024 22:00</thoiGianChieu>
+            </suat>
+        </dsVe>
+    </khach>
+    <khach id="K4">
+        <slVeDat>1</slVeDat>
+        <tongTien>200000</tongTien>
+        <hoTen>Tran Quoc Bao</hoTen>
+        <gioiTinh>Nam</gioiTinh>
+        <ngaySinh>2003-01-01</ngaySinh>
+        <dsVe id="V23">
+            <ghe>
+                <gia>80000.0</gia>
+                <khachId>K4</khachId>
+                <loai>Thuong</loai>
+                <viTri>P1A5</viTri>
+            </ghe>
+            <suat id="SCH23">
+                <phim id="Ph3">
+                    <ten>Road House</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>16</doTuoi>
+                    <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
+                    <dt>0</dt>
+                    <thoiLuong>PT2H5M</thoiLuong>
+                    <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+                </phim>
+                <phongId>P1</phongId>
+                <thoiGianChieu>22-09-2024 23:45</thoiGianChieu>
+            </suat>
+        </dsVe>
+        <dsVe id="V32">
+            <ghe>
+                <gia>120000.0</gia>
+                <khachId>K4</khachId>
+                <loai>Vip</loai>
+                <viTri>P1A9</viTri>
+            </ghe>
+            <suat id="SCH22">
+                <phim id="Ph2">
+                    <ten>Kung Fu Panda 4</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>18</doTuoi>
+                    <posterLink>/Images/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg</posterLink>
+                    <dt>0</dt>
+                    <thoiLuong>PT2H</thoiLuong>
+                    <TgKhoiChieu>2024-05-23</TgKhoiChieu>
+                </phim>
+                <phongId>P1</phongId>
+                <thoiGianChieu>22-08-2024 22:00</thoiGianChieu>
+            </suat>
+        </dsVe>
+    </khach>
+    <khach id="K5">
+        <slVeDat>7</slVeDat>
+        <tongTien>320000</tongTien>
+        <hoTen>Nguyen Quoc Huy</hoTen>
+        <gioiTinh>Nam</gioiTinh>
+        <ngaySinh>2003-04-30</ngaySinh>
+        <dsVe id="V14">
+            <ghe>
+                <gia>80000.0</gia>
+                <khachId>K5</khachId>
+                <loai>Thuong</loai>
+                <viTri>P1A5</viTri>
+            </ghe>
+            <suat id="SCH1">
+                <phim id="Ph4">
+                    <ten>After the Pandemic</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>16</doTuoi>
+                    <posterLink>/Images/p1LbrdJ53dGfEhRopG71akfzOVu.jpg</posterLink>
+                    <dt>0</dt>
+                    <thoiLuong>PT2H5M</thoiLuong>
+                    <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+                </phim>
+                <phongId>P1</phongId>
+                <thoiGianChieu>12-12-2024 15:45</thoiGianChieu>
+            </suat>
+        </dsVe>
+        <dsVe id="V16">
+            <ghe>
+                <gia>80000.0</gia>
+                <khachId>K5</khachId>
+                <loai>Thuong</loai>
+                <viTri>P2A5</viTri>
+            </ghe>
+            <suat id="SCH17">
+                <phim id="Ph8">
+                    <ten>Damsel</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>16</doTuoi>
+                    <posterLink>/Images/AgHbB9DCE9aE57zkHjSmseszh6e.jpg</posterLink>
+                    <dt>0</dt>
+                    <thoiLuong>PT2H5M</thoiLuong>
+                    <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+                </phim>
+                <phongId>P3</phongId>
+                <thoiGianChieu>16-08-2024 19:00</thoiGianChieu>
+            </suat>
+        </dsVe>
+        <dsVe id="V35">
+            <ghe>
+                <gia>80000.0</gia>
+                <khachId>K5</khachId>
+                <loai>Thuong</loai>
+                <viTri>P1A5</viTri>
+            </ghe>
+            <suat id="SCH22">
+                <phim id="Ph2">
+                    <ten>Kung Fu Panda 4</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>18</doTuoi>
+                    <posterLink>/Images/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg</posterLink>
+                    <dt>0</dt>
+                    <thoiLuong>PT2H</thoiLuong>
+                    <TgKhoiChieu>2024-05-23</TgKhoiChieu>
+                </phim>
+                <phongId>P1</phongId>
+                <thoiGianChieu>22-08-2024 22:00</thoiGianChieu>
+            </suat>
+        </dsVe>
+        <dsVe id="V37">
+            <ghe>
+                <gia>80000.0</gia>
+                <khachId>K5</khachId>
+                <loai>Thuong</loai>
+                <viTri>P2A4</viTri>
+            </ghe>
+            <suat id="SCH19">
+                <phim id="Ph7">
+                    <ten>Migration</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>16</doTuoi>
+                    <posterLink>/Images/ldfCF9RhR40mppkzmftxapaHeTo.jpg</posterLink>
+                    <dt>0</dt>
+                    <thoiLuong>PT2H5M</thoiLuong>
+                    <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+                </phim>
+                <phongId>P3</phongId>
+                <thoiGianChieu>18-09-2024 19:30</thoiGianChieu>
+            </suat>
+        </dsVe>
+    </khach>
+    <khach id="K2">
+        <slVeDat>2</slVeDat>
+        <tongTien>200000</tongTien>
         <hoTen>Pham Minh Duy</hoTen>
         <gioiTinh>Nam</gioiTinh>
         <ngaySinh>2003-03-03</ngaySinh>
@@ -82,11 +302,33 @@
                     <ten>Spider-man</ten>
                     <theLoai>Hanh dong</theLoai>
                     <doTuoi>18</doTuoi>
+                    <dt>0</dt>
                     <thoiLuong>PT2H</thoiLuong>
                     <TgKhoiChieu>2024-05-23</TgKhoiChieu>
                 </phim>
                 <phongId>P3</phongId>
                 <thoiGianChieu>16-08-2024 15:45</thoiGianChieu>
+            </suat>
+        </dsVe>
+        <dsVe id="V41">
+            <ghe>
+                <gia>80000.0</gia>
+                <khachId>K2</khachId>
+                <loai>Thuong</loai>
+                <viTri>P2A4</viTri>
+            </ghe>
+            <suat id="SCH20">
+                <phim id="Ph3">
+                    <ten>Hunters</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>16</doTuoi>
+                    <posterLink>/Images/3UKlVa1CBeQkRksHV5OfFTO52qd.jpg</posterLink>
+                    <dt>200000</dt>
+                    <thoiLuong>PT2H5M</thoiLuong>
+                    <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+                </phim>
+                <phongId>P3</phongId>
+                <thoiGianChieu>08-04-2024 22:00</thoiGianChieu>
             </suat>
         </dsVe>
     </khach>

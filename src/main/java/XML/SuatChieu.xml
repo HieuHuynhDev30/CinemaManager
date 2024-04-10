@@ -6,22 +6,89 @@
             <theLoai>Hanh dong</theLoai>
             <doTuoi>16</doTuoi>
             <posterLink>/Images/p1LbrdJ53dGfEhRopG71akfzOVu.jpg</posterLink>
+            <dt>0</dt>
             <thoiLuong>PT2H5M</thoiLuong>
             <TgKhoiChieu>2024-06-21</TgKhoiChieu>
-        </phim> 
+        </phim>
         <phongId>P1</phongId>
         <thoiGianChieu>12-12-2024 15:45</thoiGianChieu>
     </suatChieu>
-    <suatChieu id="SCH7">
-        <phim id="Ph5">
-            <ten>Madame Web</ten>
+    <suatChieu id="SCH17">
+        <phim id="Ph8">
+            <ten>Damsel</ten>
             <theLoai>Hanh dong</theLoai>
             <doTuoi>16</doTuoi>
-            <posterLink>/Images/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg</posterLink>
+            <posterLink>/Images/AgHbB9DCE9aE57zkHjSmseszh6e.jpg</posterLink>
+            <dt>0</dt>
             <thoiLuong>PT2H5M</thoiLuong>
             <TgKhoiChieu>2024-06-21</TgKhoiChieu>
-        </phim> 
+        </phim>
         <phongId>P3</phongId>
-        <thoiGianChieu>16-08-2024 15:45</thoiGianChieu>
+        <thoiGianChieu>16-08-2024 19:00</thoiGianChieu>
+    </suatChieu>
+    <suatChieu id="SCH19">
+        <phim id="Ph7">
+            <ten>Migration</ten>
+            <theLoai>Hanh dong</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/ldfCF9RhR40mppkzmftxapaHeTo.jpg</posterLink>
+            <dt>0</dt>
+            <thoiLuong>PT2H5M</thoiLuong>
+            <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+        </phim>
+        <phongId>P3</phongId>
+        <thoiGianChieu>18-09-2024 19:30</thoiGianChieu>
+    </suatChieu>
+    <suatChieu id="SCH20">
+        <phim id="Ph3">
+            <ten>Hunters</ten>
+            <theLoai>Hanh dong</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/3UKlVa1CBeQkRksHV5OfFTO52qd.jpg</posterLink>
+            <dt>200000</dt>
+            <thoiLuong>PT2H5M</thoiLuong>
+            <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+        </phim>
+        <phongId>P3</phongId>
+        <thoiGianChieu>08-04-2024 22:00</thoiGianChieu>
+    </suatChieu>
+    <suatChieu id="SCH21">
+        <phim id="Ph8">
+            <ten>Damsel</ten>
+            <theLoai>Hanh dong</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/AgHbB9DCE9aE57zkHjSmseszh6e.jpg</posterLink>
+            <dt>0</dt>
+            <thoiLuong>PT2H5M</thoiLuong>
+            <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+        </phim>
+        <phongId>P1</phongId>
+        <thoiGianChieu>22-08-2024 22:00</thoiGianChieu>
+    </suatChieu>
+    <suatChieu id="SCH22">
+        <phim id="Ph2">
+            <ten>Kung Fu Panda 4</ten>
+            <theLoai>Hanh dong</theLoai>
+            <doTuoi>18</doTuoi>
+            <posterLink>/Images/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg</posterLink>
+            <dt>0</dt>
+            <thoiLuong>PT2H</thoiLuong>
+            <TgKhoiChieu>2024-05-23</TgKhoiChieu>
+        </phim>
+        <phongId>P1</phongId>
+        <thoiGianChieu>22-08-2024 22:00</thoiGianChieu>
+    </suatChieu>
+    <suatChieu id="SCH23">
+        <phim id="Ph3">
+            <ten>Road House</ten>
+            <theLoai>Hanh dong</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
+            <dt>0</dt>
+            <thoiLuong>PT2H5M</thoiLuong>
+            <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+        </phim>
+        <phongId>P1</phongId>
+        <thoiGianChieu>22-09-2024 23:45</thoiGianChieu>
     </suatChieu>
 </suatChieus>
