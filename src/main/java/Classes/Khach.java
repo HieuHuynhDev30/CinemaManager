@@ -97,6 +97,10 @@ public class Khach {
     public LocalDate getNgaySinh() {
         return ngaySinh;
     }
+    
+    public String inNgaySinh() {
+        return this.ngaySinh.format(dateFormat);
+    }
 
     public void setNgaySinh(CharSequence ngay) {
         try {

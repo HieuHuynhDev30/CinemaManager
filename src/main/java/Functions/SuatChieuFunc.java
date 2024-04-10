@@ -77,14 +77,17 @@ public class SuatChieuFunc {
     }
 
     public void editSuatChieu(SuatChieu p) {
-        for (SuatChieu ph : this.suatChieuList) {
+        for (int i = 0; i < this.suatChieuList.size(); i++) {
+            SuatChieu ph =  this.suatChieuList.get(i);
             if (ph.getId() == null ? p.getId() == null : ph.getId().equals(p.getId())) {
+                System.out.println("updated");
                 ph.setPhim(p.getPhim());
                 ph.setPhong(p.getPhong());
                 ph.setPhongId();
-                ph.setThoiGianChieu(p.getThoiGianChieu().toString());
+                ph.setThoiGianChieu((CharSequence) p.inThoiGianChieu());
             }
         }
+        this.writeListSuatChieus(suatChieuList);
     }
 
     public boolean xoaSuatChieu(SuatChieu p) {
@@ -96,6 +99,7 @@ public class SuatChieuFunc {
                 return true;
             }
         }
+         this.writeListSuatChieus(suatChieuList);
         return false;
     }
 
@@ -109,46 +113,46 @@ public class SuatChieuFunc {
 
         @Override
         public int compare(SuatChieu o1, SuatChieu o2) {
-            if (beLon) {
-                return Integer.parseInt(o1.getId().substring(3)) - Integer.parseInt(o2.getId().substring(3));
+            if (beLon == true) {
+                return o1.getId().compareTo(o2.getId());
             } else {
-                return Integer.parseInt(o2.getId().substring(3)) - Integer.parseInt(o1.getId().substring(3));
+                return o2.getId().compareTo(o1.getId());
             }
         }
 
     }
-    
-     public class SortSlvSch implements Comparator<SuatChieu> {
+
+    public class SortDtSch implements Comparator<SuatChieu> {
 
         private boolean beLon;
 
-        public SortSlvSch(boolean beLon) {
+        public SortDtSch(boolean beLon) {
             this.beLon = beLon;
         }
 
         @Override
         public int compare(SuatChieu o1, SuatChieu o2) {
             if (beLon) {
-                return o1.getSlVeDat() - o2.getSlVeDat();
+                return o1.getDt() - o2.getDt();
             } else {
-                return o2.getSlVeDat() - o1.getSlVeDat();
+                return o2.getDt() - o1.getDt();
             }
         }
-
     }
 
     public ArrayList<SuatChieu> sapXepSuatChieu(ArrayList<SuatChieu> list, String tieuChi, boolean beLon) {
         if ("id".equals(tieuChi.toLowerCase())) {
             Collections.sort(list, new SortIdSch(beLon));
         }
-        if ("soluongve".equals(tieuChi.toLowerCase())) {
-            Collections.sort(list, new SortSlvSch(beLon));
+        if ("doanhthu".equals(tieuChi.toLowerCase())) {
+            Collections.sort(list, new SortDtSch(beLon));
         }
+        this.writeListSuatChieus(list);
         return list;
     }
 
     public List<SuatChieu> getSuatChieuList() {
-        return suatChieuList;
+        return this.readListSuatChieus();
     }
 
     public void setSuatChieuList(List<SuatChieu> suatChieuList) {

@@ -415,12 +415,12 @@ public class RapPhim {
             }
         }
         
-        if ("suatchieu".equals(tieuChi.toLowerCase())) {
-            for (SuatChieu sch : (SuatChieu[]) obs) {
-                doanhThu += sch.getDoanhThu();
-            }
-        }
-        
+//        if ("suatchieu".equals(tieuChi.toLowerCase())) {
+//            for (SuatChieu sch : (SuatChieu[]) obs) {
+//                doanhThu += sch.get;
+//            }
+//        }
+//        
         return doanhThu;
     }
 

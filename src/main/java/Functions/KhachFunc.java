@@ -55,15 +55,18 @@ public class KhachFunc {
     }
 
     public void editKhach(Khach p) {
-        for (Khach ph : this.khachList) {
+        for (int i = 0; i < this.khachList.size(); i++) {
+            Khach ph = this.khachList.get(i);
             if (ph.getId() == null ? p.getId() == null : ph.getId().equals(p.getId())) {
+                System.out.print("updated");
                 ph.setHoTen(p.getHoTen());
-                ph.setGioiTinh(p.getHoTen());
-                ph.setNgaySinh(p.getNgaySinh().toString());
+                ph.setGioiTinh(p.getGioiTinh());
+                ph.setNgaySinh((CharSequence) p.inNgaySinh());
                 ph.setSlVeDat(p.getSlVeDat());
                 ph.setTongTien(p.getTongTien());
             }
         }
+        this.writeListKhachs(khachList);
     }
 
     public boolean xoaKhach(Khach p) {

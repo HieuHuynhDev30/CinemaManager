@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <khachs>
     <khach id="K1">
-        <slVeDat>3</slVeDat>
-        <tongTien>360000</tongTien>
+        <slVeDat>0</slVeDat>
+        <tongTien>0</tongTien>
         <hoTen>Nguyen Tuyet Mai</hoTen>
-        <gioiTinh>Nu</gioiTinh>
-        <ngaySinh>2003-09-15</ngaySinh>
+        <gioiTinh>Nữ</gioiTinh>
+        <ngaySinh>2024-04-13</ngaySinh>
         <dsVe id="V1">
             <ghe>
                 <gia>120000.0</gia>
@@ -18,11 +18,13 @@
                     <ten>Killer</ten>
                     <theLoai>Kinh di</theLoai>
                     <doTuoi>18</doTuoi>
+                    <dt>0</dt>
                     <thoiLuong>PT2H5M</thoiLuong>
                     <TgKhoiChieu>2024-05-16</TgKhoiChieu>
                 </phim>
                 <phongId>P1</phongId>
                 <thoiGianChieu>12-12-2024 15:45</thoiGianChieu>
+                <dt>0</dt>
             </suat>
         </dsVe>
         <dsVe id="V3">
@@ -37,11 +39,13 @@
                     <ten>Killer</ten>
                     <theLoai>Kinh di</theLoai>
                     <doTuoi>18</doTuoi>
+                    <dt>0</dt>
                     <thoiLuong>PT2H5M</thoiLuong>
                     <TgKhoiChieu>2024-05-16</TgKhoiChieu>
                 </phim>
                 <phongId>P1</phongId>
                 <thoiGianChieu>12-12-2024 15:45</thoiGianChieu>
+                <dt>0</dt>
             </suat>
         </dsVe>
         <dsVe id="V4">
@@ -56,16 +60,18 @@
                     <ten>Spider-man</ten>
                     <theLoai>Hanh dong</theLoai>
                     <doTuoi>18</doTuoi>
+                    <dt>0</dt>
                     <thoiLuong>PT2H</thoiLuong>
                     <TgKhoiChieu>2024-05-23</TgKhoiChieu>
                 </phim>
                 <phongId>P3</phongId>
                 <thoiGianChieu>16-08-2024 15:45</thoiGianChieu>
+                <dt>0</dt>
             </suat>
         </dsVe>
     </khach>
     <khach id="K2">
-        <slVeDat>1</slVeDat>
+        <slVeDat>0</slVeDat>
         <tongTien>120000</tongTien>
         <hoTen>Pham Minh Duy</hoTen>
         <gioiTinh>Nam</gioiTinh>
@@ -82,11 +88,13 @@
                     <ten>Spider-man</ten>
                     <theLoai>Hanh dong</theLoai>
                     <doTuoi>18</doTuoi>
+                    <dt>0</dt>
                     <thoiLuong>PT2H</thoiLuong>
                     <TgKhoiChieu>2024-05-23</TgKhoiChieu>
                 </phim>
                 <phongId>P3</phongId>
                 <thoiGianChieu>16-08-2024 15:45</thoiGianChieu>
+                <dt>0</dt>
             </suat>
         </dsVe>
     </khach>

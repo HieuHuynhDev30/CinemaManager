@@ -95,22 +95,22 @@ public class CinemaManager {
 //            in("Tao ghe:");
 ////            in("Nhap so ghe thuong:");
 ////            p.setSlThuong(Integer.parseInt(sc.nextLine()));
-////            for (int i = 0; i < p.getSlThuong(); i++) {
-////                GheThuong gt = new GheThuong();
-////                p.themGhe(gt);
-////            }
-////            in("Nhap so ghe Vip:");
-////            p.setSlVip(Integer.parseInt(sc.nextLine()));
-////            for (int i = 0; i < p.getSlVip(); i++) {
-////                GheVip gv = new GheVip();
-////                p.themGhe(gv);
-////            }
-////            in("Nhap so ghe doi:");
-////            p.setSlDoi(Integer.parseInt(sc.nextLine()));
-////            for (int i = 0; i < p.getSlDoi(); i++) {
-////                GheDoi gd = new GheDoi();
-////                p.themGhe(gd);
-////            }
+//            for (int i = 0; i < p.getSlThuong(); i++) {
+//                GheThuong gt = new GheThuong();
+//                p.themGhe(gt);
+//            }
+//            in("Nhap so ghe Vip:");
+//            p.setSlVip(Integer.parseInt(sc.nextLine()));
+//            for (int i = 0; i < p.getSlVip(); i++) {
+//                GheVip gv = new GheVip();
+//                p.themGhe(gv);
+//            }
+//            in("Nhap so ghe doi:");
+//            p.setSlDoi(Integer.parseInt(sc.nextLine()));
+//            for (int i = 0; i < p.getSlDoi(); i++) {
+//                GheDoi gd = new GheDoi();
+//                p.themGhe(gd);
+//            }
 ////            in("Thong tin phong:");
 ////            in(p.toString());
 ////            rp.themPhong(p);

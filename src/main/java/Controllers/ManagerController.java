@@ -4,6 +4,9 @@
  */
 package Controllers;
 
+import Classes.GheDoi;
+import Classes.GheThuong;
+import Classes.GheVip;
 import Classes.Khach;
 import Classes.Phim;
 import Classes.Phong;
@@ -28,7 +31,7 @@ import javax.swing.event.ListSelectionListener;
  * @author Lenovo
  */
 public class ManagerController {
-
+    
     private ManagerView managerView;
     private PhongFunc phongFunc;
     private PhimFunc phimFunc;
@@ -38,10 +41,10 @@ public class ManagerController {
     private DoanhThuFunc doanhThuFunc;
     private List<Phim> phimList;
     private List<Phong> phongList;
-    private ArrayList<SuatChieu> schList;
+    private List<SuatChieu> schList;
     private List<Ve> veList;
     private List<Khach> khachList;
-
+    
     public ManagerController(ManagerView managerView) {
         this.managerView = managerView;
         phongFunc = new PhongFunc();
@@ -61,6 +64,17 @@ public class ManagerController {
         managerView.addClearSchFieldListener(new ClearSuatChieuListener());
         managerView.addDeleteSuatChieuListener(new DeleteSuatChieuListener());
         managerView.addSortSuatChieuListener(new SapXepSuatChieuListener());
+        managerView.addAddSuatChieuListener(new SapXepDtSchListener());
+        managerView.addSchDateTimePickerListener(new ShowSchDateTimeListener());
+        
+        managerView.addListPhongSelectionListener(new ListPhongSelectionListener());
+        managerView.addEditPhongListener(new EditPhongListener());
+        managerView.addClearPhongFieldListener(new ClearPhongListener());
+        managerView.addDeletePhongListener(new DeletePhongListener());
+        managerView.addSortPhongListener(new SapXepPhongListener());
+        
+        managerView.addSortDoanhThuPhimListener(new SapXepDtPhimListener());
+        managerView.addSortDoanhThuSchListener(new SapXepDtSchListener());
         managerView.addSortDoanhThuPhimListener(new SapXepDtPhimListener());
 
         //An addListener
@@ -70,16 +84,19 @@ public class ManagerController {
         managerView.addDeletePhimListener(new DeletePhimListener());
         managerView.addEditPhimListener(new EditPhimListener());
         managerView.addSearchPhimListener(new SearchPhimListener());
-
+        
         managerView.addAddKhachListener(new AddKhachListener());
         managerView.addClearListener(new ClearKhachListener());
         managerView.addListKhachSelectionListener(new ListKhachSelectionListener());
         managerView.addDeleteKhachListener(new DeleteKhachListener());
         managerView.addEditKhachListener(new EditKhachListener());
         managerView.addSearchKhachListener(new SearchKhachListener());
+        managerView.addNSDatePickerListener(new ShowNSDateListener());
         //ket thuc
+        
+        
     }
-
+    
     public void showManagerView() {
         List<Phong> phongList = phongFunc.getPhongList();
         List<SuatChieu> suatList = suatChieuFunc.getSuatChieuList();
@@ -87,24 +104,36 @@ public class ManagerController {
         managerView.showScrollPhimList(phimList);
         managerView.showScrollPhongList(phongList);
         managerView.showScrollSuatList(suatList);
+        
         managerView.showListSuatChieu(suatList);
         managerView.setSuatChieuCombo(phimList, phongList);
+        
         managerView.showDoanhThu(doanhThuFunc.doanhThu("tong", (Object) null));
         managerView.showDoanhThuPhim(phimList, veList);
+        managerView.showDoanhThuSch(schList, veList);
+        managerView.showDtPhongList(phongList, suatList);
+        
         managerView.showListPhim(phimList);
+        managerView.setTheLoaiComboAndDoTuoiSpinner();
+        
         managerView.showListKhach(khachList);
+        managerView.setGioiTinhCombo();
+        
         managerView.showListVe(veList, khachList);
+        
+        managerView.showListPhong(phongList, suatList);
+        managerView.setPhongSortCombo(phongList, suatList);
     }
-
+    
     class ListSuatChieuSelectionListener implements ListSelectionListener {
-
+        
         public void valueChanged(ListSelectionEvent e) {
             managerView.fillSuatChieuFromSelectedRow(phimList);
         }
     }
-
+    
     class EditSuatChieuListener implements ActionListener {
-
+        
         public void actionPerformed(ActionEvent e) {
             SuatChieu sch = managerView.getSchInfo(phimList, phongList);
             if (sch != null) {
@@ -115,9 +144,9 @@ public class ManagerController {
             }
         }
     }
-
+    
     class AddSuatChieuListener implements ActionListener {
-
+        
         public void actionPerformed(ActionEvent e) {
             SuatChieu sch = new SuatChieu();
             SuatChieu newSch = managerView.getSchInfo(phimList, phongList);
@@ -130,16 +159,16 @@ public class ManagerController {
             }
         }
     }
-
+    
     class ClearSuatChieuListener implements ActionListener {
-
+        
         public void actionPerformed(ActionEvent e) {
             managerView.clearSuatChieuInfo();
         }
     }
-
+    
     class DeleteSuatChieuListener implements ActionListener {
-
+        
         public void actionPerformed(ActionEvent e) {
             SuatChieu sch = managerView.getSchInfo(phimList, phongList);
             if (sch != null) {
@@ -150,30 +179,48 @@ public class ManagerController {
             }
         }
     }
-
+    
     class SapXepSuatChieuListener implements ActionListener {
-
+        
         public void actionPerformed(ActionEvent e) {
-            schList = suatChieuFunc.sapXepSuatChieu(schList, managerView.getTieuChiSxSch(), managerView.getSchTangDan());
+            schList = suatChieuFunc.sapXepSuatChieu((ArrayList) schList, managerView.getTieuChiSxSch(), managerView.getSchTangDan());
             managerView.showListSuatChieu(schList);
             suatChieuFunc.writeListSuatChieus(schList);
         }
     }
-
+    
     class SapXepDtPhimListener implements ActionListener {
-
+        
         public void actionPerformed(ActionEvent e) {
             phimList = phimFunc.sapXepPhim((ArrayList) phimList, "doanhthu", managerView.getDtPhimTangDan());
             managerView.clearDoanhThuPhim();
             managerView.showDoanhThuPhim(phimList, veList);
-            System.out.println("da show");
             phimFunc.writeListPhims(phimList);
+        }
+    }
+    
+    class SapXepDtSchListener implements ActionListener {
+        
+        public void actionPerformed(ActionEvent e) {
+            schList = suatChieuFunc.sapXepSuatChieu((ArrayList) schList, "doanhthu", managerView.getSchTangDan());
+            managerView.clearDoanhThuSch();
+            managerView.showDoanhThuSch(schList, veList);
+            suatChieuFunc.writeListSuatChieus((ArrayList) schList);
+        }
+    }
+    
+    class SapXepDtPhongListener implements ActionListener {
+        
+        public void actionPerformed(ActionEvent e) {
+            phongList = phongFunc.sapXepPhong((ArrayList) phongList, "doanhthu", managerView.getDtPhimTangDan());
+            managerView.showDoanhThuPhim(phimList, veList);
+            phongFunc.writeListPhongs((ArrayList) phongList);
         }
     }
 
     // An listener
     class AddPhimListener implements ActionListener {
-
+        
         public void actionPerformed(ActionEvent e) {
             Phim phim = managerView.getPhimInfo();
             if (phim != null) {
@@ -186,16 +233,16 @@ public class ManagerController {
             }
         }
     }
-
+    
     class ClearPhimListener implements ActionListener {
-
+        
         public void actionPerformed(ActionEvent e) {
             managerView.clearPhimInfo();
         }
     }
-
+    
     class DeletePhimListener implements ActionListener {
-
+        
         public void actionPerformed(ActionEvent e) {
             Phim phim = managerView.getPhimInfo();
             if (phim != null) {
@@ -206,9 +253,9 @@ public class ManagerController {
             }
         }
     }
-
+    
     class EditPhimListener implements ActionListener {
-
+        
         public void actionPerformed(ActionEvent e) {
             Phim phim = managerView.getPhimInfo();
             if (phim != null) {
@@ -219,16 +266,16 @@ public class ManagerController {
             }
         }
     }
-
+    
     class ListPhimSelectionListener implements ListSelectionListener {
-
+        
         public void valueChanged(ListSelectionEvent e) {
             managerView.fillPhimFromSelectedRow();
         }
     }
-
+    
     class SearchPhimListener implements ActionListener {
-
+        
         public void actionPerformed(ActionEvent e) {
             int k = managerView.luachonPhimTK();
             String s = managerView.inforPhimSearch();
@@ -248,15 +295,15 @@ public class ManagerController {
                 default:
                     break;
             }
-
+            
         }
-
+        
     }
 
     //ket thuc
     // Khach listner cua An
     class AddKhachListener implements ActionListener {
-
+        
         public void actionPerformed(ActionEvent e) {
             Khach khach = managerView.getKhachInfo();
             if (khach != null) {
@@ -276,7 +323,7 @@ public class ManagerController {
      * @author viettuts.vn
      */
     class ClearKhachListener implements ActionListener {
-
+        
         public void actionPerformed(ActionEvent e) {
             managerView.clearKhachInfo();
         }
@@ -288,7 +335,7 @@ public class ManagerController {
      * @author viettuts.vn
      */
     class DeleteKhachListener implements ActionListener {
-
+        
         public void actionPerformed(ActionEvent e) {
             Khach khach = managerView.getKhachInfo();
             if (khach != null) {
@@ -306,11 +353,11 @@ public class ManagerController {
      * @author viettuts.vn
      */
     class EditKhachListener implements ActionListener {
-
+        
         public void actionPerformed(ActionEvent e) {
             Khach khach = managerView.getKhachInfo();
             if (khach != null) {
-                khachFunc.edit(khach);
+                khachFunc.editKhach(khach);
                 managerView.showKhach(khach);
                 managerView.showListKhach(khachFunc.getKhachList());
                 managerView.showMessage("Cập nhật thành công!");
@@ -325,26 +372,104 @@ public class ManagerController {
      * @author viettuts.vn
      */
     class ListKhachSelectionListener implements ListSelectionListener {
-
+        
         public void valueChanged(ListSelectionEvent e) {
             managerView.fillKhachFromSelectedRow();
         }
     }
     
     class SearchKhachListener implements ActionListener {
+        
         public void actionPerformed(ActionEvent e) {
             int k = managerView.luachonKhachTK();
             String s = managerView.inforKhachSearch();
-            if (k == 0){
+            if (k == 0) {
                 managerView.showListKhach(khachFunc.searchTen(s));
-            } else if (k == 1){
+            } else if (k == 1) {
                 managerView.showListKhach(khachFunc.searchSLv(s));
-            } else if (k == -1){
-               managerView.showListKhach(khachFunc.getKhachList());
-            } 
-                
+            } else if (k == -1) {
+                managerView.showListKhach(khachFunc.getKhachList());
+            }
+            
         }
         
     }
     // ketthuc
+
+    //// Quản lý Phòng listener
+    class ListPhongSelectionListener implements ListSelectionListener {
+        
+        public void valueChanged(ListSelectionEvent e) {
+            managerView.fillPhongFromSelectedRow(phimList);
+        }
+    }
+    
+    class EditPhongListener implements ActionListener {
+        
+        public void actionPerformed(ActionEvent e) {
+            Phong phong = managerView.getPhongInfo(phongList);
+            for (int i = 0; i < phong.getSlThuong(); i++) {
+                GheThuong gt = new GheThuong();
+                phong.themGhe(gt);
+            }
+            for (int i = 0; i < phong.getSlVip(); i++) {
+                GheVip gv = new GheVip();
+                phong.themGhe(gv);
+            }
+            for (int i = 0; i < phong.getSlDoi(); i++) {
+                GheDoi gd = new GheDoi();
+                phong.themGhe(gd);
+            }
+            if (phong != null) {
+                phongFunc.editPhong(phong);
+                managerView.showPhong(phong);
+                managerView.showListPhong(phongFunc.getPhongList(), schList);
+                managerView.showMessage("Cập nhật thành công!\nTất cả các ghế đều trống");
+            }
+        }
+    }
+    
+    class ClearPhongListener implements ActionListener {
+        
+        public void actionPerformed(ActionEvent e) {
+            managerView.clearPhongInfo();
+        }
+    }
+    
+    class DeletePhongListener implements ActionListener {
+        
+        public void actionPerformed(ActionEvent e) {
+            Phong phong = managerView.getPhongInfo(phongList);
+            if (phong != null) {
+                phongFunc.xoaPhong(phong);
+                managerView.clearPhongInfo();
+                managerView.showListPhong(phongList, schList);
+                managerView.showMessage("Xóa thành công!");
+            }
+        }
+    }
+    
+    class SapXepPhongListener implements ActionListener {
+        
+        public void actionPerformed(ActionEvent e) {            
+            phongList = phongFunc.sapXepPhong((ArrayList) phongList, managerView.getTieuChiSxPhong(), managerView.getPhongTangDan());
+            managerView.showListPhong(phongList, schList);
+            phongFunc.writeListPhongs(phongList);
+        }
+    }
+    ///// end Quản lý phòng listener
+    
+    class ShowSchDateTimeListener implements ActionListener {
+        
+        public void actionPerformed(ActionEvent e) {            
+            managerView.confirmSchDateTimePicker(managerView.getSchDateTimePicker());
+        }
+    }
+    
+    class ShowNSDateListener implements ActionListener {
+        
+        public void actionPerformed(ActionEvent e) {            
+            managerView.confirmNSPicker(managerView.getNgaySinhPicker());
+        }
+    }
 }

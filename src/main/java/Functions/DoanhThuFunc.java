@@ -43,11 +43,11 @@ public class DoanhThuFunc {
             }
         }
         
-        if ("suatchieu".equals(tieuChi.toLowerCase())) {
-            for (SuatChieu sch : (SuatChieu[]) obs) {
-                doanhThu += sch.getDoanhThu();
-            }
-        }
+//        if ("suatchieu".equals(tieuChi.toLowerCase())) {
+//            for (SuatChieu sch : (SuatChieu[]) obs) {
+//                doanhThu += sch.getDoanhThu();
+//            }
+//        }
         
         return doanhThu;
     }

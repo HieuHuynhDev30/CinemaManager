@@ -1,19 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <suatChieus>
-    <suatChieu id="SCH1">
-        <phim id="Ph4">
-            <ten>After the Pandemic</ten>
+    <suatChieu id="SCH33">
+        <phim id="Ph8">
+            <ten>Damsel</ten>
             <theLoai>Hanh dong</theLoai>
             <doTuoi>16</doTuoi>
-            <posterLink>/Images/p1LbrdJ53dGfEhRopG71akfzOVu.jpg</posterLink>
-            <dt>0</dt>
+            <posterLink>/Images/AgHbB9DCE9aE57zkHjSmseszh6e.jpg</posterLink>
+            <dt>5000000</dt>
             <thoiLuong>PT2H5M</thoiLuong>
             <TgKhoiChieu>2024-06-21</TgKhoiChieu>
         </phim>
         <phongId>P1</phongId>
-        <thoiGianChieu>12-12-2024 15:45</thoiGianChieu>
+        <thoiGianChieu>19-05-2024 20:00</thoiGianChieu>
+        <dt>0</dt>
     </suatChieu>
-    <suatChieu id="SCH17">
+    <suatChieu id="SCH31">
+        <phim id="Ph7">
+            <ten>Migration</ten>
+            <theLoai>Hanh dong</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/ldfCF9RhR40mppkzmftxapaHeTo.jpg</posterLink>
+            <dt>12000000</dt>
+            <thoiLuong>PT2H5M</thoiLuong>
+            <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+        </phim>
+        <phongId>P3</phongId>
+        <thoiGianChieu>15-07-2024 15:20</thoiGianChieu>
+        <dt>0</dt>
+    </suatChieu>
+    <suatChieu id="SCH29">
         <phim id="Ph8">
             <ten>Damsel</ten>
             <theLoai>Hanh dong</theLoai>
@@ -24,19 +39,63 @@
             <TgKhoiChieu>2024-06-21</TgKhoiChieu>
         </phim>
         <phongId>P3</phongId>
-        <thoiGianChieu>16-08-2024 19:00</thoiGianChieu>
+        <thoiGianChieu>19-05-2024 16:50</thoiGianChieu>
+        <dt>0</dt>
     </suatChieu>
-    <suatChieu id="SCH19">
-        <phim id="Ph7">
-            <ten>Migration</ten>
+    <suatChieu id="SCH27">
+        <phim id="Ph2">
+            <ten>Kung Fu Panda 4</ten>
             <theLoai>Hanh dong</theLoai>
-            <doTuoi>16</doTuoi>
-            <posterLink>/Images/ldfCF9RhR40mppkzmftxapaHeTo.jpg</posterLink>
+            <doTuoi>18</doTuoi>
+            <posterLink>/Images/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg</posterLink>
             <dt>0</dt>
+            <thoiLuong>PT2H</thoiLuong>
+            <TgKhoiChieu>2024-05-23</TgKhoiChieu>
+        </phim>
+        <phongId>P1</phongId>
+        <thoiGianChieu>30-05-2024 18:15</thoiGianChieu>
+        <dt>0</dt>
+    </suatChieu>
+    <suatChieu id="SCH25">
+        <phim id="Ph6">
+            <ten>Creation of Gods</ten>
+            <theLoai>Kinh di</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/ccJpK0rqzhQeP7Mrs2uKqObFY4L.jpg</posterLink>
+            <dt>50000000</dt>
             <thoiLuong>PT2H5M</thoiLuong>
             <TgKhoiChieu>2024-06-21</TgKhoiChieu>
         </phim>
         <phongId>P3</phongId>
-        <thoiGianChieu>18-09-2024 19:30</thoiGianChieu>
+        <thoiGianChieu>20-05-2024 19:50</thoiGianChieu>
+        <dt>0</dt>
+    </suatChieu>
+    <suatChieu id="SCH23">
+        <phim id="Ph3">
+            <ten>Hunters</ten>
+            <theLoai>Hanh dong</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/3UKlVa1CBeQkRksHV5OfFTO52qd.jpg</posterLink>
+            <dt>200000</dt>
+            <thoiLuong>PT2H5M</thoiLuong>
+            <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+        </phim>
+        <phongId>P1</phongId>
+        <thoiGianChieu>18-05-2024 19:30</thoiGianChieu>
+        <dt>0</dt>
+    </suatChieu>
+    <suatChieu id="SCH75">
+        <phim id="Ph1">
+            <ten>Godzilla x Kong: The New Empire</ten>
+            <theLoai>Hanh dong</theLoai>
+            <doTuoi>18</doTuoi>
+            <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
+            <dt>800000</dt>
+            <thoiLuong>PT2H5M</thoiLuong>
+            <TgKhoiChieu>2024-05-16</TgKhoiChieu>
+        </phim>
+        <phongId>P1</phongId>
+        <thoiGianChieu>11-04-2024 15:00</thoiGianChieu>
+        <dt>0</dt>
     </suatChieu>
 </suatChieus>

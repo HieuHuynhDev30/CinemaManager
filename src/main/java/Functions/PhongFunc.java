@@ -12,6 +12,7 @@ import Classes.SuatChieu;
 import XML.PhongListXML;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import utils.FileUtils;
 
@@ -51,7 +52,7 @@ public class PhongFunc {
             GheThuong gt = new GheThuong();
             p.themGhe(gt);
         }
-        for (int i = 0; i <  slGVip; i++) {
+        for (int i = 0; i < slGVip; i++) {
             GheVip gv = new GheVip();
             p.themGhe(gv);
         }
@@ -70,6 +71,9 @@ public class PhongFunc {
     public void editPhong(Phong p) {
         for (Phong ph : this.phongList) {
             if (ph.getId() == null ? p.getId() == null : ph.getId().equals(p.getId())) {
+                ph.setSlThuong(p.getSlThuong());
+                ph.setSlVip(p.getSlVip());
+                ph.setSlDoi(p.getSlDoi());
                 ph.setDsGheThuong(p.getDsGheThuong());
                 ph.setDsGheVip(p.getDsGheVip());
                 ph.setDsGheDoi(p.getDsGheDoi());
@@ -78,6 +82,7 @@ public class PhongFunc {
                 ph.setIsPlaying(p.getIsPlaying());
             }
         }
+        this.writeListPhongs(phongList);
     }
 
     public boolean xoaPhong(Phong p) {
@@ -92,36 +97,153 @@ public class PhongFunc {
                 return true;
             }
         }
-        return false; 
+        return false;
     }
 
-    public void sapXepPhong(ArrayList<Phong> list, String tieuChi, boolean beLon) {
-        if ("id".equals(tieuChi.toLowerCase())) {
-            Collections.sort(list, (Phong o1, Phong o2) -> {
-                int intId1 = Integer.parseInt(o1.getId().substring(1));
-                int intId2 = Integer.parseInt(o1.getId().substring(1));
-                if ((beLon && intId1 < intId2) || (!beLon && intId1 > intId2)) {
-                    return 1;
-                }
-                if ((beLon && intId1 > intId2) || (!beLon && intId1 < intId2)) {
-                    return -1;
-                }
-                return 0;
-            });
+    public class SortDtPhong implements Comparator<Phong> {
+
+        private boolean beLon;
+
+        public SortDtPhong(boolean beLon) {
+            this.beLon = beLon;
         }
-        if ("succhua".equals(tieuChi.toLowerCase())) {
-            Collections.sort(list, (Phong o1, Phong o2) -> {
-                int intId1 = o1.getSucChua();
-                int intId2 = o2.getSucChua();
-                if ((beLon && intId1 < intId2) || (!beLon && intId1 > intId2)) {
-                    return 1;
-                }
-                if ((beLon && intId1 > intId2) || (!beLon && intId1 < intId2)) {
-                    return -1;
-                }
-                return 0;
-            });
+
+        @Override
+        public int compare(Phong o1, Phong o2) {
+            if (beLon) {
+                return o1.getDt() - o2.getDt();
+            } else {
+                return o2.getDt() - o1.getDt();
+            }
         }
+    }
+
+    public class SortPhongSc implements Comparator<Phong> {
+
+        private boolean beLon;
+
+        public SortPhongSc(boolean beLon) {
+            this.beLon = beLon;
+        }
+
+        @Override
+        public int compare(Phong o1, Phong o2) {
+            if (beLon) {
+                return o1.getSucChua() - o2.getSucChua();
+            } else {
+                return o2.getSucChua() - o1.getSucChua();
+            }
+        }
+    }
+
+    public class SortPhongTsg implements Comparator<Phong> {
+
+        private boolean beLon;
+
+        public SortPhongTsg(boolean beLon) {
+            this.beLon = beLon;
+        }
+
+        @Override
+        public int compare(Phong o1, Phong o2) {
+            if (beLon) {
+                return o1.getTongGhe() - o2.getTongGhe();
+            } else {
+                return o2.getTongGhe() - o1.getTongGhe();
+            }
+        }
+    }
+
+    public class SortPhongLd implements Comparator<Phong> {
+
+        private boolean beLon;
+
+        public SortPhongLd(boolean beLon) {
+            this.beLon = beLon;
+        }
+
+        @Override
+        public int compare(Phong o1, Phong o2) {
+            if (beLon) {
+                if (o1.getIsFull() == true) {
+                    return o2.getIsFull() == false ? 1 : 0;
+                } else {
+                    return o2.getIsFull() == true ? -1 : 0;
+                }
+            } else {
+                if (o1.getIsFull() == false) {
+                    return o2.getIsFull() == true ? 1 : 0;
+                } else {
+                    return o2.getIsFull() == false ? -1 : 0;
+                }
+            }
+        }
+    }
+
+    public class SortPhongPhim implements Comparator<Phong> {
+
+        private boolean beLon;
+
+        public SortPhongPhim(boolean beLon) {
+            this.beLon = beLon;
+        }
+
+        @Override
+        public int compare(Phong o1, Phong o2) {
+            if (!beLon) {
+                return o1.getSuatChieu().getPhim().getTen().compareTo(o2.getSuatChieu().getPhim().getTen());
+            } else {
+                return o2.getSuatChieu().getPhim().getTen().compareTo(o1.getSuatChieu().getPhim().getTen());
+            }
+        }
+    }
+
+    public class SortPhongTt implements Comparator<Phong> {
+
+        private boolean beLon;
+
+        public SortPhongTt(boolean beLon) {
+            this.beLon = beLon;
+        }
+
+        @Override
+        public int compare(Phong o1, Phong o2) {
+            if (beLon) {
+                if (o1.getIsPlaying() == true) {
+                    return o2.getIsPlaying() == false ? 1 : 0;
+                } else {
+                    return o2.getIsPlaying() == true ? -1 : 0;
+                }
+            } else {
+                if (o1.getIsPlaying() == false) {
+                    return o2.getIsPlaying() == true ? 1 : 0;
+                } else {
+                    return o2.getIsPlaying() == false ? -1 : 0;
+                }
+            }
+        }
+    }
+
+    public ArrayList<Phong> sapXepPhong(ArrayList<Phong> list, String tieuChi, boolean beLon) {
+        if ("tổng số ghế".equals(tieuChi.toLowerCase())) {
+            Collections.sort(list, new PhongFunc.SortPhongTsg(beLon));
+        }
+        if ("sức chứa".equals(tieuChi.toLowerCase())) {
+            Collections.sort(list, new PhongFunc.SortPhongSc(beLon));
+        }
+        if ("doanhthu".equals(tieuChi.toLowerCase())) {
+            Collections.sort(list, new PhongFunc.SortDtPhong(beLon));
+        }
+        if ("lấp đầy".equals(tieuChi.toLowerCase())) {
+            Collections.sort(list, new PhongFunc.SortPhongLd(beLon));
+        }
+        if ("phim chiếu".equals(tieuChi.toLowerCase())) {
+            Collections.sort(list, new PhongFunc.SortPhongPhim(beLon));
+        }
+        if ("tình trạng".equals(tieuChi.toLowerCase())) {
+            Collections.sort(list, new PhongFunc.SortPhongTt(beLon));
+        }
+        return list;
     }
 
     public List<Phong> getPhongList() {

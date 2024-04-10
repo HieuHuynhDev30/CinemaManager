@@ -35,6 +35,7 @@ public class Phong {
     private boolean isPlaying;
     private int columns;
     private char rows;
+    private int dt;
 
     public Phong() {
         currId++;
@@ -42,6 +43,11 @@ public class Phong {
         rows = 'A';
         columns = 1;
     }
+    
+    public void setId(String id) {
+        this.id = id;
+    } 
+    
 
     public String getId() {
         return id;
@@ -251,17 +257,26 @@ public class Phong {
         return ds;
     }
 
-//    public String inDsGhe() {
-//        String dsGheStr = "";
-//        for (int i = 0; i < GheList.size(); i++) {
-//            dsGheStr += GheList.get(i).InVitri() + ", ";
-//        }
-//        return dsGheStr;
-//    }
     public int getSucChua() {
-        return this.inTongTrong() + this.inTongDat();
+        return this.slThuong + this.slVip + this.slDoi * 2;
     }
 
+    public int getDt() {
+        return dt;
+    }
+
+    public void setDt(int dt) {
+        this.dt = dt;
+    }
+
+    public void themDt (int dt) {
+        this.dt += dt;
+    }
+    
+    public int getTongGhe() {
+        return slThuong + slVip + slDoi;
+    }
+    
     @Override
     public String toString() {
         return "Phong{" + "id=" + getId() + ", slVip=" + slVip + ", slThuong=" + slThuong + ", slDoi=" + slDoi + ", sucChua=" + getSucChua() + ", dsGhe=" + inDsGheTrong() + ", isFull=" + isFull + ", suatChieu=" + suatChieu + ", isPlaying=" + isPlaying + '}' + '\n';

@@ -7,6 +7,7 @@ package Classes;
 import Classes.Adaptaters.LocalDateTimeAdapter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -32,6 +33,7 @@ public class SuatChieu {
     @XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
     LocalDateTime thoiGianChieu;
     public final static DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
+    private int dt;
 
     public SuatChieu() {
         currId++;
@@ -101,12 +103,18 @@ public class SuatChieu {
         return phong.getSucChua() - phong.getDsGheTrong().size();
     }
 
-    public double getDoanhThu() {
-        double dtThuong = Double.parseDouble(phong.inThuongDat()) * 80000;
-        double dtVip = Double.parseDouble(phong.inVipDat()) * 120000;
-        double dtDoi = Double.parseDouble(phong.inDoiDat()) * 200000;
-        return dtThuong + dtVip + dtDoi;
+    public int getDt() {
+        return dt;
     }
+
+    public void setDt(int dt) {
+        this.dt = dt;
+    }
+    
+    public void themDt(double dt) {
+        this.dt += dt;
+    }
+    
 
     @Override
     public String toString() {
