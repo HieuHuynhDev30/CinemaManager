@@ -294,4 +294,46 @@
             <thoiGianChieu>08-04-2024 22:00</thoiGianChieu>
         </suat>
     </ve>
+    <ve id="V44">
+        <ghe>
+            <gia>200000.0</gia>
+            <khachId>K8</khachId>
+            <loai>Doi</loai>
+            <viTri>P2B2</viTri>
+        </ghe>
+        <suat id="SCH55">
+            <phim id="Ph1">
+                <ten>Godzilla x Kong: The New Empire</ten>
+                <theLoai>Hanh dong</theLoai>
+                <doTuoi>18</doTuoi>
+                <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
+                <dt>800000</dt>
+                <thoiLuong>PT2H5M</thoiLuong>
+                <TgKhoiChieu>2024-05-16</TgKhoiChieu>
+            </phim>
+            <phongId>P3</phongId>
+            <thoiGianChieu>30-04-2024 21:00</thoiGianChieu>
+        </suat>
+    </ve>
+    <ve id="V47">
+        <ghe>
+            <gia>200000.0</gia>
+            <khachId>K8</khachId>
+            <loai>Doi</loai>
+            <viTri>P1B3</viTri>
+        </ghe>
+        <suat id="SCH54">
+            <phim id="Ph1">
+                <ten>Godzilla x Kong: The New Empire</ten>
+                <theLoai>Hanh dong</theLoai>
+                <doTuoi>18</doTuoi>
+                <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
+                <dt>800000</dt>
+                <thoiLuong>PT2H5M</thoiLuong>
+                <TgKhoiChieu>2024-05-16</TgKhoiChieu>
+            </phim>
+            <phongId>P1</phongId>
+            <thoiGianChieu>10-04-2024 22:00</thoiGianChieu>
+        </suat>
+    </ve>
 </ves>

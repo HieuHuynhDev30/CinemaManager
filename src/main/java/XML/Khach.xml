@@ -95,55 +95,6 @@
             </suat>
         </dsVe>
     </khach>
-    <khach id="K8">
-        <slVeDat>2</slVeDat>
-        <tongTien>400000</tongTien>
-        <hoTen>Thanh An</hoTen>
-        <gioiTinh>Nam</gioiTinh>
-        <ngaySinh>2003-08-22</ngaySinh>
-        <dsVe id="V20">
-            <ghe>
-                <gia>200000.0</gia>
-                <khachId>K8</khachId>
-                <loai>Doi</loai>
-                <viTri>P1B3</viTri>
-            </ghe>
-            <suat id="SCH22">
-                <phim id="Ph2">
-                    <ten>Kung Fu Panda 4</ten>
-                    <theLoai>Hanh dong</theLoai>
-                    <doTuoi>18</doTuoi>
-                    <posterLink>/Images/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg</posterLink>
-                    <dt>0</dt>
-                    <thoiLuong>PT2H</thoiLuong>
-                    <TgKhoiChieu>2024-05-23</TgKhoiChieu>
-                </phim>
-                <phongId>P1</phongId>
-                <thoiGianChieu>22-08-2024 22:00</thoiGianChieu>
-            </suat>
-        </dsVe>
-        <dsVe id="V27">
-            <ghe>
-                <gia>200000.0</gia>
-                <khachId>K8</khachId>
-                <loai>Doi</loai>
-                <viTri>P2B5</viTri>
-            </ghe>
-            <suat id="SCH20">
-                <phim id="Ph3">
-                    <ten>Hunters</ten>
-                    <theLoai>Hanh dong</theLoai>
-                    <doTuoi>16</doTuoi>
-                    <posterLink>/Images/3UKlVa1CBeQkRksHV5OfFTO52qd.jpg</posterLink>
-                    <dt>200000</dt>
-                    <thoiLuong>PT2H5M</thoiLuong>
-                    <TgKhoiChieu>2024-06-21</TgKhoiChieu>
-                </phim>
-                <phongId>P3</phongId>
-                <thoiGianChieu>08-04-2024 22:00</thoiGianChieu>
-            </suat>
-        </dsVe>
-    </khach>
     <khach id="K4">
         <slVeDat>1</slVeDat>
         <tongTien>200000</tongTien>
@@ -329,6 +280,97 @@
                 </phim>
                 <phongId>P3</phongId>
                 <thoiGianChieu>08-04-2024 22:00</thoiGianChieu>
+            </suat>
+        </dsVe>
+    </khach>
+    <khach id="K8">
+        <slVeDat>4</slVeDat>
+        <tongTien>800000</tongTien>
+        <hoTen>Thanh An</hoTen>
+        <gioiTinh>Nam</gioiTinh>
+        <ngaySinh>2003-08-22</ngaySinh>
+        <dsVe id="V20">
+            <ghe>
+                <gia>200000.0</gia>
+                <khachId>K8</khachId>
+                <loai>Doi</loai>
+                <viTri>P1B3</viTri>
+            </ghe>
+            <suat id="SCH22">
+                <phim id="Ph2">
+                    <ten>Kung Fu Panda 4</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>18</doTuoi>
+                    <posterLink>/Images/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg</posterLink>
+                    <dt>0</dt>
+                    <thoiLuong>PT2H</thoiLuong>
+                    <TgKhoiChieu>2024-05-23</TgKhoiChieu>
+                </phim>
+                <phongId>P1</phongId>
+                <thoiGianChieu>22-08-2024 22:00</thoiGianChieu>
+            </suat>
+        </dsVe>
+        <dsVe id="V27">
+            <ghe>
+                <gia>200000.0</gia>
+                <khachId>K8</khachId>
+                <loai>Doi</loai>
+                <viTri>P2B5</viTri>
+            </ghe>
+            <suat id="SCH20">
+                <phim id="Ph3">
+                    <ten>Hunters</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>16</doTuoi>
+                    <posterLink>/Images/3UKlVa1CBeQkRksHV5OfFTO52qd.jpg</posterLink>
+                    <dt>200000</dt>
+                    <thoiLuong>PT2H5M</thoiLuong>
+                    <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+                </phim>
+                <phongId>P3</phongId>
+                <thoiGianChieu>08-04-2024 22:00</thoiGianChieu>
+            </suat>
+        </dsVe>
+        <dsVe id="V44">
+            <ghe>
+                <gia>200000.0</gia>
+                <khachId>K8</khachId>
+                <loai>Doi</loai>
+                <viTri>P2B2</viTri>
+            </ghe>
+            <suat id="SCH55">
+                <phim id="Ph1">
+                    <ten>Godzilla x Kong: The New Empire</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>18</doTuoi>
+                    <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
+                    <dt>800000</dt>
+                    <thoiLuong>PT2H5M</thoiLuong>
+                    <TgKhoiChieu>2024-05-16</TgKhoiChieu>
+                </phim>
+                <phongId>P3</phongId>
+                <thoiGianChieu>30-04-2024 21:00</thoiGianChieu>
+            </suat>
+        </dsVe>
+        <dsVe id="V47">
+            <ghe>
+                <gia>200000.0</gia>
+                <khachId>K8</khachId>
+                <loai>Doi</loai>
+                <viTri>P1B3</viTri>
+            </ghe>
+            <suat id="SCH54">
+                <phim id="Ph1">
+                    <ten>Godzilla x Kong: The New Empire</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>18</doTuoi>
+                    <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
+                    <dt>800000</dt>
+                    <thoiLuong>PT2H5M</thoiLuong>
+                    <TgKhoiChieu>2024-05-16</TgKhoiChieu>
+                </phim>
+                <phongId>P1</phongId>
+                <thoiGianChieu>10-04-2024 22:00</thoiGianChieu>
             </suat>
         </dsVe>
     </khach>

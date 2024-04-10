@@ -957,6 +957,13 @@ public class ManagerView extends javax.swing.JFrame {
         // enable Add button
      
     }
+    public void fillGheFromSelectedRow() {
+        // lấy chỉ số của hàng được chọn 
+        int row = BangGhe.getSelectedRow();
+        if (row >= 0) {
+              ViTriField.setText(BangGhe.getModel().getValueAt(row, 1).toString());
+        }
+    }
     
     
     
@@ -2318,6 +2325,10 @@ public class ManagerView extends javax.swing.JFrame {
     }
     public void addListSuatChieuSelectionListener1(ListSelectionListener listener) {
         this.suatChieuTable2.getSelectionModel().addListSelectionListener(listener);
+    }
+    
+     public void addListGheSelectionListener(ListSelectionListener listener) {
+        this.BangGhe.getSelectionModel().addListSelectionListener(listener);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

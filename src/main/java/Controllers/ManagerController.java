@@ -85,6 +85,7 @@ public class ManagerController {
         managerView.addDatVeListener(new DatVeListener());
         
         managerView.addListSuatChieuSelectionListener1(new ListSuatChieuSelectionListener1());
+        managerView.addListGheSelectionListener(new ListGheSelectionListener() );
     }
 
     public void showManagerView() {
@@ -136,6 +137,8 @@ public class ManagerController {
                 suatChieuFunc.themSuatChieu(newSch);
                 managerView.showSuatChieu(newSch);
                 managerView.showListSuatChieu(suatChieuFunc.getSuatChieuList());
+                managerView.setVeCombo(schList, phongList, khachList);
+                managerView.showListSuatChieu1(schList);
                 managerView.showMessage("Thêm thành công!");
             }
         }
@@ -156,6 +159,8 @@ public class ManagerController {
                 suatChieuFunc.xoaSuatChieu(sch);
                 managerView.clearSuatChieuInfo();
                 managerView.showListSuatChieu(suatChieuFunc.getSuatChieuList());
+                managerView.setVeCombo(schList, phongList, khachList);
+                managerView.showListSuatChieu1(schList);
                 managerView.showMessage("Xóa thành công!");
             }
         }
@@ -378,6 +383,7 @@ public class ManagerController {
             //veFunc.themVe(ve);
            // managerView.showListVe(veList, khachList);
             managerView.showListGhe(Sch.getPhong());
+            managerView.fillGheFromSelectedRow();
                      
             
          
@@ -415,6 +421,13 @@ public class ManagerController {
 
         public void valueChanged(ListSelectionEvent e) {
             managerView.fillSuatChieuFromSelectedRow1(phimList);
+        }
+    }
+    
+    class ListGheSelectionListener implements ListSelectionListener {
+
+        public void valueChanged(ListSelectionEvent e) {
+            managerView.fillGheFromSelectedRow();
         }
     }
     //ketthuc
