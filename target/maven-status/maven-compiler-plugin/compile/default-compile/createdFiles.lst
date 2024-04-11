@@ -2,7 +2,9 @@ Views\ManagerView$5.class
 com\toedter\components\JLocaleChooserBeanInfo.class
 utils\FileUtils.class
 Classes\Khach.class
+Controllers\ManagerController$DatVeListener.class
 Views\ManagerView$15.class
+Views\ManagerView$25.class
 Functions\PhongFunc$SortPhongTt.class
 Controllers\ManagerController$EditPhongListener.class
 Views\ManagerView$18.class
@@ -44,7 +46,9 @@ Controllers\ManagerController$DeleteSuatChieuListener.class
 com\toedter\calendar\JCalendar.class
 XML\PhongListXML.class
 Controllers\ManagerController$DeletePhimListener.class
+Views\ManagerView$23.class
 Controllers\ManagerController$DeleteKhachListener.class
+Views\ManagerView$22.class
 Views\ManagerView$6.class
 Functions\PhongFunc$SortPhongPhim.class
 com\toedter\calendar\JMonthChooserBeanInfo.class
@@ -64,6 +68,7 @@ com\toedter\plaf\JCalendarTheme.class
 Functions\AdminFunc.class
 Functions\PhongFunc$SortDtPhong.class
 Views\ManagerView$21.class
+Controllers\ManagerController$ListGheSelectionListener.class
 Controllers\ManagerController$EditSuatChieuListener.class
 Views\ManagerView$11.class
 Controllers\ManagerController$EditPhimListener.class
@@ -77,10 +82,12 @@ Views\ManagerView$1.class
 com\toedter\calendar\JYearChooserBeanInfo.class
 Functions\VeFunc.class
 Classes\GheThuong.class
+Controllers\ManagerController$SelectSeatListener.class
 Controllers\ManagerController$ShowSchDateTimeListener.class
 Views\ManagerView$19.class
 Classes\GheVip.class
 Controllers\ManagerController$ListPhongSelectionListener.class
+Views\ManagerView$24.class
 Controllers\ManagerController$ListSuatChieuSelectionListener.class
 com\toedter\components\JSpinField.class
 Controllers\ManagerController$AddPhimListener.class
@@ -90,6 +97,7 @@ XML\KhachListXML.class
 controller\TestBarChart.class
 Classes\HoiVien.class
 Classes\Phong.class
+Views\ManagerView$26.class
 com\toedter\calendar\JYearChooser.class
 Views\ManagerView$3.class
 Functions\SuatChieuFunc$SortDtSch.class
@@ -101,6 +109,7 @@ Views\ManagerView$20.class
 Controllers\ManagerController$ClearPhimListener.class
 Views\ManagerView$13.class
 Views\testView$1.class
+Controllers\ManagerController$ListSuatChieuDatVeSelectionListener.class
 Views\LoginView.class
 Views\ManagerView$4.class
 com\toedter\calendar\JDateChooser$1.class
@@ -118,3 +127,4 @@ Controllers\ManagerController$ListKhachSelectionListener.class
 Classes\Adaptaters\DurationAdapter.class
 Controllers\ManagerController$ClearSuatChieuListener.class
 Views\ManagerView$14.class
+Controllers\ManagerController$AddVeListener.class

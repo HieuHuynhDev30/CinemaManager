@@ -7,6 +7,7 @@ package Functions;
 import Classes.Khach;
 import Classes.Phim;
 import Classes.SuatChieu;
+import Classes.Ve;
 import XML.KhachListXML;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -190,6 +191,32 @@ public class KhachFunc {
             }
         }
         return khach.getHoTen();
+    }
+    
+     public Khach searchID(Khach khach){
+       
+        int size = khachList.size();
+        
+        for (int i = 0; i < size; i++) {
+            if ( khachList.get(i).getId().equals(khach.getId())) {
+               khach  = khachList.get(i);
+                
+                
+                
+            }
+        }
+        return khach;
+    }
+    
+     public void muaVe(Khach khach,Ve ve) {
+//        khach.dsVe.add(ve);
+//        khach.slVeDat++;
+//        khach.tongTien += ve.getGhe().getGia();
+          khach = searchID(khach);
+          xoaKhach(searchID(khach));
+          khach.muaVe(ve);
+          khachList.add(khach);
+          writeListKhachs(khachList);
     }
     
     //ket thuc

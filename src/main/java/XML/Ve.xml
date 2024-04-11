@@ -19,6 +19,7 @@
             </phim>
             <phongId>P1</phongId>
             <thoiGianChieu>12-12-2024 15:45</thoiGianChieu>
+            <dt>0</dt>
         </suat>
     </ve>
     <ve id="V3">
@@ -40,6 +41,7 @@
             </phim>
             <phongId>P1</phongId>
             <thoiGianChieu>12-12-2024 15:45</thoiGianChieu>
+            <dt>0</dt>
         </suat>
     </ve>
     <ve id="V4">
@@ -61,6 +63,7 @@
             </phim>
             <phongId>P3</phongId>
             <thoiGianChieu>16-08-2024 15:45</thoiGianChieu>
+            <dt>0</dt>
         </suat>
     </ve>
     <ve id="V7">
@@ -82,6 +85,117 @@
             </phim>
             <phongId>P3</phongId>
             <thoiGianChieu>16-08-2024 15:45</thoiGianChieu>
+            <dt>0</dt>
+        </suat>
+    </ve>
+    <ve id="V14">
+        <ghe>
+            <gia>80000.0</gia>
+            <khachId>K1</khachId>
+            <loai>Thuong</loai>
+            <viTri>P1A10</viTri>
+        </ghe>
+        <suat id="SCH23">
+            <phim id="Ph3">
+                <ten>Hunters</ten>
+                <theLoai>Hanh dong</theLoai>
+                <doTuoi>16</doTuoi>
+                <posterLink>/Images/3UKlVa1CBeQkRksHV5OfFTO52qd.jpg</posterLink>
+                <dt>200000</dt>
+                <thoiLuong>PT2H5M</thoiLuong>
+                <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+            </phim>
+            <phongId>P1</phongId>
+            <thoiGianChieu>18-05-2024 19:30</thoiGianChieu>
+            <dt>0</dt>
+        </suat>
+    </ve>
+    <ve id="V16">
+        <ghe>
+            <gia>80000.0</gia>
+            <khachId>K2</khachId>
+            <loai>Thuong</loai>
+            <viTri>P1A6</viTri>
+        </ghe>
+        <suat id="SCH33">
+            <phim id="Ph8">
+                <ten>Damsel</ten>
+                <theLoai>Hanh dong</theLoai>
+                <doTuoi>16</doTuoi>
+                <posterLink>/Images/AgHbB9DCE9aE57zkHjSmseszh6e.jpg</posterLink>
+                <dt>5000000</dt>
+                <thoiLuong>PT2H5M</thoiLuong>
+                <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+            </phim>
+            <phongId>P1</phongId>
+            <thoiGianChieu>19-05-2024 20:00</thoiGianChieu>
+            <dt>0</dt>
+        </suat>
+    </ve>
+    <ve id="V21">
+        <ghe>
+            <gia>80000.0</gia>
+            <khachId>K1</khachId>
+            <loai>Thuong</loai>
+            <viTri>P1A10</viTri>
+        </ghe>
+        <suat id="SCH23">
+            <phim id="Ph3">
+                <ten>Hunters</ten>
+                <theLoai>Hanh dong</theLoai>
+                <doTuoi>16</doTuoi>
+                <posterLink>/Images/3UKlVa1CBeQkRksHV5OfFTO52qd.jpg</posterLink>
+                <dt>200000</dt>
+                <thoiLuong>PT2H5M</thoiLuong>
+                <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+            </phim>
+            <phongId>P1</phongId>
+            <thoiGianChieu>18-05-2024 19:30</thoiGianChieu>
+            <dt>80000</dt>
+        </suat>
+    </ve>
+    <ve id="V23">
+        <ghe>
+            <gia>80000.0</gia>
+            <khachId>K2</khachId>
+            <loai>Thuong</loai>
+            <viTri>P1A6</viTri>
+        </ghe>
+        <suat id="SCH27">
+            <phim id="Ph2">
+                <ten>Kung Fu Panda 4</ten>
+                <theLoai>Hanh dong</theLoai>
+                <doTuoi>18</doTuoi>
+                <posterLink>/Images/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg</posterLink>
+                <dt>0</dt>
+                <thoiLuong>PT2H</thoiLuong>
+                <TgKhoiChieu>2024-05-23</TgKhoiChieu>
+            </phim>
+            <phongId>P1</phongId>
+            <thoiGianChieu>30-05-2024 18:15</thoiGianChieu>
+            <dt>0</dt>
+        </suat>
+    </ve>
+    <ve id="V26">
+        <ghe>
+            <gia>200000.0</gia>
+            <khachId>K1</khachId>
+            <loai>Doi</loai>
+            <viTri>P1B7</viTri>
+        </ghe>
+        <suat id="SCH33">
+            <phim id="Ph8">
+                <ten>Damsel</ten>
+                <theLoai>Hanh dong</theLoai>
+                <doTuoi>16</doTuoi>
+                <posterLink>/Images/AgHbB9DCE9aE57zkHjSmseszh6e.jpg</posterLink>
+                <dt>5000000</dt>
+                <thoiLuong>PT2H5M</thoiLuong>
+                <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+            </phim>
+            <phongId>P1</phongId>
+            <thoiGianChieu>19-05-2024 20:00</thoiGianChieu>
+            <dt>80000</dt>
         </suat>
     </ve>
 </ves>
