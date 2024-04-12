@@ -637,7 +637,7 @@ public class ManagerView extends javax.swing.JFrame {
 
             phimSch.setText(sch.getPhim().getTen());
 
-            phongSch.setText(sch.getPhong().getId());
+            phongSch.setText(sch.getPhongId());
 
             tgSch.setText(sch.getThoiGianChieu().format(formatDateTime));
 
@@ -648,13 +648,14 @@ public class ManagerView extends javax.swing.JFrame {
                 }
             }
             sch.setDt(tongDt);
-            for (Phong ph : phongList) {
-                if (ph.getId() == null ? sch.getPhongId() == null : ph.getId().equals(sch.getPhongId())) {
-                    ph.themDt(tongDt);
-                    System.out.println(ph.getDt());
+            if (phongList != null) {
+                for (Phong ph : phongList) {
+                    if (ph.getId() == null ? sch.getPhongId() == null : ph.getId().equals(sch.getPhongId())) {
+                        ph.themDt(tongDt);
+                        System.out.println(ph.getDt());
+                    }
                 }
             }
-
             dt.setText(tongDt + "đ");
 
             infoSchPanel.add(schId);
@@ -678,26 +679,28 @@ public class ManagerView extends javax.swing.JFrame {
     }
 
     public void showDtPhongList(List<Phong> list, List<Ve> ves) {
-        int size = list.size();
-        Object[][] phs = new Object[size][4];
-        for (int i = 0; i < size; i++) {
-            phs[i][0] = list.get(i).getId();
-            phs[i][1] = list.get(i).getSucChua();
-            int tong = 0;
-            int dt = 0;
-            for (Ve ve : ves) {
-                if (ve.getSuat().getPhongId() == null ? list.get(i).getId() == null : ve.getSuat().getPhongId().equals(list.get(i).getId())) {
-                    tong++;
+        if (list != null) {
+            int size = list.size();
+            Object[][] phs = new Object[size][4];
+            for (int i = 0; i < size; i++) {
+                phs[i][0] = list.get(i).getId();
+                phs[i][1] = list.get(i).getSucChua();
+                int tong = 0;
+                int dt = 0;
+                for (Ve ve : ves) {
+                    if (ve.getSuat().getPhongId() == null ? list.get(i).getId() == null : ve.getSuat().getPhongId().equals(list.get(i).getId())) {
+                        tong++;
+                    }
                 }
+                phs[i][2] = tong;
+                phs[i][3] = list.get(i).getDt();
             }
-            phs[i][2] = tong;
-            phs[i][3] = list.get(i).getDt();
+            String[] columnNames = new String[4];
+            for (int i = 0; i < 4; i++) {
+                columnNames[i] = this.DtPhongTable.getColumnName(i);
+            }
+            this.DtPhongTable.setModel(new DefaultTableModel(phs, columnNames));
         }
-        String[] columnNames = new String[4];
-        for (int i = 0; i < 4; i++) {
-            columnNames[i] = this.DtPhongTable.getColumnName(i);
-        }
-        this.DtPhongTable.setModel(new DefaultTableModel(phs, columnNames));
     }
 
     public boolean getDtPhongTangDan() {

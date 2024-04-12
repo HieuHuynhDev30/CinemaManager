@@ -93,17 +93,16 @@ public class SuatChieuFunc {
         this.writeListSuatChieus(suatChieuList);
     }
 
-    public boolean xoaSuatChieu(SuatChieu p) {
+    public void xoaSuatChieu(SuatChieu p) {
         String pId = p.getId();
         for (SuatChieu ph : this.suatChieuList) {
             if (ph.getId() == null ? pId == null : ph.getId().equals(pId)) {
+                System.out.println("da xoa");
                 this.suatChieuList.remove(ph);
                 this.writeListSuatChieus(suatChieuList);
-                return true;
+                return;
             }
         }
-        this.writeListSuatChieus(suatChieuList);
-        return false;
     }
 
     public class SortIdSch implements Comparator<SuatChieu> {

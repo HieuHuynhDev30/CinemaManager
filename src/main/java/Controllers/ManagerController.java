@@ -125,7 +125,7 @@ public class ManagerController {
         managerView.showDtPhongList(phongFunc.getPhongList(), veFunc.getVeList());
 
     }
-    
+
     class ReloadListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
@@ -194,10 +194,12 @@ public class ManagerController {
             SuatChieu sch = managerView.getSchInfo(phimFunc.getPhimList(), phongFunc.getPhongList());
             if (sch != null) {
                 suatChieuFunc.xoaSuatChieu(sch);
-                for (Phong ph : phongFunc.getPhongList()) {
-                    if (ph.getId().equals(sch.getPhongId())) {
-                        ph.setSuatChieu(sch);
-                        phongFunc.editPhong(ph);
+                if (phongFunc.getPhongList() != null) {
+                    for (Phong ph : phongFunc.getPhongList()) {
+                        if (ph.getId().equals(sch.getPhongId())) {
+                            ph.setSuatChieu(sch);
+                            phongFunc.editPhong(ph);
+                        }
                     }
                 }
                 managerView.clearSuatChieuInfo();
@@ -629,8 +631,6 @@ public class ManagerController {
             }
         }
     }
-    
-    
 
 //Tim ve
 //    class SearchVeListener implements ActionListener {
