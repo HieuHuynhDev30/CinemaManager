@@ -102,19 +102,8 @@ public class Phong {
         this.dsGheDoi = dsGheDoi;
     }
 
-//    public Map<String, Ghe> getDsGhe() {
-//        return dsGhe;
-//    }
-//
-//    public void setDsGhe() {
-//        for (Ghe ghe : this.GheList) {
-//            this.dsGhe.put(ghe.viTri, ghe);
-//        }
-//    }
-//
     public void themGhe(Ghe ghe) {
         ghe.setViTri(String.format("%s%s%d", this.getId(), rows, columns));
-//        this.GheList.add(ghe);
         if (ghe instanceof GheThuong gheThuong) {
             dsGheThuong.put(ghe.getViTri(), gheThuong);
         }

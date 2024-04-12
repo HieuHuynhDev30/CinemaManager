@@ -5,9 +5,11 @@
 package Functions;
 
 import Classes.Khach;
+import Classes.Phim;
 import Classes.Phong;
 import Classes.SuatChieu;
 import Classes.Ve;
+import java.util.List;
 
 /**
  *
@@ -24,7 +26,8 @@ public class DoanhThuFunc {
     
     public double doanhThu(String tieuChi, Object ...obs){
         double doanhThu = 0;
-        if ("tong".equals(tieuChi.toLowerCase())) {
+        veFunc.setVeList(veFunc.readListVes());
+        if ("tong".equals(tieuChi.toLowerCase()) && veFunc.getVeList() != null) {
             for (Ve ve : veFunc.getVeList()) {
                 doanhThu += ve.getGhe().getGia();
             }
@@ -43,18 +46,23 @@ public class DoanhThuFunc {
                 }
             }
         }
-        if ("phong".equals(tieuChi.toLowerCase())) {
-            for (Phong ph : (Phong[]) obs) {
-                doanhThu += ph.getDt();
-            }
-        }
-        
-//        if ("suatchieu".equals(tieuChi.toLowerCase())) {
-//            for (SuatChieu sch : (SuatChieu[]) obs) {
-//                doanhThu += sch.getDoanhThu();
+//        if ("phong".equals(tieuChi.toLowerCase())) {
+//            for (Phong ph : (Phong[]) obs) {
+//                doanhThu += ph.getDt();
 //            }
 //        }
-        
         return doanhThu;
+    }
+    
+    public void resetDt(List<Phim> phimList, List<SuatChieu> schList, List<Phong> phongList) {
+        for (Phim ph : phimList) {
+            ph.setDt(0);
+        }
+        for (Phong ph: phongList) {
+            ph.setDt(0);
+        }
+        for (SuatChieu sch: schList) {
+            sch.setDt(0);
+        }
     }
 }

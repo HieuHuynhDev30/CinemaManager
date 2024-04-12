@@ -12,6 +12,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
 /**
  *
  * @author Lenovo
@@ -19,6 +20,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlRootElement(name = "phim")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Phim {
+
     private static int currId;
     @XmlAttribute
     private String id;
@@ -35,6 +37,8 @@ public class Phim {
     public static final DateTimeFormatter timeFormat = DateTimeFormatter.ofPattern("mm");
 
     public Phim() {
+        currId++;
+        id = "Ph" + currId;
     }
 
     public Phim(String ten, long thoiLuong, String theLoai, int doTuoi) {
@@ -51,11 +55,10 @@ public class Phim {
         this.id = "Ph" + id;
     }
 
-    
     public void setId(String str) {
         this.id = str;
     }
-    
+
     public String getId() {
         return id;
     }
@@ -138,10 +141,10 @@ public class Phim {
         this.dt = dt;
     }
 
-    
     public void themDt(int dt) {
         this.dt += dt;
     }
+
     @Override
     public String toString() {
         return "Phim{" + "id=" + id + ", ten=" + ten + ", theLoai=" + theLoai + ", doTuoi=" + doTuoi + ", thoiLuong=" + inThoiLuong() + ", TgKhoiChieu=" + inTgKhoiChieu() + '}';

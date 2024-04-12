@@ -49,8 +49,7 @@ public class SuatChieuFunc {
         List<SuatChieu> list = new ArrayList<>();
         SuatChieuListXML schListXML = (SuatChieuListXML) FileUtils.readXMLFile(
                 SCH_FILE_NAME, SuatChieuListXML.class);
-        System.out.print("read");
-        if (schListXML.getSuatChieu() != null) {
+        if (schListXML != null && schListXML.getSuatChieu() != null) {
             list = schListXML.getSuatChieu();
             List<Phong> phongList = readListPhongs();
             if (phongList != null) {

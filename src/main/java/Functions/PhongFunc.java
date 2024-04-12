@@ -10,6 +10,8 @@ import Classes.GheVip;
 import Classes.Phong;
 import Classes.SuatChieu;
 import XML.PhongListXML;
+import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -83,7 +85,6 @@ public class PhongFunc {
                 ph.setSuatChieu(p.getSuatChieu());
                 ph.setIsPlaying(p.getIsPlaying());
                 if (p.getSuatChieu() != null) {
-                    System.out.println("set sch");
                     ph.setSuatChieu(p.getSuatChieu());
                 }
             }
@@ -96,6 +97,7 @@ public class PhongFunc {
         for (Phong ph : this.phongList) {
             if (ph.getId() == null ? pId == null : ph.getId().equals(pId)) {
                 this.phongList.remove(ph);
+                break;
             }
         }
         this.writeListPhongs(phongList);
@@ -246,12 +248,42 @@ public class PhongFunc {
         }
         return list;
     }
-    
+
     public void addDt() {
         for (Phong ph : phongList) {
             for (SuatChieu sch : suatChieuFunc.getSuatChieuList()) {
                 if (sch.getPhongId() == null ? ph.getId() == null : sch.getPhongId().equals(ph.getId())) {
                     ph.themDt(sch.getDt());
+                }
+            }
+        }
+        this.writeListPhongs(phongList);
+    }
+
+    public void checkPlaying() {
+        if (this.getPhongList() != null) {
+            for (Phong ph : this.getPhongList()) {
+                if (ph.getSuatChieu() == null) {
+                    continue;
+                }
+                if (ph.getSuatChieu().getThoiGianChieu().isBefore(LocalDateTime.now())) {
+                    ph.setIsPlaying(true);
+                    Duration interval = Duration.between(LocalDateTime.now(), ph.getSuatChieu().getThoiGianChieu());
+                    long intervalAbs = Math.abs(interval.toMinutes());
+                    if (intervalAbs >= ph.getSuatChieu().getPhim().getThoiLuong().toMinutes() + 30) {
+                        ph.setIsPlaying(false);
+                    }
+                }
+            }
+        }
+        this.writeListPhongs(phongList);
+    }
+
+    public void checkIsFull() {
+        if (this.getPhongList() != null) {
+            for (Phong ph : this.getPhongList()) {
+                if (ph.getDsGheTrong().isEmpty()) {
+                    ph.setIsFull(true);
                 }
             }
         }

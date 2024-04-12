@@ -52,6 +52,7 @@ public class PhimFunc {
 
     public void themPhim(Phim ph) {
         this.phimList.add(ph);
+        this.writeListPhims(phimList);
     }
 
     public void editPhim(Phim p) {

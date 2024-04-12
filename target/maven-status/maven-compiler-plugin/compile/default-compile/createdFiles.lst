@@ -34,6 +34,7 @@ Classes\Adaptaters\LocalDateAdapter.class
 Controllers\ManagerController$EditKhachListener.class
 Functions\SuatChieuFunc$SortIdSch.class
 Functions\SuatChieuFunc.class
+Controllers\ManagerController$ResetDtListner.class
 com\toedter\calendar\JDayChooserBeanInfo.class
 Controllers\ManagerController$SearchKhachListener.class
 Views\ManagerView$7.class

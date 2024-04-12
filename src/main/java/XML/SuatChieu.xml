@@ -1,4 +1,73 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <suatChieus>
-    
+    <suatChieu id="SCH29">
+        <phim id="Ph2">
+            <ten>Kung Fu Panda 4</ten>
+            <theLoai>Hai huoc</theLoai>
+            <doTuoi>13</doTuoi>
+            <posterLink>/Images/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg</posterLink>
+            <dt>1120000</dt>
+            <thoiLuong>PT2H</thoiLuong>
+            <TgKhoiChieu>2024-06-22</TgKhoiChieu>
+        </phim>
+        <phongId>P1</phongId>
+        <thoiGianChieu>25-04-2024 19:00</thoiGianChieu>
+        <dt>0</dt>
+    </suatChieu>
+    <suatChieu id="SCH32">
+        <phim id="Ph6">
+            <ten>Creation of Gods</ten>
+            <theLoai>Kinh di</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/ccJpK0rqzhQeP7Mrs2uKqObFY4L.jpg</posterLink>
+            <dt>0</dt>
+            <thoiLuong>PT2H5M</thoiLuong>
+            <TgKhoiChieu>2024-04-21</TgKhoiChieu>
+        </phim>
+        <phongId>P1</phongId>
+        <thoiGianChieu>16-04-2024 19:00</thoiGianChieu>
+        <dt>0</dt>
+    </suatChieu>
+    <suatChieu id="SCH54">
+        <phim id="Ph8">
+            <ten>Damsel</ten>
+            <theLoai>Hanh dong</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/AgHbB9DCE9aE57zkHjSmseszh6e.jpg</posterLink>
+            <dt>80000</dt>
+            <thoiLuong>PT2H5M</thoiLuong>
+            <TgKhoiChieu>2025-02-11</TgKhoiChieu>
+        </phim>
+        <phongId>P1</phongId>
+        <thoiGianChieu>24-04-2024 00:00</thoiGianChieu>
+        <dt>0</dt>
+    </suatChieu>
+    <suatChieu id="SCH116">
+        <phim id="Ph5">
+            <ten>Madame Web</ten>
+            <theLoai>Hanh dong</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg</posterLink>
+            <dt>0</dt>
+            <thoiLuong>PT2H5M</thoiLuong>
+            <TgKhoiChieu>2024-10-10</TgKhoiChieu>
+        </phim>
+        <phongId>P1</phongId>
+        <thoiGianChieu>18-04-2024 00:00</thoiGianChieu>
+        <dt>0</dt>
+    </suatChieu>
+    <suatChieu id="SCH122">
+        <phim id="Ph4">
+            <ten>After the Pandemic</ten>
+            <theLoai>Hanh dong</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/p1LbrdJ53dGfEhRopG71akfzOVu.jpg</posterLink>
+            <dt>0</dt>
+            <thoiLuong>PT2H5M</thoiLuong>
+            <TgKhoiChieu>2024-09-30</TgKhoiChieu>
+        </phim>
+        <phongId>P1</phongId>
+        <thoiGianChieu>19-04-2024 18:00</thoiGianChieu>
+        <dt>0</dt>
+    </suatChieu>
 </suatChieus>
