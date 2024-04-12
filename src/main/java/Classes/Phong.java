@@ -42,6 +42,7 @@ public class Phong {
         this.id = "P" + currId;
         rows = 'A';
         columns = 1;
+        this.isFull = false;
     }
     
     public void setId(String id) {

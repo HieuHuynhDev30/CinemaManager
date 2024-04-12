@@ -2,6 +2,7 @@ Views\ManagerView$5.class
 com\toedter\components\JLocaleChooserBeanInfo.class
 utils\FileUtils.class
 Classes\Khach.class
+Controllers\ManagerController$AddPhongListener.class
 Controllers\ManagerController$DatVeListener.class
 Views\ManagerView$15.class
 Views\ManagerView$25.class
@@ -19,6 +20,7 @@ com\toedter\components\JTitlePanel.class
 com\toedter\calendar\JDayChooser$2.class
 Views\ManagerView$2.class
 com\toedter\components\JSpinFieldBeanInfo.class
+Controllers\ManagerController$ReloadListener.class
 Views\ManagerView$8.class
 com\toedter\calendar\JCalendarBeanInfo.class
 Controllers\ManagerController$ClearKhachListener.class
@@ -85,6 +87,7 @@ Classes\GheThuong.class
 Controllers\ManagerController$SelectSeatListener.class
 Controllers\ManagerController$ShowSchDateTimeListener.class
 Views\ManagerView$19.class
+Views\ManagerView$27.class
 Classes\GheVip.class
 Controllers\ManagerController$ListPhongSelectionListener.class
 Views\ManagerView$24.class
@@ -127,4 +130,3 @@ Controllers\ManagerController$ListKhachSelectionListener.class
 Classes\Adaptaters\DurationAdapter.class
 Controllers\ManagerController$ClearSuatChieuListener.class
 Views\ManagerView$14.class
-Controllers\ManagerController$AddVeListener.class

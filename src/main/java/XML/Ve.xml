@@ -1,201 +1,113 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ves>
-    <ve id="V1">
-        <ghe>
-            <gia>120000.0</gia>
-            <khachId>K1</khachId>
-            <loai>Vip</loai>
-            <viTri>P1A6</viTri>
-        </ghe>
-        <suat id="SCH1">
-            <phim id="Ph7">
-                <ten>Migration</ten>
-                <theLoai>Hanh dong</theLoai>
-                <doTuoi>16</doTuoi>
-                <posterLink>/Images/ldfCF9RhR40mppkzmftxapaHeTo.jpg</posterLink>
-                <dt>0</dt>
-                <thoiLuong>PT2H5M</thoiLuong>
-                <TgKhoiChieu>2024-06-21</TgKhoiChieu>
-            </phim>
-            <phongId>P1</phongId>
-            <thoiGianChieu>12-12-2024 15:45</thoiGianChieu>
-            <dt>0</dt>
-        </suat>
-    </ve>
-    <ve id="V3">
-        <ghe>
-            <gia>120000.0</gia>
-            <khachId>K1</khachId>
-            <loai>Vip</loai>
-            <viTri>P1A7</viTri>
-        </ghe>
-        <suat id="SCH1">
-            <phim id="Ph1">
-                <ten>Godzilla x Kong: The New Empire</ten>
-                <theLoai>Hanh dong</theLoai>
-                <doTuoi>18</doTuoi>
-                <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
-                <dt>800000</dt>
-                <thoiLuong>PT2H5M</thoiLuong>
-                <TgKhoiChieu>2024-05-16</TgKhoiChieu>
-            </phim>
-            <phongId>P1</phongId>
-            <thoiGianChieu>12-12-2024 15:45</thoiGianChieu>
-            <dt>0</dt>
-        </suat>
-    </ve>
     <ve id="V4">
         <ghe>
-            <gia>120000.0</gia>
-            <khachId>K1</khachId>
-            <loai>Vip</loai>
-            <viTri>P3A9</viTri>
+            <gia>80000.0</gia>
+            <khachId>K3</khachId>
+            <loai>Thuong</loai>
+            <viTri>P1A7</viTri>
         </ghe>
-        <suat id="SCH7">
-            <phim id="Ph3">
-                <ten>Hunters</ten>
-                <theLoai>Hanh dong</theLoai>
-                <doTuoi>16</doTuoi>
-                <posterLink>/Images/3UKlVa1CBeQkRksHV5OfFTO52qd.jpg</posterLink>
-                <dt>200000</dt>
-                <thoiLuong>PT2H5M</thoiLuong>
-                <TgKhoiChieu>2024-06-21</TgKhoiChieu>
-            </phim>
-            <phongId>P3</phongId>
-            <thoiGianChieu>16-08-2024 15:45</thoiGianChieu>
-            <dt>0</dt>
-        </suat>
-    </ve>
-    <ve id="V7">
-        <ghe>
-            <gia>120000.0</gia>
-            <khachId>K2</khachId>
-            <loai>Vip</loai>
-            <viTri>P3A8</viTri>
-        </ghe>
-        <suat id="SCH7">
+        <suat id="SCH21">
             <phim id="Ph6">
                 <ten>Creation of Gods</ten>
                 <theLoai>Kinh di</theLoai>
                 <doTuoi>16</doTuoi>
                 <posterLink>/Images/ccJpK0rqzhQeP7Mrs2uKqObFY4L.jpg</posterLink>
-                <dt>50000000</dt>
-                <thoiLuong>PT2H5M</thoiLuong>
-                <TgKhoiChieu>2024-06-21</TgKhoiChieu>
-            </phim>
-            <phongId>P3</phongId>
-            <thoiGianChieu>16-08-2024 15:45</thoiGianChieu>
-            <dt>0</dt>
-        </suat>
-    </ve>
-    <ve id="V14">
-        <ghe>
-            <gia>80000.0</gia>
-            <khachId>K1</khachId>
-            <loai>Thuong</loai>
-            <viTri>P1A10</viTri>
-        </ghe>
-        <suat id="SCH23">
-            <phim id="Ph3">
-                <ten>Hunters</ten>
-                <theLoai>Hanh dong</theLoai>
-                <doTuoi>16</doTuoi>
-                <posterLink>/Images/3UKlVa1CBeQkRksHV5OfFTO52qd.jpg</posterLink>
-                <dt>200000</dt>
-                <thoiLuong>PT2H5M</thoiLuong>
-                <TgKhoiChieu>2024-06-21</TgKhoiChieu>
-            </phim>
-            <phongId>P1</phongId>
-            <thoiGianChieu>18-05-2024 19:30</thoiGianChieu>
-            <dt>0</dt>
-        </suat>
-    </ve>
-    <ve id="V16">
-        <ghe>
-            <gia>80000.0</gia>
-            <khachId>K2</khachId>
-            <loai>Thuong</loai>
-            <viTri>P1A6</viTri>
-        </ghe>
-        <suat id="SCH33">
-            <phim id="Ph8">
-                <ten>Damsel</ten>
-                <theLoai>Hanh dong</theLoai>
-                <doTuoi>16</doTuoi>
-                <posterLink>/Images/AgHbB9DCE9aE57zkHjSmseszh6e.jpg</posterLink>
-                <dt>5000000</dt>
-                <thoiLuong>PT2H5M</thoiLuong>
-                <TgKhoiChieu>2024-06-21</TgKhoiChieu>
-            </phim>
-            <phongId>P1</phongId>
-            <thoiGianChieu>19-05-2024 20:00</thoiGianChieu>
-            <dt>0</dt>
-        </suat>
-    </ve>
-    <ve id="V21">
-        <ghe>
-            <gia>80000.0</gia>
-            <khachId>K1</khachId>
-            <loai>Thuong</loai>
-            <viTri>P1A10</viTri>
-        </ghe>
-        <suat id="SCH23">
-            <phim id="Ph3">
-                <ten>Hunters</ten>
-                <theLoai>Hanh dong</theLoai>
-                <doTuoi>16</doTuoi>
-                <posterLink>/Images/3UKlVa1CBeQkRksHV5OfFTO52qd.jpg</posterLink>
-                <dt>200000</dt>
-                <thoiLuong>PT2H5M</thoiLuong>
-                <TgKhoiChieu>2024-06-21</TgKhoiChieu>
-            </phim>
-            <phongId>P1</phongId>
-            <thoiGianChieu>18-05-2024 19:30</thoiGianChieu>
-            <dt>80000</dt>
-        </suat>
-    </ve>
-    <ve id="V23">
-        <ghe>
-            <gia>80000.0</gia>
-            <khachId>K2</khachId>
-            <loai>Thuong</loai>
-            <viTri>P1A6</viTri>
-        </ghe>
-        <suat id="SCH27">
-            <phim id="Ph2">
-                <ten>Kung Fu Panda 4</ten>
-                <theLoai>Hanh dong</theLoai>
-                <doTuoi>18</doTuoi>
-                <posterLink>/Images/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg</posterLink>
                 <dt>0</dt>
-                <thoiLuong>PT2H</thoiLuong>
-                <TgKhoiChieu>2024-05-23</TgKhoiChieu>
+                <thoiLuong>PT2H5M</thoiLuong>
+                <TgKhoiChieu>2024-04-21</TgKhoiChieu>
             </phim>
             <phongId>P1</phongId>
-            <thoiGianChieu>30-05-2024 18:15</thoiGianChieu>
+            <thoiGianChieu>26-04-2024 10:00</thoiGianChieu>
             <dt>0</dt>
         </suat>
     </ve>
-    <ve id="V26">
+    <ve id="V7">
         <ghe>
             <gia>200000.0</gia>
-            <khachId>K1</khachId>
+            <khachId>K3</khachId>
             <loai>Doi</loai>
-            <viTri>P1B7</viTri>
+            <viTri>P1C2</viTri>
         </ghe>
-        <suat id="SCH33">
+        <suat id="SCH21">
+            <phim id="Ph6">
+                <ten>Creation of Gods</ten>
+                <theLoai>Kinh di</theLoai>
+                <doTuoi>16</doTuoi>
+                <posterLink>/Images/ccJpK0rqzhQeP7Mrs2uKqObFY4L.jpg</posterLink>
+                <dt>0</dt>
+                <thoiLuong>PT2H5M</thoiLuong>
+                <TgKhoiChieu>2024-04-21</TgKhoiChieu>
+            </phim>
+            <phongId>P1</phongId>
+            <thoiGianChieu>26-04-2024 10:00</thoiGianChieu>
+            <dt>0</dt>
+        </suat>
+    </ve>
+    <ve id="V10">
+        <ghe>
+            <gia>200000.0</gia>
+            <khachId>K2</khachId>
+            <loai>Doi</loai>
+            <viTri>P1C1</viTri>
+        </ghe>
+        <suat id="SCH132">
             <phim id="Ph8">
                 <ten>Damsel</ten>
                 <theLoai>Hanh dong</theLoai>
                 <doTuoi>16</doTuoi>
                 <posterLink>/Images/AgHbB9DCE9aE57zkHjSmseszh6e.jpg</posterLink>
-                <dt>5000000</dt>
+                <dt>0</dt>
                 <thoiLuong>PT2H5M</thoiLuong>
-                <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+                <TgKhoiChieu>2025-02-11</TgKhoiChieu>
             </phim>
             <phongId>P1</phongId>
-            <thoiGianChieu>19-05-2024 20:00</thoiGianChieu>
-            <dt>80000</dt>
+            <thoiGianChieu>26-04-2024 15:00</thoiGianChieu>
+            <dt>0</dt>
+        </suat>
+    </ve>
+    <ve id="V13">
+        <ghe>
+            <gia>80000.0</gia>
+            <khachId>K3</khachId>
+            <loai>Thuong</loai>
+            <viTri>P133A5</viTri>
+        </ghe>
+        <suat id="SCH280">
+            <phim id="Ph5">
+                <ten>Madame Web</ten>
+                <theLoai>Hanh dong</theLoai>
+                <doTuoi>16</doTuoi>
+                <posterLink>/Images/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg</posterLink>
+                <dt>0</dt>
+                <thoiLuong>PT2H5M</thoiLuong>
+                <TgKhoiChieu>2024-10-10</TgKhoiChieu>
+            </phim>
+            <phongId>P133</phongId>
+            <thoiGianChieu>17-04-2024 15:00</thoiGianChieu>
+            <dt>0</dt>
+        </suat>
+    </ve>
+    <ve id="V15">
+        <ghe>
+            <gia>200000.0</gia>
+            <khachId>K8</khachId>
+            <loai>Doi</loai>
+            <viTri>P517B1</viTri>
+        </ghe>
+        <suat id="SCH953">
+            <phim id="Ph1">
+                <ten>Godzilla x Kong: The New Empire</ten>
+                <theLoai>Hanh dong</theLoai>
+                <doTuoi>18</doTuoi>
+                <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
+                <dt>0</dt>
+                <thoiLuong>PT2H5M</thoiLuong>
+                <TgKhoiChieu>2024-07-10</TgKhoiChieu>
+            </phim>
+            <phongId>P517</phongId>
+            <thoiGianChieu>24-04-2024 16:00</thoiGianChieu>
+            <dt>0</dt>
         </suat>
     </ve>
 </ves>

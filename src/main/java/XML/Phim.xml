@@ -1,40 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <phims>
-    <phim id="Ph6">
-        <ten>Creation of Gods</ten>
-        <theLoai>Kinh di</theLoai>
-        <doTuoi>16</doTuoi>
-        <posterLink>/Images/ccJpK0rqzhQeP7Mrs2uKqObFY4L.jpg</posterLink>
-        <dt>50000000</dt>
-        <thoiLuong>PT2H5M</thoiLuong>
-        <TgKhoiChieu>2024-06-21</TgKhoiChieu>
-    </phim>
-    <phim id="Ph1">
-        <ten>Godzilla x Kong: The New Empire</ten>
-        <theLoai>Hanh dong</theLoai>
-        <doTuoi>18</doTuoi>
-        <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
-        <dt>800000</dt>
-        <thoiLuong>PT2H5M</thoiLuong>
-        <TgKhoiChieu>2024-05-16</TgKhoiChieu>
-    </phim>
     <phim id="Ph3">
         <ten>Hunters</ten>
         <theLoai>Hanh dong</theLoai>
         <doTuoi>16</doTuoi>
         <posterLink>/Images/3UKlVa1CBeQkRksHV5OfFTO52qd.jpg</posterLink>
-        <dt>200000</dt>
-        <thoiLuong>PT2H5M</thoiLuong>
-        <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+        <dt>0</dt>
+        <thoiLuong>PT2H</thoiLuong>
+        <TgKhoiChieu>2024-08-01</TgKhoiChieu>
     </phim>
     <phim id="Ph4">
         <ten>After the Pandemic</ten>
         <theLoai>Hanh dong</theLoai>
         <doTuoi>16</doTuoi>
         <posterLink>/Images/p1LbrdJ53dGfEhRopG71akfzOVu.jpg</posterLink>
-        <dt>120000</dt>
+        <dt>0</dt>
         <thoiLuong>PT2H5M</thoiLuong>
-        <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+        <TgKhoiChieu>2024-09-30</TgKhoiChieu>
     </phim>
     <phim id="Ph3">
         <ten>Road House</ten>
@@ -43,25 +25,7 @@
         <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
         <dt>0</dt>
         <thoiLuong>PT2H5M</thoiLuong>
-        <TgKhoiChieu>2024-06-21</TgKhoiChieu>
-    </phim>
-    <phim id="Ph5">
-        <ten>Madame Web</ten>
-        <theLoai>Hanh dong</theLoai>
-        <doTuoi>16</doTuoi>
-        <posterLink>/Images/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg</posterLink>
-        <dt>0</dt>
-        <thoiLuong>PT2H5M</thoiLuong>
-        <TgKhoiChieu>2024-06-21</TgKhoiChieu>
-    </phim>
-    <phim id="Ph8">
-        <ten>Damsel</ten>
-        <theLoai>Hanh dong</theLoai>
-        <doTuoi>16</doTuoi>
-        <posterLink>/Images/AgHbB9DCE9aE57zkHjSmseszh6e.jpg</posterLink>
-        <dt>0</dt>
-        <thoiLuong>PT2H5M</thoiLuong>
-        <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+        <TgKhoiChieu>2024-11-01</TgKhoiChieu>
     </phim>
     <phim id="Ph2">
         <ten>Kung Fu Panda 4</ten>
@@ -70,15 +34,42 @@
         <posterLink>/Images/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg</posterLink>
         <dt>0</dt>
         <thoiLuong>PT2H</thoiLuong>
-        <TgKhoiChieu>2024-05-23</TgKhoiChieu>
+        <TgKhoiChieu>2024-06-22</TgKhoiChieu>
     </phim>
-    <phim id="Ph7">
-        <ten>Migration</ten>
+    <phim id="Ph1">
+        <ten>Godzilla x Kong: The New Empire</ten>
+        <theLoai>Hanh dong</theLoai>
+        <doTuoi>18</doTuoi>
+        <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
+        <dt>800000</dt>
+        <thoiLuong>PT2H5M</thoiLuong>
+        <TgKhoiChieu>2024-07-10</TgKhoiChieu>
+    </phim>
+    <phim id="Ph5">
+        <ten>Madame Web</ten>
         <theLoai>Hanh dong</theLoai>
         <doTuoi>16</doTuoi>
-        <posterLink>/Images/ldfCF9RhR40mppkzmftxapaHeTo.jpg</posterLink>
-        <dt>0</dt>
+        <posterLink>/Images/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg</posterLink>
+        <dt>1760000</dt>
         <thoiLuong>PT2H5M</thoiLuong>
-        <TgKhoiChieu>2024-06-21</TgKhoiChieu>
+        <TgKhoiChieu>2024-10-10</TgKhoiChieu>
+    </phim>
+    <phim id="Ph8">
+        <ten>Damsel</ten>
+        <theLoai>Hanh dong</theLoai>
+        <doTuoi>16</doTuoi>
+        <posterLink>/Images/AgHbB9DCE9aE57zkHjSmseszh6e.jpg</posterLink>
+        <dt>5600000</dt>
+        <thoiLuong>PT2H5M</thoiLuong>
+        <TgKhoiChieu>2025-02-11</TgKhoiChieu>
+    </phim>
+    <phim id="Ph6">
+        <ten>Creation of Gods</ten>
+        <theLoai>Kinh di</theLoai>
+        <doTuoi>16</doTuoi>
+        <posterLink>/Images/ccJpK0rqzhQeP7Mrs2uKqObFY4L.jpg</posterLink>
+        <dt>9800000</dt>
+        <thoiLuong>PT2H5M</thoiLuong>
+        <TgKhoiChieu>2024-04-21</TgKhoiChieu>
     </phim>
 </phims>

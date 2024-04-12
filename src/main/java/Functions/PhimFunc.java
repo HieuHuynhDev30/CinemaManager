@@ -66,26 +66,23 @@ public class PhimFunc {
         }
     }
 
-    public boolean xoaPhim(Phim p) {
+    public void xoaPhim(Phim p) {
         String phimId = p.getId();
         for (Phim ph : this.phimList) {
             if (ph.getId() == null ? phimId == null : ph.getId().equals(phimId)) {
                 this.phimList.remove(ph);
-                List<SuatChieu> schList = schFunc.readListSuatChieus();
-                for (SuatChieu sch : schList) {
-                    if (sch.getPhim().getId() == null ? ph.getId() == null : sch.getPhim().getId().equals(ph.getId())) {
-                        schList.remove(sch);
-                        schFunc.writeListSuatChieus(schList);
-                    }
-                }
-                this.writeListPhims(phimList);
-                return true;
+//                List<SuatChieu> schList = schFunc.readListSuatChieus();
+//                for (SuatChieu sch : schList) {
+//                    if (sch.getPhim().getId() == null ? ph.getId() == null : sch.getPhim().getId().equals(ph.getId())) {
+//                        schList.remove(sch);
+//                        schFunc.writeListSuatChieus(schList);
+//                    }
+//                }
             }
         }
-        return false;
+        this.writeListPhims(phimList);
     }
-    
-    
+
     public class SortDtPhim implements Comparator<Phim> {
 
         private boolean beLon;
@@ -104,7 +101,6 @@ public class PhimFunc {
         }
 
     }
-
 
     public ArrayList<Phim> sapXepPhim(ArrayList<Phim> list, String tieuChi, boolean beLon) {
         if ("id".equals(tieuChi.toLowerCase())) {
@@ -147,57 +143,53 @@ public class PhimFunc {
     public void setPhimList(List<Phim> phimList) {
         this.phimList = phimList;
     }
-    
+
     // An method
-    
-    public List<Phim> searchTen(String s){
+    public List<Phim> searchTen(String s) {
         List<Phim> list = new ArrayList<>();
         int size = phimList.size();
         for (int i = 0; i < size; i++) {
-            if ( phimList.get(i).getTen().contains(s)) {
+            if (phimList.get(i).getTen().contains(s)) {
                 //phim = listPhim.get(i);
                 list.add(phimList.get(i));
-                
-                
+
             }
         }
         return list;
     }
-    
-    public List<Phim> searchTheLoai(String s){
+
+    public List<Phim> searchTheLoai(String s) {
         List<Phim> list = new ArrayList<>();
         int size = phimList.size();
         for (int i = 0; i < size; i++) {
-            if ( phimList.get(i).getTheLoai().contains(s)) {
-               // phim = listPhim.get(i);
+            if (phimList.get(i).getTheLoai().contains(s)) {
+                // phim = listPhim.get(i);
                 list.add(phimList.get(i));
-                
-                
+
             }
         }
         return list;
     }
-    public List<Phim> searchDoTuoi(String s){
+
+    public List<Phim> searchDoTuoi(String s) {
         List<Phim> list = new ArrayList<>();
         int size = phimList.size();
         int k = Integer.parseInt(s);
         for (int i = 0; i < size; i++) {
-            if ( phimList.get(i).getDoTuoi() >= k) {
-               // phim = listPhim.get(i);
+            if (phimList.get(i).getDoTuoi() == k) {
+                // phim = listPhim.get(i);
                 list.add(phimList.get(i));
-                
-                
             }
         }
         return list;
     }
-    
+
     public void edit(Phim phim) {
         int size = phimList.size();
         for (int i = 0; i < size; i++) {
             if (phimList.get(i).getId().equals(phim.getId())) {
                 phimList.get(i).setTen(phim.getTen());
-                phimList.get(i).setDoTuoi(phim.getDoTuoi());               
+                phimList.get(i).setDoTuoi(phim.getDoTuoi());
                 phimList.get(i).setTheLoai(phim.getTheLoai());
                 phimList.get(i).setThoiLuong(phim.inThoiLuong());
                 phimList.get(i).setTgKhoiChieu(phim.inTgKhoiChieu());
@@ -206,8 +198,6 @@ public class PhimFunc {
             }
         }
     }
-    
-    
-    // ket thuc
 
+    // ket thuc
 }

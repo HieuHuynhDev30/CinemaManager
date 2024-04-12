@@ -46,17 +46,16 @@ public class PhongFunc {
         return list;
     }
 
-    public Phong taoPhong(int slGT, int slGVip, int slGDoi) {
-        Phong p = new Phong();
-        for (int i = 0; i < slGT; i++) {
+    public Phong taoPhong(Phong p) {
+        for (int i = 0; i < p.getSlThuong(); i++) {
             GheThuong gt = new GheThuong();
             p.themGhe(gt);
         }
-        for (int i = 0; i < slGVip; i++) {
+        for (int i = 0; i < p.getSlVip(); i++) {
             GheVip gv = new GheVip();
             p.themGhe(gv);
         }
-        for (int i = 0; i < slGDoi; i++) {
+        for (int i = 0; i < p.getSlDoi(); i++) {
             GheDoi gd = new GheDoi();
             p.themGhe(gd);
         }
@@ -64,7 +63,10 @@ public class PhongFunc {
     }
 
     public void themPhong(Phong p) {
-        this.phongList.add(p);
+        if (this.phongList == null) {
+            this.phongList = new ArrayList<>();
+        }
+        this.phongList.add(taoPhong(p));
         writeListPhongs(phongList);
     }
 
@@ -80,24 +82,23 @@ public class PhongFunc {
                 ph.setIsFull(p.getIsFull());
                 ph.setSuatChieu(p.getSuatChieu());
                 ph.setIsPlaying(p.getIsPlaying());
+                if (p.getSuatChieu() != null) {
+                    System.out.println("set sch");
+                    ph.setSuatChieu(p.getSuatChieu());
+                }
             }
         }
         this.writeListPhongs(phongList);
     }
 
-    public boolean xoaPhong(Phong p) {
+    public void xoaPhong(Phong p) {
         String pId = p.getId();
         for (Phong ph : this.phongList) {
             if (ph.getId() == null ? pId == null : ph.getId().equals(pId)) {
                 this.phongList.remove(ph);
-                if (p.getSuatChieu() != null) {
-                    boolean xoaSch = suatChieuFunc.xoaSuatChieu(p.getSuatChieu());
-                }
-                this.writeListPhongs(phongList);
-                return true;
             }
         }
-        return false;
+        this.writeListPhongs(phongList);
     }
 
     public class SortDtPhong implements Comparator<Phong> {
@@ -244,6 +245,17 @@ public class PhongFunc {
             Collections.sort(list, new PhongFunc.SortPhongTt(beLon));
         }
         return list;
+    }
+    
+    public void addDt() {
+        for (Phong ph : phongList) {
+            for (SuatChieu sch : suatChieuFunc.getSuatChieuList()) {
+                if (sch.getPhongId() == null ? ph.getId() == null : sch.getPhongId().equals(ph.getId())) {
+                    ph.themDt(sch.getDt());
+                }
+            }
+        }
+        this.writeListPhongs(phongList);
     }
 
     public List<Phong> getPhongList() {

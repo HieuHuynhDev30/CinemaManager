@@ -179,16 +179,15 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jTabbedPane1" pref="1068" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
+          <Component id="jTabbedPane1" alignment="1" pref="1060" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane1" alignment="1" pref="612" max="32767" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <Component id="jTabbedPane1" pref="547" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -241,8 +240,13 @@
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="DsSuatScrollPane" alignment="0" max="32767" attributes="0"/>
-                              <Component id="DsPhongScrollPane" pref="937" max="32767" attributes="0"/>
-                              <Component id="HomepageTitle" min="-2" max="-2" attributes="0"/>
+                              <Component id="DsPhongScrollPane" pref="929" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="HomepageTitle" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="reLoadButton" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                              </Group>
                               <Component id="DsPhimScrollPane" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -252,13 +256,17 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="HomepageTitle" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="HomepageTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="reLoadButton" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Component id="DsPhimScrollPane" min="-2" pref="253" max="-2" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Component id="DsSuatScrollPane" pref="202" max="32767" attributes="0"/>
+                          <Component id="DsSuatScrollPane" pref="135" max="32767" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Component id="DsPhongScrollPane" pref="66" max="32767" attributes="0"/>
+                          <Component id="DsPhongScrollPane" pref="50" max="32767" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -378,6 +386,15 @@
                     </Container>
                   </SubComponents>
                 </Container>
+                <Component class="javax.swing.JButton" name="reLoadButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Reload"/>
+                    <Property name="focusCycleRoot" type="boolean" value="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reLoadButtonActionPerformed"/>
+                  </Events>
+                </Component>
               </SubComponents>
             </Container>
           </SubComponents>
@@ -673,7 +690,7 @@
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane7" alignment="0" pref="261" max="32767" attributes="0"/>
+                              <Component id="jScrollPane7" alignment="0" pref="243" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -1582,7 +1599,7 @@
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Component id="jScrollPane3" pref="263" max="32767" attributes="0"/>
+                          <Component id="jScrollPane3" pref="198" max="32767" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -1951,7 +1968,7 @@
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Component id="jPanel21" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Component id="jScrollPane8" pref="298" max="32767" attributes="0"/>
+                          <Component id="jScrollPane8" pref="233" max="32767" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -2128,7 +2145,7 @@
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="jLabel20" alignment="0" max="32767" attributes="0"/>
                               <Component id="jPanel8" alignment="0" max="32767" attributes="0"/>
-                              <Component id="quanLySuatChieu1" alignment="1" pref="937" max="32767" attributes="0"/>
+                              <Component id="quanLySuatChieu1" alignment="1" pref="929" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -2141,7 +2158,7 @@
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Component id="jPanel8" max="32767" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Component id="quanLySuatChieu1" pref="340" max="32767" attributes="0"/>
+                          <Component id="quanLySuatChieu1" pref="307" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -2203,7 +2220,7 @@
                                   </Group>
                                   <Component id="chonGheButton" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="330" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="322" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2230,7 +2247,7 @@
                                   <Component id="phimCombo1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="chonGheButton" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="89" max="32767" attributes="0"/>
+                              <EmptySpace pref="57" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2315,7 +2332,7 @@
                     </Component>
                     <Component class="javax.swing.JTextField" name="phongDatVeCombo">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jTextField1"/>
+                        <Property name="editable" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -2340,7 +2357,7 @@
                           <Group type="102" attributes="0">
                               <Component id="SuatChieuManager1" min="-2" pref="40" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                              <Component id="suatChieuScroll2" pref="300" max="32767" attributes="0"/>
+                              <Component id="suatChieuScroll2" pref="267" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2414,7 +2431,7 @@
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jPanel10" pref="931" max="32767" attributes="0"/>
+                              <Component id="jPanel10" pref="923" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -2424,12 +2441,12 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Component id="jPanel4" min="-2" pref="86" max="-2" attributes="0"/>
-                          <EmptySpace pref="491" max="32767" attributes="0"/>
+                          <EmptySpace pref="426" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
-                              <Component id="jPanel10" max="32767" attributes="0"/>
+                              <Component id="jPanel10" pref="416" max="32767" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -2454,7 +2471,7 @@
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="tongDoanhThu" min="-2" pref="165" max="-2" attributes="0"/>
-                              <EmptySpace pref="762" max="32767" attributes="0"/>
+                              <EmptySpace pref="754" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2542,7 +2559,7 @@
                                           <Component id="tieuChiDtPhim" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jScrollPane1" pref="165" max="32767" attributes="0"/>
+                                      <Component id="jScrollPane1" pref="133" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -2603,7 +2620,7 @@
                                               <Component id="sortDtSchButton" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="tieuChiDtSch" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="0" pref="280" max="32767" attributes="0"/>
+                                              <EmptySpace min="0" pref="276" max="32767" attributes="0"/>
                                           </Group>
                                           <Component id="jScrollPane5" alignment="1" max="32767" attributes="0"/>
                                       </Group>
@@ -2619,7 +2636,7 @@
                                           <Component id="tieuChiDtSch" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jScrollPane5" pref="176" max="32767" attributes="0"/>
+                                      <Component id="jScrollPane5" pref="143" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -2684,7 +2701,7 @@
                                   <Component id="sortDtPhongButton" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="tieuChiDtPhong" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="286" max="32767" attributes="0"/>
+                                  <EmptySpace pref="282" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2697,7 +2714,7 @@
                                       <Component id="tieuChiDtPhong" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jScrollPane6" pref="408" max="32767" attributes="0"/>
+                                  <Component id="jScrollPane6" pref="343" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -2717,7 +2734,7 @@
                                   <Table columnCount="4" rowCount="4">
                                     <Column editable="false" title="Id" type="java.lang.String"/>
                                     <Column editable="false" title="S&#x1ee9;c ch&#x1ee9;a" type="java.lang.Integer"/>
-                                    <Column editable="false" title="S&#x1ed1; l&#x1b0;&#x1ee3;ng su&#x1ea5;t chi&#x1ebf;u" type="java.lang.Integer"/>
+                                    <Column editable="false" title="S&#x1ed1; l&#x1b0;&#x1ee3;ng v&#xe9; &#x111;&#xe3; &#x111;&#x1eb7;t" type="java.lang.Integer"/>
                                     <Column editable="false" title="Doanh thu" type="java.lang.Double"/>
                                   </Table>
                                 </Property>

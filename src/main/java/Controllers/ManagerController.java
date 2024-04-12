@@ -22,6 +22,7 @@ import Functions.VeFunc;
 import Views.ManagerView;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.event.ListSelectionEvent;
@@ -40,11 +41,6 @@ public class ManagerController {
     private KhachFunc khachFunc;
     private VeFunc veFunc;
     private DoanhThuFunc doanhThuFunc;
-    private List<Phim> phimList;
-    private List<Phong> phongList;
-    private List<SuatChieu> schList;
-    private List<Ve> veList;
-    private List<Khach> khachList;
 
     public ManagerController(ManagerView managerView) {
         this.managerView = managerView;
@@ -54,11 +50,6 @@ public class ManagerController {
         khachFunc = new KhachFunc();
         doanhThuFunc = new DoanhThuFunc();
         veFunc = new VeFunc();
-        this.phimList = phimFunc.getPhimList();
-        this.phongList = phongFunc.getPhongList();
-        this.schList = (ArrayList) suatChieuFunc.getSuatChieuList();
-        this.veList = veFunc.getVeList();
-        this.khachList = khachFunc.getKhachList();
         managerView.addListSuatChieuSelectionListener(new ListSuatChieuSelectionListener());
         managerView.addEditSuatChieuListener(new EditSuatChieuListener());
         managerView.addAddSuatChieuListener(new AddSuatChieuListener());
@@ -77,6 +68,7 @@ public class ManagerController {
         managerView.addSortDoanhThuPhimListener(new SapXepDtPhimListener());
         managerView.addSortDoanhThuSchListener(new SapXepDtSchListener());
         managerView.addSortDoanhThuPhimListener(new SapXepDtPhimListener());
+        managerView.addAddPhongListener(new AddPhongListener());
 
         //An addListener
         managerView.addAddPhimListener(new AddPhimListener());
@@ -101,53 +93,66 @@ public class ManagerController {
 //        managerView.addSearchVeListener(new SearchVeListener());
         managerView.addselectSeatListener(new SelectSeatListener());
         managerView.addListGheSelectionListener(new ListGheSelectionListener());
-
+        managerView.addReloadListener(new ReloadListener());
     }
 
     public void showManagerView() {
-
-        List<Phong> phongList = phongFunc.getPhongList();
-        List<SuatChieu> suatList = suatChieuFunc.getSuatChieuList();
         this.managerView.setVisible(true);
-        managerView.showScrollPhimList(phimList);
-        managerView.showScrollPhongList(phongList);
-        managerView.showScrollSuatList(suatList);
+        managerView.clearScrollList();
+        managerView.showScrollPhimList(phimFunc.getPhimList());
+        managerView.showScrollPhongList(phongFunc.getPhongList());
+        managerView.showScrollSuatList(suatChieuFunc.getSuatChieuList());
 
-        managerView.showListSuatChieu(suatList);
-        managerView.setSuatChieuCombo(phimList, phongList);
+        managerView.showListPhong(phongFunc.getPhongList(), suatChieuFunc.getSuatChieuList());
+        managerView.setPhongSortCombo(phongFunc.getPhongList(), suatChieuFunc.getSuatChieuList());
 
-        managerView.showDoanhThu(doanhThuFunc.doanhThu("tong", (Object) null));
-        managerView.showDoanhThuPhim(phimList, veList);
-        managerView.showDoanhThuSch(schList, veList);
-        managerView.showDtPhongList(phongList, suatList);
-
-        managerView.showListPhim(phimList);
+        managerView.showListPhim(phimFunc.getPhimList());
         managerView.setTheLoaiComboAndDoTuoiSpinner();
 
-        managerView.showListKhach(khachList);
+        managerView.showListSuatChieu(suatChieuFunc.getSuatChieuList());
+        managerView.setSuatChieuCombo(phimFunc.getPhimList(), phongFunc.getPhongList());
+
+        managerView.showListKhach(khachFunc.getKhachList());
         managerView.setGioiTinhCombo();
 
-        managerView.showListVe(veList, khachList);
-        managerView.setVeCombo(schList, phongList, khachList);
-        managerView.showListSuatChieu1(schList);
+        managerView.showListVe(veFunc.getVeList(), khachFunc.getKhachList());
+        managerView.setVeCombo(suatChieuFunc.getSuatChieuList(), phongFunc.getPhongList(), khachFunc.getKhachList());
+        managerView.showListSuatChieu1(suatChieuFunc.getSuatChieuList());
 
-        managerView.showListPhong(phongList, suatList);
-        managerView.setPhongSortCombo(phongList, suatList);
+        managerView.showDoanhThu(doanhThuFunc.doanhThu("tong", (Object) null));
+        managerView.showDoanhThuPhim(phimFunc.getPhimList(), veFunc.getVeList());
+        managerView.showDoanhThuSch(suatChieuFunc.getSuatChieuList(), veFunc.getVeList(), phongFunc.getPhongList());
+        managerView.showDtPhongList(phongFunc.getPhongList(), veFunc.getVeList());
+
+    }
+    
+    class ReloadListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            managerView.setVisible(false);
+            showManagerView();
+        }
     }
 
     class ListSuatChieuSelectionListener implements ListSelectionListener {
 
         public void valueChanged(ListSelectionEvent e) {
-            managerView.fillSuatChieuFromSelectedRow(phimList);
+            managerView.fillSuatChieuFromSelectedRow(phimFunc.getPhimList());
         }
     }
 
     class EditSuatChieuListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            SuatChieu sch = managerView.getSchInfo(phimList, phongList);
+            SuatChieu sch = managerView.getSchInfo(phimFunc.getPhimList(), phongFunc.getPhongList());
             if (sch != null) {
                 suatChieuFunc.editSuatChieu(sch);
+                for (Phong ph : phongFunc.getPhongList()) {
+                    if (ph.getId().equals(sch.getPhongId())) {
+                        ph.setSuatChieu(sch);
+                        phongFunc.editPhong(ph);
+                    }
+                }
                 managerView.showSuatChieu(sch);
                 managerView.showListSuatChieu(suatChieuFunc.getSuatChieuList());
                 managerView.showMessage("Cập nhật thành công!");
@@ -159,10 +164,16 @@ public class ManagerController {
 
         public void actionPerformed(ActionEvent e) {
             SuatChieu sch = new SuatChieu();
-            SuatChieu newSch = managerView.getSchInfo(phimList, phongList);
+            SuatChieu newSch = managerView.getSchInfo(phimFunc.getPhimList(), phongFunc.getPhongList());
             if (newSch != null) {
                 newSch.setId(sch.getId());
                 suatChieuFunc.themSuatChieu(newSch);
+                for (Phong ph : phongFunc.getPhongList()) {
+                    if (ph.getId().equals(sch.getPhongId())) {
+                        ph.setSuatChieu(sch);
+                        phongFunc.editPhong(ph);
+                    }
+                }
                 managerView.showSuatChieu(newSch);
                 managerView.showListSuatChieu(suatChieuFunc.getSuatChieuList());
                 managerView.showMessage("Thêm thành công!");
@@ -180,9 +191,15 @@ public class ManagerController {
     class DeleteSuatChieuListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            SuatChieu sch = managerView.getSchInfo(phimList, phongList);
+            SuatChieu sch = managerView.getSchInfo(phimFunc.getPhimList(), phongFunc.getPhongList());
             if (sch != null) {
                 suatChieuFunc.xoaSuatChieu(sch);
+                for (Phong ph : phongFunc.getPhongList()) {
+                    if (ph.getId().equals(sch.getPhongId())) {
+                        ph.setSuatChieu(sch);
+                        phongFunc.editPhong(ph);
+                    }
+                }
                 managerView.clearSuatChieuInfo();
                 managerView.showListSuatChieu(suatChieuFunc.getSuatChieuList());
                 managerView.showMessage("Xóa thành công!");
@@ -193,38 +210,38 @@ public class ManagerController {
     class SapXepSuatChieuListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            schList = suatChieuFunc.sapXepSuatChieu((ArrayList) schList, managerView.getTieuChiSxSch(), managerView.getSchTangDan());
-            managerView.showListSuatChieu(schList);
-            suatChieuFunc.writeListSuatChieus(schList);
+            suatChieuFunc.setSuatChieuList(suatChieuFunc.sapXepSuatChieu((ArrayList) suatChieuFunc.getSuatChieuList(), managerView.getTieuChiSxSch(), managerView.getSchTangDan()));
+            managerView.showListSuatChieu(suatChieuFunc.getSuatChieuList());
+            suatChieuFunc.writeListSuatChieus(suatChieuFunc.getSuatChieuList());
         }
     }
 
     class SapXepDtPhimListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            phimList = phimFunc.sapXepPhim((ArrayList) phimList, "doanhthu", managerView.getDtPhimTangDan());
+            phimFunc.setPhimList(phimFunc.sapXepPhim((ArrayList) phimFunc.getPhimList(), "doanhthu", managerView.getDtPhimTangDan()));
             managerView.clearDoanhThuPhim();
-            managerView.showDoanhThuPhim(phimList, veList);
-            phimFunc.writeListPhims(phimList);
+            managerView.showDoanhThuPhim(phimFunc.getPhimList(), veFunc.getVeList());
+            phimFunc.writeListPhims(phimFunc.getPhimList());
         }
     }
 
     class SapXepDtSchListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            schList = suatChieuFunc.sapXepSuatChieu((ArrayList) schList, "doanhthu", managerView.getSchTangDan());
+            suatChieuFunc.setSuatChieuList(suatChieuFunc.sapXepSuatChieu((ArrayList) suatChieuFunc.getSuatChieuList(), "doanhthu", managerView.getSchTangDan()));
             managerView.clearDoanhThuSch();
-            managerView.showDoanhThuSch(schList, veList);
-            suatChieuFunc.writeListSuatChieus((ArrayList) schList);
+            managerView.showDoanhThuSch(suatChieuFunc.getSuatChieuList(), veFunc.getVeList(), phongFunc.getPhongList());
+            suatChieuFunc.writeListSuatChieus((ArrayList) suatChieuFunc.getSuatChieuList());
         }
     }
 
     class SapXepDtPhongListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            phongList = phongFunc.sapXepPhong((ArrayList) phongList, "doanhthu", managerView.getDtPhimTangDan());
-            managerView.showDoanhThuPhim(phimList, veList);
-            phongFunc.writeListPhongs((ArrayList) phongList);
+            phongFunc.setPhongList(phongFunc.sapXepPhong((ArrayList) phongFunc.getPhongList(), "doanhthu", managerView.getDtPhimTangDan()));
+            managerView.showDoanhThuPhim(phimFunc.getPhimList(), veFunc.getVeList());
+            phongFunc.writeListPhongs((ArrayList) phongFunc.getPhongList());
         }
     }
 
@@ -257,6 +274,11 @@ public class ManagerController {
             Phim phim = managerView.getPhimInfo();
             if (phim != null) {
                 phimFunc.xoaPhim(phim);
+                for (SuatChieu sc : suatChieuFunc.getSuatChieuList()) {
+                    if (sc.getPhim().getId() == null ? phim.getId() == null : sc.getPhim().getId().equals(phim.getId())) {
+                        suatChieuFunc.xoaSuatChieu(sc);
+                    }
+                }
                 managerView.clearPhimInfo();
                 managerView.showListPhim(phimFunc.getPhimList());
                 managerView.showMessage("Xóa thành công!");
@@ -322,7 +344,7 @@ public class ManagerController {
                 managerView.showKhach(khach);
                 managerView.showListKhach(khachFunc.getKhachList());
                 //studentView.showListStudents(studentDao.getListStudents());
-                managerView.setVeCombo(schList, phongList, khachList);
+                managerView.setVeCombo(suatChieuFunc.getSuatChieuList(), phongFunc.getPhongList(), khachFunc.getKhachList());
                 managerView.showMessage("Thêm thành công!");
             }
         }
@@ -353,7 +375,7 @@ public class ManagerController {
                 khachFunc.xoaKhach(khach);
                 managerView.clearKhachInfo();
                 managerView.showListKhach(khachFunc.getKhachList());
-                managerView.setVeCombo(schList, phongList, khachList);
+                managerView.setVeCombo(suatChieuFunc.getSuatChieuList(), phongFunc.getPhongList(), khachFunc.getKhachList());
                 managerView.showMessage("Xóa thành công!");
             }
         }
@@ -372,7 +394,7 @@ public class ManagerController {
                 khachFunc.editKhach(khach);
                 managerView.showKhach(khach);
                 managerView.showListKhach(khachFunc.getKhachList());
-                managerView.setVeCombo(schList, phongList, khachList);
+                managerView.setVeCombo(suatChieuFunc.getSuatChieuList(), phongFunc.getPhongList(), khachFunc.getKhachList());
                 managerView.showMessage("Cập nhật thành công!");
             }
         }
@@ -413,14 +435,31 @@ public class ManagerController {
     class ListPhongSelectionListener implements ListSelectionListener {
 
         public void valueChanged(ListSelectionEvent e) {
-            managerView.fillPhongFromSelectedRow(phimList);
+            managerView.fillPhongFromSelectedRow(phimFunc.getPhimList());
+        }
+    }
+
+    class AddPhongListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            Phong phong = managerView.getPhongInfo(phongFunc.getPhongList());
+            System.out.println(phong.getId());
+            if (phong != null) {
+                // khachDao = new KhachDao();
+                phongFunc.themPhong(phong);
+                managerView.showPhong(phong);
+                managerView.showListPhong(phongFunc.getPhongList(), suatChieuFunc.getSuatChieuList());
+                //studentView.showListStudents(studentDao.getListStudents());
+//                managerView.setVeCombo(schList, phongList, khachList);
+                managerView.showMessage("Thêm thành công!");
+            }
         }
     }
 
     class EditPhongListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            Phong phong = managerView.getPhongInfo(phongList);
+            Phong phong = managerView.getPhongInfo(phongFunc.getPhongList());
             for (int i = 0; i < phong.getSlThuong(); i++) {
                 GheThuong gt = new GheThuong();
                 phong.themGhe(gt);
@@ -436,7 +475,7 @@ public class ManagerController {
             if (phong != null) {
                 phongFunc.editPhong(phong);
                 managerView.showPhong(phong);
-                managerView.showListPhong(phongFunc.getPhongList(), schList);
+                managerView.showListPhong(phongFunc.getPhongList(), suatChieuFunc.getSuatChieuList());
                 managerView.showMessage("Cập nhật thành công!\nTất cả các ghế đều trống");
             }
         }
@@ -452,11 +491,14 @@ public class ManagerController {
     class DeletePhongListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            Phong phong = managerView.getPhongInfo(phongList);
+            Phong phong = managerView.getPhongInfo(phongFunc.getPhongList());
             if (phong != null) {
                 phongFunc.xoaPhong(phong);
+                if (phong.getSuatChieu() != null) {
+                    suatChieuFunc.xoaSuatChieu(phong.getSuatChieu());
+                }
                 managerView.clearPhongInfo();
-                managerView.showListPhong(phongList, schList);
+                managerView.showListPhong(phongFunc.getPhongList(), suatChieuFunc.getSuatChieuList());
                 managerView.showMessage("Xóa thành công!");
             }
         }
@@ -465,12 +507,12 @@ public class ManagerController {
     class SapXepPhongListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            phongList = phongFunc.sapXepPhong((ArrayList) phongList, managerView.getTieuChiSxPhong(), managerView.getPhongTangDan());
-            managerView.showListPhong(phongList, schList);
-            phongFunc.writeListPhongs(phongList);
+            phimFunc.setPhimList(phongFunc.sapXepPhong((ArrayList) phongFunc.getPhongList(), managerView.getTieuChiSxPhong(), managerView.getPhongTangDan()));
+            managerView.showListPhong(phongFunc.getPhongList(), suatChieuFunc.getSuatChieuList());
+            phongFunc.writeListPhongs(phongFunc.getPhongList());
         }
     }
-    ///// end Quản lý phòng listener
+///// end Quản lý phòng listener
 
     class ShowSchDateTimeListener implements ActionListener {
 
@@ -486,32 +528,32 @@ public class ManagerController {
         }
     }
 
-    //thao tác với vé
-    class AddVeListener implements ActionListener {
-
-        public void actionPerformed(ActionEvent e) {
-            Ve ve = new Ve();
-            Ghe ghe = new Ghe();
-            Khach khach = managerView.getKhachInfor(khachList);
-            SuatChieu Sch = managerView.getDatVeSchÌno(schList);
-            //SuatChieu Sch = managerView.getSch1Info(phimList, phongList);
-            ghe.setKhachId(khach.getId());
-            ve.setSuat(Sch);
-            //ve.setGhe(ghe);
-            //veFunc.themVe(ve);
-            // managerView.showListVe(veList, khachList);
-            managerView.showListGhe(Sch.getPhong());
-        }
-    }
-
+//thao tác với vé
+//    class AddVeListener implements ActionListener {
+//
+//        public void actionPerformed(ActionEvent e) {
+//            Ve ve = new Ve();
+//            Ghe ghe = new Ghe();
+//            Khach khach = managerView.getKhachInfor(khachFunc.getKhachList());
+//            SuatChieu Sch = managerView.getDatVeSchInfo(suatChieuFunc.getSuatChieuList());
+//            //SuatChieu Sch = managerView.getSch1Info(phimList, phongList);
+//            ghe.setKhachId(khach.getId());
+//            ve.setSuat(Sch);
+//            //ve.setGhe(ghe);
+//            //veFunc.themVe(ve);
+//            // managerView.showListVe(veList, khachList);
+//            managerView.showListGhe(Sch.getPhong());
+//        }
+//    }
     class DatVeListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
             //SuatChieu Sch = managerView.getSch1Info(phimList, phongList);
-            SuatChieu Sch = managerView.getDatVeSchÌno(schList);
+            SuatChieu Sch = managerView.getDatVeSchInfo(suatChieuFunc.getSuatChieuList());
             Ghe ghe = managerView.getGheInfor(Sch.getPhong());
+            System.out.println(ghe.getViTri());
             Ve ve = new Ve();
-            Khach khach = managerView.getKhachInfor(khachList);
+            Khach khach = managerView.getKhachInfor(khachFunc.getKhachList());
             ghe.setKhachId(khach.getId());
             ve.setSuat(Sch);
 
@@ -521,10 +563,29 @@ public class ManagerController {
             khachFunc.muaVe(khach, ve);
             veFunc.themVe(ve);
             // veFunc.editVe(ve1);
-            managerView.showListVe(veList, khachList);
+            for (Phong ph : phongFunc.getPhongList()) {
+                if (ph.getId() == null ? ve.getSuat().getPhongId() == null : ph.getId().equals(ve.getSuat().getPhongId())) {
+                    if ("Thuong".equals(ghe.getLoai())) {
+                        ph.getDsGheThuong().get(ghe.getViTri()).setKhachId(ghe.getKhachId());
+                        ph.getDsGheThuong().get(ghe.getViTri()).setThoiGianDat(LocalDateTime.now());
+                    }
+                    if ("Vip".equals(ghe.getLoai())) {
+                        ph.getDsGheVip().get(ghe.getViTri()).setKhachId(ghe.getKhachId());
+                        ph.getDsGheVip().get(ghe.getViTri()).setThoiGianDat(LocalDateTime.now());
+                    }
+                    if ("Doi".equals(ghe.getLoai())) {
+                        ph.getDsGheDoi().get(ghe.getViTri()).setKhachId(ghe.getKhachId());
+                        ph.getDsGheDoi().get(ghe.getViTri()).setThoiGianDat(LocalDateTime.now());
+                    }
+                    ph.themDt((int) ghe.getGia());
+                    phongFunc.editPhong(ph);
+                    break;
+                }
+            }
+            managerView.showListVe(veFunc.getVeList(), khachFunc.getKhachList());
             managerView.showListKhach(khachFunc.getKhachList());
             managerView.showMessage("Đặt vé thành công!");
-            managerView.showDoanhThuPhim(phimList, veList);
+            managerView.showDoanhThuPhim(phimFunc.getPhimList(), veFunc.getVeList());
             managerView.clearSuatChieuDatVeInfo();
             managerView.showDoanhThu(doanhThuFunc.doanhThu("tong", (Object) null));
             managerView.closeSeatDialog();
@@ -534,7 +595,7 @@ public class ManagerController {
     class ListSuatChieuDatVeSelectionListener implements ListSelectionListener {
 
         public void valueChanged(ListSelectionEvent e) {
-            managerView.fillSuatChieuFromSelectedRow1(phimList);
+            managerView.fillSuatChieuFromSelectedRow1(phimFunc.getPhimList());
 
         }
     }
@@ -551,8 +612,8 @@ public class ManagerController {
         public void actionPerformed(ActionEvent e) {
             Ve ve = new Ve();
             Ghe ghe = new Ghe();
-            Khach khach = managerView.getKhachInfor(khachList);
-            SuatChieu Sch = managerView.getDatVeSchÌno(schList);
+            Khach khach = managerView.getKhachInfor(khachFunc.getKhachList());
+            SuatChieu Sch = managerView.getDatVeSchInfo(suatChieuFunc.getSuatChieuList());
             //SuatChieu Sch = managerView.getSch1Info(phimList, phongList);
             if (Sch.getPhong() != null) {
                 ghe.setKhachId(khach.getId());
@@ -568,8 +629,10 @@ public class ManagerController {
             }
         }
     }
+    
+    
 
-    //Tim ve
+//Tim ve
 //    class SearchVeListener implements ActionListener {
 //
 //        public void actionPerformed(ActionEvent e) {

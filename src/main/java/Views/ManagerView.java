@@ -24,7 +24,9 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -111,31 +113,37 @@ public class ManagerView extends javax.swing.JFrame {
     }
 
     public void showScrollPhongList(List<Phong> list) {
-        for (Phong ph : list) {
-            JPanel phongPanel = new javax.swing.JPanel();
-            JLabel phongLabel = new JLabel();
-            JLabel sucChuaLabel = new JLabel();
-            JLabel phimChieuLabel = new JLabel();
-            JLabel dangChieuLabel = new JLabel();
-            JLabel gheTrongLabel = new javax.swing.JLabel();
-            phongLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-            phongLabel.setText(ph.getId());
-            sucChuaLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-            sucChuaLabel.setText(ph.getSucChua() + " ghế");
-            phimChieuLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-            phimChieuLabel.setText(ph.getSuatChieu().getPhim().getTen());
-            dangChieuLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-            dangChieuLabel.setText(ph.getIsPlaying() ? "đang chiếu" : "đang rảnh");
-            gheTrongLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-            gheTrongLabel.setText(ph.getDsGheTrong().size() + " ghế trống");
-            phongPanel.setLayout(new java.awt.GridLayout(5, 0));
-            phongPanel.add(phongLabel);
-            phongPanel.add(sucChuaLabel);
-            phongPanel.add(gheTrongLabel);
-            phongPanel.add(phimChieuLabel);
-            phongPanel.add(dangChieuLabel);
-            phongPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-            DsPhongPane.add(phongPanel);
+        if (list != null) {
+            for (Phong ph : list) {
+                JPanel phongPanel = new javax.swing.JPanel();
+                JLabel phongLabel = new JLabel();
+                JLabel sucChuaLabel = new JLabel();
+                JLabel phimChieuLabel = new JLabel();
+                JLabel dangChieuLabel = new JLabel();
+                JLabel gheTrongLabel = new javax.swing.JLabel();
+                phongLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                phongLabel.setText(ph.getId());
+                sucChuaLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                sucChuaLabel.setText("Sức chứa: " + ph.getSucChua() + " khách");
+                phimChieuLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                try {
+                    phimChieuLabel.setText(ph.getSuatChieu().getPhim().getTen());
+                } catch (Exception e) {
+                    phimChieuLabel.setText("");
+                }
+                dangChieuLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                dangChieuLabel.setText(ph.getIsPlaying() ? "đang chiếu" : "đang rảnh");
+                gheTrongLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                gheTrongLabel.setText(ph.getDsGheTrong().size() + " ghế trống");
+                phongPanel.setLayout(new java.awt.GridLayout(5, 0));
+                phongPanel.add(phongLabel);
+                phongPanel.add(sucChuaLabel);
+                phongPanel.add(gheTrongLabel);
+                phongPanel.add(phimChieuLabel);
+                phongPanel.add(dangChieuLabel);
+                phongPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+                DsPhongPane.add(phongPanel);
+            }
         }
     }
 
@@ -174,36 +182,48 @@ public class ManagerView extends javax.swing.JFrame {
 
     }
 
+    public void clearScrollList() {
+        DsPhimPane.removeAll();
+        DsSuatPane.removeAll();
+        DsPhongPane.removeAll();
+        doanhThuPhim.removeAll();
+        DoanhThuSch.removeAll();
+    }
+
 //////// end Trang chủ
 //////// Quản lý phòng
     public void showListPhong(List<Phong> list, List<SuatChieu> schList) {
-        int size = list.size();
-        // với bảng studentTable có 5 cột, 
-        // khởi tạo mảng 2 chiều students, trong đó:
-        // số hàng: là kích thước của list student 
-        // số cột: là 5
-        Object[][] phs = new Object[size][9];
-        for (int i = 0; i < size; i++) {
-            phs[i][0] = list.get(i).getId();
-            phs[i][1] = list.get(i).getSlThuong();
-            phs[i][2] = list.get(i).getSlVip();
-            phs[i][3] = list.get(i).getSlDoi();
-            phs[i][4] = list.get(i).getSlThuong() + list.get(i).getSlVip() + list.get(i).getSlDoi();
-            phs[i][5] = list.get(i).getIsFull() ? "Đã đầy" : "Chưa đầy";
-            phs[i][6] = list.get(i).getSucChua();
-            for (SuatChieu sch : schList) {
-                if (sch.getPhong().getId() == null ? list.get(i).getId() == null : sch.getPhong().getId().equals(list.get(i).getId())) {
-                    phs[i][7] = sch.getPhim().getTen();
-                    break;
+        System.out.println("Show list phong");
+        if (list != null) {
+            int size = list.size();
+            Object[][] phs = new Object[size][9];
+            for (int i = 0; i < size; i++) {
+                phs[i][0] = list.get(i).getId();
+                phs[i][1] = list.get(i).getSlThuong();
+                phs[i][2] = list.get(i).getSlVip();
+                phs[i][3] = list.get(i).getSlDoi();
+                phs[i][4] = list.get(i).getSlThuong() + list.get(i).getSlVip() + list.get(i).getSlDoi();
+                phs[i][5] = list.get(i).getIsFull() == true ? "Chưa đầy" : "Đã đầy";
+                phs[i][6] = list.get(i).getSucChua();
+                try {
+                    for (SuatChieu sch : schList) {
+                        if (sch.getPhong().getId() == null ? list.get(i).getId() == null : sch.getPhong().getId().equals(list.get(i).getId())) {
+                            phs[i][7] = sch.getPhim().getTen();
+                            break;
+                        }
+                    }
+                } catch (Exception e) {
+                    System.out.println("sch trong");
+                    phs[i][7] = "";
                 }
+                phs[i][8] = list.get(i).getIsPlaying() == true ? "Đang chiếu" : "Đang rảnh";
             }
-            phs[i][8] = list.get(i).getIsPlaying() ? "Đang chiếu" : "Đang rảnh";
+            String[] columnNames = new String[9];
+            for (int i = 0; i < 9; i++) {
+                columnNames[i] = this.PhongTable.getColumnName(i);
+            }
+            this.PhongTable.setModel(new DefaultTableModel(phs, columnNames));
         }
-        String[] columnNames = new String[9];
-        for (int i = 0; i < 9; i++) {
-            columnNames[i] = this.PhongTable.getColumnName(i);
-        }
-        this.PhongTable.setModel(new DefaultTableModel(phs, columnNames));
     }
 
     public void showPhong(Phong ph) {
@@ -253,26 +273,27 @@ public class ManagerView extends javax.swing.JFrame {
 //        }
         try {
             Phong phong = new Phong();
-            for (Phong ph : phongList) {
-                if (ph.getId() == null ? this.IdPhongFiled.getText() == null : ph.getId().equals(this.IdPhongFiled.getText())) {
-                    if (ph.getIsPlaying() == false) {
-                        phong.setId(ph.getId());
-                        phong.setDt(ph.getDt());
-                        phong.setSuatChieu(ph.getSuatChieu());
-                        phong.setSlThuong((Integer) this.SlgThuongSpinner.getValue());
-                        phong.setSlDoi((Integer) this.SlgDoiSpinner.getValue());
-                        phong.setSlVip((Integer) this.SlgVipSpinner.getValue());
-                        if (phong.getTongGhe() > ph.inTongDat()) {
-                            phong.setIsFull(false);
+            if (phongList != null) {
+                for (Phong ph : phongList) {
+                    if (ph.getId() == null ? this.IdPhongFiled.getText() == null : ph.getId().equals(this.IdPhongFiled.getText())) {
+                        if (ph.getIsPlaying() == false) {
+                            phong.setId(ph.getId());
+                            phong.setDt(ph.getDt());
+                            phong.setSuatChieu(ph.getSuatChieu());
+                            if (phong.getTongGhe() > ph.inTongDat()) {
+                                phong.setIsFull(false);
+                            } else {
+                                phong.setIsFull(true);
+                            }
                         } else {
-                            phong.setIsFull(true);
+                            return null;
                         }
-                    } else {
-                        return null;
                     }
                 }
             }
-
+            phong.setSlThuong((Integer) this.SlgThuongSpinner.getValue());
+            phong.setSlDoi((Integer) this.SlgDoiSpinner.getValue());
+            phong.setSlVip((Integer) this.SlgVipSpinner.getValue());
             return phong;
         } catch (Exception e) {
             showMessage(e.getMessage());
@@ -383,21 +404,23 @@ public class ManagerView extends javax.swing.JFrame {
     }
 
     public void setSuatChieuCombo(List<Phim> phimList, List<Phong> phongList) {
-        String[] phimStr = new String[phimList.size()];
-        for (int i = 0; i < phimStr.length; i++) {
-            phimStr[i] = phimList.get(i).getTen();
-        }
-        phimCombo.setModel(new javax.swing.DefaultComboBoxModel<>(phimStr));
+        if (phimList != null && phongList != null) {
+            String[] phimStr = new String[phimList.size()];
+            for (int i = 0; i < phimStr.length; i++) {
+                phimStr[i] = phimList.get(i).getTen();
+            }
+            phimCombo.setModel(new javax.swing.DefaultComboBoxModel<>(phimStr));
 //        quanLySuatChieu.add(phimCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 160, 20));
 
-        String[] phongStr = new String[phongList.size()];
-        for (int i = 0; i < phongStr.length; i++) {
-            phongStr[i] = phongList.get(i).getId();
-        }
-        phongCombo.setModel(new javax.swing.DefaultComboBoxModel<>(phongStr));
+            String[] phongStr = new String[phongList.size()];
+            for (int i = 0; i < phongStr.length; i++) {
+                phongStr[i] = phongList.get(i).getId();
+            }
+            phongCombo.setModel(new javax.swing.DefaultComboBoxModel<>(phongStr));
 //        quanLySuatChieu.add(phongCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 150, -1));
 //        String[] tieuChiStr = {}
-        tieuChiSchCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Id", "soluongve"}));
+            tieuChiSchCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Id", "soluongve"}));
+        }
     }
 
     public void fillSuatChieuFromSelectedRow(List<Phim> phimList) {
@@ -429,6 +452,7 @@ public class ManagerView extends javax.swing.JFrame {
             }
             for (Phong ph : phongList) {
                 if (this.phongCombo.getSelectedItem().toString() == null ? ph.getId() == null : this.phongCombo.getSelectedItem().toString().equals(ph.getId())) {
+                    System.out.println("chon phong");
                     sch.setPhong(ph);
                     sch.setPhongId();
                 }
@@ -538,10 +562,11 @@ public class ManagerView extends javax.swing.JFrame {
             for (Ve ve : veList) {
                 if (ve.getSuat().getPhim().getId() == null ? ph.getId() == null : ve.getSuat().getPhim().getId().equals(ph.getId())) {
                     tongVe++;
-                    tongDt += ph.getDt();
+                    tongDt += ve.getGhe().getGia();
                     System.out.println(ph.getDt());
                 }
             }
+            ph.themDt(tongDt);
             slve.setText(Integer.toString(tongVe) + " vé");
 
             dt.setText(tongDt + "đ");
@@ -560,7 +585,7 @@ public class ManagerView extends javax.swing.JFrame {
         return this.tieuChiDtPhim.isSelected();
     }
 
-    public void showDoanhThuSch(List<SuatChieu> list, List<Ve> veList) {
+    public void showDoanhThuSch(List<SuatChieu> list, List<Ve> veList, List<Phong> phongList) {
         for (SuatChieu sch : list) {
             JPanel dtSchPanel = new javax.swing.JPanel();
 
@@ -623,6 +648,13 @@ public class ManagerView extends javax.swing.JFrame {
                 }
             }
             sch.setDt(tongDt);
+            for (Phong ph : phongList) {
+                if (ph.getId() == null ? sch.getPhongId() == null : ph.getId().equals(sch.getPhongId())) {
+                    ph.themDt(tongDt);
+                    System.out.println(ph.getDt());
+                }
+            }
+
             dt.setText(tongDt + "đ");
 
             infoSchPanel.add(schId);
@@ -645,27 +677,21 @@ public class ManagerView extends javax.swing.JFrame {
         this.sortDtSchButton.addActionListener(listener);
     }
 
-    public void showDtPhongList(List<Phong> list, List<SuatChieu> schList) {
+    public void showDtPhongList(List<Phong> list, List<Ve> ves) {
         int size = list.size();
-        // với bảng studentTable có 5 cột, 
-        // khởi tạo mảng 2 chiều students, trong đó:
-        // số hàng: là kích thước của list student 
-        // số cột: là 5
         Object[][] phs = new Object[size][4];
         for (int i = 0; i < size; i++) {
             phs[i][0] = list.get(i).getId();
             phs[i][1] = list.get(i).getSucChua();
             int tong = 0;
             int dt = 0;
-            for (SuatChieu sch : schList) {
-                if (sch.getPhong().getId() == null ? list.get(i).getId() == null : sch.getPhong().getId().equals(list.get(i).getId())) {
+            for (Ve ve : ves) {
+                if (ve.getSuat().getPhongId() == null ? list.get(i).getId() == null : ve.getSuat().getPhongId().equals(list.get(i).getId())) {
                     tong++;
-                    dt += sch.getDt();
                 }
             }
-            list.get(i).setDt(dt);
             phs[i][2] = tong;
-            phs[i][3] = dt;
+            phs[i][3] = list.get(i).getDt();
         }
         String[] columnNames = new String[4];
         for (int i = 0; i < 4; i++) {
@@ -718,7 +744,7 @@ public class ManagerView extends javax.swing.JFrame {
             IDPhimField.setText(BangPhim.getModel().getValueAt(row, 0).toString());
             TenPhimField.setText(BangPhim.getModel().getValueAt(row, 1).toString());
             this.theLoaiCombo.setSelectedItem(BangPhim.getModel().getValueAt(row, 2).toString());
-            doTuoiSpinner.setValue(BangPhim.getModel().getValueAt(row, 3).toString());
+            doTuoiSpinner.setValue(BangPhim.getModel().getValueAt(row, 3));
             ThoiLuongField.setText(BangPhim.getModel().getValueAt(row, 4).toString());
             NgayKhoiChieuField.setText(BangPhim.getModel().getValueAt(row, 5).toString());
             // enable Edit and Delete buttons
@@ -740,18 +766,17 @@ public class ManagerView extends javax.swing.JFrame {
         try {
             Phim phim = new Phim();
             if (TenPhimField.getText() != null) {
-
+                phim.setTen(TenPhimField.getText());
             }
             if (IDPhimField.getText() != null && !"".equals(IDPhimField.getText())) {
-                phim.setId(Integer.parseInt(IDPhimField.getText().trim()));
+                phim.setId(Integer.parseInt(IDPhimField.getText().substring(2).trim()));
             }
 
             phim.setTen(TenPhimField.getText().trim());
             phim.setTheLoai(theLoaiCombo.getSelectedItem().toString().trim());
-            phim.setDoTuoi(Integer.parseInt(doTuoiSpinner.getValue().toString()));
-            phim.setThoiLuong(Integer.parseInt(ThoiLuongField.getText().trim()));
+            phim.setDoTuoi(Integer.parseInt((doTuoiSpinner.getValue().toString())));
+            phim.setThoiLuong(Integer.parseInt(ThoiLuongField.getText()));
             phim.setTgKhoiChieu(NgayKhoiChieuField.getText().trim());
-            //   
 
             return phim;
         } catch (NumberFormatException e) {
@@ -894,7 +919,7 @@ public class ManagerView extends javax.swing.JFrame {
 //        if (!validateID() || !validateAge() || !validateAddress() || !validateGPA()) {
 //            return null;
 //        }
-        if (!validateName() || !validateGioiTinh() || !validateSLV()) {
+        if (!validateName() || !validateGioiTinh()) {
             return null;
         }
         try {
@@ -909,8 +934,7 @@ public class ManagerView extends javax.swing.JFrame {
             khach.setHoTen(HoTenField.getText().trim());
             khach.setGioiTinh(gioiTinhCombo.getSelectedItem().toString());
             khach.setNgaySinh(NgaySinhField.getText().trim());
-            khach.setSlVeDat(Integer.parseInt(SlvField.getText().trim()));
-
+//            khach.setSlVeDat(Integer.parseInt(SlvField.getText().trim()));
             return khach;
         } catch (NumberFormatException e) {
             showMessage(e.getMessage());
@@ -1057,38 +1081,46 @@ public class ManagerView extends javax.swing.JFrame {
     }
 
     public void setVeCombo(List<SuatChieu> suatchieuList, List<Phong> phongList, List<Khach> khachList) {
-        String[] khachIDStr = new String[khachList.size()];
-        String[] phimStr = new String[suatchieuList.size()];
-        String[] phongStr = new String[phongList.size()];
+        if (phongList != null && suatchieuList != null && khachList != null) {
+            String[] khachIDStr = new String[khachList.size()];
+            Set<String> phimSet = new HashSet<>();
+            String[] phimStr = new String[suatchieuList.size()];
+            String[] phongStr = new String[phongList.size()];
 
-        String[] thoiluongStr = new String[phongList.size()];
-        String[] thoigianchieuStr = new String[suatchieuList.size()];
+            String[] thoiluongStr = new String[phongList.size()];
+            String[] thoigianchieuStr = new String[suatchieuList.size()];
 
-        for (int i = 0; i < khachIDStr.length; i++) {
-            khachIDStr[i] = khachList.get(i).getHoTen();
-        }
-        for (int i = 0; i < phimStr.length; i++) {
-            phimStr[i] = suatchieuList.get(i).getPhim().getTen();
-        }
+            for (int i = 0; i < khachIDStr.length; i++) {
+                khachIDStr[i] = khachList.get(i).getHoTen();
+            }
+            for (int i = 0; i < phimStr.length; i++) {
+                if (!phimSet.contains(suatchieuList.get(i).getPhim().getTen())) {
+                    phimSet.add(suatchieuList.get(i).getPhim().getTen());
+                }
+            }
+            String[] phimArr = new String[phimSet.size()];
+            String[] phimSetStr = phimSet.toArray(phimArr);
 
 //        for (int i = 0; i < phongStr.length; i++) {
 //            phongStr[i] = phongList.get(i).getId();
 //
 //        }
-        for (int i = 0; i < phongStr.length; i++) {
-            thoiluongStr[i] = "" + phongList.get(i).getSuatChieu().getPhim().inThoiLuong();
+            for (int i = 0; i < phongStr.length; i++) {
+                if (phongList.get(i).getSuatChieu() != null) {
+                    thoiluongStr[i] = "" + phongList.get(i).getSuatChieu().getPhim().inThoiLuong();
+                }
 
-        }
-        for (int i = 0; i < thoigianchieuStr.length; i++) {
-            thoigianchieuStr[i] = suatchieuList.get(i).inThoiGianChieu();
+            }
+            for (int i = 0; i < thoigianchieuStr.length; i++) {
+                thoigianchieuStr[i] = suatchieuList.get(i).inThoiGianChieu();
 
-        }
-        ListKhachHang.setModel(new javax.swing.DefaultComboBoxModel<>(khachIDStr));
-        phimCombo1.setModel(new javax.swing.DefaultComboBoxModel<>(phimStr));
+            }
+            ListKhachHang.setModel(new javax.swing.DefaultComboBoxModel<>(khachIDStr));
+            phimCombo1.setModel(new javax.swing.DefaultComboBoxModel<>(phimArr));
 
 //        quanLySuatChieu.add(phimCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 160, 20));
 //        phongDatVeCombo.setModel(new javax.swing.DefaultComboBoxModel<>(phongStr));
-        LuaChonVe.setModel(new javax.swing.DefaultComboBoxModel<>(columnNames2));
+            LuaChonVe.setModel(new javax.swing.DefaultComboBoxModel<>(columnNames2));
 //        ListViTri.setMaximumRowCount(100);
 //        ListViTri.setModel(new javax.swing.DefaultComboBoxModel<>(gheStr));
 //        ListThoiLuong.setModel(new javax.swing.DefaultComboBoxModel<>(thoiluongStr));
@@ -1123,6 +1155,7 @@ public class ManagerView extends javax.swing.JFrame {
 //            showMessage(e.getMessage());
 //        }
 //        return null;
+        }
     }
 
     public int luachonVeTK() {
@@ -1199,7 +1232,6 @@ public class ManagerView extends javax.swing.JFrame {
 
             Ghe ghe = new Ghe();
             ghe.setViTri(ViTriField.getText());
-
             for (Ghe gh : list) {
                 if (ghe.InVitri().equals(gh.InVitri())) {
                     return gh;
@@ -1305,7 +1337,7 @@ public class ManagerView extends javax.swing.JFrame {
         }
     }
 
-    public SuatChieu getDatVeSchÌno(List<SuatChieu> list) {
+    public SuatChieu getDatVeSchInfo(List<SuatChieu> list) {
         // validate student
 //        if (!validateName() || !validateAge() || !validateAddress() || !validateGPA()) {
 //            return null;
@@ -1349,6 +1381,10 @@ public class ManagerView extends javax.swing.JFrame {
         return BangGhe.isEnabled();
     }
 
+    public void addReloadListener(ActionListener listener) {
+        reLoadButton.addActionListener(listener);
+    }
+
     // Het ve method
 /////// end Quản lý vé
     // Het phim method
@@ -1380,6 +1416,7 @@ public class ManagerView extends javax.swing.JFrame {
         DsSuatPane = new javax.swing.JPanel();
         DsPhongScrollPane = new javax.swing.JScrollPane();
         DsPhongPane = new javax.swing.JPanel();
+        reLoadButton = new javax.swing.JButton();
         jTabbedPane8 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
@@ -1699,10 +1736,19 @@ public class ManagerView extends javax.swing.JFrame {
         DsPhongPane.setLayout(new java.awt.GridLayout(1, 0));
         DsPhongScrollPane.setViewportView(DsPhongPane);
 
+        reLoadButton.setText("Reload");
+        reLoadButton.setFocusCycleRoot(true);
+        reLoadButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reLoadButtonActionPerformed(evt);
+            }
+        });
+
         Homepage.setLayer(HomepageTitle, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Homepage.setLayer(DsPhimScrollPane, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Homepage.setLayer(DsSuatScrollPane, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Homepage.setLayer(DsPhongScrollPane, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Homepage.setLayer(reLoadButton, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout HomepageLayout = new javax.swing.GroupLayout(Homepage);
         Homepage.setLayout(HomepageLayout);
@@ -1711,21 +1757,28 @@ public class ManagerView extends javax.swing.JFrame {
             .addGroup(HomepageLayout.createSequentialGroup()
                 .addGroup(HomepageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(DsSuatScrollPane)
-                    .addComponent(DsPhongScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 937, Short.MAX_VALUE)
-                    .addComponent(HomepageTitle)
+                    .addComponent(DsPhongScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 929, Short.MAX_VALUE)
+                    .addGroup(HomepageLayout.createSequentialGroup()
+                        .addComponent(HomepageTitle)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(reLoadButton)
+                        .addGap(50, 50, 50))
                     .addComponent(DsPhimScrollPane))
                 .addContainerGap())
         );
         HomepageLayout.setVerticalGroup(
             HomepageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HomepageLayout.createSequentialGroup()
-                .addComponent(HomepageTitle)
+                .addGap(8, 8, 8)
+                .addGroup(HomepageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(HomepageTitle)
+                    .addComponent(reLoadButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(DsPhimScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(DsSuatScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
+                .addComponent(DsSuatScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(DsPhongScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+                .addComponent(DsPhongScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1857,7 +1910,7 @@ public class ManagerView extends javax.swing.JFrame {
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 261, Short.MAX_VALUE)
+            .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
         );
 
         jPanel14.add(jPanel15);
@@ -2609,7 +2662,7 @@ public class ManagerView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -2728,7 +2781,7 @@ public class ManagerView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -2773,7 +2826,7 @@ public class ManagerView extends javax.swing.JFrame {
         DatVeSchId.setEditable(false);
         DatVeSchId.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        phongDatVeCombo.setText("jTextField1");
+        phongDatVeCombo.setEditable(false);
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -2805,7 +2858,7 @@ public class ManagerView extends javax.swing.JFrame {
                             .addComponent(tgChieuField1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(phongDatVeCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(chonGheButton))
-                .addGap(0, 330, Short.MAX_VALUE))
+                .addGap(0, 322, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2827,7 +2880,7 @@ public class ManagerView extends javax.swing.JFrame {
                     .addComponent(jLabel48)
                     .addComponent(phimCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(chonGheButton))
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
 
         quanLySuatChieu1.setAutoscrolls(true);
@@ -2877,7 +2930,7 @@ public class ManagerView extends javax.swing.JFrame {
             .addGroup(quanLySuatChieu1Layout.createSequentialGroup()
                 .addComponent(SuatChieuManager1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(suatChieuScroll2, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
+                .addComponent(suatChieuScroll2, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout ChonSuatChieuLayout = new javax.swing.GroupLayout(ChonSuatChieu);
@@ -2888,7 +2941,7 @@ public class ManagerView extends javax.swing.JFrame {
                 .addGroup(ChonSuatChieuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(quanLySuatChieu1, javax.swing.GroupLayout.DEFAULT_SIZE, 937, Short.MAX_VALUE))
+                    .addComponent(quanLySuatChieu1, javax.swing.GroupLayout.DEFAULT_SIZE, 929, Short.MAX_VALUE))
                 .addContainerGap())
         );
         ChonSuatChieuLayout.setVerticalGroup(
@@ -2898,7 +2951,7 @@ public class ManagerView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(quanLySuatChieu1, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+                .addComponent(quanLySuatChieu1, javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE)
                 .addGap(4, 4, 4))
         );
 
@@ -2919,7 +2972,7 @@ public class ManagerView extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(tongDoanhThu, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(762, Short.MAX_VALUE))
+                .addContainerGap(754, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2964,7 +3017,7 @@ public class ManagerView extends javax.swing.JFrame {
                     .addComponent(sortDtPhimButton)
                     .addComponent(tieuChiDtPhim))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -2993,7 +3046,7 @@ public class ManagerView extends javax.swing.JFrame {
                         .addComponent(sortDtSchButton)
                         .addGap(18, 18, 18)
                         .addComponent(tieuChiDtSch)
-                        .addGap(0, 280, Short.MAX_VALUE))
+                        .addGap(0, 276, Short.MAX_VALUE))
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
@@ -3004,7 +3057,7 @@ public class ManagerView extends javax.swing.JFrame {
                     .addComponent(sortDtSchButton)
                     .addComponent(tieuChiDtSch))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3035,7 +3088,7 @@ public class ManagerView extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Id", "Sức chứa", "Số lượng suất chiếu", "Doanh thu"
+                "Id", "Sức chứa", "Số lượng vé đã đặt", "Doanh thu"
             }
         ) {
             Class[] types = new Class [] {
@@ -3077,7 +3130,7 @@ public class ManagerView extends javax.swing.JFrame {
                 .addComponent(sortDtPhongButton)
                 .addGap(18, 18, 18)
                 .addComponent(tieuChiDtPhong)
-                .addContainerGap(286, Short.MAX_VALUE))
+                .addContainerGap(282, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3087,7 +3140,7 @@ public class ManagerView extends javax.swing.JFrame {
                     .addComponent(sortDtPhongButton)
                     .addComponent(tieuChiDtPhong))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 343, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3104,18 +3157,18 @@ public class ManagerView extends javax.swing.JFrame {
             .addGroup(DoanhThuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(DoanhThuLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, 931, Short.MAX_VALUE)
+                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, 923, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         DoanhThuLayout.setVerticalGroup(
             DoanhThuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DoanhThuLayout.createSequentialGroup()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(491, Short.MAX_VALUE))
+                .addContainerGap(426, Short.MAX_VALUE))
             .addGroup(DoanhThuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DoanhThuLayout.createSequentialGroup()
                     .addGap(90, 90, 90)
-                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, 416, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -3127,14 +3180,13 @@ public class ManagerView extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1068, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1060, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 612, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 547, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         getAccessibleContext().setAccessibleName("frame");
@@ -3146,37 +3198,29 @@ public class ManagerView extends javax.swing.JFrame {
 
     }//GEN-LAST:event_formWindowOpened
 
-    private void suatChieuTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suatChieuTableMouseClicked
+    private void ViTriFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViTriFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_suatChieuTableMouseClicked
-
-    private void QlphimMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QlphimMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_QlphimMouseClicked
-
-    private void tieuChiDtSchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tieuChiDtSchActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tieuChiDtSchActionPerformed
+    }//GEN-LAST:event_ViTriFieldActionPerformed
 
     private void tieuChiDtPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tieuChiDtPhongActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tieuChiDtPhongActionPerformed
 
-    private void IdPhongFiledActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IdPhongFiledActionPerformed
+    private void tieuChiDtSchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tieuChiDtSchActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_IdPhongFiledActionPerformed
+    }//GEN-LAST:event_tieuChiDtSchActionPerformed
 
-    private void schCalendarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_schCalendarMouseClicked
+    private void suatChieuTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suatChieuTable2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_suatChieuTable2MouseClicked
 
-    }//GEN-LAST:event_schCalendarMouseClicked
+    private void phimCombo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phimCombo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_phimCombo1ActionPerformed
 
-    private void schCalendarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_schCalendarMouseReleased
-
-    }//GEN-LAST:event_schCalendarMouseReleased
-
-    private void schCalendarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_schCalendarMousePressed
-
-    }//GEN-LAST:event_schCalendarMousePressed
+    private void ListKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListKhachHangActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ListKhachHangActionPerformed
 
     private void LuaChonKhachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LuaChonKhachActionPerformed
         // TODO add your handling code here:
@@ -3218,21 +3262,33 @@ public class ManagerView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_NgaySinhFieldActionPerformed
 
-    private void ListKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListKhachHangActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ListKhachHangActionPerformed
+    private void schCalendarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_schCalendarMouseReleased
 
-    private void phimCombo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phimCombo1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_phimCombo1ActionPerformed
+    }//GEN-LAST:event_schCalendarMouseReleased
 
-    private void suatChieuTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suatChieuTable2MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_suatChieuTable2MouseClicked
+    private void schCalendarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_schCalendarMousePressed
 
-    private void ViTriFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViTriFieldActionPerformed
+    }//GEN-LAST:event_schCalendarMousePressed
+
+    private void schCalendarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_schCalendarMouseClicked
+
+    }//GEN-LAST:event_schCalendarMouseClicked
+
+    private void suatChieuTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suatChieuTableMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_ViTriFieldActionPerformed
+    }//GEN-LAST:event_suatChieuTableMouseClicked
+
+    private void QlphimMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QlphimMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QlphimMouseClicked
+
+    private void IdPhongFiledActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IdPhongFiledActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IdPhongFiledActionPerformed
+
+    private void reLoadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reLoadButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_reLoadButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -3394,6 +3450,7 @@ public class ManagerView extends javax.swing.JFrame {
     private javax.swing.JTextField phongDatVeCombo;
     private javax.swing.JLayeredPane quanLySuatChieu;
     private javax.swing.JLayeredPane quanLySuatChieu1;
+    private javax.swing.JButton reLoadButton;
     private com.toedter.calendar.JCalendar schCalendar;
     private javax.swing.JTextField schDateTimeField;
     private javax.swing.JDialog seatDialog;

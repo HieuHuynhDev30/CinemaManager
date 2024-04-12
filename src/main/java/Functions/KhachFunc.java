@@ -25,6 +25,12 @@ public class KhachFunc {
 
     public KhachFunc() {
         this.khachList = this.readListKhachs();
+        validateListXML();
+    }
+     public final void validateListXML() {
+        if (khachList == null) {
+            khachList = new ArrayList<>();
+        }
     }
 
     public void writeListKhachs(List<Khach> khachs) {

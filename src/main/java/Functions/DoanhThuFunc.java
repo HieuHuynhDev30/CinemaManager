@@ -5,6 +5,7 @@
 package Functions;
 
 import Classes.Khach;
+import Classes.Phong;
 import Classes.SuatChieu;
 import Classes.Ve;
 
@@ -40,6 +41,11 @@ public class DoanhThuFunc {
                         doanhThu += ve.getGhe().getGia();
                     }
                 }
+            }
+        }
+        if ("phong".equals(tieuChi.toLowerCase())) {
+            for (Phong ph : (Phong[]) obs) {
+                doanhThu += ph.getDt();
             }
         }
         

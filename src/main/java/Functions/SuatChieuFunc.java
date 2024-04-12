@@ -49,13 +49,16 @@ public class SuatChieuFunc {
         List<SuatChieu> list = new ArrayList<>();
         SuatChieuListXML schListXML = (SuatChieuListXML) FileUtils.readXMLFile(
                 SCH_FILE_NAME, SuatChieuListXML.class);
-        if (schListXML != null) {
+        System.out.print("read");
+        if (schListXML.getSuatChieu() != null) {
             list = schListXML.getSuatChieu();
             List<Phong> phongList = readListPhongs();
-            for (SuatChieu sch : list) {
-                for (Phong ph : phongList) {
-                    if (sch.getPhongId() == null ? ph.getId() == null : sch.getPhongId().equals(ph.getId())) {
-                        sch.setPhong(ph);
+            if (phongList != null) {
+                for (SuatChieu sch : list) {
+                    for (Phong ph : phongList) {
+                        if (sch.getPhongId() == null ? ph.getId() == null : sch.getPhongId().equals(ph.getId())) {
+                            sch.setPhong(ph);
+                        }
                     }
                 }
             }
@@ -78,7 +81,7 @@ public class SuatChieuFunc {
 
     public void editSuatChieu(SuatChieu p) {
         for (int i = 0; i < this.suatChieuList.size(); i++) {
-            SuatChieu ph =  this.suatChieuList.get(i);
+            SuatChieu ph = this.suatChieuList.get(i);
             if (ph.getId() == null ? p.getId() == null : ph.getId().equals(p.getId())) {
                 System.out.println("updated");
                 ph.setPhim(p.getPhim());
@@ -99,7 +102,7 @@ public class SuatChieuFunc {
                 return true;
             }
         }
-         this.writeListSuatChieus(suatChieuList);
+        this.writeListSuatChieus(suatChieuList);
         return false;
     }
 

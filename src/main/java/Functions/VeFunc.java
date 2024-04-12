@@ -27,6 +27,12 @@ public class VeFunc {
 
     public VeFunc() {
         this.veList = this.readListVes();
+        validateListXML();
+    }
+     public final void validateListXML() {
+        if (veList == null) {
+            veList = new ArrayList<>();
+        }
     }
 
     public Ve taoVe(Ghe ghe, SuatChieu suat) {

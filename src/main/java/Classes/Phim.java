@@ -139,7 +139,7 @@ public class Phim {
     }
 
     
-    public void tangDt(int dt) {
+    public void themDt(int dt) {
         this.dt += dt;
     }
     @Override

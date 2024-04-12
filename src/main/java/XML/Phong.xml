@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <phongs>
     <phong id="P1">
-        <slVip>5</slVip>
+        <slVip>10</slVip>
         <slThuong>10</slThuong>
-        <slDoi>5</slDoi>
+        <slDoi>10</slDoi>
         <dsGheThuong>
             <entry>
                 <key>P1A5</key>
@@ -33,6 +33,7 @@
                 <key>P1A7</key>
                 <value>
                     <gia>80000.0</gia>
+                    <khachId>K3</khachId>
                     <loai>Thuong</loai>
                     <viTri>P1A7</viTri>
                 </value>
@@ -88,6 +89,14 @@
         </dsGheThuong>
         <dsGheVip>
             <entry>
+                <key>P1B6</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P1B6</viTri>
+                </value>
+            </entry>
+            <entry>
                 <key>P1B5</key>
                 <value>
                     <gia>120000.0</gia>
@@ -96,9 +105,26 @@
                 </value>
             </entry>
             <entry>
+                <key>P1B8</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P1B8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P1B7</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P1B7</viTri>
+                </value>
+            </entry>
+            <entry>
                 <key>P1B2</key>
                 <value>
                     <gia>120000.0</gia>
+                    <khachId>K3</khachId>
                     <loai>Vip</loai>
                     <viTri>P1B2</viTri>
                 </value>
@@ -115,6 +141,7 @@
                 <key>P1B4</key>
                 <value>
                     <gia>120000.0</gia>
+                    <khachId>K3</khachId>
                     <loai>Vip</loai>
                     <viTri>P1B4</viTri>
                 </value>
@@ -127,219 +154,127 @@
                     <viTri>P1B3</viTri>
                 </value>
             </entry>
-        </dsGheVip>
-        <dsGheDoi>
-            <entry>
-                <key>P1B6</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
-                    <viTri>P1B6</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P1B8</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
-                    <viTri>P1B8</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P1B7</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
-                    <viTri>P1B7</viTri>
-                </value>
-            </entry>
             <entry>
                 <key>P1B9</key>
                 <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
                     <viTri>P1B9</viTri>
                 </value>
             </entry>
             <entry>
                 <key>P1B10</key>
                 <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
                     <viTri>P1B10</viTri>
-                </value>
-            </entry>
-        </dsGheDoi>
-        <isFull>false</isFull>
-        <suatChieu id="SCH1">
-            <phim id="Ph3">
-                <ten>Road House</ten>
-                <theLoai>Hanh dong</theLoai>
-                <doTuoi>16</doTuoi>
-                <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
-                <dt>0</dt>
-                <thoiLuong>PT2H5M</thoiLuong>
-                <TgKhoiChieu>2024-06-21</TgKhoiChieu>
-            </phim>
-            <phongId>P1</phongId>
-            <thoiGianChieu>12-12-2024 15:45</thoiGianChieu>
-            <dt>0</dt>
-        </suatChieu>
-        <isPlaying>false</isPlaying>
-        <columns>6</columns>
-        <rows>66</rows>
-        <dt>0</dt>
-    </phong>
-    <phong id="P3">
-        <slVip>5</slVip>
-        <slThuong>5</slThuong>
-        <slDoi>5</slDoi>
-        <dsGheThuong>
-            <entry>
-                <key>P2A4</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P2A4</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P2A3</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P2A3</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P2A5</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P2A5</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P2A2</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P2A2</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P2A1</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P2A1</viTri>
-                </value>
-            </entry>
-        </dsGheThuong>
-        <dsGheVip>
-            <entry>
-                <key>P2A10</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P2A10</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P2A6</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P2A6</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P2A8</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <khachId>K2</khachId>
-                    <loai>Vip</loai>
-                    <viTri>P2A8</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P2A7</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P2A7</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P2A9</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <khachId>K1</khachId>
-                    <loai>Vip</loai>
-                    <viTri>P2A9</viTri>
                 </value>
             </entry>
         </dsGheVip>
         <dsGheDoi>
             <entry>
-                <key>P2B5</key>
+                <key>P1C7</key>
                 <value>
                     <gia>200000.0</gia>
+                    <khachId>K3</khachId>
                     <loai>Doi</loai>
-                    <viTri>P2B5</viTri>
+                    <viTri>P1C7</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P2B4</key>
+                <key>P1C6</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P2B4</viTri>
+                    <viTri>P1C6</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P2B1</key>
+                <key>P1C9</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P2B1</viTri>
+                    <viTri>P1C9</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P2B3</key>
+                <key>P1C8</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P2B3</viTri>
+                    <viTri>P1C8</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P2B2</key>
+                <key>P1C3</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P2B2</viTri>
+                    <viTri>P1C3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P1C2</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <khachId>K3</khachId>
+                    <loai>Doi</loai>
+                    <viTri>P1C2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P1C5</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P1C5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P1C4</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P1C4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P1C1</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <khachId>K2</khachId>
+                    <loai>Doi</loai>
+                    <viTri>P1C1</viTri>
+                    <thoiGianDat>12-04-2024 10:09</thoiGianDat>
+                </value>
+            </entry>
+            <entry>
+                <key>P1C10</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P1C10</viTri>
                 </value>
             </entry>
         </dsGheDoi>
         <isFull>false</isFull>
-        <suatChieu id="SCH7">
+        <suatChieu id="SCH953">
             <phim id="Ph1">
                 <ten>Godzilla x Kong: The New Empire</ten>
                 <theLoai>Hanh dong</theLoai>
                 <doTuoi>18</doTuoi>
                 <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
-                <dt>0</dt>
+                <dt>1200000</dt>
                 <thoiLuong>PT2H5M</thoiLuong>
-                <TgKhoiChieu>2024-05-16</TgKhoiChieu>
+                <TgKhoiChieu>2024-07-10</TgKhoiChieu>
             </phim>
-            <phongId>P2</phongId>
-            <thoiGianChieu>16-08-2024 15:45</thoiGianChieu>
+            <phongId>P1</phongId>
+            <thoiGianChieu>24-04-2024 16:00</thoiGianChieu>
             <dt>0</dt>
         </suatChieu>
-        <isPlaying>true</isPlaying>
+        <isPlaying>false</isPlaying>
         <columns>6</columns>
-        <rows>66</rows>
-        <dt>0</dt>
+        <rows>67</rows>
+        <dt>9360000</dt>
     </phong>
 </phongs>
