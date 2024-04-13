@@ -209,14 +209,8 @@ public class ManagerView extends javax.swing.JFrame {
                 phs[i][5] = list.get(i).getIsFull() == true ? "Đã đầy" : "Chưa đầy";
                 phs[i][6] = list.get(i).getSucChua();
                 try {
-                    for (SuatChieu sch : schList) {
-                        if (sch.getPhong().getId() == null ? list.get(i).getId() == null : sch.getPhong().getId().equals(list.get(i).getId())) {
-                            phs[i][7] = sch.getPhim().getTen();
-                            break;
-                        }
-                    }
+                    phs[i][7] = list.get(i).getSuatChieu().getPhim().getTen();
                 } catch (Exception e) {
-                    System.out.println("sch trong");
                     phs[i][7] = "";
                 }
                 phs[i][8] = list.get(i).getIsPlaying() == true ? "Đang chiếu" : "Đang rảnh";
@@ -422,7 +416,7 @@ public class ManagerView extends javax.swing.JFrame {
             phongCombo.setModel(new javax.swing.DefaultComboBoxModel<>(phongStr));
 //        quanLySuatChieu.add(phongCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 150, -1));
 //        String[] tieuChiStr = {}
-            tieuChiSchCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Id", "soluongve"}));
+            tieuChiSchCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Id", "thoigian"}));
         }
     }
 
@@ -488,7 +482,7 @@ public class ManagerView extends javax.swing.JFrame {
     }
 
     public boolean getSchTangDan() {
-        return this.tieuChiDtSch.isSelected();
+        return this.tChiSchtangDan.isSelected();
     }
 
     public void addListSuatChieuSelectionListener(ListSelectionListener listener) {

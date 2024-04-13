@@ -44,11 +44,10 @@ public class Phong {
         columns = 1;
         this.isFull = false;
     }
-    
+
     public void setId(String id) {
         this.id = id;
-    } 
-    
+    }
 
     public String getId() {
         return id;
@@ -259,14 +258,26 @@ public class Phong {
         this.dt = dt;
     }
 
-    public void themDt (double dt) {
+    public void themDt(double dt) {
         this.dt += dt;
     }
-    
+
     public int getTongGhe() {
         return slThuong + slVip + slDoi;
     }
-    
+
+    public void resetDsGhe() {
+        for (Entry<String, GheThuong> g : this.dsGheThuong.entrySet()) {
+            g.getValue().setKhachId("");
+        }
+        for (Entry<String, GheVip> g : this.dsGheVip.entrySet()) {
+            g.getValue().setKhachId("");
+        }
+        for (Entry<String, GheDoi> g : this.dsGheDoi.entrySet()) {
+            g.getValue().setKhachId("");
+        }
+    }
+
     @Override
     public String toString() {
         return "Phong{" + "id=" + getId() + ", slVip=" + slVip + ", slThuong=" + slThuong + ", slDoi=" + slDoi + ", sucChua=" + getSucChua() + ", dsGhe=" + inDsGheTrong() + ", isFull=" + isFull + ", suatChieu=" + suatChieu + ", isPlaying=" + isPlaying + '}' + '\n';

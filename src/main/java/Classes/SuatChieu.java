@@ -34,10 +34,12 @@ public class SuatChieu {
     LocalDateTime thoiGianChieu;
     public final static DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
     private double dt;
+    private boolean chieuXong;
 
     public SuatChieu() {
         currId++;
         this.id = "SCH" + currId;
+        chieuXong = false;
     }
 
     public Phim getPhim() {
@@ -113,6 +115,17 @@ public class SuatChieu {
     
     public void themDt(double dt) {
         this.dt += dt;
+    }
+
+    public boolean isChieuXong() {
+        if (LocalDateTime.now().isAfter(thoiGianChieu.plusMinutes(phim.getThoiLuong().toMinutes()))) {
+            chieuXong = true;
+        }
+        return chieuXong;
+    }
+
+    public void setChieuXong(boolean chieuXong) {
+        this.chieuXong = chieuXong;
     }
     
 

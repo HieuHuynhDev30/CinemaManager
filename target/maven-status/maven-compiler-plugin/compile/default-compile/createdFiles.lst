@@ -112,6 +112,7 @@ Functions\PhongFunc.class
 Views\ManagerView$20.class
 Controllers\ManagerController$ClearPhimListener.class
 Views\ManagerView$13.class
+Functions\SuatChieuFunc$SortTgSch.class
 Views\testView$1.class
 Controllers\ManagerController$ListSuatChieuDatVeSelectionListener.class
 Views\LoginView.class

@@ -139,6 +139,7 @@ public class SuatChieuFunc {
             if (beLon == true) {
                 return o1.getId().compareTo(o2.getId());
             } else {
+                System.out.println(beLon);
                 return o2.getId().compareTo(o1.getId());
             }
         }
@@ -163,6 +164,32 @@ public class SuatChieuFunc {
         }
     }
 
+    public class SortTgSch implements Comparator<SuatChieu> {
+
+        private boolean beLon;
+
+        public SortTgSch(boolean beLon) {
+            this.beLon = beLon;
+        }
+
+        @Override
+        public int compare(SuatChieu o1, SuatChieu o2) {
+            int num;
+            if (o1.getThoiGianChieu().isBefore(o2.getThoiGianChieu())) {
+                num = -1;
+            } else if (o2.getThoiGianChieu().isBefore(o1.getThoiGianChieu())) {
+                num = 1;
+            } else {
+                return 0;
+            }
+            if (beLon) {
+                return num;
+            } else {
+                return -num;
+            }
+        }
+    }
+
     public ArrayList<SuatChieu> sapXepSuatChieu(ArrayList<SuatChieu> list, String tieuChi, boolean beLon) {
         if ("id".equals(tieuChi.toLowerCase())) {
             Collections.sort(list, new SortIdSch(beLon));
@@ -170,8 +197,20 @@ public class SuatChieuFunc {
         if ("doanhthu".equals(tieuChi.toLowerCase())) {
             Collections.sort(list, new SortDtSch(beLon));
         }
+        if ("thoigian".equals(tieuChi.toLowerCase())) {
+            Collections.sort(list, new SortTgSch(beLon));
+        }
         this.writeListSuatChieus(list);
         return list;
+    }
+    
+    public void checkChieuXong() {
+        for (SuatChieu sch: this.suatChieuList) {
+            if (sch.isChieuXong()) {
+                this.xoaSuatChieu(sch);
+            }
+        }
+        this.writeListSuatChieus(this.getSuatChieuList());
     }
 
     public List<SuatChieu> getSuatChieuList() {

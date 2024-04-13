@@ -56,7 +56,7 @@ public class ManagerController {
         managerView.addClearSchFieldListener(new ClearSuatChieuListener());
         managerView.addDeleteSuatChieuListener(new DeleteSuatChieuListener());
         managerView.addSortSuatChieuListener(new SapXepSuatChieuListener());
-        managerView.addAddSuatChieuListener(new SapXepDtSchListener());
+//        managerView.addAddSuatChieuListener(new SapXepDtSchListener());
         managerView.addSchDateTimePickerListener(new ShowSchDateTimeListener());
 
         managerView.addListPhongSelectionListener(new ListPhongSelectionListener());
@@ -105,6 +105,8 @@ public class ManagerController {
 
         phongFunc.checkPlaying();
         phongFunc.checkIsFull();
+        phongFunc.reSetPhong();
+        suatChieuFunc.checkChieuXong();
 
         managerView.showListPhong(phongFunc.getPhongList(), suatChieuFunc.getSuatChieuList());
         managerView.setPhongSortCombo(phongFunc.getPhongList(), suatChieuFunc.getSuatChieuList());
@@ -114,6 +116,7 @@ public class ManagerController {
 
         managerView.showListSuatChieu(suatChieuFunc.getSuatChieuList());
         managerView.setSuatChieuCombo(phimFunc.getPhimList(), phongFunc.getPhongList());
+        suatChieuFunc.checkChieuXong();
 
         managerView.showListKhach(khachFunc.getKhachList());
         managerView.setGioiTinhCombo();
@@ -172,6 +175,9 @@ public class ManagerController {
         public void actionPerformed(ActionEvent e) {
             System.out.println("check sch");
             SuatChieu infoSch = managerView.getSchInfo(phimFunc.getPhimList(), phongFunc.getPhongList());
+            if (infoSch == null) {
+                return;
+            }
             SuatChieu newSch = suatChieuFunc.taoSuatChieu(infoSch.getPhim(), infoSch.getPhong(), infoSch.getThoiGianChieu().toString());
             if (newSch == null) {
                 managerView.showMessage("Thời gian chiếu trùng với suất chiếu khác");
@@ -180,11 +186,21 @@ public class ManagerController {
             if (phongFunc.getPhongList() != null) {
                 for (Phong ph : phongFunc.getPhongList()) {
                     if (ph.getId().equals(newSch.getPhongId())) {
+//                        if (ph.getSuatChieu() != null) {
+//                            managerView.showMessage("Phòng đã đặt suất chiếu khác");
+//                            return;
+//                        }
                         if (ph.getIsPlaying()) {
                             managerView.showMessage("Phòng chưa rảnh");
                             return;
                         }
-                        ph.setSuatChieu(newSch);
+                        if (ph.getSuatChieu() == null) {
+                            ph.setSuatChieu(newSch);
+                        } else {
+                            if (ph.getSuatChieu().isChieuXong()) {
+                                ph.setSuatChieu(newSch);
+                            } 
+                        }
                         phongFunc.editPhong(ph);
                     }
                 }

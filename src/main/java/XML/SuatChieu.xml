@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <suatChieus>
-    <suatChieu id="SCH44">
-        <phim id="Ph4">
-            <ten>After the Pandemic</ten>
-            <theLoai>Hanh dong</theLoai>
-            <doTuoi>16</doTuoi>
-            <posterLink>/Images/p1LbrdJ53dGfEhRopG71akfzOVu.jpg</posterLink>
-            <dt>0.0</dt>
-            <thoiLuong>PT2H5M</thoiLuong>
-            <TgKhoiChieu>2024-09-30</TgKhoiChieu>
-        </phim>
-        <phongId>P1</phongId>
-        <thoiGianChieu>20-04-2024 10:00</thoiGianChieu>
-        <dt>0.0</dt>
-    </suatChieu>
-    <suatChieu id="SCH55">
+    <suatChieu id="SCH69">
         <phim id="Ph5">
             <ten>Madame Web</ten>
             <theLoai>Hanh dong</theLoai>
@@ -25,21 +11,23 @@
             <TgKhoiChieu>2024-10-10</TgKhoiChieu>
         </phim>
         <phongId>P1</phongId>
-        <thoiGianChieu>20-04-2024 10:00</thoiGianChieu>
+        <thoiGianChieu>18-04-2024 10:00</thoiGianChieu>
         <dt>0.0</dt>
+        <chieuXong>false</chieuXong>
     </suatChieu>
-    <suatChieu id="SCH64">
-        <phim id="Ph8">
-            <ten>Damsel</ten>
+    <suatChieu id="SCH73">
+        <phim id="Ph3">
+            <ten>Road House</ten>
             <theLoai>Hanh dong</theLoai>
             <doTuoi>16</doTuoi>
-            <posterLink>/Images/AgHbB9DCE9aE57zkHjSmseszh6e.jpg</posterLink>
+            <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
             <dt>0.0</dt>
             <thoiLuong>PT2H5M</thoiLuong>
-            <TgKhoiChieu>2025-02-11</TgKhoiChieu>
+            <TgKhoiChieu>2024-11-01</TgKhoiChieu>
         </phim>
         <phongId>P1</phongId>
-        <thoiGianChieu>25-04-2024 10:00</thoiGianChieu>
+        <thoiGianChieu>19-04-2024 11:00</thoiGianChieu>
         <dt>0.0</dt>
+        <chieuXong>false</chieuXong>
     </suatChieu>
 </suatChieus>

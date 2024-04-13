@@ -114,9 +114,9 @@ public class PhongFunc {
         @Override
         public int compare(Phong o1, Phong o2) {
             if (beLon) {
-                return (int)o1.getDt() - (int)o2.getDt();
+                return (int) o1.getDt() - (int) o2.getDt();
             } else {
-                return (int)o2.getDt() - (int) o1.getDt();
+                return (int) o2.getDt() - (int) o1.getDt();
             }
         }
     }
@@ -274,6 +274,9 @@ public class PhongFunc {
                         ph.setIsPlaying(false);
                     }
                 }
+                if (LocalDateTime.now().isAfter(ph.getSuatChieu().getThoiGianChieu().plusMinutes(ph.getSuatChieu().getPhim().getThoiLuong().toMinutes()))) {
+                    ph.resetDsGhe();
+                }
             }
         }
         this.writeListPhongs(phongList);
@@ -288,6 +291,37 @@ public class PhongFunc {
             }
         }
         this.writeListPhongs(phongList);
+    }
+
+    public void reSetPhong() {
+        if (this.getPhongList() != null) {
+            for (Phong ph : this.getPhongList()) {
+                if (ph.getSuatChieu() != null && ph.getSuatChieu().isChieuXong()) {
+                    ph.resetDsGhe();
+                    ph.setSuatChieu(null);
+                    updateSuatChieu(ph);
+                }
+            }
+
+        }
+        this.writeListPhongs(phongList);
+    }
+
+    public void updateSuatChieu(Phong ph) {
+        if (suatChieuFunc.getSuatChieuList() != null) {
+            LocalDateTime now = LocalDateTime.now();
+            long wait = 100;
+            int count = 0;
+            for (SuatChieu sch : suatChieuFunc.getSuatChieuList()) {
+                if (sch.getPhongId().equals(ph.getId())) {
+                    if (Duration.between(now, sch.getThoiGianChieu().plusMinutes(sch.getPhim().getThoiLuong().toMinutes())).toMinutes() <= wait) {
+                        wait = Duration.between(now, sch.getThoiGianChieu().plusMinutes(sch.getPhim().getThoiLuong().toMinutes())).toMinutes();
+                        count++;
+                    }
+                }
+            }
+            ph.setSuatChieu(suatChieuFunc.getSuatChieuList().get(count));
+        }
     }
 
     public List<Phong> getPhongList() {
