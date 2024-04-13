@@ -5,6 +5,7 @@
 package Classes;
 
 import Functions.KhachFunc;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -22,7 +23,6 @@ public class Ve {
     private String id;
     private Ghe ghe;
     private SuatChieu suat;
-//    private KhachFunc khachFunc;
 
     public Ve() {
         currId++;
@@ -50,9 +50,18 @@ public class Ve {
         this.suat = suat;
     }
     
-//    public String getHoTen(){
-//        return khachFunc.searchID(ghe.getKhachId());
-//    }
+    public String getPhong(){
+        return suat.getPhongId();
+    }
+    
+    public String getKhachName(List <Khach> list){
+        for(Khach kh: list){
+            if(this.getGhe().getKhachId().equals(kh.getId())){
+                     return kh.getHoTen();
+            }
+        }
+        return null;
+    }
 
     @Override
     public String toString() {

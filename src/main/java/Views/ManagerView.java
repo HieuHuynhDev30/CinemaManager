@@ -55,8 +55,8 @@ public class ManagerView extends javax.swing.JFrame {
     private String[] columnNames = new String[]{
         "ID", "Name", "Ngày sinh", "Giới tính", "Số lượng vé", "Tổng tiền"};
 
-    private String[] columnNames2 = new String[]{
-        "ID", "Họ tên khách", "Vị trí ghế", "Loại ghế", "Tên phim", "Thời lượng", "Phòng", "Thời gian chiếu"};
+    String[] columnNames2 = new String[]{
+        "ID", "Họ tên khách", "Vị trí ghế", "Loại ghế", "Tên phim", "Phòng", "Thời gian chiếu"};
 
     /**
      * Creates new form ManagerWindow
@@ -637,7 +637,6 @@ public class ManagerView extends javax.swing.JFrame {
 
             tgSch.setText(sch.getThoiGianChieu().format(formatDateTime));
 
-          
             dt.setText(sch.getDt() + "đ");
 
             infoSchPanel.add(schId);
@@ -1080,16 +1079,12 @@ public class ManagerView extends javax.swing.JFrame {
     // Ve method
     public void showListVe(List<Ve> list, List<Khach> khachs) {
         int size = list.size();
-        // với bảng studentTable có 5 cột, 
-        // khởi tạo mảng 2 chiều students, trong đó:
-        // số hàng: là kích thước của list student 
-        // số cột: là 5
-
+     
         Object[][] ve = new Object[size][8];
         for (int i = 0; i < size; i++) {
             ve[i][0] = list.get(i).getId();
             for (Khach kh : khachs) {
-                if (kh.getId() == null ? list.get(i).getGhe().getKhachId() == null : kh.getId().equals(list.get(i).getGhe().getKhachId())) {
+                if (kh.getId().equals(list.get(i).getGhe().getKhachId())) {
                     ve[i][1] = kh.getHoTen();
                     break;
                 }
@@ -1097,9 +1092,8 @@ public class ManagerView extends javax.swing.JFrame {
             ve[i][2] = list.get(i).getGhe().InVitri();
             ve[i][3] = list.get(i).getGhe().getLoai();
             ve[i][4] = list.get(i).getSuat().getPhim().getTen();
-            ve[i][5] = list.get(i).getSuat().getPhim().inThoiLuong();
-            ve[i][6] = list.get(i).getSuat().getPhongId();
-            ve[i][7] = list.get(i).getSuat().inThoiGianChieu();
+            ve[i][5] = list.get(i).getSuat().getPhongId();
+            ve[i][6] = list.get(i).getSuat().inThoiGianChieu();
 
         }
         BangVe.setModel(new DefaultTableModel(ve, columnNames2));
@@ -1142,9 +1136,6 @@ public class ManagerView extends javax.swing.JFrame {
             }
             ListKhachHang.setModel(new javax.swing.DefaultComboBoxModel<>(khachIDStr));
             phimCombo1.setModel(new javax.swing.DefaultComboBoxModel<>(phimArr));
-
-//        quanLySuatChieu.add(phimCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 160, 20));
-//        phongDatVeCombo.setModel(new javax.swing.DefaultComboBoxModel<>(phongStr));
             LuaChonVe.setModel(new javax.swing.DefaultComboBoxModel<>(columnNames2));
 //        ListViTri.setMaximumRowCount(100);
 //        ListViTri.setModel(new javax.swing.DefaultComboBoxModel<>(gheStr));
@@ -1190,6 +1181,23 @@ public class ManagerView extends javax.swing.JFrame {
         int k;
         k = LuaChonVe.getSelectedIndex();
         return k;
+    }
+
+    public String inforVeSearch() {
+        String s = SearchVe.getText().trim();
+        return s;
+    }
+
+    public String getIDVe() {
+        String s = "";
+        int row = this.BangVe.getSelectedRow();
+        if (row >= 0) {
+
+            s = BangVe.getModel().getValueAt(row, 0).toString();
+            return s;
+
+        }
+        return s;
     }
 
 //    public Ve inforVeSearch(List<Khach> khachs) {
@@ -1302,10 +1310,9 @@ public class ManagerView extends javax.swing.JFrame {
         DatVebtn.addActionListener(listener);
     }
 
-    public void addSearchVeListener(ActionListener listener) {
-        SearchVeBtn.addActionListener(listener);
-    }
-
+//    public void addSearchVeListener(ActionListener listener) {
+//        SearchVeBtn.addActionListener(listener);
+//    }
     public void addListSuatChieuSelectionListener1(ListSelectionListener listener) {
         this.suatChieuTable2.getSelectionModel().addListSelectionListener(listener);
         this.BangGhe.getSelectionModel().addListSelectionListener(listener);
@@ -1320,7 +1327,7 @@ public class ManagerView extends javax.swing.JFrame {
     }
     //////////////////////////////////////////
 
-    public void showListSuatChieu1(List<SuatChieu> list) {
+    public void showListSuatChieuDatVe(List<SuatChieu> list) {
         int size = list.size();
         // với bảng studentTable có 5 cột, 
         // khởi tạo mảng 2 chiều students, trong đó:
@@ -1350,7 +1357,7 @@ public class ManagerView extends javax.swing.JFrame {
 //        // disable Add button
     }
 
-    public void fillSuatChieuFromSelectedRow1(List<Phim> phimList) {
+    public void fillSuatChieuDatVeFromSelectedRow(List<Phim> phimList) {
         // lấy chỉ số của hàng được chọn 
         int row = this.suatChieuTable2.getSelectedRow();
         if (row >= 0) {
@@ -1408,6 +1415,22 @@ public class ManagerView extends javax.swing.JFrame {
 
     public void addReloadListener(ActionListener listener) {
         reLoadButton.addActionListener(listener);
+    }
+
+    public void addSearchVeListener(ActionListener listener) {
+        SearchVeBtn.addActionListener(listener);
+    }
+
+    public void addDeleteVeListener(ActionListener listener) {
+        DeleteVeBtn.addActionListener(listener);
+    }
+
+    public void addSortNameVeListener(ActionListener listener) {
+        SortbyNamebtn.addActionListener(listener);
+    }
+
+    public void addSortPhimVeListener(ActionListener listener) {
+        SortbyPhimbtn.addActionListener(listener);
     }
 
     // Het ve method
@@ -1556,11 +1579,12 @@ public class ManagerView extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         jPanel21 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        SortbyNamebtn = new javax.swing.JButton();
+        SortbyPhimbtn = new javax.swing.JButton();
         LuaChonVe = new javax.swing.JComboBox<>();
         SearchVe = new javax.swing.JTextField();
         SearchVeBtn = new javax.swing.JButton();
+        DeleteVeBtn = new javax.swing.JButton();
         jScrollPane8 = new javax.swing.JScrollPane();
         BangVe = new javax.swing.JTable();
         jTabbedPane9 = new javax.swing.JTabbedPane();
@@ -2709,15 +2733,21 @@ public class ManagerView extends javax.swing.JFrame {
         jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel19.setText("Quản lý vé");
 
-        jButton2.setText("Sắp xếp theo tên khách hàng");
+        SortbyNamebtn.setText("Sắp xếp theo tên khách hàng");
 
-        jButton3.setText("Sắp xếp theo phòng");
+        SortbyPhimbtn.setText("Sắp xếp theo phim");
 
         LuaChonVe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        SearchVe.setText("Tìm kiếm");
+        SearchVe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SearchVeActionPerformed(evt);
+            }
+        });
 
         SearchVeBtn.setText("Tìm kiếm");
+
+        DeleteVeBtn.setText("Xóa vé");
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -2725,9 +2755,11 @@ public class ManagerView extends javax.swing.JFrame {
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(DeleteVeBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(SortbyNamebtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(SortbyPhimbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(LuaChonVe, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2742,14 +2774,16 @@ public class ManagerView extends javax.swing.JFrame {
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
+                    .addComponent(SortbyNamebtn)
                     .addComponent(SearchVe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SearchVeBtn))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
+                    .addComponent(SortbyPhimbtn)
                     .addComponent(LuaChonVe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DeleteVeBtn)
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
@@ -2759,7 +2793,7 @@ public class ManagerView extends javax.swing.JFrame {
             .addGroup(jPanel21Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(505, Short.MAX_VALUE))
         );
         jPanel21Layout.setVerticalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3331,6 +3365,10 @@ public class ManagerView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_reLoadButtonActionPerformed
 
+    private void SearchVeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchVeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SearchVeActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AddKhach;
@@ -3346,6 +3384,7 @@ public class ManagerView extends javax.swing.JFrame {
     private javax.swing.JButton DatVebtn;
     private javax.swing.JButton DeleteKhach;
     private javax.swing.JButton DeletePhimButton;
+    private javax.swing.JButton DeleteVeBtn;
     private javax.swing.JLayeredPane DoanhThu;
     private javax.swing.JPanel DoanhThuSch;
     private javax.swing.JPanel DsPhimPane;
@@ -3386,6 +3425,8 @@ public class ManagerView extends javax.swing.JFrame {
     private javax.swing.JSpinner SlgVipSpinner;
     private javax.swing.JTextField SlvField;
     private javax.swing.JButton SortPhongButton;
+    private javax.swing.JButton SortbyNamebtn;
+    private javax.swing.JButton SortbyPhimbtn;
     private javax.swing.JPanel SuatChieuControllers;
     private javax.swing.JLabel SuatChieuManager;
     private javax.swing.JLabel SuatChieuManager1;
@@ -3413,8 +3454,6 @@ public class ManagerView extends javax.swing.JFrame {
     private javax.swing.JButton editPhongButton;
     private javax.swing.JComboBox<String> gioiTinhCombo;
     private javax.swing.JSpinner hourSchSpinner;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

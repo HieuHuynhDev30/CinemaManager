@@ -160,12 +160,11 @@ public class KhachFunc {
         int size = khachList.size();
         for (int i = 0; i < size; i++) {
             if ( khachList.get(i).getHoTen().contains(s)) {
-                //phim = listPhim.get(i);
-                list.add(khachList.get(i));
-                
-                
+//                System.out.println("search");
+                list.add(khachList.get(i));  
             }
         }
+         System.out.println("search");
         return list;
     }
     

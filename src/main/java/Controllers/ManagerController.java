@@ -84,6 +84,11 @@ public class ManagerController {
         managerView.addEditKhachListener(new EditKhachListener());
         managerView.addSearchKhachListener(new SearchKhachListener());
         managerView.addNSDatePickerListener(new ShowNSDateListener());
+
+        managerView.addSearchVeListener(new SearchVeListener());
+        managerView.addDeleteVeListener(new DeleteVeListener());
+        managerView.addSortNameVeListener(new SortByNameVeListener());
+        managerView.addSortPhimVeListener(new SortByPhimVeListener());
 //   
 //        managerView.addAddVeListener(new AddVeListener());
         managerView.addDatVeListener(new DatVeListener());
@@ -123,7 +128,7 @@ public class ManagerController {
 
         managerView.showListVe(veFunc.getVeList(), khachFunc.getKhachList());
         managerView.setVeCombo(suatChieuFunc.getSuatChieuList(), phongFunc.getPhongList(), khachFunc.getKhachList());
-        managerView.showListSuatChieu1(suatChieuFunc.getSuatChieuList());
+        managerView.showListSuatChieuDatVe(suatChieuFunc.getSuatChieuList());
 
         managerView.showDoanhThu(doanhThuFunc.doanhThu("tong", (Object) null));
         managerView.showDoanhThuPhim(phimFunc.getPhimList(), veFunc.getVeList());
@@ -199,7 +204,7 @@ public class ManagerController {
                         } else {
                             if (ph.getSuatChieu().isChieuXong()) {
                                 ph.setSuatChieu(newSch);
-                            } 
+                            }
                         }
                         phongFunc.editPhong(ph);
                     }
@@ -654,7 +659,7 @@ public class ManagerController {
     class ListSuatChieuDatVeSelectionListener implements ListSelectionListener {
 
         public void valueChanged(ListSelectionEvent e) {
-            managerView.fillSuatChieuFromSelectedRow1(phimFunc.getPhimList());
+            managerView.fillSuatChieuDatVeFromSelectedRow(phimFunc.getPhimList());
 
         }
     }
@@ -689,39 +694,67 @@ public class ManagerController {
         }
     }
 
-//Tim ve
-//    class SearchVeListener implements ActionListener {
-//
-//        public void actionPerformed(ActionEvent e) {
-//            int k = managerView.luachonVeTK();
-//            Ve ve = managerView.inforVeSearch(khachList);
-//            switch (k) {
-//                case 0:
-//
-//                    break;
-//                case 1:
-//                    managerView.showListVe(veFunc.SearchKhachVe(ve), khachList);
-//                    break;
-//                case 2:
-//                    managerView.showListVe(veFunc.SearchViTriVe(ve), khachList);
-//                    break;
-//                case 3:
-//
-//                    break;
-//                case 4:
-//
-//                    break;
-//                case 5:
-//
-//                    break;
-//                case -1:
-//                    managerView.showListVe(veList, khachList);
-//                    break;
-//                default:
-//                    break;
-//            }
-//
-//        }
-//
-//    }
+    class SearchVeListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            int k = managerView.luachonVeTK();
+            String s = managerView.inforVeSearch();
+            switch (k) {
+                case 0:
+                     managerView.showListVe(veFunc.SearchIdVe(s), khachFunc.getKhachList());
+                    break;
+                case 1:
+                    managerView.showListVe(veFunc.SearchKhachVe(s), khachFunc.getKhachList());
+                    break;
+                case 2:
+                     managerView.showListVe(veFunc.SearchVitriVe(s), khachFunc.getKhachList());
+                    break;
+                case 3:
+                    managerView.showListVe(veFunc.SearchLoaiGhe(s), khachFunc.getKhachList());
+                    break;
+                case 4:
+                    managerView.showListVe(veFunc.SearchTenPhim(s), khachFunc.getKhachList());
+                    break;
+                case 5:
+                    managerView.showListVe(veFunc.SearchPhong(s), khachFunc.getKhachList());
+                    break;
+                case 6:
+                    managerView.showListVe(veFunc.SearchThoiGian(s), khachFunc.getKhachList());
+                    break;
+                default:
+                    managerView.showListVe(veFunc.getVeList(), khachFunc.getKhachList());
+                    break;
+            }
+
+        }
+    }
+
+    class DeleteVeListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            String s = managerView.getIDVe();
+            veFunc.xoaVe(s);
+            managerView.showListVe(veFunc.getVeList(), khachFunc.getKhachList());
+            khachFunc.writeListKhachs(khachFunc.getKhachList());
+            managerView.showListKhach(khachFunc.getKhachList());
+
+        }
+    }
+
+    class SortByNameVeListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            veFunc.sortVeByName(khachFunc.getKhachList());
+            managerView.showListVe(veFunc.getVeList(), khachFunc.getKhachList());
+
+        }
+    }
+
+    class SortByPhimVeListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            veFunc.sortVeByPhim(khachFunc.getKhachList());
+            managerView.showListVe(veFunc.getVeList(), khachFunc.getKhachList());
+        }
+    }
 }
