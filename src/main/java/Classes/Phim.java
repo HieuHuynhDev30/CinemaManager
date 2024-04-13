@@ -27,7 +27,7 @@ public class Phim {
     private String ten, theLoai;
     private int doTuoi;
     private String posterLink;
-    private int dt;
+    private double dt;
     @XmlJavaTypeAdapter(DurationAdapter.class)
     private Duration thoiLuong;
     @XmlJavaTypeAdapter(LocalDateAdapter.class)
@@ -133,15 +133,15 @@ public class Phim {
         return TgKhoiChieu.format(dateFormat);
     }
 
-    public int getDt() {
+    public double getDt() {
         return dt;
     }
 
-    public void setDt(int dt) {
+    public void setDt(double dt) {
         this.dt = dt;
     }
 
-    public void themDt(int dt) {
+    public void themDt(double dt) {
         this.dt += dt;
     }
 

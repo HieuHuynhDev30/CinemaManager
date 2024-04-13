@@ -35,7 +35,7 @@ public class Phong {
     private boolean isPlaying;
     private int columns;
     private char rows;
-    private int dt;
+    private double dt;
 
     public Phong() {
         currId++;
@@ -251,15 +251,15 @@ public class Phong {
         return this.slThuong + this.slVip + this.slDoi * 2;
     }
 
-    public int getDt() {
+    public double getDt() {
         return dt;
     }
 
-    public void setDt(int dt) {
+    public void setDt(double dt) {
         this.dt = dt;
     }
 
-    public void themDt (int dt) {
+    public void themDt (double dt) {
         this.dt += dt;
     }
     

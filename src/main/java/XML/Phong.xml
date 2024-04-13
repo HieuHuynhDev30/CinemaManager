@@ -259,23 +259,23 @@
             </entry>
         </dsGheDoi>
         <isFull>false</isFull>
-        <suatChieu id="SCH122">
-            <phim id="Ph4">
-                <ten>After the Pandemic</ten>
+        <suatChieu id="SCH64">
+            <phim id="Ph8">
+                <ten>Damsel</ten>
                 <theLoai>Hanh dong</theLoai>
                 <doTuoi>16</doTuoi>
-                <posterLink>/Images/p1LbrdJ53dGfEhRopG71akfzOVu.jpg</posterLink>
-                <dt>0</dt>
+                <posterLink>/Images/AgHbB9DCE9aE57zkHjSmseszh6e.jpg</posterLink>
+                <dt>0.0</dt>
                 <thoiLuong>PT2H5M</thoiLuong>
-                <TgKhoiChieu>2024-09-30</TgKhoiChieu>
+                <TgKhoiChieu>2025-02-11</TgKhoiChieu>
             </phim>
             <phongId>P1</phongId>
-            <thoiGianChieu>19-04-2024 18:00</thoiGianChieu>
-            <dt>0</dt>
+            <thoiGianChieu>25-04-2024 10:00</thoiGianChieu>
+            <dt>0.0</dt>
         </suatChieu>
         <isPlaying>false</isPlaying>
         <columns>1</columns>
         <rows>68</rows>
-        <dt>960000</dt>
+        <dt>0.0</dt>
     </phong>
 </phongs>

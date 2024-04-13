@@ -114,9 +114,9 @@ public class PhongFunc {
         @Override
         public int compare(Phong o1, Phong o2) {
             if (beLon) {
-                return o1.getDt() - o2.getDt();
+                return (int)o1.getDt() - (int)o2.getDt();
             } else {
-                return o2.getDt() - o1.getDt();
+                return (int)o2.getDt() - (int) o1.getDt();
             }
         }
     }

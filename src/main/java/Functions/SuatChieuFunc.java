@@ -9,10 +9,14 @@ import Classes.Phong;
 import Classes.SuatChieu;
 import XML.PhongListXML;
 import XML.SuatChieuListXML;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import utils.FileUtils;
 
 /**
@@ -23,10 +27,17 @@ public class SuatChieuFunc {
 
     private static final String SCH_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\SuatChieu.xml";
     private static final String PHONG_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\Phong.xml";
+    public final static DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
     private List<SuatChieu> suatChieuList;
+    private Map<String, LocalDateTime[]> schIntervals;
 
     public SuatChieuFunc() {
         this.suatChieuList = this.readListSuatChieus();
+        this.schIntervals = new HashMap<>();
+        for (SuatChieu sch : this.suatChieuList) {
+            LocalDateTime tgKetThuc = sch.getThoiGianChieu().plusMinutes(sch.getPhim().getThoiLuong().toMinutes());
+            this.schIntervals.put(sch.getPhongId(), new LocalDateTime[]{sch.getThoiGianChieu(), tgKetThuc});
+        }
     }
 
     public void writeListSuatChieus(List<SuatChieu> schs) {
@@ -66,10 +77,22 @@ public class SuatChieuFunc {
     }
 
     public SuatChieu taoSuatChieu(Phim phim, Phong ph, String tgChieu) {
+        LocalDateTime TgChieu = LocalDateTime.parse(tgChieu);
+        System.out.println(this.schIntervals.keySet().toString());
+        for (Map.Entry<String, LocalDateTime[]> dt : this.schIntervals.entrySet()) {
+            if (dt.getKey().equals(ph.getId())) {
+                if (TgChieu.isAfter(dt.getValue()[0]) && TgChieu.isBefore(dt.getValue()[1].plusMinutes(phim.getThoiLuong().toMinutes()))) {
+                    System.out.println("no sch");
+                    return null;
+                }
+            }
+        }
         SuatChieu sch = new SuatChieu();
         sch.setPhim(phim);
         sch.setPhong(ph);
-        sch.setThoiGianChieu(tgChieu);
+        sch.setThoiGianChieu(TgChieu.format(formatDateTime));
+        LocalDateTime tgKetThuc = TgChieu.plusMinutes(sch.getPhim().getThoiLuong().toMinutes());
+        this.schIntervals.put(ph.getId(), new LocalDateTime[]{sch.getThoiGianChieu(), tgKetThuc});
         return sch;
     }
 
@@ -82,7 +105,6 @@ public class SuatChieuFunc {
         for (int i = 0; i < this.suatChieuList.size(); i++) {
             SuatChieu ph = this.suatChieuList.get(i);
             if (ph.getId() == null ? p.getId() == null : ph.getId().equals(p.getId())) {
-                System.out.println("updated");
                 ph.setPhim(p.getPhim());
                 ph.setPhong(p.getPhong());
                 ph.setPhongId();
@@ -134,9 +156,9 @@ public class SuatChieuFunc {
         @Override
         public int compare(SuatChieu o1, SuatChieu o2) {
             if (beLon) {
-                return o1.getDt() - o2.getDt();
+                return (int) o1.getDt() - (int) o2.getDt();
             } else {
-                return o2.getDt() - o1.getDt();
+                return (int) o2.getDt() - (int) o1.getDt();
             }
         }
     }

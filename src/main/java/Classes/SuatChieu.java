@@ -33,7 +33,7 @@ public class SuatChieu {
     @XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
     LocalDateTime thoiGianChieu;
     public final static DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
-    private int dt;
+    private double dt;
 
     public SuatChieu() {
         currId++;
@@ -103,11 +103,11 @@ public class SuatChieu {
         return phong.getSucChua() - phong.getDsGheTrong().size();
     }
 
-    public int getDt() {
+    public double getDt() {
         return dt;
     }
 
-    public void setDt(int dt) {
+    public void setDt(double dt) {
         this.dt = dt;
     }
     

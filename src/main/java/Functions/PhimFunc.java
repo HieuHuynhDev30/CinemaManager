@@ -72,13 +72,6 @@ public class PhimFunc {
         for (Phim ph : this.phimList) {
             if (ph.getId() == null ? phimId == null : ph.getId().equals(phimId)) {
                 this.phimList.remove(ph);
-//                List<SuatChieu> schList = schFunc.readListSuatChieus();
-//                for (SuatChieu sch : schList) {
-//                    if (sch.getPhim().getId() == null ? ph.getId() == null : sch.getPhim().getId().equals(ph.getId())) {
-//                        schList.remove(sch);
-//                        schFunc.writeListSuatChieus(schList);
-//                    }
-//                }
             }
         }
         this.writeListPhims(phimList);
@@ -95,9 +88,9 @@ public class PhimFunc {
         @Override
         public int compare(Phim o1, Phim o2) {
             if (beLon) {
-                return o1.getDt() - o2.getDt();
+                return (int)o1.getDt() - (int)o2.getDt();
             } else {
-                return o2.getDt() - o1.getDt();
+                return (int)o2.getDt() - (int)o1.getDt();
             }
         }
 
@@ -131,7 +124,6 @@ public class PhimFunc {
             });
         }
         if ("doanhthu".equals(tieuChi.toLowerCase())) {
-            System.out.println("sap xep  dt");
             Collections.sort(list, new SortDtPhim(beLon));
         }
         return list;

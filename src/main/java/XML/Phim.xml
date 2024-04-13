@@ -1,29 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <phims>
-    <phim id="Ph2">
-        <ten>Kung Fu Panda 4</ten>
-        <theLoai>Hai huoc</theLoai>
-        <doTuoi>13</doTuoi>
-        <posterLink>/Images/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg</posterLink>
-        <dt>3760000</dt>
-        <thoiLuong>PT2H</thoiLuong>
-        <TgKhoiChieu>2024-06-22</TgKhoiChieu>
-    </phim>
-    <phim id="Ph8">
-        <ten>Damsel</ten>
-        <theLoai>Hanh dong</theLoai>
-        <doTuoi>16</doTuoi>
-        <posterLink>/Images/AgHbB9DCE9aE57zkHjSmseszh6e.jpg</posterLink>
-        <dt>320000</dt>
-        <thoiLuong>PT2H5M</thoiLuong>
-        <TgKhoiChieu>2025-02-11</TgKhoiChieu>
-    </phim>
     <phim id="Ph1">
         <ten>Godzilla x Kong: The New Empire</ten>
         <theLoai>Khoa hoc vien tuong</theLoai>
         <doTuoi>16</doTuoi>
         <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
-        <dt>0</dt>
+        <dt>0.0</dt>
         <thoiLuong>PT2H5M</thoiLuong>
         <TgKhoiChieu>2024-07-10</TgKhoiChieu>
     </phim>
@@ -32,7 +14,7 @@
         <theLoai>Kinh di</theLoai>
         <doTuoi>16</doTuoi>
         <posterLink>/Images/ccJpK0rqzhQeP7Mrs2uKqObFY4L.jpg</posterLink>
-        <dt>0</dt>
+        <dt>0.0</dt>
         <thoiLuong>PT2H5M</thoiLuong>
         <TgKhoiChieu>2024-04-21</TgKhoiChieu>
     </phim>
@@ -41,7 +23,7 @@
         <theLoai>Hanh dong</theLoai>
         <doTuoi>16</doTuoi>
         <posterLink>/Images/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg</posterLink>
-        <dt>0</dt>
+        <dt>0.0</dt>
         <thoiLuong>PT2H5M</thoiLuong>
         <TgKhoiChieu>2024-10-10</TgKhoiChieu>
     </phim>
@@ -50,7 +32,7 @@
         <theLoai>Hai huoc</theLoai>
         <doTuoi>13</doTuoi>
         <posterLink>/Images/no_poster.jpg</posterLink>
-        <dt>0</dt>
+        <dt>0.0</dt>
         <thoiLuong>PT2H</thoiLuong>
         <TgKhoiChieu>2024-06-16</TgKhoiChieu>
     </phim>
@@ -59,7 +41,7 @@
         <theLoai>Hanh dong</theLoai>
         <doTuoi>16</doTuoi>
         <posterLink>/Images/3UKlVa1CBeQkRksHV5OfFTO52qd.jpg</posterLink>
-        <dt>0</dt>
+        <dt>0.0</dt>
         <thoiLuong>PT2H5M</thoiLuong>
         <TgKhoiChieu>2024-11-01</TgKhoiChieu>
     </phim>
@@ -68,7 +50,7 @@
         <theLoai>Hanh dong</theLoai>
         <doTuoi>16</doTuoi>
         <posterLink>/Images/p1LbrdJ53dGfEhRopG71akfzOVu.jpg</posterLink>
-        <dt>0</dt>
+        <dt>0.0</dt>
         <thoiLuong>PT2H5M</thoiLuong>
         <TgKhoiChieu>2024-09-30</TgKhoiChieu>
     </phim>
@@ -77,8 +59,26 @@
         <theLoai>Hanh dong</theLoai>
         <doTuoi>16</doTuoi>
         <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
-        <dt>0</dt>
+        <dt>0.0</dt>
         <thoiLuong>PT2H5M</thoiLuong>
         <TgKhoiChieu>2024-11-01</TgKhoiChieu>
+    </phim>
+    <phim id="Ph8">
+        <ten>Damsel</ten>
+        <theLoai>Hanh dong</theLoai>
+        <doTuoi>16</doTuoi>
+        <posterLink>/Images/AgHbB9DCE9aE57zkHjSmseszh6e.jpg</posterLink>
+        <dt>0.0</dt>
+        <thoiLuong>PT2H5M</thoiLuong>
+        <TgKhoiChieu>2025-02-11</TgKhoiChieu>
+    </phim>
+    <phim id="Ph2">
+        <ten>Kung Fu Panda 4</ten>
+        <theLoai>Hai huoc</theLoai>
+        <doTuoi>13</doTuoi>
+        <posterLink>/Images/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg</posterLink>
+        <dt>0.0</dt>
+        <thoiLuong>PT2H</thoiLuong>
+        <TgKhoiChieu>2024-06-22</TgKhoiChieu>
     </phim>
 </phims>
