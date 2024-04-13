@@ -24,7 +24,7 @@ import utils.FileUtils;
  */
 public class PhongFunc {
 
-    private static final String PHONG_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\Phong.xml";
+    private static final String PHONG_FILE_NAME = "xml/Phong.xml";
     private List<Phong> phongList;
     private SuatChieuFunc suatChieuFunc;
 

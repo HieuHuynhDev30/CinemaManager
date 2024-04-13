@@ -25,8 +25,8 @@ import utils.FileUtils;
  */
 public class SuatChieuFunc {
 
-    private static final String SCH_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\SuatChieu.xml";
-    private static final String PHONG_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\Phong.xml";
+    private static final String SCH_FILE_NAME = "xml/SuatChieu.xml";
+    private static final String PHONG_FILE_NAME = "xml/Phong.xml";
     public final static DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
     private List<SuatChieu> suatChieuList;
     private Map<String, LocalDateTime[]> schIntervals;

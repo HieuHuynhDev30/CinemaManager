@@ -20,7 +20,7 @@ import utils.FileUtils;
  */
 public class PhimFunc {
 
-    private static final String PHIM_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\Phim.xml";
+    private static final String PHIM_FILE_NAME = "xml/Phim.xml";
     private List<Phim> phimList;
     private SuatChieuFunc schFunc;
 

@@ -24,7 +24,7 @@ import utils.FileUtils;
  */
 public class VeFunc {
 
-    private static final String VE_FILE_NAME = "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\CinemaManager\\src\\main\\java\\XML\\Ve.xml";
+    private static final String VE_FILE_NAME = "xml/Ve.xml";
     private List<Ve> veList;
     KhachFunc khachFunc;
 

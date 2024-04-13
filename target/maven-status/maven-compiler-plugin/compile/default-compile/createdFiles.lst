@@ -83,7 +83,6 @@ Controllers\ManagerController$EditPhimListener.class
 Classes\GheDoi.class
 com\toedter\calendar\JDayChooser.class
 Views\ManagerView$9.class
-Classes\RapPhim.class
 Classes\Phim.class
 Functions\PhongFunc$SortPhongTsg.class
 Views\ManagerView$1.class
@@ -100,13 +99,10 @@ Views\ManagerView$24.class
 Controllers\ManagerController$ListSuatChieuSelectionListener.class
 com\toedter\components\JSpinField.class
 Controllers\ManagerController$AddPhimListener.class
-Functions\Func.class
 Controllers\ManagerController$SortByPhimVeListener.class
 Controllers\ManagerController$DeletePhongListener.class
 Controllers\ManagerController$SearchVeListener.class
 XML\KhachListXML.class
-controller\TestBarChart.class
-Classes\HoiVien.class
 Classes\Phong.class
 Views\ManagerView$26.class
 com\toedter\calendar\JYearChooser.class
