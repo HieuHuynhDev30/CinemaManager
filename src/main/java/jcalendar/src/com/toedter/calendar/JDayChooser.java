@@ -504,7 +504,7 @@ public class JDayChooser extends JPanel implements ActionListener, KeyListener,
     public void actionPerformed(ActionEvent e) {
         JButton button = (JButton) e.getSource();
         String buttonText = button.getText();
-        int day = Integer.parseInt(buttonText);
+        int day = new Integer(buttonText).intValue();
         setDay(day);
     }
 

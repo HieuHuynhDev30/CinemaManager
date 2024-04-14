@@ -153,7 +153,7 @@ public class JSpinField extends JPanel implements ChangeListener, CaretListener,
 	 */
 	public void setValue(int newValue) {
 		setValue(newValue, true, true);
-		spinner.setValue(value);
+		spinner.setValue(new Integer(value));
 	}
 
 	/**

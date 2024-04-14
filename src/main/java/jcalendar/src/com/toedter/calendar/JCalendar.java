@@ -24,7 +24,6 @@ import java.awt.Color;
 import java.awt.Font;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -511,8 +510,8 @@ public class JCalendar extends JPanel implements PropertyChangeListener {
      *
      * @return a date object constructed from the calendar property.
      */
-    public LocalDate getDate() {
-        return LocalDate.now();
+    public Date getDate() {
+        return new Date(calendar.getTimeInMillis());
     }
 
     /**
