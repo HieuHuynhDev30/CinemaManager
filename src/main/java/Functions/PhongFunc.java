@@ -317,7 +317,6 @@ public class PhongFunc {
             long wait = 0;
             for (SuatChieu sch : suatChieuFunc.getSuatChieuList()) {
                 if (sch.getPhongId().equals(ph.getId())) {
-                    System.out.println("set wait");
                     wait = Duration.between(now, sch.getThoiGianChieu()).toMinutes();
                     break;
                 }
