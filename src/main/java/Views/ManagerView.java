@@ -482,7 +482,7 @@ public class ManagerView extends javax.swing.JFrame {
     }
 
     public boolean getSchTangDan() {
-        return this.tChiSchtangDan.isSelected();
+        return this.tieuChiDtSch.isSelected();
     }
 
     public void addListSuatChieuSelectionListener(ListSelectionListener listener) {
@@ -516,6 +516,7 @@ public class ManagerView extends javax.swing.JFrame {
     }
 
     public void showDoanhThuPhim(List<Phim> list, List<Ve> veList) {
+        this.doanhThuPhim.removeAll();
         for (Phim ph : list) {
             JPanel dtPhimPanel = new javax.swing.JPanel();
             dtPhimPanel.setPreferredSize(new java.awt.Dimension(200, 198));
@@ -573,15 +574,14 @@ public class ManagerView extends javax.swing.JFrame {
         }
     }
 
-    public void clearDoanhThuPhim() {
-        this.doanhThuPhim.removeAll();
-    }
+
 
     public boolean getDtPhimTangDan() {
         return this.tieuChiDtPhim.isSelected();
     }
 
     public void showDoanhThuSch(List<SuatChieu> list, List<Ve> veList) {
+        this.DoanhThuSch.removeAll();
         for (SuatChieu sch : list) {
             JPanel dtSchPanel = new javax.swing.JPanel();
 
@@ -647,9 +647,7 @@ public class ManagerView extends javax.swing.JFrame {
         }
     }
 
-    public void clearDoanhThuSch() {
-        this.DoanhThuSch.removeAll();
-    }
+
 
     public void addSortDoanhThuPhimListener(ActionListener listener) {
         this.sortDtPhimButton.addActionListener(listener);
@@ -694,6 +692,32 @@ public class ManagerView extends javax.swing.JFrame {
     public void addSortDoanhThuPhongListener(ActionListener listener) {
         this.sortDtPhongButton.addActionListener(listener);
     }
+    
+     public void addSearchDoanhThuListener(ActionListener listener) {
+        DoanhThuPhongSearch.addActionListener(listener);
+     }
+     
+     public String getInforDtbegin(){
+         if (!validateDouble(DoanhThuBegin.getText())) {
+             return "0";
+         }
+         return DoanhThuBegin.getText();
+     }
+     public String getInforDtend(){
+         if (!validateDouble(DoanhThuEnd.getText())) {
+             return "1000000000.0";
+         }
+         return DoanhThuEnd.getText();
+     }
+     
+     public boolean validateDouble(String douStr) {
+         try {
+             double dou = Double.parseDouble(douStr);
+             return true;
+         } catch (Exception e) {
+             return false;
+         }
+     }
 
     public void showMessage(String message) {
         JOptionPane.showMessageDialog(this, message);
@@ -1628,9 +1652,9 @@ public class ManagerView extends javax.swing.JFrame {
         DtPhongTable = new javax.swing.JTable();
         sortDtPhongButton = new javax.swing.JButton();
         tieuChiDtPhong = new javax.swing.JCheckBox();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        DoanhThuBegin = new javax.swing.JTextField();
+        DoanhThuEnd = new javax.swing.JTextField();
+        DoanhThuPhongSearch = new javax.swing.JButton();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
 
@@ -3196,7 +3220,7 @@ public class ManagerView extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Tìm kiếm theo doanh thu");
+        DoanhThuPhongSearch.setText("Tìm kiếm theo doanh thu");
 
         jLabel22.setText("từ");
 
@@ -3214,15 +3238,15 @@ public class ManagerView extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(tieuChiDtPhong))
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(DoanhThuPhongSearch)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel22)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(DoanhThuBegin, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel23)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(DoanhThuEnd, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
         );
@@ -3235,9 +3259,9 @@ public class ManagerView extends javax.swing.JFrame {
                     .addComponent(tieuChiDtPhong))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1)
+                    .addComponent(DoanhThuBegin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DoanhThuEnd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DoanhThuPhongSearch)
                     .addComponent(jLabel22)
                     .addComponent(jLabel23))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
@@ -3412,6 +3436,9 @@ public class ManagerView extends javax.swing.JFrame {
     private javax.swing.JButton DeletePhimButton;
     private javax.swing.JButton DeleteVeBtn;
     private javax.swing.JLayeredPane DoanhThu;
+    private javax.swing.JTextField DoanhThuBegin;
+    private javax.swing.JTextField DoanhThuEnd;
+    private javax.swing.JButton DoanhThuPhongSearch;
     private javax.swing.JPanel DoanhThuSch;
     private javax.swing.JPanel DsPhimPane;
     private javax.swing.JScrollPane DsPhimScrollPane;
@@ -3480,7 +3507,6 @@ public class ManagerView extends javax.swing.JFrame {
     private javax.swing.JButton editPhongButton;
     private javax.swing.JComboBox<String> gioiTinhCombo;
     private javax.swing.JSpinner hourSchSpinner;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -3550,8 +3576,6 @@ public class ManagerView extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane7;
     private javax.swing.JTabbedPane jTabbedPane8;
     private javax.swing.JTabbedPane jTabbedPane9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JSpinner minsSchSpinner;
     private javax.swing.JLabel phimChieu;
     private javax.swing.JComboBox<String> phimCombo;

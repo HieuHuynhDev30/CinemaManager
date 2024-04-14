@@ -9,6 +9,7 @@ import Classes.Phim;
 import Classes.Phong;
 import Classes.SuatChieu;
 import Classes.Ve;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,15 +17,16 @@ import java.util.List;
  * @author Lenovo
  */
 public class DoanhThuFunc {
-    
+
     private VeFunc veFunc;
+    public PhongFunc phongFunc;
 
     public DoanhThuFunc() {
         veFunc = new VeFunc();
+        phongFunc = new PhongFunc();
     }
-    
-    
-    public double doanhThu(String tieuChi, Object ...obs){
+
+    public double doanhThu(String tieuChi, Object... obs) {
         double doanhThu = 0;
         veFunc.setVeList(veFunc.readListVes());
         if ("tong".equals(tieuChi.toLowerCase()) && veFunc.getVeList() != null) {
@@ -53,16 +55,31 @@ public class DoanhThuFunc {
 //        }
         return doanhThu;
     }
-    
+
     public void resetDt(List<Phim> phimList, List<SuatChieu> schList, List<Phong> phongList) {
         for (Phim ph : phimList) {
             ph.setDt(0);
         }
-        for (Phong ph: phongList) {
+        for (Phong ph : phongList) {
             ph.setDt(0);
         }
-        for (SuatChieu sch: schList) {
+        for (SuatChieu sch : schList) {
             sch.setDt(0);
         }
+    }
+
+    public List<Phong> searchDoanhThuPhong(String s, String s1) {
+        List<Phong> list = new ArrayList<>(); 
+        List<Phong> phongList = phongFunc.getPhongList();
+        list.addAll(phongList);
+        double begin = Double.parseDouble(s);
+        double end = Double.parseDouble(s1);
+        for (Phong ph : phongList) {
+            double tong = ph.getDt();
+            if (tong < begin || tong > end) {
+                list.remove(ph);
+            }
+        }
+        return list;
     }
 }

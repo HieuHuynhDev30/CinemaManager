@@ -15,6 +15,7 @@ Controllers\ManagerController$AddSuatChieuListener.class
 Controllers\ManagerController$SortByNameVeListener.class
 Views\ManagerView$12.class
 Controllers\LoginController$LoginListener.class
+Controllers\ManagerController$SearchDoanhThuListener.class
 Controllers\ManagerController$ShowNSDateListener.class
 Controllers\ManagerController$DeleteVeListener.class
 com\toedter\calendar\JDateChooserBeanInfo.class
