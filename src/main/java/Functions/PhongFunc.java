@@ -30,6 +30,7 @@ public class PhongFunc {
 
     public PhongFunc() {
         this.phongList = readListPhongs();
+        this.suatChieuFunc = new SuatChieuFunc();
     }
 
     public void writeListPhongs(List<Phong> phongs) {
@@ -296,11 +297,14 @@ public class PhongFunc {
     public void reSetPhong() {
         if (this.getPhongList() != null) {
             for (Phong ph : this.getPhongList()) {
+                if (ph.getSuatChieu() != null) {
+                    updateSuatChieu(ph);
+                }
                 if (ph.getSuatChieu() != null && ph.getSuatChieu().isChieuXong()) {
                     ph.resetDsGhe();
                     ph.setSuatChieu(null);
-                    updateSuatChieu(ph);
-                }
+//                    updateSuatChieu(ph);
+                }  
             }
 
         }
@@ -310,17 +314,22 @@ public class PhongFunc {
     public void updateSuatChieu(Phong ph) {
         if (suatChieuFunc.getSuatChieuList() != null) {
             LocalDateTime now = LocalDateTime.now();
-            long wait = 100;
-            int count = 0;
+            long wait = 0;
             for (SuatChieu sch : suatChieuFunc.getSuatChieuList()) {
                 if (sch.getPhongId().equals(ph.getId())) {
-                    if (Duration.between(now, sch.getThoiGianChieu().plusMinutes(sch.getPhim().getThoiLuong().toMinutes())).toMinutes() <= wait) {
-                        wait = Duration.between(now, sch.getThoiGianChieu().plusMinutes(sch.getPhim().getThoiLuong().toMinutes())).toMinutes();
-                        count++;
+                    System.out.println("set wait");
+                    wait = Duration.between(now, sch.getThoiGianChieu()).toMinutes();
+                    break;
+                }
+            }
+            for (SuatChieu sch : suatChieuFunc.getSuatChieuList()) {
+                if (sch.getPhongId().equals(ph.getId())) {
+                    if (Duration.between(now, sch.getThoiGianChieu()).toMinutes() <= wait) {
+                        wait = Duration.between(now, sch.getThoiGianChieu()).toMinutes();
+                        ph.setSuatChieu(sch);
                     }
                 }
             }
-            ph.setSuatChieu(suatChieuFunc.getSuatChieuList().get(count));
         }
     }
 

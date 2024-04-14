@@ -104,16 +104,16 @@ public class ManagerController {
     }
 
     public void showManagerView() {
+        phongFunc.checkPlaying();
+        phongFunc.checkIsFull();
+        phongFunc.reSetPhong();
+        suatChieuFunc.checkChieuXong();
+        
         this.managerView.setVisible(true);
         managerView.clearScrollList();
         managerView.showScrollPhimList(phimFunc.getPhimList());
         managerView.showScrollPhongList(phongFunc.getPhongList());
         managerView.showScrollSuatList(suatChieuFunc.getSuatChieuList());
-
-        phongFunc.checkPlaying();
-        phongFunc.checkIsFull();
-        phongFunc.reSetPhong();
-        suatChieuFunc.checkChieuXong();
 
         managerView.showListPhong(phongFunc.getPhongList(), suatChieuFunc.getSuatChieuList());
         managerView.setPhongSortCombo(phongFunc.getPhongList(), suatChieuFunc.getSuatChieuList());
