@@ -220,6 +220,7 @@
                 <key>P255C2</key>
                 <value>
                     <gia>120000.0</gia>
+                    <khachId>K4</khachId>
                     <loai>Vip</loai>
                     <viTri>P255C2</viTri>
                 </value>
@@ -338,19 +339,19 @@
                 <theLoai>Hanh dong</theLoai>
                 <doTuoi>16</doTuoi>
                 <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
-                <dt>200000.0</dt>
+                <dt>320000.0</dt>
                 <thoiLuong>PT2H5M</thoiLuong>
                 <TgKhoiChieu>2024-11-01</TgKhoiChieu>
             </phim>
             <phongId>P255</phongId>
             <thoiGianChieu>18-04-2024 20:00</thoiGianChieu>
-            <dt>80000.0</dt>
+            <dt>200000.0</dt>
             <chieuXong>false</chieuXong>
         </suatChieu>
         <isPlaying>false</isPlaying>
         <columns>1</columns>
         <rows>69</rows>
-        <dt>80000.0</dt>
+        <dt>200000.0</dt>
     </phong>
     <phong id="P1">
         <slVip>10</slVip>
@@ -369,6 +370,7 @@
                 <key>P1A4</key>
                 <value>
                     <gia>80000.0</gia>
+                    <khachId>K7</khachId>
                     <loai>Thuong</loai>
                     <viTri>P1A4</viTri>
                 </value>
@@ -545,6 +547,7 @@
                 <key>P1C9</key>
                 <value>
                     <gia>200000.0</gia>
+                    <khachId>K7</khachId>
                     <loai>Doi</loai>
                     <viTri>P1C9</viTri>
                 </value>
@@ -603,6 +606,7 @@
                 <key>P1C10</key>
                 <value>
                     <gia>200000.0</gia>
+                    <khachId>K11</khachId>
                     <loai>Doi</loai>
                     <viTri>P1C10</viTri>
                 </value>
@@ -615,19 +619,19 @@
                 <theLoai>Hanh dong</theLoai>
                 <doTuoi>16</doTuoi>
                 <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
-                <dt>320000.0</dt>
+                <dt>800000.0</dt>
                 <thoiLuong>PT2H5M</thoiLuong>
                 <TgKhoiChieu>2024-11-01</TgKhoiChieu>
             </phim>
             <phongId>P1</phongId>
             <thoiGianChieu>17-04-2024 16:00</thoiGianChieu>
-            <dt>320000.0</dt>
+            <dt>800000.0</dt>
             <chieuXong>false</chieuXong>
         </suatChieu>
         <isPlaying>false</isPlaying>
         <columns>1</columns>
         <rows>68</rows>
-        <dt>320000.0</dt>
+        <dt>800000.0</dt>
     </phong>
     <phong id="P13">
         <slVip>10</slVip>
@@ -769,6 +773,7 @@
                 <key>P13B5</key>
                 <value>
                     <gia>120000.0</gia>
+                    <khachId>K4</khachId>
                     <loai>Vip</loai>
                     <viTri>P13B5</viTri>
                 </value>
@@ -901,6 +906,6 @@
         <isPlaying>false</isPlaying>
         <columns>1</columns>
         <rows>68</rows>
-        <dt>520000.0</dt>
+        <dt>640000.0</dt>
     </phong>
 </phongs>

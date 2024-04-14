@@ -90,6 +90,7 @@ public class PhongFunc {
                 }
             }
         }
+        this.setPhongList(phongList);
         this.writeListPhongs(phongList);
     }
 
@@ -333,6 +334,7 @@ public class PhongFunc {
     }
 
     public List<Phong> getPhongList() {
+        this.setPhongList(this.readListPhongs());
         return phongList;
     }
 
