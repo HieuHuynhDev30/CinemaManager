@@ -233,16 +233,45 @@ public class Phong {
                 ds.add(g.getValue());
             }
         }
+        Collections.sort(ds, new Comparator<Ghe>() {
+            @Override
+            public int compare(Ghe o1, Ghe o2) {
+                int o1Int = Integer.parseInt(o1.getViTri().split(id)[1].substring(1));
+                int o2Int = Integer.parseInt(o2.getViTri().split(id)[1].substring(1));
+                return o1Int - o2Int;
+            }
+        });
+        List<Ghe> dsVip = new ArrayList<>();
         for (Entry<String, GheVip> g : this.dsGheVip.entrySet()) {
             if (g.getValue().getKhachId() == null) {
-                ds.add(g.getValue());
+                dsVip.add(g.getValue());
             }
         }
+        Collections.sort(dsVip, new Comparator<Ghe>() {
+            @Override
+            public int compare(Ghe o1, Ghe o2) {
+                int o1Int = Integer.parseInt(o1.getViTri().split(id)[1].substring(1));
+                int o2Int = Integer.parseInt(o2.getViTri().split(id)[1].substring(1));
+                return o1Int - o2Int;
+            }
+        });
+        ds.addAll(dsVip);
+        List<Ghe> dsDoi = new ArrayList<>();
         for (Entry<String, GheDoi> g : this.dsGheDoi.entrySet()) {
             if (g.getValue().getKhachId() == null) {
-                ds.add(g.getValue());
+                dsDoi.add(g.getValue());
             }
         }
+        Collections.sort(dsDoi, new Comparator<Ghe>() {
+            @Override
+            public int compare(Ghe o1, Ghe o2) {
+                int o1Int = Integer.parseInt(o1.getViTri().split(id)[1].substring(1));
+                int o2Int = Integer.parseInt(o2.getViTri().split(id)[1].substring(1));
+                return o1Int - o2Int;
+            }
+        });
+        ds.addAll(dsDoi);
+
         return ds;
     }
 

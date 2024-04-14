@@ -63,6 +63,7 @@ public class PhimFunc {
                 ph.setTgKhoiChieu(p.getTgKhoiChieu().toString());
                 ph.setTheLoai(p.getTheLoai());
                 ph.setThoiLuong(p.getThoiLuong().toMinutes());
+                ph.setDt(p.getDt());
             }
         }
     }

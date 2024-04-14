@@ -109,6 +109,7 @@ public class SuatChieuFunc {
                 ph.setPhong(p.getPhong());
                 ph.setPhongId();
                 ph.setThoiGianChieu((CharSequence) p.inThoiGianChieu());
+                ph.setDt(p.getDt());
             }
         }
         this.writeListSuatChieus(suatChieuList);

@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <phims>
+    <phim id="Ph7">
+        <ten>Hunters</ten>
+        <theLoai>Hanh dong</theLoai>
+        <doTuoi>16</doTuoi>
+        <posterLink>/Images/3UKlVa1CBeQkRksHV5OfFTO52qd.jpg</posterLink>
+        <dt>120000.0</dt>
+        <thoiLuong>PT2H5M</thoiLuong>
+        <TgKhoiChieu>2024-11-01</TgKhoiChieu>
+    </phim>
+    <phim id="Ph3">
+        <ten>Road House</ten>
+        <theLoai>Hanh dong</theLoai>
+        <doTuoi>16</doTuoi>
+        <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
+        <dt>120000.0</dt>
+        <thoiLuong>PT2H5M</thoiLuong>
+        <TgKhoiChieu>2024-11-01</TgKhoiChieu>
+    </phim>
     <phim id="Ph1">
         <ten>Godzilla x Kong: The New Empire</ten>
         <theLoai>Khoa hoc vien tuong</theLoai>
@@ -36,15 +54,6 @@
         <thoiLuong>PT2H</thoiLuong>
         <TgKhoiChieu>2024-06-16</TgKhoiChieu>
     </phim>
-    <phim id="Ph3">
-        <ten>Road House</ten>
-        <theLoai>Hanh dong</theLoai>
-        <doTuoi>16</doTuoi>
-        <posterLink>/Images/3UKlVa1CBeQkRksHV5OfFTO52qd.jpg</posterLink>
-        <dt>0.0</dt>
-        <thoiLuong>PT2H5M</thoiLuong>
-        <TgKhoiChieu>2024-11-01</TgKhoiChieu>
-    </phim>
     <phim id="Ph4">
         <ten>After the Pandemic</ten>
         <theLoai>Hanh dong</theLoai>
@@ -53,15 +62,6 @@
         <dt>0.0</dt>
         <thoiLuong>PT2H5M</thoiLuong>
         <TgKhoiChieu>2024-09-30</TgKhoiChieu>
-    </phim>
-    <phim id="Ph3">
-        <ten>Road House</ten>
-        <theLoai>Hanh dong</theLoai>
-        <doTuoi>16</doTuoi>
-        <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
-        <dt>0.0</dt>
-        <thoiLuong>PT2H5M</thoiLuong>
-        <TgKhoiChieu>2024-11-01</TgKhoiChieu>
     </phim>
     <phim id="Ph8">
         <ten>Damsel</ten>

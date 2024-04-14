@@ -1,2 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<suatChieus/>
+<suatChieus>
+    <suatChieu id="SCH40">
+        <phim id="Ph3">
+            <ten>Road House</ten>
+            <theLoai>Hanh dong</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
+            <dt>120000.0</dt>
+            <thoiLuong>PT2H5M</thoiLuong>
+            <TgKhoiChieu>2024-11-01</TgKhoiChieu>
+        </phim>
+        <phongId>P1</phongId>
+        <thoiGianChieu>17-04-2024 16:00</thoiGianChieu>
+        <dt>120000.0</dt>
+        <chieuXong>false</chieuXong>
+    </suatChieu>
+</suatChieus>

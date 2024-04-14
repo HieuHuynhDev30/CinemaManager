@@ -1,2 +1,125 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<khachs/>
+<khachs>
+    <khach id="K1">
+        <slVeDat>5</slVeDat>
+        <tongTien>640000</tongTien>
+        <hoTen>Lê Thế Phát</hoTen>
+        <gioiTinh>Nam</gioiTinh>
+        <ngaySinh>2003-10-30</ngaySinh>
+        <dsVe id="V2">
+            <ghe>
+                <gia>120000.0</gia>
+                <khachId>K1</khachId>
+                <loai>Vip</loai>
+                <viTri>P1B8</viTri>
+            </ghe>
+            <suat id="SCH2">
+                <phim id="Ph1">
+                    <ten>Godzilla x Kong: The New Empire</ten>
+                    <theLoai>Khoa hoc vien tuong</theLoai>
+                    <doTuoi>16</doTuoi>
+                    <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
+                    <dt>0.0</dt>
+                    <thoiLuong>PT2H5M</thoiLuong>
+                    <TgKhoiChieu>2024-07-10</TgKhoiChieu>
+                </phim>
+                <phongId>P1</phongId>
+                <thoiGianChieu>15-04-2024 10:00</thoiGianChieu>
+                <dt>0.0</dt>
+                <chieuXong>false</chieuXong>
+            </suat>
+        </dsVe>
+        <dsVe id="V8">
+            <ghe>
+                <gia>120000.0</gia>
+                <khachId>K1</khachId>
+                <loai>Vip</loai>
+                <viTri>P1B3</viTri>
+            </ghe>
+            <suat id="SCH2">
+                <phim id="Ph1">
+                    <ten>Godzilla x Kong: The New Empire</ten>
+                    <theLoai>Khoa hoc vien tuong</theLoai>
+                    <doTuoi>16</doTuoi>
+                    <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
+                    <dt>0.0</dt>
+                    <thoiLuong>PT2H5M</thoiLuong>
+                    <TgKhoiChieu>2024-07-10</TgKhoiChieu>
+                </phim>
+                <phongId>P1</phongId>
+                <thoiGianChieu>15-04-2024 10:00</thoiGianChieu>
+                <dt>0.0</dt>
+                <chieuXong>false</chieuXong>
+            </suat>
+        </dsVe>
+        <dsVe id="V14">
+            <ghe>
+                <gia>80000.0</gia>
+                <khachId>K1</khachId>
+                <loai>Thuong</loai>
+                <viTri>P1A8</viTri>
+            </ghe>
+            <suat id="SCH2">
+                <phim id="Ph1">
+                    <ten>Godzilla x Kong: The New Empire</ten>
+                    <theLoai>Khoa hoc vien tuong</theLoai>
+                    <doTuoi>16</doTuoi>
+                    <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
+                    <dt>120000.0</dt>
+                    <thoiLuong>PT2H5M</thoiLuong>
+                    <TgKhoiChieu>2024-07-10</TgKhoiChieu>
+                </phim>
+                <phongId>P1</phongId>
+                <thoiGianChieu>15-04-2024 10:00</thoiGianChieu>
+                <dt>0.0</dt>
+                <chieuXong>false</chieuXong>
+            </suat>
+        </dsVe>
+        <dsVe id="V20">
+            <ghe>
+                <gia>200000.0</gia>
+                <khachId>K1</khachId>
+                <loai>Doi</loai>
+                <viTri>P1C3</viTri>
+            </ghe>
+            <suat id="SCH42">
+                <phim id="Ph5">
+                    <ten>Madame Web</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>16</doTuoi>
+                    <posterLink>/Images/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg</posterLink>
+                    <dt>0.0</dt>
+                    <thoiLuong>PT2H5M</thoiLuong>
+                    <TgKhoiChieu>2024-10-10</TgKhoiChieu>
+                </phim>
+                <phongId>P1</phongId>
+                <thoiGianChieu>25-04-2024 15:00</thoiGianChieu>
+                <dt>0.0</dt>
+                <chieuXong>false</chieuXong>
+            </suat>
+        </dsVe>
+        <dsVe id="V19">
+            <ghe>
+                <gia>120000.0</gia>
+                <khachId>K1</khachId>
+                <loai>Vip</loai>
+                <viTri>P1B9</viTri>
+            </ghe>
+            <suat id="SCH40">
+                <phim id="Ph3">
+                    <ten>Road House</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>16</doTuoi>
+                    <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
+                    <dt>0.0</dt>
+                    <thoiLuong>PT2H5M</thoiLuong>
+                    <TgKhoiChieu>2024-11-01</TgKhoiChieu>
+                </phim>
+                <phongId>P1</phongId>
+                <thoiGianChieu>17-04-2024 16:00</thoiGianChieu>
+                <dt>0.0</dt>
+                <chieuXong>false</chieuXong>
+            </suat>
+        </dsVe>
+    </khach>
+</khachs>

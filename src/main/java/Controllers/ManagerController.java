@@ -641,6 +641,9 @@ public class ManagerController {
             }
             Sch.themDt(ve.getGhe().getGia());
             suatChieuFunc.editSuatChieu(Sch);
+            Sch.getPhim().themDt(ve.getGhe().getGia());
+            phimFunc.editPhim(Sch.getPhim());
+            suatChieuFunc.editSuatChieu(Sch);
             managerView.closeSeatDialog();
             managerView.showListVe(veFunc.getVeList(), khachFunc.getKhachList());
             managerView.showListKhach(khachFunc.getKhachList());
