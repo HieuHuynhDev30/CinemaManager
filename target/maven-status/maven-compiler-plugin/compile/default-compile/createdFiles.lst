@@ -17,7 +17,6 @@ Views\ManagerView$12.class
 Controllers\LoginController$LoginListener.class
 Controllers\ManagerController$SearchDoanhThuListener.class
 Controllers\ManagerController$ShowNSDateListener.class
-Views\LoginGUI.class
 Controllers\ManagerController$DeleteVeListener.class
 com\toedter\calendar\JDateChooserBeanInfo.class
 com\toedter\calendar\JDateChooser.class
@@ -124,7 +123,6 @@ Functions\SuatChieuFunc$SortTgSch.class
 Controllers\ManagerController$ListSuatChieuDatVeSelectionListener.class
 Views\LoginView.class
 Views\ManagerView$4.class
-Views\LoginGUI$1.class
 com\toedter\calendar\JDateChooser$1.class
 Functions\PhongFunc$SortPhongSc.class
 Controllers\ManagerController$ListPhimSelectionListener.class

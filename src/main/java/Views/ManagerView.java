@@ -63,6 +63,8 @@ public class ManagerView extends javax.swing.JFrame {
      */
     public ManagerView() {
         initComponents();
+        ImageIcon icon = new ImageIcon("Icons/cineverse-cinema-favicon-color.png");
+        this.setIconImage(icon.getImage());
     }
 
     public ImageIcon getImage(String imagePath, JLabel label) {
@@ -1756,6 +1758,7 @@ public class ManagerView extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Cineverse Cinema");
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
