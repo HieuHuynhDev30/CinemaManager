@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <suatChieus>
+    <suatChieu id="SCH757">
+        <phim id="Ph3">
+            <ten>Road House</ten>
+            <theLoai>Hanh dong</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
+            <dt>200000.0</dt>
+            <thoiLuong>PT2H5M</thoiLuong>
+            <TgKhoiChieu>2024-11-01</TgKhoiChieu>
+        </phim>
+        <phongId>P255</phongId>
+        <thoiGianChieu>18-04-2024 20:00</thoiGianChieu>
+        <dt>80000.0</dt>
+        <chieuXong>false</chieuXong>
+    </suatChieu>
+    <suatChieu id="SCH70">
+        <phim id="Ph1">
+            <ten>Godzilla x Kong: The New Empire</ten>
+            <theLoai>Khoa hoc vien tuong</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
+            <dt>200000.0</dt>
+            <thoiLuong>PT2H5M</thoiLuong>
+            <TgKhoiChieu>2024-07-10</TgKhoiChieu>
+        </phim>
+        <phongId>P13</phongId>
+        <thoiGianChieu>18-04-2024 10:00</thoiGianChieu>
+        <dt>200000.0</dt>
+        <chieuXong>false</chieuXong>
+    </suatChieu>
     <suatChieu id="SCH40">
         <phim id="Ph3">
             <ten>Road House</ten>
@@ -28,36 +58,6 @@
         <phongId>P13</phongId>
         <thoiGianChieu>17-04-2024 20:00</thoiGianChieu>
         <dt>320000.0</dt>
-        <chieuXong>false</chieuXong>
-    </suatChieu>
-    <suatChieu id="SCH70">
-        <phim id="Ph1">
-            <ten>Godzilla x Kong: The New Empire</ten>
-            <theLoai>Khoa hoc vien tuong</theLoai>
-            <doTuoi>16</doTuoi>
-            <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
-            <dt>200000.0</dt>
-            <thoiLuong>PT2H5M</thoiLuong>
-            <TgKhoiChieu>2024-07-10</TgKhoiChieu>
-        </phim>
-        <phongId>P13</phongId>
-        <thoiGianChieu>18-04-2024 10:00</thoiGianChieu>
-        <dt>200000.0</dt>
-        <chieuXong>false</chieuXong>
-    </suatChieu>
-    <suatChieu id="SCH757">
-        <phim id="Ph3">
-            <ten>Road House</ten>
-            <theLoai>Hanh dong</theLoai>
-            <doTuoi>16</doTuoi>
-            <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
-            <dt>200000.0</dt>
-            <thoiLuong>PT2H5M</thoiLuong>
-            <TgKhoiChieu>2024-11-01</TgKhoiChieu>
-        </phim>
-        <phongId>P255</phongId>
-        <thoiGianChieu>18-04-2024 20:00</thoiGianChieu>
-        <dt>80000.0</dt>
         <chieuXong>false</chieuXong>
     </suatChieu>
 </suatChieus>

@@ -482,7 +482,7 @@ public class ManagerView extends javax.swing.JFrame {
     }
 
     public boolean getSchTangDan() {
-        return this.tChiSchtangDan.isSelected();
+        return this.tieuChiDtSch.isSelected();
     }
 
     public void addListSuatChieuSelectionListener(ListSelectionListener listener) {
