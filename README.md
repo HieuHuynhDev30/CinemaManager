@@ -1,6 +1,7 @@
 ### CINEVERSE CINEMA
 
 Chương trình quản lý rạp chiếu phim CINEVERSE CINEMA
+
 Tác giả: 
 - Huỳnh Ngọc Hiệu - B9D53 C500
 - Nguyễn Văn Thành An - B9D53 C500
