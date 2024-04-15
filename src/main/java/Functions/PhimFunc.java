@@ -60,12 +60,13 @@ public class PhimFunc {
             if (ph.getId() == null ? p.getId() == null : ph.getId().equals(p.getId())) {
                 ph.setDoTuoi(p.getDoTuoi());
                 ph.setTen(p.getTen());
-                ph.setTgKhoiChieu(p.getTgKhoiChieu().toString());
+                ph.setTgKhoiChieu(p.inTgKhoiChieu());
                 ph.setTheLoai(p.getTheLoai());
                 ph.setThoiLuong(p.getThoiLuong().toMinutes());
                 ph.setDt(p.getDt());
             }
         }
+        this.writeListPhims(phimList);
     }
 
     public void xoaPhim(Phim p) {

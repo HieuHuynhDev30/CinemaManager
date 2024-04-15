@@ -581,6 +581,10 @@ public class ManagerView extends javax.swing.JFrame {
     public boolean getDtPhimTangDan() {
         return this.tieuChiDtPhim.isSelected();
     }
+    
+    public boolean getDtSchTangDan() {
+        return this.tieuChiDtSch.isSelected();
+    }
 
     public void showDoanhThuSch(List<SuatChieu> list, List<Ve> veList) {
         this.DoanhThuSch.removeAll();
@@ -789,7 +793,7 @@ public class ManagerView extends javax.swing.JFrame {
 //            if (IDPhimField.getText() != null && !"".equals(IDPhimField.getText())) {
 //                phim.setId(Integer.parseInt(IDPhimField.getText().substring(2).trim()));
 //            }
-
+            phim.setId(IDPhimField.getText().trim());
             phim.setTen(TenPhimField.getText().trim());
             phim.setTheLoai(theLoaiCombo.getSelectedItem().toString().trim());
             phim.setDoTuoi(Integer.parseInt((doTuoiSpinner.getValue().toString())));

@@ -334,7 +334,6 @@ public class PhongFunc {
     }
 
     public List<Phong> getPhongList() {
-        this.setPhongList(this.readListPhongs());
         return phongList;
     }
 

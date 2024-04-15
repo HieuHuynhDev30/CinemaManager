@@ -70,6 +70,7 @@ public class DoanhThuFunc {
 
     public List<Phong> searchDoanhThuPhong(String s, String s1) {
         List<Phong> list = new ArrayList<>(); 
+        phongFunc.setPhongList(phongFunc.readListPhongs());
         List<Phong> phongList = phongFunc.getPhongList();
         list.addAll(phongList);
         double begin = Double.parseDouble(s);

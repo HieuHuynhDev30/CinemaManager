@@ -1,357 +1,3241 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <phongs>
-    <phong id="P255">
-        <slVip>10</slVip>
-        <slThuong>20</slThuong>
-        <slDoi>10</slDoi>
+    <phong id="P49">
+        <slVip>21</slVip>
+        <slThuong>25</slThuong>
+        <slDoi>9</slDoi>
         <dsGheThuong>
             <entry>
-                <key>P255A8</key>
+                <key>P49A10</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P255A8</viTri>
+                    <viTri>P49A10</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255B9</key>
+                <key>P49A9</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P255B9</viTri>
+                    <viTri>P49A9</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255A7</key>
+                <key>P49A8</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P255A7</viTri>
+                    <viTri>P49A8</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255B8</key>
+                <key>P49A7</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P255B8</viTri>
+                    <viTri>P49A7</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255A9</key>
+                <key>P49A6</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P255A9</viTri>
+                    <viTri>P49A6</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255A4</key>
+                <key>P49A5</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P255A4</viTri>
+                    <viTri>P49A5</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255B5</key>
+                <key>P49A4</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P255B5</viTri>
+                    <viTri>P49A4</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255A3</key>
+                <key>P49B10</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P255A3</viTri>
+                    <viTri>P49B10</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255B4</key>
+                <key>P49A3</key>
                 <value>
                     <gia>80000.0</gia>
-                    <khachId>K1</khachId>
                     <loai>Thuong</loai>
-                    <viTri>P255B4</viTri>
+                    <viTri>P49A3</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255A6</key>
+                <key>P49C5</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P255A6</viTri>
+                    <viTri>P49C5</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255B7</key>
+                <key>P49A2</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P255B7</viTri>
+                    <viTri>P49A2</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255A5</key>
+                <key>P49C4</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P255A5</viTri>
+                    <viTri>P49C4</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255B6</key>
+                <key>P49A1</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P255B6</viTri>
+                    <viTri>P49A1</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255B1</key>
+                <key>P49C3</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P255B1</viTri>
+                    <viTri>P49C3</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255A2</key>
+                <key>P49C2</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P255A2</viTri>
+                    <viTri>P49C2</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255B3</key>
+                <key>P49C1</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P255B3</viTri>
+                    <viTri>P49C1</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255A1</key>
+                <key>P49B9</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P255A1</viTri>
+                    <viTri>P49B9</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255B2</key>
+                <key>P49B8</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P255B2</viTri>
+                    <viTri>P49B8</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255A10</key>
+                <key>P49B7</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P255A10</viTri>
+                    <viTri>P49B7</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255B10</key>
+                <key>P49B6</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P255B10</viTri>
+                    <viTri>P49B6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P49B5</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P49B5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P49B4</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P49B4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P49B3</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P49B3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P49B2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P49B2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P49B1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P49B1</viTri>
                 </value>
             </entry>
         </dsGheThuong>
         <dsGheVip>
             <entry>
-                <key>P255C9</key>
+                <key>P49C9</key>
                 <value>
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
-                    <viTri>P255C9</viTri>
+                    <viTri>P49C9</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255C6</key>
+                <key>P49C8</key>
                 <value>
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
-                    <viTri>P255C6</viTri>
+                    <viTri>P49C8</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255C10</key>
+                <key>P49D9</key>
                 <value>
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
-                    <viTri>P255C10</viTri>
+                    <viTri>P49D9</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255C5</key>
+                <key>P49D10</key>
                 <value>
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
-                    <viTri>P255C5</viTri>
+                    <viTri>P49D10</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255C8</key>
+                <key>P49C7</key>
                 <value>
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
-                    <viTri>P255C8</viTri>
+                    <viTri>P49C7</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255C7</key>
+                <key>P49C10</key>
                 <value>
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
-                    <viTri>P255C7</viTri>
+                    <viTri>P49C10</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255C2</key>
+                <key>P49D8</key>
                 <value>
                     <gia>120000.0</gia>
-                    <khachId>K4</khachId>
                     <loai>Vip</loai>
-                    <viTri>P255C2</viTri>
+                    <viTri>P49D8</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255C1</key>
+                <key>P49C6</key>
                 <value>
                     <gia>120000.0</gia>
+                    <khachId>K6</khachId>
                     <loai>Vip</loai>
-                    <viTri>P255C1</viTri>
+                    <viTri>P49C6</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255C4</key>
+                <key>P49D7</key>
                 <value>
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
-                    <viTri>P255C4</viTri>
+                    <viTri>P49D7</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255C3</key>
+                <key>P49D6</key>
                 <value>
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
-                    <viTri>P255C3</viTri>
+                    <viTri>P49D6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P49D5</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P49D5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P49E6</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P49E6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P49D4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P49D4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P49E5</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P49E5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P49D3</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P49D3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P49E4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P49E4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P49D2</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P49D2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P49E3</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P49E3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P49D1</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P49D1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P49E2</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P49E2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P49E1</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P49E1</viTri>
                 </value>
             </entry>
         </dsGheVip>
         <dsGheDoi>
             <entry>
-                <key>P255D1</key>
+                <key>P49E10</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P255D1</viTri>
+                    <viTri>P49E10</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255D7</key>
+                <key>P49E9</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P255D7</viTri>
+                    <viTri>P49E9</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255D6</key>
+                <key>P49E8</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P255D6</viTri>
+                    <viTri>P49E8</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255D10</key>
+                <key>P49E7</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P255D10</viTri>
+                    <viTri>P49E7</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255D9</key>
+                <key>P49F5</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P255D9</viTri>
+                    <viTri>P49F5</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255D8</key>
+                <key>P49F4</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P255D8</viTri>
+                    <viTri>P49F4</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255D3</key>
+                <key>P49F3</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P255D3</viTri>
+                    <viTri>P49F3</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255D2</key>
+                <key>P49F2</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P255D2</viTri>
+                    <viTri>P49F2</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P255D5</key>
+                <key>P49F1</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P255D5</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P255D4</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
-                    <viTri>P255D4</viTri>
+                    <viTri>P49F1</viTri>
                 </value>
             </entry>
         </dsGheDoi>
         <isFull>false</isFull>
-        <suatChieu id="SCH757">
-            <phim id="Ph3">
-                <ten>Road House</ten>
-                <theLoai>Hanh dong</theLoai>
+        <suatChieu id="SCH2">
+            <phim id="Ph1">
+                <ten>Alien Noid</ten>
+                <theLoai>Khoa hoc vien tuong</theLoai>
                 <doTuoi>16</doTuoi>
-                <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
-                <dt>320000.0</dt>
-                <thoiLuong>PT2H5M</thoiLuong>
-                <TgKhoiChieu>2024-11-01</TgKhoiChieu>
+                <posterLink>/Images/aliennoid.jpg</posterLink>
+                <dt>120000.0</dt>
+                <thoiLuong>PT2H25M</thoiLuong>
+                <TgKhoiChieu>2022-07-20</TgKhoiChieu>
             </phim>
-            <phongId>P255</phongId>
-            <thoiGianChieu>18-04-2024 20:00</thoiGianChieu>
-            <dt>200000.0</dt>
+            <phongId>P49</phongId>
+            <thoiGianChieu>16-04-2024 15:00</thoiGianChieu>
+            <dt>120000.0</dt>
+            <chieuXong>false</chieuXong>
+        </suatChieu>
+        <isPlaying>false</isPlaying>
+        <columns>6</columns>
+        <rows>70</rows>
+        <dt>120000.0</dt>
+    </phong>
+    <phong id="P25">
+        <slVip>20</slVip>
+        <slThuong>20</slThuong>
+        <slDoi>10</slDoi>
+        <dsGheThuong>
+            <entry>
+                <key>P25A10</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P25A10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25B10</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P25B10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25A8</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P25A8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25B9</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P25B9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25A9</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P25A9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25A6</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P25A6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25B7</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P25B7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25A7</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P25A7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25B8</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P25B8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25A4</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P25A4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25B5</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P25B5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25A5</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P25A5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25B6</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P25B6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25A2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P25A2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25B3</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P25B3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25A3</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P25A3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25B4</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P25B4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25B1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P25B1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25A1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P25A1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25B2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P25B2</viTri>
+                </value>
+            </entry>
+        </dsGheThuong>
+        <dsGheVip>
+            <entry>
+                <key>P25D10</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <khachId>K1</khachId>
+                    <loai>Vip</loai>
+                    <viTri>P25D10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25C10</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P25C10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25C8</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P25C8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25D9</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P25D9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25C9</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P25C9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25C6</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P25C6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25D7</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P25D7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25C7</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P25C7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25D8</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P25D8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25C4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P25C4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25D5</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P25D5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25C5</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P25C5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25D6</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P25D6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25C2</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P25C2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25D3</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P25D3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25C3</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P25C3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25D4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <khachId>K8</khachId>
+                    <loai>Vip</loai>
+                    <viTri>P25D4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25D1</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P25D1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25C1</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P25C1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25D2</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P25D2</viTri>
+                </value>
+            </entry>
+        </dsGheVip>
+        <dsGheDoi>
+            <entry>
+                <key>P25E1</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P25E1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25E8</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P25E8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25E9</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P25E9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25E6</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P25E6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25E7</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P25E7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25E4</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P25E4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25E10</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P25E10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25E5</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <khachId>K7</khachId>
+                    <loai>Doi</loai>
+                    <viTri>P25E5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25E2</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P25E2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P25E3</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P25E3</viTri>
+                </value>
+            </entry>
+        </dsGheDoi>
+        <isFull>false</isFull>
+        <suatChieu id="SCH6">
+            <phim id="Ph2">
+                <ten>Baghead</ten>
+                <theLoai>Kinh di</theLoai>
+                <doTuoi>18</doTuoi>
+                <posterLink>/Images/baghead.jpg</posterLink>
+                <dt>440000.0</dt>
+                <thoiLuong>PT1H35M</thoiLuong>
+                <TgKhoiChieu>2023-12-28</TgKhoiChieu>
+            </phim>
+            <phongId>P25</phongId>
+            <thoiGianChieu>17-04-2024 17:00</thoiGianChieu>
+            <dt>440000.0</dt>
             <chieuXong>false</chieuXong>
         </suatChieu>
         <isPlaying>false</isPlaying>
         <columns>1</columns>
+        <rows>70</rows>
+        <dt>440000.0</dt>
+    </phong>
+    <phong id="P100">
+        <slVip>18</slVip>
+        <slThuong>11</slThuong>
+        <slDoi>18</slDoi>
+        <dsGheThuong>
+            <entry>
+                <key>P100A8</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P100A8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100A10</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P100A10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100A9</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P100A9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100A4</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P100A4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100A5</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P100A5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100A6</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P100A6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100A7</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P100A7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100B1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P100B1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100A1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P100A1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100A2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P100A2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100A3</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P100A3</viTri>
+                </value>
+            </entry>
+        </dsGheThuong>
+        <dsGheVip>
+            <entry>
+                <key>P100C1</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P100C1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100B10</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P100B10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100B9</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P100B9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100B5</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P100B5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100C6</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P100C6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100B6</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P100B6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100C7</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P100C7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100B7</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P100B7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100C8</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P100C8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100B8</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P100B8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100C9</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P100C9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100C2</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P100C2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100B2</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <khachId>K1</khachId>
+                    <loai>Vip</loai>
+                    <viTri>P100B2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100C3</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P100C3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100B3</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P100B3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100C4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P100C4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100B4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P100B4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100C5</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P100C5</viTri>
+                </value>
+            </entry>
+        </dsGheVip>
+        <dsGheDoi>
+            <entry>
+                <key>P100E1</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P100E1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100D1</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P100D1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100E2</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P100E2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100D2</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P100D2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100E3</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P100E3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100D10</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P100D10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100C10</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P100C10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100D7</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P100D7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100D8</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P100D8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100D9</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P100D9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100D3</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P100D3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100E4</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P100E4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100D4</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P100D4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100E5</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P100E5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100D5</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P100D5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100E6</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P100E6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100D6</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P100D6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P100E7</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P100E7</viTri>
+                </value>
+            </entry>
+        </dsGheDoi>
+        <isFull>false</isFull>
+        <suatChieu id="SCH12">
+            <phim id="Ph3">
+                <ten>Dune: Part Two</ten>
+                <theLoai>Khoa hoc vien tuong</theLoai>
+                <doTuoi>16</doTuoi>
+                <posterLink>/Images/dune2.jpg</posterLink>
+                <dt>120000.0</dt>
+                <thoiLuong>PT2H45M</thoiLuong>
+                <TgKhoiChieu>2024-02-27</TgKhoiChieu>
+            </phim>
+            <phongId>P100</phongId>
+            <thoiGianChieu>18-04-2024 10:00</thoiGianChieu>
+            <dt>120000.0</dt>
+            <chieuXong>false</chieuXong>
+        </suatChieu>
+        <isPlaying>false</isPlaying>
+        <columns>8</columns>
+        <rows>69</rows>
+        <dt>120000.0</dt>
+    </phong>
+    <phong id="P81">
+        <slVip>12</slVip>
+        <slThuong>14</slThuong>
+        <slDoi>16</slDoi>
+        <dsGheThuong>
+            <entry>
+                <key>P81A9</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P81A9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81A8</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P81A8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81A10</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P81A10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81A1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P81A1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81B2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P81B2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81B1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P81B1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81A3</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P81A3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81B4</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P81B4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81A2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P81A2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81B3</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P81B3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81A5</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P81A5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81A4</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P81A4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81A7</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P81A7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81A6</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P81A6</viTri>
+                </value>
+            </entry>
+        </dsGheThuong>
+        <dsGheVip>
+            <entry>
+                <key>P81B9</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P81B9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81C1</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P81C1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81B10</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P81B10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81C3</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P81C3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81C2</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P81C2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81C5</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P81C5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81C4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P81C4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81B6</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P81B6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81B5</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P81B5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81C6</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P81C6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81B8</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P81B8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81B7</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P81B7</viTri>
+                </value>
+            </entry>
+        </dsGheVip>
+        <dsGheDoi>
+            <entry>
+                <key>P81C10</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P81C10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81D10</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P81D10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81E1</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P81E1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81D2</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P81D2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81D1</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P81D1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81E2</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P81E2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81D4</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P81D4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81D3</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P81D3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81D6</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P81D6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81D5</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <khachId>K8</khachId>
+                    <loai>Doi</loai>
+                    <viTri>P81D5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81C7</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P81C7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81D8</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P81D8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81D7</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P81D7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81C9</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P81C9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81C8</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P81C8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P81D9</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P81D9</viTri>
+                </value>
+            </entry>
+        </dsGheDoi>
+        <isFull>false</isFull>
+        <suatChieu id="SCH20">
+            <phim id="Ph4">
+                <ten>Hard Hit</ten>
+                <theLoai>Hanh dong</theLoai>
+                <doTuoi>18</doTuoi>
+                <posterLink>/Images/hardhit.jpg</posterLink>
+                <dt>200000.0</dt>
+                <thoiLuong>PT1H34M</thoiLuong>
+                <TgKhoiChieu>2021-06-23</TgKhoiChieu>
+            </phim>
+            <phongId>P81</phongId>
+            <thoiGianChieu>23-04-2024 13:00</thoiGianChieu>
+            <dt>200000.0</dt>
+            <chieuXong>false</chieuXong>
+        </suatChieu>
+        <isPlaying>false</isPlaying>
+        <columns>3</columns>
         <rows>69</rows>
         <dt>200000.0</dt>
+    </phong>
+    <phong id="P36">
+        <slVip>14</slVip>
+        <slThuong>13</slThuong>
+        <slDoi>14</slDoi>
+        <dsGheThuong>
+            <entry>
+                <key>P36A10</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P36A10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36A9</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P36A9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36A8</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P36A8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36A7</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P36A7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36A6</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P36A6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36A5</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P36A5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36A4</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P36A4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36A3</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P36A3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36A2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P36A2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36B3</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P36B3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36A1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P36A1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36B2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P36B2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36B1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P36B1</viTri>
+                </value>
+            </entry>
+        </dsGheThuong>
+        <dsGheVip>
+            <entry>
+                <key>P36B10</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P36B10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36B9</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P36B9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36B8</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P36B8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36B7</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P36B7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36B6</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P36B6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36C7</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <khachId>K5</khachId>
+                    <loai>Vip</loai>
+                    <viTri>P36C7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36B5</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P36B5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36C6</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P36C6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36B4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <khachId>K5</khachId>
+                    <loai>Vip</loai>
+                    <viTri>P36B4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36C5</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P36C5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36C4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P36C4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36C3</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P36C3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36C2</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P36C2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36C1</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P36C1</viTri>
+                </value>
+            </entry>
+        </dsGheVip>
+        <dsGheDoi>
+            <entry>
+                <key>P36E1</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P36E1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36C10</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P36C10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36C9</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P36C9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36C8</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P36C8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36D9</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P36D9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36D8</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P36D8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36D7</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P36D7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36D6</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P36D6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36D5</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P36D5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36D10</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P36D10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36D4</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <khachId>K3</khachId>
+                    <loai>Doi</loai>
+                    <viTri>P36D4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36D3</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P36D3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36D2</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P36D2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P36D1</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P36D1</viTri>
+                </value>
+            </entry>
+        </dsGheDoi>
+        <isFull>false</isFull>
+        <suatChieu id="SCH202">
+            <phim id="Ph5">
+                <ten>Heart Of Hunter</ten>
+                <theLoai>Hanh dong</theLoai>
+                <doTuoi>16</doTuoi>
+                <posterLink>/Images/heartofhunter.jpg</posterLink>
+                <dt>440000.0</dt>
+                <thoiLuong>PT1H45M</thoiLuong>
+                <TgKhoiChieu>2024-03-28</TgKhoiChieu>
+            </phim>
+            <phongId>P36</phongId>
+            <thoiGianChieu>22-04-2024 19:00</thoiGianChieu>
+            <dt>440000.0</dt>
+            <chieuXong>false</chieuXong>
+        </suatChieu>
+        <isPlaying>false</isPlaying>
+        <columns>2</columns>
+        <rows>69</rows>
+        <dt>440000.0</dt>
+    </phong>
+    <phong id="P64">
+        <slVip>12</slVip>
+        <slThuong>15</slThuong>
+        <slDoi>10</slDoi>
+        <dsGheThuong>
+            <entry>
+                <key>P64A3</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P64A3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64B4</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P64B4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64A4</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P64A4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64B5</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P64B5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64A5</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P64A5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64A6</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P64A6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64A7</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P64A7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64A8</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P64A8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64A9</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P64A9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64A10</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P64A10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64B1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P64B1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64A1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P64A1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64B2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P64B2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64A2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P64A2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64B3</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P64B3</viTri>
+                </value>
+            </entry>
+        </dsGheThuong>
+        <dsGheVip>
+            <entry>
+                <key>P64C5</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P64C5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64C6</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P64C6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64B6</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P64B6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64C7</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <khachId>K6</khachId>
+                    <loai>Vip</loai>
+                    <viTri>P64C7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64B7</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P64B7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64B8</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P64B8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64B9</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P64B9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64B10</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P64B10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64C1</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P64C1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64C2</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P64C2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64C3</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P64C3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64C4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P64C4</viTri>
+                </value>
+            </entry>
+        </dsGheVip>
+        <dsGheDoi>
+            <entry>
+                <key>P64D6</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P64D6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64C10</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P64C10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64D7</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P64D7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64C8</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P64C8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64C9</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P64C9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64D1</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P64D1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64D2</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P64D2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64D3</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P64D3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64D4</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P64D4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P64D5</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P64D5</viTri>
+                </value>
+            </entry>
+        </dsGheDoi>
+        <isFull>false</isFull>
+        <suatChieu id="SCH214">
+            <phim id="Ph6">
+                <ten>Imaginary</ten>
+                <theLoai>Kinh di</theLoai>
+                <doTuoi>13</doTuoi>
+                <posterLink>/Images/imaginary.jpg</posterLink>
+                <dt>120000.0</dt>
+                <thoiLuong>PT1H45M</thoiLuong>
+                <TgKhoiChieu>2024-03-06</TgKhoiChieu>
+            </phim>
+            <phongId>P64</phongId>
+            <thoiGianChieu>24-04-2024 23:00</thoiGianChieu>
+            <dt>120000.0</dt>
+            <chieuXong>false</chieuXong>
+        </suatChieu>
+        <isPlaying>false</isPlaying>
+        <columns>8</columns>
+        <rows>68</rows>
+        <dt>120000.0</dt>
+    </phong>
+    <phong id="P16">
+        <slVip>10</slVip>
+        <slThuong>10</slThuong>
+        <slDoi>15</slDoi>
+        <dsGheThuong>
+            <entry>
+                <key>P16A8</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P16A8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16A9</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P16A9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16A6</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P16A6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16A10</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <khachId>K2</khachId>
+                    <loai>Thuong</loai>
+                    <viTri>P16A10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16A7</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P16A7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16A4</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P16A4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16A5</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P16A5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16A2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P16A2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16A3</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P16A3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16A1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P16A1</viTri>
+                </value>
+            </entry>
+        </dsGheThuong>
+        <dsGheVip>
+            <entry>
+                <key>P16B9</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P16B9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16B10</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P16B10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16B7</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P16B7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16B8</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P16B8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16B5</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P16B5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16B6</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P16B6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16B3</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P16B3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16B4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P16B4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16B1</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P16B1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16B2</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P16B2</viTri>
+                </value>
+            </entry>
+        </dsGheVip>
+        <dsGheDoi>
+            <entry>
+                <key>P16C10</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P16C10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16C8</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <khachId>K3</khachId>
+                    <loai>Doi</loai>
+                    <viTri>P16C8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16C9</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P16C9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16C6</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P16C6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16C7</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P16C7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16C4</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P16C4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16D5</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P16D5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16C5</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P16C5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16C2</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P16C2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16D3</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P16D3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16C3</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P16C3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16D4</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P16D4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16D1</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P16D1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16C1</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P16C1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P16D2</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P16D2</viTri>
+                </value>
+            </entry>
+        </dsGheDoi>
+        <isFull>false</isFull>
+        <suatChieu id="SCH228">
+            <phim id="Ph7">
+                <ten>The Adventures of Maid Marian</ten>
+                <theLoai>Hai huoc</theLoai>
+                <doTuoi>16</doTuoi>
+                <posterLink>/Images/maidmarian.jpg</posterLink>
+                <dt>280000.0</dt>
+                <thoiLuong>PT1H22M</thoiLuong>
+                <TgKhoiChieu>2022-05-09</TgKhoiChieu>
+            </phim>
+            <phongId>P16</phongId>
+            <thoiGianChieu>22-05-2024 18:00</thoiGianChieu>
+            <dt>280000.0</dt>
+            <chieuXong>false</chieuXong>
+        </suatChieu>
+        <isPlaying>false</isPlaying>
+        <columns>6</columns>
+        <rows>68</rows>
+        <dt>280000.0</dt>
+    </phong>
+    <phong id="P4">
+        <slVip>12</slVip>
+        <slThuong>15</slThuong>
+        <slDoi>5</slDoi>
+        <dsGheThuong>
+            <entry>
+                <key>P4A10</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P4A10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4A2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P4A2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4B3</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P4B3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4A1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P4A1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4B2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P4B2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4A4</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P4A4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4B5</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P4B5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4A3</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P4A3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4B4</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P4B4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4B1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P4B1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4A9</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P4A9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4A6</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P4A6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4A5</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P4A5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4A8</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P4A8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4A7</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P4A7</viTri>
+                </value>
+            </entry>
+        </dsGheThuong>
+        <dsGheVip>
+            <entry>
+                <key>P4C4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P4C4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4C3</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P4C3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4B10</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P4B10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4C6</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P4C6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4C5</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P4C5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4C2</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P4C2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4C1</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P4C1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4B7</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P4B7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4B6</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P4B6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4C7</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P4C7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4B9</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P4B9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4B8</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P4B8</viTri>
+                </value>
+            </entry>
+        </dsGheVip>
+        <dsGheDoi>
+            <entry>
+                <key>P4C10</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P4C10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4D1</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <khachId>K1</khachId>
+                    <loai>Doi</loai>
+                    <viTri>P4D1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4D2</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P4D2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4C8</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P4C8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P4C9</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P4C9</viTri>
+                </value>
+            </entry>
+        </dsGheDoi>
+        <isFull>false</isFull>
+        <suatChieu id="SCH244">
+            <phim id="Ph9">
+                <ten>Penoza: The Final Chapter</ten>
+                <theLoai>Hanh dong</theLoai>
+                <doTuoi>16</doTuoi>
+                <posterLink>/Images/penzoa.jpg</posterLink>
+                <dt>200000.0</dt>
+                <thoiLuong>PT1H55M</thoiLuong>
+                <TgKhoiChieu>2019-11-28</TgKhoiChieu>
+            </phim>
+            <phongId>P4</phongId>
+            <thoiGianChieu>23-05-2024 20:00</thoiGianChieu>
+            <dt>200000.0</dt>
+            <chieuXong>false</chieuXong>
+        </suatChieu>
+        <isPlaying>false</isPlaying>
+        <columns>3</columns>
+        <rows>68</rows>
+        <dt>200000.0</dt>
+    </phong>
+    <phong id="P121">
+        <slVip>8</slVip>
+        <slThuong>12</slThuong>
+        <slDoi>11</slDoi>
+        <dsGheThuong>
+            <entry>
+                <key>P121B1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P121B1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121A9</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P121A9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121A10</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P121A10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121A6</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P121A6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121A5</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P121A5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121A8</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P121A8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121A7</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P121A7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121A2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P121A2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121A1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P121A1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121B2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P121B2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121A4</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P121A4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121A3</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P121A3</viTri>
+                </value>
+            </entry>
+        </dsGheThuong>
+        <dsGheVip>
+            <entry>
+                <key>P121B10</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P121B10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121B7</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P121B7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121B6</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P121B6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121B9</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P121B9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121B8</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P121B8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121B3</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P121B3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121B5</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P121B5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121B4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P121B4</viTri>
+                </value>
+            </entry>
+        </dsGheVip>
+        <dsGheDoi>
+            <entry>
+                <key>P121D1</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P121D1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121C2</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P121C2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121C1</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P121C1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121C10</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P121C10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121C8</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P121C8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121C7</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P121C7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121C9</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P121C9</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121C4</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P121C4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121C3</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P121C3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121C6</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P121C6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P121C5</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P121C5</viTri>
+                </value>
+            </entry>
+        </dsGheDoi>
+        <isFull>false</isFull>
+        <isPlaying>false</isPlaying>
+        <columns>2</columns>
+        <rows>68</rows>
+        <dt>0.0</dt>
     </phong>
     <phong id="P1">
         <slVip>10</slVip>
@@ -370,7 +3254,6 @@
                 <key>P1A4</key>
                 <value>
                     <gia>80000.0</gia>
-                    <khachId>K7</khachId>
                     <loai>Thuong</loai>
                     <viTri>P1A4</viTri>
                 </value>
@@ -435,7 +3318,6 @@
                 <key>P1A8</key>
                 <value>
                     <gia>80000.0</gia>
-                    <khachId>K1</khachId>
                     <loai>Thuong</loai>
                     <viTri>P1A8</viTri>
                 </value>
@@ -462,7 +3344,6 @@
                 <key>P1B8</key>
                 <value>
                     <gia>120000.0</gia>
-                    <khachId>K1</khachId>
                     <loai>Vip</loai>
                     <viTri>P1B8</viTri>
                 </value>
@@ -503,7 +3384,6 @@
                 <key>P1B3</key>
                 <value>
                     <gia>120000.0</gia>
-                    <khachId>K1</khachId>
                     <loai>Vip</loai>
                     <viTri>P1B3</viTri>
                 </value>
@@ -512,7 +3392,6 @@
                 <key>P1B9</key>
                 <value>
                     <gia>120000.0</gia>
-                    <khachId>K1</khachId>
                     <loai>Vip</loai>
                     <viTri>P1B9</viTri>
                 </value>
@@ -547,7 +3426,6 @@
                 <key>P1C9</key>
                 <value>
                     <gia>200000.0</gia>
-                    <khachId>K7</khachId>
                     <loai>Doi</loai>
                     <viTri>P1C9</viTri>
                 </value>
@@ -564,7 +3442,6 @@
                 <key>P1C3</key>
                 <value>
                     <gia>200000.0</gia>
-                    <khachId>K1</khachId>
                     <loai>Doi</loai>
                     <viTri>P1C3</viTri>
                 </value>
@@ -581,7 +3458,6 @@
                 <key>P1C5</key>
                 <value>
                     <gia>200000.0</gia>
-                    <khachId>K1</khachId>
                     <loai>Doi</loai>
                     <viTri>P1C5</viTri>
                 </value>
@@ -606,306 +3482,271 @@
                 <key>P1C10</key>
                 <value>
                     <gia>200000.0</gia>
-                    <khachId>K11</khachId>
                     <loai>Doi</loai>
                     <viTri>P1C10</viTri>
                 </value>
             </entry>
         </dsGheDoi>
         <isFull>false</isFull>
-        <suatChieu id="SCH40">
-            <phim id="Ph3">
-                <ten>Road House</ten>
-                <theLoai>Hanh dong</theLoai>
-                <doTuoi>16</doTuoi>
-                <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
-                <dt>800000.0</dt>
-                <thoiLuong>PT2H5M</thoiLuong>
-                <TgKhoiChieu>2024-11-01</TgKhoiChieu>
-            </phim>
-            <phongId>P1</phongId>
-            <thoiGianChieu>17-04-2024 16:00</thoiGianChieu>
-            <dt>800000.0</dt>
-            <chieuXong>false</chieuXong>
-        </suatChieu>
         <isPlaying>false</isPlaying>
         <columns>1</columns>
         <rows>68</rows>
-        <dt>800000.0</dt>
+        <dt>0.0</dt>
     </phong>
-    <phong id="P13">
-        <slVip>10</slVip>
-        <slThuong>10</slThuong>
-        <slDoi>10</slDoi>
+    <phong id="P9">
+        <slVip>5</slVip>
+        <slThuong>20</slThuong>
+        <slDoi>5</slDoi>
         <dsGheThuong>
             <entry>
-                <key>P13A10</key>
+                <key>P9A9</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P13A10</viTri>
+                    <viTri>P9A9</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P13A9</key>
+                <key>P9A8</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P13A9</viTri>
+                    <viTri>P9A8</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P13A7</key>
+                <key>P9B9</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P13A7</viTri>
+                    <viTri>P9B9</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P13A8</key>
+                <key>P9A10</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P13A8</viTri>
+                    <viTri>P9A10</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P13A5</key>
+                <key>P9A5</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P13A5</viTri>
+                    <viTri>P9A5</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P13A6</key>
+                <key>P9B6</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P13A6</viTri>
+                    <viTri>P9B6</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P13A3</key>
+                <key>P9A4</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P13A3</viTri>
+                    <viTri>P9A4</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P13A4</key>
+                <key>P9B5</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P13A4</viTri>
+                    <viTri>P9B5</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P13A1</key>
+                <key>P9A7</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P13A1</viTri>
+                    <viTri>P9A7</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P13A2</key>
+                <key>P9B8</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P13A2</viTri>
+                    <viTri>P9B8</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P9B10</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P9B10</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P9A6</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P9A6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P9B7</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P9B7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P9A1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P9A1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P9B2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P9B2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P9B1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P9B1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P9A3</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P9A3</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P9B4</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P9B4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P9A2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P9A2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P9B3</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P9B3</viTri>
                 </value>
             </entry>
         </dsGheThuong>
         <dsGheVip>
             <entry>
-                <key>P13B10</key>
+                <key>P9C1</key>
                 <value>
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
-                    <viTri>P13B10</viTri>
+                    <viTri>P9C1</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P13B8</key>
+                <key>P9C3</key>
                 <value>
                     <gia>120000.0</gia>
-                    <khachId>K7</khachId>
                     <loai>Vip</loai>
-                    <viTri>P13B8</viTri>
+                    <viTri>P9C3</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P13B9</key>
+                <key>P9C2</key>
                 <value>
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
-                    <viTri>P13B9</viTri>
+                    <viTri>P9C2</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P13B6</key>
+                <key>P9C5</key>
                 <value>
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
-                    <viTri>P13B6</viTri>
+                    <viTri>P9C5</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P13B7</key>
+                <key>P9C4</key>
                 <value>
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
-                    <viTri>P13B7</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P13B4</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P13B4</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P13B5</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <khachId>K4</khachId>
-                    <loai>Vip</loai>
-                    <viTri>P13B5</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P13B2</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P13B2</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P13B3</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P13B3</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P13B1</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P13B1</viTri>
+                    <viTri>P9C4</viTri>
                 </value>
             </entry>
         </dsGheVip>
         <dsGheDoi>
             <entry>
-                <key>P13C9</key>
+                <key>P9C7</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P13C9</viTri>
+                    <viTri>P9C7</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P13C7</key>
+                <key>P9C6</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P13C7</viTri>
+                    <viTri>P9C6</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P13C8</key>
+                <key>P9C9</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P13C8</viTri>
+                    <viTri>P9C9</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P13C5</key>
+                <key>P9C8</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P13C5</viTri>
+                    <viTri>P9C8</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P13C6</key>
+                <key>P9C10</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P13C6</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P13C3</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
-                    <viTri>P13C3</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P13C4</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
-                    <viTri>P13C4</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P13C1</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <khachId>K11</khachId>
-                    <loai>Doi</loai>
-                    <viTri>P13C1</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P13C10</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
-                    <viTri>P13C10</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P13C2</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <khachId>K4</khachId>
-                    <loai>Doi</loai>
-                    <viTri>P13C2</viTri>
+                    <viTri>P9C10</viTri>
                 </value>
             </entry>
         </dsGheDoi>
         <isFull>false</isFull>
-        <suatChieu id="SCH76">
-            <phim id="Ph4">
-                <ten>After the Pandemic</ten>
-                <theLoai>Hanh dong</theLoai>
-                <doTuoi>16</doTuoi>
-                <posterLink>/Images/p1LbrdJ53dGfEhRopG71akfzOVu.jpg</posterLink>
-                <dt>320000.0</dt>
-                <thoiLuong>PT2H5M</thoiLuong>
-                <TgKhoiChieu>2024-09-30</TgKhoiChieu>
-            </phim>
-            <phongId>P13</phongId>
-            <thoiGianChieu>17-04-2024 20:00</thoiGianChieu>
-            <dt>320000.0</dt>
-            <chieuXong>false</chieuXong>
-        </suatChieu>
         <isPlaying>false</isPlaying>
         <columns>1</columns>
         <rows>68</rows>
-        <dt>640000.0</dt>
+        <dt>0.0</dt>
     </phong>
 </phongs>

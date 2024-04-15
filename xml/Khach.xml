@@ -1,374 +1,349 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <khachs>
-    <khach id="K1">
-        <slVeDat>7</slVeDat>
-        <tongTien>920000</tongTien>
-        <hoTen>Lê Thế Phát</hoTen>
-        <gioiTinh>Nam</gioiTinh>
-        <ngaySinh>2003-10-30</ngaySinh>
-        <dsVe id="V2">
-            <ghe>
-                <gia>120000.0</gia>
-                <khachId>K1</khachId>
-                <loai>Vip</loai>
-                <viTri>P1B8</viTri>
-            </ghe>
-            <suat id="SCH2">
-                <phim id="Ph1">
-                    <ten>Godzilla x Kong: The New Empire</ten>
-                    <theLoai>Khoa hoc vien tuong</theLoai>
-                    <doTuoi>16</doTuoi>
-                    <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
-                    <dt>0.0</dt>
-                    <thoiLuong>PT2H5M</thoiLuong>
-                    <TgKhoiChieu>2024-07-10</TgKhoiChieu>
-                </phim>
-                <phongId>P1</phongId>
-                <thoiGianChieu>15-04-2024 10:00</thoiGianChieu>
-                <dt>0.0</dt>
-                <chieuXong>false</chieuXong>
-            </suat>
-        </dsVe>
-        <dsVe id="V8">
-            <ghe>
-                <gia>120000.0</gia>
-                <khachId>K1</khachId>
-                <loai>Vip</loai>
-                <viTri>P1B3</viTri>
-            </ghe>
-            <suat id="SCH2">
-                <phim id="Ph1">
-                    <ten>Godzilla x Kong: The New Empire</ten>
-                    <theLoai>Khoa hoc vien tuong</theLoai>
-                    <doTuoi>16</doTuoi>
-                    <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
-                    <dt>0.0</dt>
-                    <thoiLuong>PT2H5M</thoiLuong>
-                    <TgKhoiChieu>2024-07-10</TgKhoiChieu>
-                </phim>
-                <phongId>P1</phongId>
-                <thoiGianChieu>15-04-2024 10:00</thoiGianChieu>
-                <dt>0.0</dt>
-                <chieuXong>false</chieuXong>
-            </suat>
-        </dsVe>
-        <dsVe id="V14">
+    <khach id="K2">
+        <slVeDat>1</slVeDat>
+        <tongTien>80000</tongTien>
+        <hoTen>Chu Thị Hồng Anh</hoTen>
+        <gioiTinh>Nữ</gioiTinh>
+        <ngaySinh>2003-04-30</ngaySinh>
+        <dsVe id="V5">
             <ghe>
                 <gia>80000.0</gia>
-                <khachId>K1</khachId>
+                <khachId>K2</khachId>
                 <loai>Thuong</loai>
-                <viTri>P1A8</viTri>
+                <viTri>P16A10</viTri>
             </ghe>
-            <suat id="SCH2">
-                <phim id="Ph1">
-                    <ten>Godzilla x Kong: The New Empire</ten>
-                    <theLoai>Khoa hoc vien tuong</theLoai>
+            <suat id="SCH228">
+                <phim id="Ph7">
+                    <ten>The Adventures of Maid Marian</ten>
+                    <theLoai>Hai huoc</theLoai>
                     <doTuoi>16</doTuoi>
-                    <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
-                    <dt>120000.0</dt>
-                    <thoiLuong>PT2H5M</thoiLuong>
-                    <TgKhoiChieu>2024-07-10</TgKhoiChieu>
+                    <posterLink>/Images/maidmarian.jpg</posterLink>
+                    <dt>80000.0</dt>
+                    <thoiLuong>PT1H22M</thoiLuong>
+                    <TgKhoiChieu>2022-05-09</TgKhoiChieu>
                 </phim>
-                <phongId>P1</phongId>
-                <thoiGianChieu>15-04-2024 10:00</thoiGianChieu>
-                <dt>0.0</dt>
-                <chieuXong>false</chieuXong>
-            </suat>
-        </dsVe>
-        <dsVe id="V20">
-            <ghe>
-                <gia>200000.0</gia>
-                <khachId>K1</khachId>
-                <loai>Doi</loai>
-                <viTri>P1C3</viTri>
-            </ghe>
-            <suat id="SCH42">
-                <phim id="Ph5">
-                    <ten>Madame Web</ten>
-                    <theLoai>Hanh dong</theLoai>
-                    <doTuoi>16</doTuoi>
-                    <posterLink>/Images/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg</posterLink>
-                    <dt>0.0</dt>
-                    <thoiLuong>PT2H5M</thoiLuong>
-                    <TgKhoiChieu>2024-10-10</TgKhoiChieu>
-                </phim>
-                <phongId>P1</phongId>
-                <thoiGianChieu>25-04-2024 15:00</thoiGianChieu>
-                <dt>0.0</dt>
-                <chieuXong>false</chieuXong>
-            </suat>
-        </dsVe>
-        <dsVe id="V19">
-            <ghe>
-                <gia>120000.0</gia>
-                <khachId>K1</khachId>
-                <loai>Vip</loai>
-                <viTri>P1B9</viTri>
-            </ghe>
-            <suat id="SCH40">
-                <phim id="Ph3">
-                    <ten>Road House</ten>
-                    <theLoai>Hanh dong</theLoai>
-                    <doTuoi>16</doTuoi>
-                    <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
-                    <dt>0.0</dt>
-                    <thoiLuong>PT2H5M</thoiLuong>
-                    <TgKhoiChieu>2024-11-01</TgKhoiChieu>
-                </phim>
-                <phongId>P1</phongId>
-                <thoiGianChieu>17-04-2024 16:00</thoiGianChieu>
-                <dt>0.0</dt>
-                <chieuXong>false</chieuXong>
-            </suat>
-        </dsVe>
-        <dsVe id="V21">
-            <ghe>
-                <gia>200000.0</gia>
-                <khachId>K1</khachId>
-                <loai>Doi</loai>
-                <viTri>P1C5</viTri>
-            </ghe>
-            <suat id="SCH40">
-                <phim id="Ph3">
-                    <ten>Road House</ten>
-                    <theLoai>Hanh dong</theLoai>
-                    <doTuoi>16</doTuoi>
-                    <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
-                    <dt>120000.0</dt>
-                    <thoiLuong>PT2H5M</thoiLuong>
-                    <TgKhoiChieu>2024-11-01</TgKhoiChieu>
-                </phim>
-                <phongId>P1</phongId>
-                <thoiGianChieu>17-04-2024 16:00</thoiGianChieu>
-                <dt>120000.0</dt>
-                <chieuXong>false</chieuXong>
-            </suat>
-        </dsVe>
-        <dsVe id="V94">
-            <ghe>
-                <gia>80000.0</gia>
-                <khachId>K1</khachId>
-                <loai>Thuong</loai>
-                <viTri>P255B4</viTri>
-            </ghe>
-            <suat id="SCH757">
-                <phim id="Ph3">
-                    <ten>Road House</ten>
-                    <theLoai>Hanh dong</theLoai>
-                    <doTuoi>16</doTuoi>
-                    <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
-                    <dt>120000.0</dt>
-                    <thoiLuong>PT2H5M</thoiLuong>
-                    <TgKhoiChieu>2024-11-01</TgKhoiChieu>
-                </phim>
-                <phongId>P255</phongId>
-                <thoiGianChieu>18-04-2024 20:00</thoiGianChieu>
-                <dt>0.0</dt>
-                <chieuXong>false</chieuXong>
-            </suat>
-        </dsVe>
-    </khach>
-    <khach id="K4">
-        <slVeDat>3</slVeDat>
-        <tongTien>440000</tongTien>
-        <hoTen>Hoàng Đức Linh</hoTen>
-        <gioiTinh>Nam</gioiTinh>
-        <ngaySinh>2003-04-17</ngaySinh>
-        <dsVe id="V30">
-            <ghe>
-                <gia>200000.0</gia>
-                <khachId>K4</khachId>
-                <loai>Doi</loai>
-                <viTri>P13C2</viTri>
-            </ghe>
-            <suat id="SCH70">
-                <phim id="Ph1">
-                    <ten>Godzilla x Kong: The New Empire</ten>
-                    <theLoai>Khoa hoc vien tuong</theLoai>
-                    <doTuoi>16</doTuoi>
-                    <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
-                    <dt>0.0</dt>
-                    <thoiLuong>PT2H5M</thoiLuong>
-                    <TgKhoiChieu>2024-07-10</TgKhoiChieu>
-                </phim>
-                <phongId>P13</phongId>
-                <thoiGianChieu>18-04-2024 10:00</thoiGianChieu>
-                <dt>0.0</dt>
-                <chieuXong>false</chieuXong>
-            </suat>
-        </dsVe>
-        <dsVe id="V50">
-            <ghe>
-                <gia>120000.0</gia>
-                <khachId>K4</khachId>
-                <loai>Vip</loai>
-                <viTri>P13B5</viTri>
-            </ghe>
-            <suat id="SCH70">
-                <phim id="Ph1">
-                    <ten>Godzilla x Kong: The New Empire</ten>
-                    <theLoai>Khoa hoc vien tuong</theLoai>
-                    <doTuoi>16</doTuoi>
-                    <posterLink>/Images/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg</posterLink>
-                    <dt>320000.0</dt>
-                    <thoiLuong>PT2H5M</thoiLuong>
-                    <TgKhoiChieu>2024-07-10</TgKhoiChieu>
-                </phim>
-                <phongId>P13</phongId>
-                <thoiGianChieu>18-04-2024 10:00</thoiGianChieu>
-                <dt>320000.0</dt>
-                <chieuXong>false</chieuXong>
-            </suat>
-        </dsVe>
-        <dsVe id="V59">
-            <ghe>
-                <gia>120000.0</gia>
-                <khachId>K4</khachId>
-                <loai>Vip</loai>
-                <viTri>P255C2</viTri>
-            </ghe>
-            <suat id="SCH757">
-                <phim id="Ph3">
-                    <ten>Road House</ten>
-                    <theLoai>Hanh dong</theLoai>
-                    <doTuoi>16</doTuoi>
-                    <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
-                    <dt>200000.0</dt>
-                    <thoiLuong>PT2H5M</thoiLuong>
-                    <TgKhoiChieu>2024-11-01</TgKhoiChieu>
-                </phim>
-                <phongId>P255</phongId>
-                <thoiGianChieu>18-04-2024 20:00</thoiGianChieu>
+                <phongId>P16</phongId>
+                <thoiGianChieu>22-05-2024 18:00</thoiGianChieu>
                 <dt>80000.0</dt>
                 <chieuXong>false</chieuXong>
             </suat>
         </dsVe>
     </khach>
-    <khach id="K11">
-        <slVeDat>2</slVeDat>
-        <tongTien>400000</tongTien>
-        <hoTen>Nguyễn Lại Quang Vinh</hoTen>
+    <khach id="K7">
+        <slVeDat>1</slVeDat>
+        <tongTien>200000</tongTien>
+        <hoTen>Huỳnh Ngọc Hiệu</hoTen>
         <gioiTinh>Nam</gioiTinh>
-        <ngaySinh>2003-04-16</ngaySinh>
-        <dsVe id="V54">
+        <ngaySinh>1996-07-30</ngaySinh>
+        <dsVe id="V27">
             <ghe>
                 <gia>200000.0</gia>
-                <khachId>K11</khachId>
+                <khachId>K7</khachId>
                 <loai>Doi</loai>
-                <viTri>P13C1</viTri>
+                <viTri>P25E5</viTri>
             </ghe>
-            <suat id="SCH76">
-                <phim id="Ph4">
-                    <ten>After the Pandemic</ten>
-                    <theLoai>Hanh dong</theLoai>
-                    <doTuoi>16</doTuoi>
-                    <posterLink>/Images/p1LbrdJ53dGfEhRopG71akfzOVu.jpg</posterLink>
-                    <dt>320000.0</dt>
-                    <thoiLuong>PT2H5M</thoiLuong>
-                    <TgKhoiChieu>2024-09-30</TgKhoiChieu>
+            <suat id="SCH6">
+                <phim id="Ph2">
+                    <ten>Baghead</ten>
+                    <theLoai>Kinh di</theLoai>
+                    <doTuoi>18</doTuoi>
+                    <posterLink>/Images/baghead.jpg</posterLink>
+                    <dt>200000.0</dt>
+                    <thoiLuong>PT1H35M</thoiLuong>
+                    <TgKhoiChieu>2023-12-28</TgKhoiChieu>
                 </phim>
-                <phongId>P13</phongId>
-                <thoiGianChieu>17-04-2024 20:00</thoiGianChieu>
-                <dt>320000.0</dt>
-                <chieuXong>false</chieuXong>
-            </suat>
-        </dsVe>
-        <dsVe id="V68">
-            <ghe>
-                <gia>200000.0</gia>
-                <khachId>K11</khachId>
-                <loai>Doi</loai>
-                <viTri>P1C10</viTri>
-            </ghe>
-            <suat id="SCH40">
-                <phim id="Ph3">
-                    <ten>Road House</ten>
-                    <theLoai>Hanh dong</theLoai>
-                    <doTuoi>16</doTuoi>
-                    <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
-                    <dt>400000.0</dt>
-                    <thoiLuong>PT2H5M</thoiLuong>
-                    <TgKhoiChieu>2024-11-01</TgKhoiChieu>
-                </phim>
-                <phongId>P1</phongId>
-                <thoiGianChieu>17-04-2024 16:00</thoiGianChieu>
-                <dt>400000.0</dt>
+                <phongId>P25</phongId>
+                <thoiGianChieu>17-04-2024 17:00</thoiGianChieu>
+                <dt>200000.0</dt>
                 <chieuXong>false</chieuXong>
             </suat>
         </dsVe>
     </khach>
-    <khach id="K7">
-        <slVeDat>3</slVeDat>
+    <khach id="K3">
+        <slVeDat>2</slVeDat>
         <tongTien>400000</tongTien>
-        <hoTen>Nguyễn Tuyết Mai</hoTen>
+        <hoTen>Trần Quốc Bảo</hoTen>
         <gioiTinh>Nam</gioiTinh>
-        <ngaySinh>2003-08-08</ngaySinh>
-        <dsVe id="V36">
+        <ngaySinh>2003-04-27</ngaySinh>
+        <dsVe id="V9">
             <ghe>
-                <gia>120000.0</gia>
-                <khachId>K7</khachId>
-                <loai>Vip</loai>
-                <viTri>P13B8</viTri>
+                <gia>200000.0</gia>
+                <khachId>K3</khachId>
+                <loai>Doi</loai>
+                <viTri>P16C8</viTri>
             </ghe>
-            <suat id="SCH76">
-                <phim id="Ph4">
-                    <ten>After the Pandemic</ten>
-                    <theLoai>Hanh dong</theLoai>
+            <suat id="SCH228">
+                <phim id="Ph7">
+                    <ten>The Adventures of Maid Marian</ten>
+                    <theLoai>Hai huoc</theLoai>
                     <doTuoi>16</doTuoi>
-                    <posterLink>/Images/p1LbrdJ53dGfEhRopG71akfzOVu.jpg</posterLink>
-                    <dt>120000.0</dt>
-                    <thoiLuong>PT2H5M</thoiLuong>
-                    <TgKhoiChieu>2024-09-30</TgKhoiChieu>
+                    <posterLink>/Images/maidmarian.jpg</posterLink>
+                    <dt>280000.0</dt>
+                    <thoiLuong>PT1H22M</thoiLuong>
+                    <TgKhoiChieu>2022-05-09</TgKhoiChieu>
                 </phim>
-                <phongId>P13</phongId>
-                <thoiGianChieu>17-04-2024 20:00</thoiGianChieu>
-                <dt>120000.0</dt>
+                <phongId>P16</phongId>
+                <thoiGianChieu>22-05-2024 18:00</thoiGianChieu>
+                <dt>280000.0</dt>
                 <chieuXong>false</chieuXong>
             </suat>
         </dsVe>
-        <dsVe id="V62">
+        <dsVe id="V44">
             <ghe>
-                <gia>80000.0</gia>
-                <khachId>K7</khachId>
-                <loai>Thuong</loai>
-                <viTri>P1A4</viTri>
+                <gia>200000.0</gia>
+                <khachId>K3</khachId>
+                <loai>Doi</loai>
+                <viTri>P36D4</viTri>
             </ghe>
-            <suat id="SCH40">
-                <phim id="Ph3">
-                    <ten>Road House</ten>
+            <suat id="SCH202">
+                <phim id="Ph5">
+                    <ten>Heart Of Hunter</ten>
                     <theLoai>Hanh dong</theLoai>
                     <doTuoi>16</doTuoi>
-                    <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
+                    <posterLink>/Images/heartofhunter.jpg</posterLink>
                     <dt>320000.0</dt>
-                    <thoiLuong>PT2H5M</thoiLuong>
-                    <TgKhoiChieu>2024-11-01</TgKhoiChieu>
+                    <thoiLuong>PT1H45M</thoiLuong>
+                    <TgKhoiChieu>2024-03-28</TgKhoiChieu>
                 </phim>
-                <phongId>P1</phongId>
-                <thoiGianChieu>17-04-2024 16:00</thoiGianChieu>
+                <phongId>P36</phongId>
+                <thoiGianChieu>22-04-2024 19:00</thoiGianChieu>
                 <dt>320000.0</dt>
                 <chieuXong>false</chieuXong>
             </suat>
         </dsVe>
-        <dsVe id="V74">
+    </khach>
+    <khach id="K6">
+        <slVeDat>2</slVeDat>
+        <tongTien>240000</tongTien>
+        <hoTen>Phạm Minh Duy</hoTen>
+        <gioiTinh>Nam</gioiTinh>
+        <ngaySinh>2003-08-15</ngaySinh>
+        <dsVe id="V20">
             <ghe>
-                <gia>200000.0</gia>
-                <khachId>K7</khachId>
-                <loai>Doi</loai>
-                <viTri>P1C9</viTri>
+                <gia>120000.0</gia>
+                <khachId>K6</khachId>
+                <loai>Vip</loai>
+                <viTri>P49C6</viTri>
             </ghe>
-            <suat id="SCH40">
-                <phim id="Ph3">
-                    <ten>Road House</ten>
+            <suat id="SCH2">
+                <phim id="Ph1">
+                    <ten>Alien Noid</ten>
+                    <theLoai>Khoa hoc vien tuong</theLoai>
+                    <doTuoi>16</doTuoi>
+                    <posterLink>/Images/aliennoid.jpg</posterLink>
+                    <dt>120000.0</dt>
+                    <thoiLuong>PT2H25M</thoiLuong>
+                    <TgKhoiChieu>2022-07-20</TgKhoiChieu>
+                </phim>
+                <phongId>P49</phongId>
+                <thoiGianChieu>16-04-2024 15:00</thoiGianChieu>
+                <dt>120000.0</dt>
+                <chieuXong>false</chieuXong>
+            </suat>
+        </dsVe>
+        <dsVe id="V54">
+            <ghe>
+                <gia>120000.0</gia>
+                <khachId>K6</khachId>
+                <loai>Vip</loai>
+                <viTri>P64C7</viTri>
+            </ghe>
+            <suat id="SCH214">
+                <phim id="Ph6">
+                    <ten>Imaginary</ten>
+                    <theLoai>Kinh di</theLoai>
+                    <doTuoi>13</doTuoi>
+                    <posterLink>/Images/imaginary.jpg</posterLink>
+                    <dt>120000.0</dt>
+                    <thoiLuong>PT1H45M</thoiLuong>
+                    <TgKhoiChieu>2024-03-06</TgKhoiChieu>
+                </phim>
+                <phongId>P64</phongId>
+                <thoiGianChieu>24-04-2024 23:00</thoiGianChieu>
+                <dt>120000.0</dt>
+                <chieuXong>false</chieuXong>
+            </suat>
+        </dsVe>
+    </khach>
+    <khach id="K5">
+        <slVeDat>2</slVeDat>
+        <tongTien>240000</tongTien>
+        <hoTen>Nguyễn Duy Đức</hoTen>
+        <gioiTinh>Nam</gioiTinh>
+        <ngaySinh>2003-05-17</ngaySinh>
+        <dsVe id="V14">
+            <ghe>
+                <gia>120000.0</gia>
+                <khachId>K5</khachId>
+                <loai>Vip</loai>
+                <viTri>P36C7</viTri>
+            </ghe>
+            <suat id="SCH202">
+                <phim id="Ph5">
+                    <ten>Heart Of Hunter</ten>
                     <theLoai>Hanh dong</theLoai>
                     <doTuoi>16</doTuoi>
-                    <posterLink>/Images/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg</posterLink>
-                    <dt>600000.0</dt>
-                    <thoiLuong>PT2H5M</thoiLuong>
-                    <TgKhoiChieu>2024-11-01</TgKhoiChieu>
+                    <posterLink>/Images/heartofhunter.jpg</posterLink>
+                    <dt>120000.0</dt>
+                    <thoiLuong>PT1H45M</thoiLuong>
+                    <TgKhoiChieu>2024-03-28</TgKhoiChieu>
                 </phim>
-                <phongId>P1</phongId>
-                <thoiGianChieu>17-04-2024 16:00</thoiGianChieu>
-                <dt>600000.0</dt>
+                <phongId>P36</phongId>
+                <thoiGianChieu>22-04-2024 19:00</thoiGianChieu>
+                <dt>120000.0</dt>
+                <chieuXong>false</chieuXong>
+            </suat>
+        </dsVe>
+        <dsVe id="V77">
+            <ghe>
+                <gia>120000.0</gia>
+                <khachId>K5</khachId>
+                <loai>Vip</loai>
+                <viTri>P36B4</viTri>
+            </ghe>
+            <suat id="SCH202">
+                <phim id="Ph5">
+                    <ten>Heart Of Hunter</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>16</doTuoi>
+                    <posterLink>/Images/heartofhunter.jpg</posterLink>
+                    <dt>440000.0</dt>
+                    <thoiLuong>PT1H45M</thoiLuong>
+                    <TgKhoiChieu>2024-03-28</TgKhoiChieu>
+                </phim>
+                <phongId>P36</phongId>
+                <thoiGianChieu>22-04-2024 19:00</thoiGianChieu>
+                <dt>440000.0</dt>
+                <chieuXong>false</chieuXong>
+            </suat>
+        </dsVe>
+    </khach>
+    <khach id="K1">
+        <slVeDat>3</slVeDat>
+        <tongTien>440000</tongTien>
+        <hoTen>Nguyễn Văn Thành An</hoTen>
+        <gioiTinh>Nam</gioiTinh>
+        <ngaySinh>2003-04-22</ngaySinh>
+        <dsVe id="V2">
+            <ghe>
+                <gia>200000.0</gia>
+                <khachId>K1</khachId>
+                <loai>Doi</loai>
+                <viTri>P4D1</viTri>
+            </ghe>
+            <suat id="SCH244">
+                <phim id="Ph9">
+                    <ten>Penoza: The Final Chapter</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>16</doTuoi>
+                    <posterLink>/Images/penzoa.jpg</posterLink>
+                    <dt>200000.0</dt>
+                    <thoiLuong>PT1H55M</thoiLuong>
+                    <TgKhoiChieu>2019-11-28</TgKhoiChieu>
+                </phim>
+                <phongId>P4</phongId>
+                <thoiGianChieu>23-05-2024 20:00</thoiGianChieu>
+                <dt>200000.0</dt>
+                <chieuXong>false</chieuXong>
+            </suat>
+        </dsVe>
+        <dsVe id="V35">
+            <ghe>
+                <gia>120000.0</gia>
+                <khachId>K1</khachId>
+                <loai>Vip</loai>
+                <viTri>P25D10</viTri>
+            </ghe>
+            <suat id="SCH6">
+                <phim id="Ph2">
+                    <ten>Baghead</ten>
+                    <theLoai>Kinh di</theLoai>
+                    <doTuoi>18</doTuoi>
+                    <posterLink>/Images/baghead.jpg</posterLink>
+                    <dt>320000.0</dt>
+                    <thoiLuong>PT1H35M</thoiLuong>
+                    <TgKhoiChieu>2023-12-28</TgKhoiChieu>
+                </phim>
+                <phongId>P25</phongId>
+                <thoiGianChieu>17-04-2024 17:00</thoiGianChieu>
+                <dt>320000.0</dt>
+                <chieuXong>false</chieuXong>
+            </suat>
+        </dsVe>
+        <dsVe id="V90">
+            <ghe>
+                <gia>120000.0</gia>
+                <khachId>K1</khachId>
+                <loai>Vip</loai>
+                <viTri>P100B2</viTri>
+            </ghe>
+            <suat id="SCH12">
+                <phim id="Ph3">
+                    <ten>Dune: Part Two</ten>
+                    <theLoai>Khoa hoc vien tuong</theLoai>
+                    <doTuoi>16</doTuoi>
+                    <posterLink>/Images/dune2.jpg</posterLink>
+                    <dt>120000.0</dt>
+                    <thoiLuong>PT2H45M</thoiLuong>
+                    <TgKhoiChieu>2024-02-27</TgKhoiChieu>
+                </phim>
+                <phongId>P100</phongId>
+                <thoiGianChieu>18-04-2024 10:00</thoiGianChieu>
+                <dt>120000.0</dt>
+                <chieuXong>false</chieuXong>
+            </suat>
+        </dsVe>
+    </khach>
+    <khach id="K8">
+        <slVeDat>2</slVeDat>
+        <tongTien>320000</tongTien>
+        <hoTen>Ngô Mạnh hùng</hoTen>
+        <gioiTinh>Nam</gioiTinh>
+        <ngaySinh>2003-11-21</ngaySinh>
+        <dsVe id="V65">
+            <ghe>
+                <gia>200000.0</gia>
+                <khachId>K8</khachId>
+                <loai>Doi</loai>
+                <viTri>P81D5</viTri>
+            </ghe>
+            <suat id="SCH20">
+                <phim id="Ph4">
+                    <ten>Hard Hit</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>18</doTuoi>
+                    <posterLink>/Images/hardhit.jpg</posterLink>
+                    <dt>200000.0</dt>
+                    <thoiLuong>PT1H34M</thoiLuong>
+                    <TgKhoiChieu>2021-06-23</TgKhoiChieu>
+                </phim>
+                <phongId>P81</phongId>
+                <thoiGianChieu>23-04-2024 13:00</thoiGianChieu>
+                <dt>200000.0</dt>
+                <chieuXong>false</chieuXong>
+            </suat>
+        </dsVe>
+        <dsVe id="V104">
+            <ghe>
+                <gia>120000.0</gia>
+                <khachId>K8</khachId>
+                <loai>Vip</loai>
+                <viTri>P25D4</viTri>
+            </ghe>
+            <suat id="SCH6">
+                <phim id="Ph2">
+                    <ten>Baghead</ten>
+                    <theLoai>Kinh di</theLoai>
+                    <doTuoi>18</doTuoi>
+                    <posterLink>/Images/baghead.jpg</posterLink>
+                    <dt>320000.0</dt>
+                    <thoiLuong>PT1H35M</thoiLuong>
+                    <TgKhoiChieu>2023-12-28</TgKhoiChieu>
+                </phim>
+                <phongId>P25</phongId>
+                <thoiGianChieu>17-04-2024 17:00</thoiGianChieu>
+                <dt>320000.0</dt>
                 <chieuXong>false</chieuXong>
             </suat>
         </dsVe>
