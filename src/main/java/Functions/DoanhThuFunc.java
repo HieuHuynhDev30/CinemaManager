@@ -16,6 +16,8 @@ import java.util.List;
  *
  * @author Lenovo
  */
+
+// Lớp định nghĩa các hành vi làm việc với doanh thu
 public class DoanhThuFunc {
 
     private VeFunc veFunc;
@@ -48,11 +50,6 @@ public class DoanhThuFunc {
                 }
             }
         }
-//        if ("phong".equals(tieuChi.toLowerCase())) {
-//            for (Phong ph : (Phong[]) obs) {
-//                doanhThu += ph.getDt();
-//            }
-//        }
         return doanhThu;
     }
 

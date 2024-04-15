@@ -14,18 +14,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *
  * @author Lenovo
  */
+// Adapter cho giá trị kiểu LocalDate trước khi viết vào file xml
 public class LocalDateAdapter extends XmlAdapter<javax.xml.datatype.XMLGregorianCalendar, LocalDate> {
-//    public static final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
     @Override
     public LocalDate unmarshal(XMLGregorianCalendar dayInXML) throws Exception {
-        return LocalDate.of(dayInXML.getYear(),
+        return LocalDate.of(dayInXML.getYear(), // adapter cho hành vi đọc
                 dayInXML.getMonth(),
                 dayInXML.getDay());
     }
 
     @Override
     public XMLGregorianCalendar marshal(LocalDate day) throws Exception {
-        return DatatypeFactory.newInstance().newXMLGregorianCalendar(day.toString());
+        return DatatypeFactory.newInstance().newXMLGregorianCalendar(day.toString()); //adapter cho hành vi viết
     }
 }

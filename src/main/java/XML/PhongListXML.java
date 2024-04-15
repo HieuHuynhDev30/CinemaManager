@@ -14,6 +14,8 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author Lenovo
  */
+
+//// Lớp định nghĩa danh sách đối tượng Phòng dùng để tạo element danh sách khi viết và đọc từ file xml
 @XmlRootElement(name = "phongs")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PhongListXML {

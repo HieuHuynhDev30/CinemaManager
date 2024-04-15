@@ -17,20 +17,20 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *
  * @author Lenovo
  */
-@XmlRootElement(name = "phim")
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "phim") // anotation xác định element được đọc vào file xml
+@XmlAccessorType(XmlAccessType.FIELD) // đọc dưới dạng trường, nhận các thuộc tính là một element
 public class Phim {
 
     private static int currId;
-    @XmlAttribute
+    @XmlAttribute // xác định cách đọc thuộc tính dưới dạng thuộc tính của element mẹ
     private String id;
     private String ten, theLoai;
     private int doTuoi;
     private String posterLink;
     private double dt;
-    @XmlJavaTypeAdapter(DurationAdapter.class)
+    @XmlJavaTypeAdapter(DurationAdapter.class) // gán adapter cho thuộc tính dạng thời lượng để có thể đọc được vào trong file xml
     private Duration thoiLuong;
-    @XmlJavaTypeAdapter(LocalDateAdapter.class)
+    @XmlJavaTypeAdapter(LocalDateAdapter.class) // gán adapter cho thuộc tính dạng ngày giờ để có thể đọc được vào trong file xml
     private LocalDate TgKhoiChieu;
     public static final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy");
     public static final String[] dsTheLoai = {"Hai huoc", "Hanh dong", "Khoa hoc vien tuong", "Kinh di", "Tinh cam", "Lich su"};

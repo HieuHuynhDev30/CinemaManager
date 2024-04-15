@@ -18,6 +18,8 @@ import utils.FileUtils;
  *
  * @author Lenovo
  */
+
+// Lớp định nghĩa các hành vi làm việc với danh sách phim
 public class PhimFunc {
 
     private static final String PHIM_FILE_NAME = "xml/Phim.xml";
@@ -28,12 +30,16 @@ public class PhimFunc {
         this.phimList = readListPhims();
     }
 
+    
+    // hành vi viết vào file xml
     public void writeListPhims(List<Phim> phims) {
         PhimListXML phimXML = new PhimListXML();
         phimXML.setPhims(phims);
         FileUtils.writeXMLtoFile(PHIM_FILE_NAME, phimXML);
     }
 
+    
+    // hành vi đọc từ file xml
     public List<Phim> readListPhims() {
         List<Phim> list = new ArrayList<>();
         PhimListXML phimListXML = (PhimListXML) FileUtils.readXMLFile(

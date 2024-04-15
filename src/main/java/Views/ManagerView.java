@@ -45,10 +45,14 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Lenovo
  */
+// Lớp định nghĩa giao diện cửa sổ quản lý rạp phim
 public class ManagerView extends javax.swing.JFrame {
 
+    // các thuộc tính tĩnh quy định định dạng các giá trị LocalDate và LocalDateTime
     public final static DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
     public static final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+
+    //// thuộc tính quy định tiêu đề cột của một số bảng dùng trong giao diện
     private String[] columnNames1 = new String[]{
         "ID", "Name", "Thể Loại", "Độ tuổi", "Thời lượng", "Ngày khởi chiếu"};
 
@@ -67,6 +71,12 @@ public class ManagerView extends javax.swing.JFrame {
         this.setIconImage(icon.getImage());
     }
 
+    // hàm hiển thị thông báo
+    public void showMessage(String message) {
+        JOptionPane.showMessageDialog(this, message);
+    }
+    
+    // hàm đọc file ảnh giúp hiện thị ảnh theo đúng kích thước theo đối tượng giao diện chứa ảnh
     public ImageIcon getImage(String imagePath, JLabel label) {
 
         try {
@@ -82,7 +92,7 @@ public class ManagerView extends javax.swing.JFrame {
         }
     }
 
-//////// Trang chủ
+//////// các hành vi dùng trong phần Trang chủ
     public JPanel getDsPhimPane() {
         return DsPhimPane;
     }
@@ -196,6 +206,12 @@ public class ManagerView extends javax.swing.JFrame {
     }
 
 //////// end Trang chủ
+    
+    
+    
+    
+    
+    
 //////// Quản lý phòng
     public void showListPhong(List<Phong> list, List<SuatChieu> schList) {
         System.out.println("Show list phong");
@@ -232,7 +248,6 @@ public class ManagerView extends javax.swing.JFrame {
         this.SlgDoiSpinner.setValue(ph.getSlDoi());
         this.editPhongButton.setEnabled(true);
         this.deletePhongButton.setEnabled(true);
-//        // disable Add button
         this.addPhongButton.setEnabled(false);
     }
 
@@ -248,7 +263,6 @@ public class ManagerView extends javax.swing.JFrame {
     }
 
     public void fillPhongFromSelectedRow(List<Phim> phimList) {
-        // lấy chỉ số của hàng được chọn 
         int row = this.PhongTable.getSelectedRow();
         if (row >= 0) {
             this.IdPhongFiled.setText(PhongTable.getModel().getValueAt(row, 0).toString());
@@ -261,15 +275,7 @@ public class ManagerView extends javax.swing.JFrame {
         }
     }
 
-    public void addListPhongSelectionListener(ListSelectionListener listener) {
-        this.PhongTable.getSelectionModel().addListSelectionListener(listener);
-    }
-
     public Phong getPhongInfo(List<Phong> phongList) {
-        // validate student
-//        if (!validateName() || !validateAge() || !validateAddress() || !validateGPA()) {
-//            return null;
-//        }
         try {
             Phong phong = new Phong();
             if (phongList != null) {
@@ -312,6 +318,7 @@ public class ManagerView extends javax.swing.JFrame {
         this.addPhongButton.setEnabled(true);
     }
 
+    // Addlistener Quản lý phòng
     public String getTieuChiSxPhong() {
         return this.TieuChiSortPhongCombo.getSelectedItem().toString();
     }
@@ -339,8 +346,160 @@ public class ManagerView extends javax.swing.JFrame {
     public void addSortPhongListener(ActionListener listener) {
         this.SortPhongButton.addActionListener(listener);
     }
+    
+    public void addListPhongSelectionListener(ListSelectionListener listener) {
+        this.PhongTable.getSelectionModel().addListSelectionListener(listener);
+    }
 
 //////// end Quản lý phòng
+    
+    
+    
+    
+    
+/////// Quản lý phim
+    public void showListPhim(List<Phim> list) {
+        int size = list.size();
+        if (size != 0) {
+            Object[][] phim = new Object[size][6];
+            for (int i = 0; i < size; i++) {
+                phim[i][0] = list.get(i).getId();
+                phim[i][1] = list.get(i).getTen();
+                phim[i][2] = list.get(i).getTheLoai();
+                phim[i][3] = list.get(i).getDoTuoi();
+                phim[i][4] = list.get(i).inThoiLuong();
+                phim[i][5] = list.get(i).inTgKhoiChieu();
+            }
+            BangPhim.setModel(new DefaultTableModel(phim, columnNames1));
+        } else {
+            this.showMessage("Không có kết quả");
+        }
+
+    }
+
+    public void setTheLoaiComboAndDoTuoiSpinner() {
+        doTuoiSpinner.setValue(13);
+        theLoaiCombo.setModel(new javax.swing.DefaultComboBoxModel<>(Phim.dsTheLoai));
+    }
+
+    public void fillPhimFromSelectedRow(String posterLink) {
+        // lấy chỉ số của hàng được chọn 
+        int row = BangPhim.getSelectedRow();
+        if (row >= 0) {
+            IDPhimField.setText(BangPhim.getModel().getValueAt(row, 0).toString());
+            TenPhimField.setText(BangPhim.getModel().getValueAt(row, 1).toString());
+            this.theLoaiCombo.setSelectedItem(BangPhim.getModel().getValueAt(row, 2).toString());
+            doTuoiSpinner.setValue(BangPhim.getModel().getValueAt(row, 3));
+            ThoiLuongField.setText(BangPhim.getModel().getValueAt(row, 4).toString());
+            NgayKhoiChieuField.setText(BangPhim.getModel().getValueAt(row, 5).toString());
+            posterFrame.setSize(200, 250);
+            posterFrame.setIcon(this.getImage(posterLink, posterFrame));
+            // enable Edit and Delete buttons
+            EditPhimButton.setEnabled(true);
+            DeletePhimButton.setEnabled(true);
+            // disable Add button
+            AddPhimButton.setEnabled(false);
+        }
+    }
+
+    public String getIDPhimField() {
+        return this.IDPhimField.getText();
+    }
+
+    public Phim getPhimInfo() {
+        if (!validateString(TenPhimField.getText(), TenPhimField) || !validateInt(ThoiLuongField.getText(), ThoiLuongField)) {
+            return null;
+        }
+        if (!this.validateDate(NgayKhoiChieuField.getText(), NgayKhoiChieuField)) {
+            return null;
+        }
+        try {
+            Phim phim = new Phim();
+            phim.setId(IDPhimField.getText().trim());
+            phim.setTen(TenPhimField.getText().trim());
+            phim.setTheLoai(theLoaiCombo.getSelectedItem().toString().trim());
+            phim.setDoTuoi(Integer.parseInt((doTuoiSpinner.getValue().toString())));
+            phim.setThoiLuong(Integer.parseInt(ThoiLuongField.getText()));
+            phim.setTgKhoiChieu(NgayKhoiChieuField.getText().trim());
+            return phim;
+        } catch (NumberFormatException e) {
+            showMessage(e.getMessage());
+        }
+        return null;
+    }
+
+    public void showPhim(Phim phim) {
+        IDPhimField.setText("" + phim.getId());
+        TenPhimField.setText("" + phim.getTen());
+        doTuoiSpinner.setValue(phim.getDoTuoi());
+        theLoaiCombo.setSelectedItem(phim.getTheLoai());
+        ThoiLuongField.setText("" + phim.inThoiLuong());
+        NgayKhoiChieuField.setText("" + phim.inTgKhoiChieu());
+        EditPhimButton.setEnabled(true);
+        DeletePhimButton.setEnabled(true);
+        AddPhimButton.setEnabled(false);
+    }
+
+    public void clearPhimInfo() {
+        IDPhimField.setText("");
+        TenPhimField.setText("");
+        doTuoiSpinner.setValue(13);
+        theLoaiCombo.setSelectedItem("Chọn một thể loại");
+
+        ThoiLuongField.setText("");
+        NgayKhoiChieuField.setText("");
+        EditPhimButton.setEnabled(false);
+        DeletePhimButton.setEnabled(false);
+        AddPhimButton.setEnabled(true);
+    }
+
+    public int luachonPhimTK() {
+        if (TimKiemPhimField.getText().equals("") || TimKiemPhimField.getText() == null) {
+            return -1;
+        }
+        int k;
+        k = LuaChonPhim.getSelectedIndex();
+        return k;
+    }
+
+    public String inforPhimSearch() {
+        String s = TimKiemPhimField.getText().trim();
+
+        return s;
+    }
+
+    
+    // Addlistener Quản lý phim
+    public void addAddPhimListener(ActionListener listener) {
+        AddPhimButton.addActionListener(listener);
+    }
+
+    public void addClearPhimListener(ActionListener listener) {
+        ClearPhimButton.addActionListener(listener);
+    }
+
+    public void addListPhimSelectionListener(ListSelectionListener listener) {
+        BangPhim.getSelectionModel().addListSelectionListener(listener);
+    }
+
+    public void addDeletePhimListener(ActionListener listener) {
+        DeletePhimButton.addActionListener(listener);
+    }
+
+    public void addEditPhimListener(ActionListener listener) {
+        EditPhimButton.addActionListener(listener);
+    }
+
+    public void addSearchPhimListener(ActionListener listener) {
+        TimKiemBtn.addActionListener(listener);
+    }
+
+    ////// end Quản lý phim
+    
+    
+    
+    
+    
 //////// Quản lý suất chiếu
     public void showListSuatChieu(List<SuatChieu> list) {
         int size = list.size();
@@ -409,15 +568,11 @@ public class ManagerView extends javax.swing.JFrame {
                 phimStr[i] = phimList.get(i).getTen();
             }
             phimCombo.setModel(new javax.swing.DefaultComboBoxModel<>(phimStr));
-//        quanLySuatChieu.add(phimCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 160, 20));
-
             String[] phongStr = new String[phongList.size()];
             for (int i = 0; i < phongStr.length; i++) {
                 phongStr[i] = phongList.get(i).getId();
             }
             phongCombo.setModel(new javax.swing.DefaultComboBoxModel<>(phongStr));
-//        quanLySuatChieu.add(phongCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 150, -1));
-//        String[] tieuChiStr = {}
             tieuChiSchCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Id", "thoigian"}));
         }
     }
@@ -487,6 +642,7 @@ public class ManagerView extends javax.swing.JFrame {
         return this.tChiSchtangDan.isSelected();
     }
 
+    // Addlistener Quản lý suất chiếu
     public void addListSuatChieuSelectionListener(ListSelectionListener listener) {
         this.suatChieuTable.getSelectionModel().addListSelectionListener(listener);
     }
@@ -512,6 +668,247 @@ public class ManagerView extends javax.swing.JFrame {
     }
 
 //////// end Quản lý suất chiếu
+    
+    
+    
+
+    //////// Quản lý khách
+    public void showListKhach(List<Khach> list) {
+        int size = list.size();
+        Object[][] khach = new Object[size][6];
+        for (int i = 0; i < size; i++) {
+            khach[i][0] = list.get(i).getId();
+            khach[i][1] = list.get(i).getHoTen();
+            khach[i][2] = list.get(i).getNgaySinh().format(dateFormat);
+            khach[i][3] = list.get(i).getGioiTinh();
+            khach[i][4] = list.get(i).getSlVeDat();
+            khach[i][5] = list.get(i).getTongTien();
+
+        }
+        BangKhachHang.setModel(new DefaultTableModel(khach, columnNames));
+    }
+
+    public void setGioiTinhCombo() {
+        this.gioiTinhCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Nam", "Nữ"}));
+    }
+
+    public String getNgaySinhPicker() {
+        int day = this.NSCalendar.getDayChooser().getDay();
+        int month = this.NSCalendar.getMonthChooser().getMonth() + 1;
+        int year = this.NSCalendar.getYearChooser().getYear();
+        CharSequence date = String.format("%02d-%02d-%d", day, month, year);
+        try {
+            String dateStr = LocalDate.parse(date, dateFormat).format(dateFormat);
+            return dateStr;
+        } catch (Exception e) {
+            this.showMessage("Thiếu thông tin ngày");
+            return "";
+        }
+    }
+
+    public void confirmNSPicker(String date) {
+        this.NgaySinhField.setText(date);
+    }
+
+    public void addNSDatePickerListener(ActionListener listener) {
+        this.confirmNS.addActionListener(listener);
+    }
+
+    public void fillKhachFromSelectedRow() {
+        // lấy chỉ số của hàng được chọn 
+        int row = BangKhachHang.getSelectedRow();
+        if (row >= 0) {
+            IDField.setText(BangKhachHang.getModel().getValueAt(row, 0).toString());
+            HoTenField.setText(BangKhachHang.getModel().getValueAt(row, 1).toString());
+            NgaySinhField.setText(BangKhachHang.getModel().getValueAt(row, 2).toString());
+            gioiTinhCombo.setSelectedItem(BangKhachHang.getModel().getValueAt(row, 3).toString());
+            SlvField.setText(BangKhachHang.getModel().getValueAt(row, 4).toString());
+            // enable Edit and Delete buttons
+            EditKhach.setEnabled(true);
+            DeleteKhach.setEnabled(true);
+            // disable Add button
+            AddKhach.setEnabled(false);
+        }
+    }
+
+    public Khach getKhachInfo() {
+        // validate student
+        if (!this.validateString(HoTenField.getText(), HoTenField) || !this.validateDate(NgaySinhField.getText(), NgaySinhField)) {
+            return null;
+        }
+        try {
+            Khach khach = new Khach();
+            if (HoTenField.getText() != null) {
+
+            }
+            if (IDField.getText() != null && !"".equals(IDField.getText())) {
+                khach.setId(IDField.getText().trim());
+            }
+
+            khach.setHoTen(HoTenField.getText().trim());
+            khach.setGioiTinh(gioiTinhCombo.getSelectedItem().toString());
+            khach.setNgaySinh(NgaySinhField.getText().trim());
+//            khach.setSlVeDat(Integer.parseInt(SlvField.getText().trim()));
+            return khach;
+        } catch (NumberFormatException e) {
+            showMessage(e.getMessage());
+        }
+        return null;
+    }
+
+    public void showKhach(Khach khach) {
+        IDField.setText("" + khach.getId());
+        HoTenField.setText("" + khach.getHoTen());
+        gioiTinhCombo.setSelectedItem(khach.getGioiTinh());
+        NgaySinhField.setText("" + khach.getNgaySinh().format(dateFormat));
+        SlvField.setText("" + khach.getSlVeDat());
+//        gpaField.setText("" + student.getGpa()); 
+
+        // enable Edit and Delete buttons
+        EditKhach.setEnabled(true);
+        DeleteKhach.setEnabled(true);
+        // disable Add button
+        AddKhach.setEnabled(false);
+    }
+
+    public void clearKhachInfo() {
+        IDField.setText("");
+        HoTenField.setText("");
+        gioiTinhCombo.setSelectedIndex(0);
+        NgaySinhField.setText("");
+
+        SlvField.setText("");
+        // disable Edit and Delete buttons
+        EditKhach.setEnabled(false);
+        DeleteKhach.setEnabled(false);
+        // enable Add button
+        AddKhach.setEnabled(true);
+    }
+    
+     public int luachonKhachTK() {
+        if (TimKiemKhachField.getText().equals("") || TimKiemKhachField.getText() == null) {
+            return -1;
+        }
+        int k;
+        k = LuaChonKhach.getSelectedIndex();
+        return k;
+    }
+
+    public String inforKhachSearch() {
+        String s = TimKiemKhachField.getText().trim();
+
+        return s;
+    }
+
+    
+    ///// các hàm kiểm tra thông tin nhập trong quản lý Khách
+    private boolean validateString(String str, JTextField field) {
+        if (str == null || "".equals(str.trim())) {
+            field.requestFocus();
+            showMessage("Tên không được trống.");
+            return false;
+        }
+        return true;
+    }
+
+    private boolean validateDate(String date, JTextField field) {
+        try {
+            LocalDate time = LocalDate.parse(date, dateFormat);
+        } catch (Exception e) {
+            field.requestFocus();
+            showMessage("Thời gian không đúng định dạng hoặc bị bỏ trống");
+            return false;
+        }
+        return true;
+    }
+
+    private boolean validateDateTime(String date, JTextField field) {
+        try {
+            LocalDateTime time = LocalDateTime.parse(date, formatDateTime);
+        } catch (Exception e) {
+            field.requestFocus();
+            showMessage("Thời gian không đúng định dạng hoặc bị bỏ trống");
+            return false;
+        }
+        return true;
+    }
+
+    private boolean validateBefore(String date, JTextField field) {
+        try {
+            LocalDateTime time = LocalDateTime.parse(date, formatDateTime);
+            if (time.isBefore(LocalDateTime.now())) {
+                field.requestFocus();
+                showMessage("Thời gian chiếu phải ở tương lai");
+                return false;
+            }
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
+    }
+
+    private boolean validateInt(String str, JTextField field) {
+        try {
+            int num = Integer.parseInt(str);
+        } catch (Exception e) {
+            field.requestFocus();
+            showMessage("Nhập số không đúng");
+            return false;
+        }
+        return true;
+    }
+
+    private boolean validateSLV() {
+        try {
+            Byte slv = Byte.valueOf(SlvField.getText().trim());
+            if (slv < 0 || slv > 10) {
+                SlvField.requestFocus();
+                showMessage("số lượng vé không hợp lệ, nên trong khoảng 0 đến 10.");
+                return false;
+            }
+        } catch (Exception e) {
+            SlvField.requestFocus();
+            showMessage("Số lượng vé không hợp lệ!");
+            return false;
+        }
+        return true;
+    }
+
+   
+    
+    /// Addlistener của Quản lý Khách
+
+    public void addSearchKhachListener(ActionListener listener) {
+        TimKhachbtn.addActionListener(listener);
+    }
+
+    // Khach addListener
+    public void addAddKhachListener(ActionListener listener) {
+        AddKhach.addActionListener(listener);
+    }
+
+    public void addClearListener(ActionListener listener) {
+        clearKhach.addActionListener(listener);
+    }
+
+    public void addListKhachSelectionListener(ListSelectionListener listener) {
+        BangKhachHang.getSelectionModel().addListSelectionListener(listener);
+    }
+
+    public void addDeleteKhachListener(ActionListener listener) {
+        DeleteKhach.addActionListener(listener);
+    }
+
+    public void addEditKhachListener(ActionListener listener) {
+        EditKhach.addActionListener(listener);
+    }
+
+    ////// end Quản lý khách
+    
+    
+    
+    
+    
 /////// Doanh thu
     public void showDoanhThu(double dt) {
         this.tongDoanhThu.setText(dt + "đ");
@@ -576,12 +973,10 @@ public class ManagerView extends javax.swing.JFrame {
         }
     }
 
-
-
     public boolean getDtPhimTangDan() {
         return this.tieuChiDtPhim.isSelected();
     }
-    
+
     public boolean getDtSchTangDan() {
         return this.tieuChiDtSch.isSelected();
     }
@@ -652,21 +1047,7 @@ public class ManagerView extends javax.swing.JFrame {
             this.DoanhThuSch.add(dtSchPanel);
         }
     }
-
-
-
-    public void addSortDoanhThuPhimListener(ActionListener listener) {
-        this.sortDtPhimButton.addActionListener(listener);
-    }
-
-    public void addSortDoanhThuSchListener(ActionListener listener) {
-        this.sortDtSchButton.addActionListener(listener);
-    }
-
-    public void addResetDoanhThuListener(ActionListener listener) {
-        this.resetDTButton.addActionListener(listener);
-    }
-
+    
     public void showDtPhongList(List<Phong> list, List<Ve> ves) {
         if (list != null) {
             int size = list.size();
@@ -694,422 +1075,60 @@ public class ManagerView extends javax.swing.JFrame {
     public boolean getDtPhongTangDan() {
         return this.tieuChiDtPhong.isSelected();
     }
+    
+    public String getInforDtbegin() {
+        if (!validateDouble(DoanhThuBegin.getText())) {
+            return "0";
+        }
+        return DoanhThuBegin.getText();
+    }
+
+    public String getInforDtend() {
+        if (!validateDouble(DoanhThuEnd.getText())) {
+            return "1000000000.0";
+        }
+        return DoanhThuEnd.getText();
+    }
+
+    public boolean validateDouble(String douStr) {
+        try {
+            double dou = Double.parseDouble(douStr);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    
+    // Addlistener Quản lý Doanh thu
+    public void addSortDoanhThuPhimListener(ActionListener listener) {
+        this.sortDtPhimButton.addActionListener(listener);
+    }
+
+    public void addSortDoanhThuSchListener(ActionListener listener) {
+        this.sortDtSchButton.addActionListener(listener);
+    }
+
+    public void addResetDoanhThuListener(ActionListener listener) {
+        this.resetDTButton.addActionListener(listener);
+    }
 
     public void addSortDoanhThuPhongListener(ActionListener listener) {
         this.sortDtPhongButton.addActionListener(listener);
     }
-    
-     public void addSearchDoanhThuListener(ActionListener listener) {
+
+    public void addSearchDoanhThuListener(ActionListener listener) {
         DoanhThuPhongSearch.addActionListener(listener);
-     }
-     
-     public String getInforDtbegin(){
-         if (!validateDouble(DoanhThuBegin.getText())) {
-             return "0";
-         }
-         return DoanhThuBegin.getText();
-     }
-     public String getInforDtend(){
-         if (!validateDouble(DoanhThuEnd.getText())) {
-             return "1000000000.0";
-         }
-         return DoanhThuEnd.getText();
-     }
-     
-     public boolean validateDouble(String douStr) {
-         try {
-             double dou = Double.parseDouble(douStr);
-             return true;
-         } catch (Exception e) {
-             return false;
-         }
-     }
-
-    public void showMessage(String message) {
-        JOptionPane.showMessageDialog(this, message);
     }
 
-/////// Quản lý phim
-    public void showListPhim(List<Phim> list) {
-        int size = list.size();
-        if (size != 0) {
-            Object[][] phim = new Object[size][6];
-            for (int i = 0; i < size; i++) {
-                phim[i][0] = list.get(i).getId();
-                phim[i][1] = list.get(i).getTen();
-                phim[i][2] = list.get(i).getTheLoai();
-                phim[i][3] = list.get(i).getDoTuoi();
-                phim[i][4] = list.get(i).inThoiLuong();
-                phim[i][5] = list.get(i).inTgKhoiChieu();
-            }
-            BangPhim.setModel(new DefaultTableModel(phim, columnNames1));
-        } else {
-            this.showMessage("Không có kết quả");
-        }
+    ///// end Quản lý Doanh thu
 
-    }
+   
 
-    public void setTheLoaiComboAndDoTuoiSpinner() {
-        doTuoiSpinner.setValue(13);
-        theLoaiCombo.setModel(new javax.swing.DefaultComboBoxModel<>(Phim.dsTheLoai));
-    }
 
-    public void fillPhimFromSelectedRow(String posterLink) {
-        // lấy chỉ số của hàng được chọn 
-        int row = BangPhim.getSelectedRow();
-        if (row >= 0) {
-            IDPhimField.setText(BangPhim.getModel().getValueAt(row, 0).toString());
-            TenPhimField.setText(BangPhim.getModel().getValueAt(row, 1).toString());
-            this.theLoaiCombo.setSelectedItem(BangPhim.getModel().getValueAt(row, 2).toString());
-            doTuoiSpinner.setValue(BangPhim.getModel().getValueAt(row, 3));
-            ThoiLuongField.setText(BangPhim.getModel().getValueAt(row, 4).toString());
-            NgayKhoiChieuField.setText(BangPhim.getModel().getValueAt(row, 5).toString());
-            posterFrame.setSize(200, 250);
-            posterFrame.setIcon(this.getImage(posterLink, posterFrame));
-            // enable Edit and Delete buttons
-            EditPhimButton.setEnabled(true);
-            DeletePhimButton.setEnabled(true);
-            // disable Add button
-            AddPhimButton.setEnabled(false);
-        }
-    }
-
-    public String getIDPhimField() {
-        return this.IDPhimField.getText();
-    }
-
-    public Phim getPhimInfo() {
-        if (!validateString(TenPhimField.getText(), TenPhimField) || !validateInt(ThoiLuongField.getText(), ThoiLuongField)) {
-            return null;
-        }
-        if (!this.validateDate(NgayKhoiChieuField.getText(), NgayKhoiChieuField)) {
-            return null;
-        }
-        try {
-            Phim phim = new Phim();
-//            if (TenPhimField.getText() != null) {
-//                phim.setTen(TenPhimField.getText());
-//            }
-//            if (IDPhimField.getText() != null && !"".equals(IDPhimField.getText())) {
-//                phim.setId(Integer.parseInt(IDPhimField.getText().substring(2).trim()));
-//            }
-            phim.setId(IDPhimField.getText().trim());
-            phim.setTen(TenPhimField.getText().trim());
-            phim.setTheLoai(theLoaiCombo.getSelectedItem().toString().trim());
-            phim.setDoTuoi(Integer.parseInt((doTuoiSpinner.getValue().toString())));
-            phim.setThoiLuong(Integer.parseInt(ThoiLuongField.getText()));
-            phim.setTgKhoiChieu(NgayKhoiChieuField.getText().trim());
-            return phim;
-        } catch (NumberFormatException e) {
-            showMessage(e.getMessage());
-        }
-        return null;
-    }
-
-    public void showPhim(Phim phim) {
-        IDPhimField.setText("" + phim.getId());
-        TenPhimField.setText("" + phim.getTen());
-        doTuoiSpinner.setValue(phim.getDoTuoi());
-        theLoaiCombo.setSelectedItem(phim.getTheLoai());
-        ThoiLuongField.setText("" + phim.inThoiLuong());
-        NgayKhoiChieuField.setText("" + phim.inTgKhoiChieu());
-        EditPhimButton.setEnabled(true);
-        DeletePhimButton.setEnabled(true);
-        AddPhimButton.setEnabled(false);
-    }
-
-    public void clearPhimInfo() {
-        IDPhimField.setText("");
-        TenPhimField.setText("");
-        doTuoiSpinner.setValue(13);
-        theLoaiCombo.setSelectedItem("Chọn một thể loại");
-
-        ThoiLuongField.setText("");
-        NgayKhoiChieuField.setText("");
-        EditPhimButton.setEnabled(false);
-        DeletePhimButton.setEnabled(false);
-        AddPhimButton.setEnabled(true);
-    }
-
-    public int luachonPhimTK() {
-        if (TimKiemPhimField.getText().equals("") || TimKiemPhimField.getText() == null) {
-            return -1;
-        }
-        int k;
-        k = LuaChonPhim.getSelectedIndex();
-        return k;
-    }
-
-    public String inforPhimSearch() {
-        String s = TimKiemPhimField.getText().trim();
-
-        return s;
-    }
-
-    public void addAddPhimListener(ActionListener listener) {
-        AddPhimButton.addActionListener(listener);
-    }
-
-    public void addClearPhimListener(ActionListener listener) {
-        ClearPhimButton.addActionListener(listener);
-    }
-
-    public void addListPhimSelectionListener(ListSelectionListener listener) {
-        BangPhim.getSelectionModel().addListSelectionListener(listener);
-    }
-
-    public void addDeletePhimListener(ActionListener listener) {
-        DeletePhimButton.addActionListener(listener);
-    }
-
-    public void addEditPhimListener(ActionListener listener) {
-        EditPhimButton.addActionListener(listener);
-    }
-
-    public void addSearchPhimListener(ActionListener listener) {
-        TimKiemBtn.addActionListener(listener);
-    }
-
-    ////// end Quản lý phim
-//////// Quản lý khách
-    public void showListKhach(List<Khach> list) {
-        int size = list.size();
-        // với bảng studentTable có 5 cột, 
-        // khởi tạo mảng 2 chiều students, trong đó:
-        // số hàng: là kích thước của list student 
-        // số cột: là 5
-        Object[][] khach = new Object[size][6];
-        for (int i = 0; i < size; i++) {
-            khach[i][0] = list.get(i).getId();
-            khach[i][1] = list.get(i).getHoTen();
-            khach[i][2] = list.get(i).getNgaySinh().format(dateFormat);
-            khach[i][3] = list.get(i).getGioiTinh();
-            khach[i][4] = list.get(i).getSlVeDat();
-            khach[i][5] = list.get(i).getTongTien();
-
-        }
-        BangKhachHang.setModel(new DefaultTableModel(khach, columnNames));
-    }
-
-    public void setGioiTinhCombo() {
-        this.gioiTinhCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Nam", "Nữ"}));
-    }
-
-    public String getNgaySinhPicker() {
-        int day = this.NSCalendar.getDayChooser().getDay();
-        int month = this.NSCalendar.getMonthChooser().getMonth() + 1;
-        int year = this.NSCalendar.getYearChooser().getYear();
-        CharSequence date = String.format("%02d-%02d-%d", day, month, year);
-        try {
-            String dateStr = LocalDate.parse(date, dateFormat).format(dateFormat);
-            return dateStr;
-        } catch (Exception e) {
-            this.showMessage("Thiếu thông tin ngày");
-            return "";
-        }
-    }
-
-    public void confirmNSPicker(String date) {
-        this.NgaySinhField.setText(date);
-    }
-
-    public void addNSDatePickerListener(ActionListener listener) {
-        this.confirmNS.addActionListener(listener);
-    }
-
-    //
-    public void fillKhachFromSelectedRow() {
-        // lấy chỉ số của hàng được chọn 
-        int row = BangKhachHang.getSelectedRow();
-        if (row >= 0) {
-            IDField.setText(BangKhachHang.getModel().getValueAt(row, 0).toString());
-            HoTenField.setText(BangKhachHang.getModel().getValueAt(row, 1).toString());
-            NgaySinhField.setText(BangKhachHang.getModel().getValueAt(row, 2).toString());
-            gioiTinhCombo.setSelectedItem(BangKhachHang.getModel().getValueAt(row, 3).toString());
-            SlvField.setText(BangKhachHang.getModel().getValueAt(row, 4).toString());
-            // enable Edit and Delete buttons
-            EditKhach.setEnabled(true);
-            DeleteKhach.setEnabled(true);
-            // disable Add button
-            AddKhach.setEnabled(false);
-        }
-    }
-
-    public Khach getKhachInfo() {
-        // validate student
-        if (!this.validateString(HoTenField.getText(), HoTenField) || !this.validateDate(NgaySinhField.getText(), NgaySinhField)) {
-            return null;
-        }
-        try {
-            Khach khach = new Khach();
-            if (HoTenField.getText() != null) {
-
-            }
-            if (IDField.getText() != null && !"".equals(IDField.getText())) {
-                khach.setId(IDField.getText().trim());
-            }
-
-            khach.setHoTen(HoTenField.getText().trim());
-            khach.setGioiTinh(gioiTinhCombo.getSelectedItem().toString());
-            khach.setNgaySinh(NgaySinhField.getText().trim());
-//            khach.setSlVeDat(Integer.parseInt(SlvField.getText().trim()));
-            return khach;
-        } catch (NumberFormatException e) {
-            showMessage(e.getMessage());
-        }
-        return null;
-    }
-
-    public void showKhach(Khach khach) {
-        IDField.setText("" + khach.getId());
-        HoTenField.setText("" + khach.getHoTen());
-        gioiTinhCombo.setSelectedItem(khach.getGioiTinh());
-        NgaySinhField.setText("" + khach.getNgaySinh().format(dateFormat));
-        SlvField.setText("" + khach.getSlVeDat());
-//        gpaField.setText("" + student.getGpa()); 
-
-        // enable Edit and Delete buttons
-        EditKhach.setEnabled(true);
-        DeleteKhach.setEnabled(true);
-        // disable Add button
-        AddKhach.setEnabled(false);
-    }
-
-    /**
-     * xóa thông tin student
-     */
-    public void clearKhachInfo() {
-        IDField.setText("");
-        HoTenField.setText("");
-        gioiTinhCombo.setSelectedIndex(0);
-        NgaySinhField.setText("");
-
-        SlvField.setText("");
-        // disable Edit and Delete buttons
-        EditKhach.setEnabled(false);
-        DeleteKhach.setEnabled(false);
-        // enable Add button
-        AddKhach.setEnabled(true);
-    }
-
-    private boolean validateString(String str, JTextField field) {
-        if (str == null || "".equals(str.trim())) {
-            field.requestFocus();
-            showMessage("Name không được trống.");
-            return false;
-        }
-        return true;
-    }
-
-    private boolean validateDate(String date, JTextField field) {
-        try {
-            LocalDate time = LocalDate.parse(date, dateFormat);
-        } catch (Exception e) {
-            field.requestFocus();
-            showMessage("Thời gian không đúng định dạng hoặc bị bỏ trống");
-            return false;
-        }
-        return true;
-    }
-
-    private boolean validateDateTime(String date, JTextField field) {
-        try {
-            LocalDateTime time = LocalDateTime.parse(date, formatDateTime);
-        } catch (Exception e) {
-            field.requestFocus();
-            showMessage("Thời gian không đúng định dạng hoặc bị bỏ trống");
-            return false;
-        }
-        return true;
-    }
-
-    private boolean validateBefore(String date, JTextField field) {
-        try {
-            LocalDateTime time = LocalDateTime.parse(date, formatDateTime);
-            if (time.isBefore(LocalDateTime.now())) {
-                field.requestFocus();
-                showMessage("Thời gian chiếu phải ở tương lai");
-                return false;
-            }
-        } catch (Exception e) {
-            return false;
-        }
-        return true;
-    }
-
-    private boolean validateInt(String str, JTextField field) {
-        try {
-            int num = Integer.parseInt(str);
-        } catch (Exception e) {
-            field.requestFocus();
-            showMessage("Nhập số không đúng");
-            return false;
-        }
-        return true;
-    }
-
-    private boolean validateSLV() {
-        try {
-            Byte slv = Byte.valueOf(SlvField.getText().trim());
-            if (slv < 0 || slv > 10) {
-                SlvField.requestFocus();
-                showMessage("số lượng vé không hợp lệ, nên trong khoảng 0 đến 10.");
-                return false;
-            }
-        } catch (Exception e) {
-            SlvField.requestFocus();
-            showMessage("Số lượng vé không hợp lệ!");
-            return false;
-        }
-        return true;
-    }
-
-    public int luachonKhachTK() {
-        if (TimKiemKhachField.getText().equals("") || TimKiemKhachField.getText() == null) {
-            return -1;
-        }
-        int k;
-        k = LuaChonKhach.getSelectedIndex();
-        return k;
-    }
-
-    public String inforKhachSearch() {
-        String s = TimKiemKhachField.getText().trim();
-
-        return s;
-    }
-
-    public void addSearchKhachListener(ActionListener listener) {
-        TimKhachbtn.addActionListener(listener);
-    }
-
-    // Khach addListener
-    public void addAddKhachListener(ActionListener listener) {
-        AddKhach.addActionListener(listener);
-    }
-
-    public void addClearListener(ActionListener listener) {
-        clearKhach.addActionListener(listener);
-    }
-
-    public void addListKhachSelectionListener(ListSelectionListener listener) {
-        BangKhachHang.getSelectionModel().addListSelectionListener(listener);
-    }
-
-    public void addDeleteKhachListener(ActionListener listener) {
-        DeleteKhach.addActionListener(listener);
-    }
-
-    public void addEditKhachListener(ActionListener listener) {
-        EditKhach.addActionListener(listener);
-    }
-
-    ////// end Quản lý khách
     ////// Quản lý vé
-    // Ve method
     public void showListVe(List<Ve> list, List<Khach> khachs) {
         int size = list.size();
-     
+
         Object[][] ve = new Object[size][8];
         for (int i = 0; i < size; i++) {
             ve[i][0] = list.get(i).getId();
@@ -1150,10 +1169,6 @@ public class ManagerView extends javax.swing.JFrame {
             String[] phimArr = new String[phimSet.size()];
             String[] phimSetStr = phimSet.toArray(phimArr);
 
-//        for (int i = 0; i < phongStr.length; i++) {
-//            phongStr[i] = phongList.get(i).getId();
-//
-//        }
             for (int i = 0; i < phongStr.length; i++) {
                 if (phongList.get(i).getSuatChieu() != null) {
                     thoiluongStr[i] = "" + phongList.get(i).getSuatChieu().getPhim().inThoiLuong();
@@ -1167,40 +1182,6 @@ public class ManagerView extends javax.swing.JFrame {
             ListKhachHang.setModel(new javax.swing.DefaultComboBoxModel<>(khachIDStr));
             phimCombo1.setModel(new javax.swing.DefaultComboBoxModel<>(phimArr));
             LuaChonVe.setModel(new javax.swing.DefaultComboBoxModel<>(columnNames2));
-//        ListViTri.setMaximumRowCount(100);
-//        ListViTri.setModel(new javax.swing.DefaultComboBoxModel<>(gheStr));
-//        ListThoiLuong.setModel(new javax.swing.DefaultComboBoxModel<>(thoiluongStr));
-//        ListThoiGianChieu.setModel(new javax.swing.DefaultComboBoxModel<>(thoigianchieuStr));
-//        quanLySuatChieu.add(phongCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 150, -1));
-//        String[] tieuChiStr = {};
-//        tieuChiSchCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Id", "soluongve"}));
-//    }
-//    
-//    public SuatChieu getSch1Info(List<Phim> phimList, List<Phong> phongList) {
-//        // validate student
-////        if (!validateName() || !validateAge() || !validateAddress() || !validateGPA()) {
-////            return null;
-////        }
-//        try {
-//            SuatChieu sch = new SuatChieu();
-//            //sch.setId(this.IdField.getText());
-//            for (Phim ph : phimList) {
-//                if (this.ListPhim.getSelectedItem().toString() == null ? ph.getTen() == null : this.ListPhim.getSelectedItem().toString().equals(ph.getTen())) {
-//                    sch.setPhim(ph);
-//                }
-//            }
-//            for (Phong ph : phongList) {
-//                if (this.ListPhong.getSelectedItem().toString() == null ? ph.getId() == null : this.ListPhong.getSelectedItem().toString().equals(ph.getId())) {
-//                    sch.setPhong(ph);
-//                    sch.setPhongId();
-//                }
-//            }
-//          sch.setThoiGianChieu(ListThoiGianChieu.getSelectedItem().toString());
-//            return sch;
-//        } catch (Exception e) {
-//            showMessage(e.getMessage());
-//        }
-//        return null;
         }
     }
 
@@ -1217,7 +1198,27 @@ public class ManagerView extends javax.swing.JFrame {
         String s = SearchVe.getText().trim();
         return s;
     }
+    
+    /// addListener Quản lý vé
+     public void addDeleteVeListener(ActionListener listener) {
+        DeleteVeBtn.addActionListener(listener);
+    }
 
+    public void addSortNameVeListener(ActionListener listener) {
+        SortbyNamebtn.addActionListener(listener);
+    }
+
+    public void addSortPhimVeListener(ActionListener listener) {
+        SortbyPhimbtn.addActionListener(listener);
+    }
+ ////// end Quản lý vé   
+    
+ 
+    
+    
+    
+    
+/////// Đặt vé
     public String getIDVe() {
         String s = "";
         int row = this.BangVe.getSelectedRow();
@@ -1230,48 +1231,6 @@ public class ManagerView extends javax.swing.JFrame {
         return s;
     }
 
-//    public Ve inforVeSearch(List<Khach> khachs) {
-//        String s = SearchVe.getText().trim();
-//        Ve ve = new Ve();
-//        Ghe ghe = new Ghe();
-//        SuatChieu sch = new SuatChieu();
-//        if(luachonVeTK() == 0 ){
-//            ve.setId(s);
-//        } else if (luachonVeTK() == 1){
-//            
-//            for (Khach kh : khachs) {
-//                if (kh.getId() == null ? s == null : kh.getId().equals(s)) {
-//                    s = kh.getId();
-//                }
-//            }
-//            ghe.setKhachId(s);
-//            ve.setGhe(ghe);
-//        } else if (luachonVeTK() == 2) {
-//            ghe.setViTri(s);
-//            ve.setGhe(ghe);
-//        } else if (luachonVeTK() == 3){
-//            ghe.setLoai(s);
-//            ve.setGhe(ghe);
-//        } else if (luachonVeTK() == 4) {
-//            Phim phim = new Phim();
-//            phim.setTen(s);
-//            sch.setPhim(phim);
-//            ve.setSuat(sch);
-//         
-//        } else if (luachonVeTK() == 5){
-//            Phim phim = new Phim();
-//            phim.setThoiLuong(Integer.parseInt(s));
-//            sch.setPhim(phim);
-//            ve.setSuat(sch);
-//        } else if (luachonVeTK() == 6){
-//             sch.setPhongId1(s);
-//            ve.setSuat(sch);
-//            
-//        }
-//       
-//        return ve;
-//    }
-//    
     public Khach getKhachInfor(List<Khach> khachs) {
         try {
             Khach khach = new Khach();
@@ -1333,36 +1292,8 @@ public class ManagerView extends javax.swing.JFrame {
         this.seatDialog.setVisible(false);
     }
 
-//    public void addAddVeListener(ActionListener listener) {
-//        chonGheButton.addActionListener(listener);
-//    }
-    public void addDatVeListener(ActionListener listener) {
-        DatVebtn.addActionListener(listener);
-    }
-
-//    public void addSearchVeListener(ActionListener listener) {
-//        SearchVeBtn.addActionListener(listener);
-//    }
-    public void addListSuatChieuSelectionListener1(ListSelectionListener listener) {
-        this.suatChieuTable2.getSelectionModel().addListSelectionListener(listener);
-        this.BangGhe.getSelectionModel().addListSelectionListener(listener);
-    }
-
-    public void addListGheSelectionListener(ListSelectionListener listener) {
-        this.BangGhe.getSelectionModel().addListSelectionListener(listener);
-    }
-
-    public void addselectSeatListener(ActionListener listener) {
-        this.chonGheButton.addActionListener(listener);
-    }
-    //////////////////////////////////////////
-
     public void showListSuatChieuDatVe(List<SuatChieu> list) {
         int size = list.size();
-        // với bảng studentTable có 5 cột, 
-        // khởi tạo mảng 2 chiều students, trong đó:
-        // số hàng: là kích thước của list student 
-        // số cột: là 5
         Object[][] schs = new Object[size][4];
         for (int i = 0; i < size; i++) {
             schs[i][0] = list.get(i).getId();
@@ -1382,9 +1313,6 @@ public class ManagerView extends javax.swing.JFrame {
         this.phimCombo1.setSelectedItem(sch.getPhim().getTen());
         this.phongDatVeCombo.setText(sch.getPhong().getId());
         this.tgChieuField1.setText(sch.getThoiGianChieu().format(formatDateTime));
-        // enable Edit and Delete buttons
-
-//        // disable Add button
     }
 
     public void fillSuatChieuDatVeFromSelectedRow(List<Phim> phimList) {
@@ -1400,10 +1328,6 @@ public class ManagerView extends javax.swing.JFrame {
     }
 
     public SuatChieu getDatVeSchInfo(List<SuatChieu> list) {
-        // validate student
-//        if (!validateName() || !validateAge() || !validateAddress() || !validateGPA()) {
-//            return null;
-//        }
         try {
             SuatChieu sch = new SuatChieu();
             sch.setId(this.DatVeSchId.getText());
@@ -1426,9 +1350,6 @@ public class ManagerView extends javax.swing.JFrame {
         this.phimCombo1.setSelectedIndex(0);
         this.tgChieuField1.setText("");
         this.ViTriField.setText("");
-        // disable Edit and Delete buttons
-
-        // enable Add button
     }
 
     public void fillGheFromSelectedRow() {
@@ -1443,29 +1364,38 @@ public class ManagerView extends javax.swing.JFrame {
         return BangGhe.isEnabled();
     }
 
+    
+    //// Addlistener Đặt vé
     public void addReloadListener(ActionListener listener) {
         reLoadButton.addActionListener(listener);
     }
 
     public void addSearchVeListener(ActionListener listener) {
         SearchVeBtn.addActionListener(listener);
+    }    
+    public void addDatVeListener(ActionListener listener) {
+        DatVebtn.addActionListener(listener);
     }
 
-    public void addDeleteVeListener(ActionListener listener) {
-        DeleteVeBtn.addActionListener(listener);
+    public void addListSuatChieuDatVeSelectionListener(ListSelectionListener listener) {
+        this.suatChieuTable2.getSelectionModel().addListSelectionListener(listener);
+        this.BangGhe.getSelectionModel().addListSelectionListener(listener);
     }
 
-    public void addSortNameVeListener(ActionListener listener) {
-        SortbyNamebtn.addActionListener(listener);
+    public void addListGheSelectionListener(ListSelectionListener listener) {
+        this.BangGhe.getSelectionModel().addListSelectionListener(listener);
     }
 
-    public void addSortPhimVeListener(ActionListener listener) {
-        SortbyPhimbtn.addActionListener(listener);
+    public void addselectSeatListener(ActionListener listener) {
+        this.chonGheButton.addActionListener(listener);
     }
+/////// end Đặt vé
+    
+    
+    
+    
 
-    // Het ve method
-/////// end Quản lý vé
-    // Het phim method
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

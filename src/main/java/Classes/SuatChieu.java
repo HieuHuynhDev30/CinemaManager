@@ -19,8 +19,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *
  * @author Lenovo
  */
-@XmlRootElement(name = "suatChieu")
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "suatChieu") // anotation xác định element được đọc vào file xml
+@XmlAccessorType(XmlAccessType.FIELD) // đọc dưới dạng trường, nhận các thuộc tính là một element
 public class SuatChieu {
 
     private static int currId;

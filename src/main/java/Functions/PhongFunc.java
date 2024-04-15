@@ -22,6 +22,8 @@ import utils.FileUtils;
  *
  * @author Lenovo
  */
+
+// Lớp định nghĩa các hành vi làm việc với danh sách phòng
 public class PhongFunc {
 
     private static final String PHONG_FILE_NAME = "xml/Phong.xml";
@@ -33,12 +35,14 @@ public class PhongFunc {
         this.suatChieuFunc = new SuatChieuFunc();
     }
 
+    // hành vi viết vào file xml
     public void writeListPhongs(List<Phong> phongs) {
         PhongListXML phongXML = new PhongListXML();
         phongXML.setPhong(phongs);
         FileUtils.writeXMLtoFile(PHONG_FILE_NAME, phongXML);
     }
 
+    // hành vi đọc từ file xml
     public List<Phong> readListPhongs() {
         List<Phong> list = new ArrayList<>();
         PhongListXML phongListXML = (PhongListXML) FileUtils.readXMLFile(

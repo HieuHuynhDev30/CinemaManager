@@ -15,11 +15,11 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author Lenovo
  */
-@XmlRootElement(name = "ve")
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "ve") // anotation xác định element được đọc vào file xml
+@XmlAccessorType(XmlAccessType.FIELD) // đọc dưới dạng trường, nhận các thuộc tính là một element
 public class Ve {
     private static int currId;
-    @XmlAttribute
+    @XmlAttribute // xác định cách đọc thuộc tính dưới dạng thuộc tính của element mẹ
     private String id;
     private Ghe ghe;
     private SuatChieu suat;
@@ -27,7 +27,6 @@ public class Ve {
     public Ve() {
         currId++;
         this.id = "V" + currId;
-//        khachFunc = new KhachFunc();
     }
 
     public String getId() {

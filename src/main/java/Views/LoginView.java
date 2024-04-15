@@ -20,6 +20,8 @@ import javax.swing.JOptionPane;
  *
  * @author Lenovo
  */
+
+// Lớp định nghĩa giao diện cho cửa sổ đăng nhập
 public class LoginView extends javax.swing.JFrame  implements ActionListener {
     
     /**
@@ -31,6 +33,8 @@ public class LoginView extends javax.swing.JFrame  implements ActionListener {
         this.setIconImage(icon.getImage());
     }
 
+    
+    // hàm đọc file ảnh giúp hiện thị ảnh theo đúng kích thước theo đối tượng giao diện chứa ảnh
     public final ImageIcon getImage(String imagePath, JLabel label) {
 
         try {

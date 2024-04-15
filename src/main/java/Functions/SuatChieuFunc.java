@@ -23,6 +23,8 @@ import utils.FileUtils;
  *
  * @author Lenovo
  */
+
+// Lớp định nghĩa các hành vi làm việc với danh sách suất chiếu
 public class SuatChieuFunc {
 
     private static final String SCH_FILE_NAME = "xml/SuatChieu.xml";
@@ -40,22 +42,15 @@ public class SuatChieuFunc {
         }
     }
 
+    // hành vi viết vào file xml
     public void writeListSuatChieus(List<SuatChieu> schs) {
         SuatChieuListXML schXML = new SuatChieuListXML();
         schXML.setSuatChieu(schs);
         FileUtils.writeXMLtoFile(SCH_FILE_NAME, schXML);
     }
 
-    public List<Phong> readListPhongs() {
-        List<Phong> list = new ArrayList<>();
-        PhongListXML phongListXML = (PhongListXML) FileUtils.readXMLFile(
-                PHONG_FILE_NAME, PhongListXML.class);
-        if (phongListXML != null) {
-            list = phongListXML.getPhong();
-        }
-        return list;
-    }
 
+    // hành vi đọc từ file xml
     public List<SuatChieu> readListSuatChieus() {
         List<SuatChieu> list = new ArrayList<>();
         SuatChieuListXML schListXML = (SuatChieuListXML) FileUtils.readXMLFile(
@@ -72,6 +67,16 @@ public class SuatChieuFunc {
                     }
                 }
             }
+        }
+        return list;
+    }
+    
+      public List<Phong> readListPhongs() {
+        List<Phong> list = new ArrayList<>();
+        PhongListXML phongListXML = (PhongListXML) FileUtils.readXMLFile(
+                PHONG_FILE_NAME, PhongListXML.class);
+        if (phongListXML != null) {
+            list = phongListXML.getPhong();
         }
         return list;
     }

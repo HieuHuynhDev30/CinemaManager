@@ -16,8 +16,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *
  * @author Lenovo
  */
-@XmlRootElement(name = "gheThuong")
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "gheThuong") // anotation xác định element được đọc vào file xml
+@XmlAccessorType(XmlAccessType.FIELD) // đọc dưới dạng trường, nhận các thuộc tính là một element
 public class GheThuong extends Ghe {
 
     public GheThuong() {

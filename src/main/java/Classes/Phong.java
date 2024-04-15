@@ -18,18 +18,17 @@ import javax.xml.bind.annotation.XmlElement;
  *
  * @author Lenovo
  */
-@XmlRootElement(name = "phong")
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "phong") // anotation xác định element được đọc vào file xml
+@XmlAccessorType(XmlAccessType.FIELD) // đọc dưới dạng trường, nhận các thuộc tính là một element
 public class Phong {
 
     private static int currId;
     private int slVip, slThuong, slDoi;
-    @XmlAttribute
+    @XmlAttribute // xác định cách đọc thuộc tính dưới dạng thuộc tính của element mẹ
     private String id;
     private Map<String, GheThuong> dsGheThuong = new HashMap<>();
     private Map<String, GheVip> dsGheVip = new HashMap<>();
     private Map<String, GheDoi> dsGheDoi = new HashMap<>();
-//    public List<Ghe> GheList = new ArrayList<>();
     private boolean isFull;
     private SuatChieu suatChieu;
     private boolean isPlaying;

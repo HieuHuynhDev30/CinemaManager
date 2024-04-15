@@ -20,15 +20,15 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *
  * @author Lenovo
  */
-@XmlRootElement(name = "khach")
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "khach") // anotation xác định element được đọc vào file xml
+@XmlAccessorType(XmlAccessType.FIELD) // đọc dưới dạng trường, nhận các thuộc tính là một element
 public class Khach {
     private static int currId;
     private int slVeDat, tongTien;
-    @XmlAttribute
+    @XmlAttribute // xác định cách đọc thuộc tính dưới dạng thuộc tính của element mẹ
     private String id;
     private String hoTen, gioiTinh;
-    @XmlJavaTypeAdapter(LocalDateAdapter.class)
+    @XmlJavaTypeAdapter(LocalDateAdapter.class) // gán adapter cho thuộc tính dạng ngày giờ để có thể đọc được vào trong file xml
     private LocalDate ngaySinh;
     public static final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy");
     private List<Ve> dsVe = new ArrayList<>();

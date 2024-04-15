@@ -22,6 +22,7 @@ import utils.FileUtils;
  *
  * @author Lenovo
  */
+// Lớp định nghĩa các hành vi làm việc với danh sách vé
 public class VeFunc {
 
     private static final String VE_FILE_NAME = "xml/Ve.xml";
@@ -33,10 +34,31 @@ public class VeFunc {
         this.khachFunc = new KhachFunc();
         validateListXML();
     }
-     public final void validateListXML() {
+
+    // kiểm tra danh sách vé đọc từ file xml
+    public final void validateListXML() {
         if (veList == null) {
             veList = new ArrayList<>();
         }
+    }
+
+    // hành vi viết vào file xml
+    public void writeListVes(List<Ve> ves) {
+        VeListXML veXML = new VeListXML();
+        veXML.setVe(ves);
+        FileUtils.writeXMLtoFile(VE_FILE_NAME, veXML);
+    }
+
+    // hành vi đọc từ file xml
+    public List<Ve> readListVes() {
+        List<Ve> list = new ArrayList<>();
+        VeListXML veListXML = (VeListXML) FileUtils.readXMLFile(
+                VE_FILE_NAME, VeListXML.class);
+        if (veListXML != null) {
+            System.out.println("error");
+            list = veListXML.getVe();
+        }
+        return list;
     }
 
     public Ve taoVe(Ghe ghe, SuatChieu suat) {
@@ -78,7 +100,7 @@ public class VeFunc {
         }
         return false;
     }
-    
+
     public void xoaVe(String s) {
         String veId = s;
         for (Ve V : this.veList) {
@@ -86,119 +108,102 @@ public class VeFunc {
                 this.veList.remove(V);
                 this.writeListVes(veList);
             }
-        }    
+        }
     }
 
-    public void writeListVes(List<Ve> ves) {
-        VeListXML veXML = new VeListXML();
-        veXML.setVe(ves);
-        FileUtils.writeXMLtoFile(VE_FILE_NAME, veXML);
+    public List<Ve> SearchTenPhim(String s) {
+        List<Ve> list = new ArrayList<>();
+        for (Ve V : this.veList) {
+
+            if (V.getSuat().getPhim().getTen().contains(s)) {
+                list.add(V);
+
+            }
+
+        }
+        return list;
     }
 
-    public List<Ve> readListVes() {
-        List<Ve> list = new ArrayList<>();
-        VeListXML veListXML = (VeListXML) FileUtils.readXMLFile(
-                VE_FILE_NAME, VeListXML.class);
-        if (veListXML != null) {
-            System.out.println("error");
-            list = veListXML.getVe();
-        }
-        return list;
-    }
-    
-    public List<Ve> SearchTenPhim(String s){
+    public List<Ve> SearchPhong(String s) {
         List<Ve> list = new ArrayList<>();
         for (Ve V : this.veList) {
-            
-            if(V.getSuat().getPhim().getTen().contains(s)){
-                    list.add(V);
-                
+            if (V.getPhong().contains(s)) {
+                list.add(V);
+
             }
-           
+
         }
         return list;
     }
-    public List<Ve> SearchPhong(String s){
+
+    public List<Ve> SearchIdVe(String s) {
         List<Ve> list = new ArrayList<>();
-        for (Ve V : this.veList) {
-            if(V.getPhong().contains(s)){
-                    list.add(V);
-                
-            }
-           
-        }
-        return list;
-    }
-    public List<Ve> SearchIdVe(String s){
-        List<Ve> list = new ArrayList<>();
-        for (Ve v: this.veList) {
+        for (Ve v : this.veList) {
             if (v.getId().contains(s)) {
                 list.add(v);
             }
         }
         return list;
     }
-    
-    
-     public List<Ve> SearchKhachVe(String s){
+
+    public List<Ve> SearchKhachVe(String s) {
         List<Ve> list = new ArrayList<>();
-        List <Khach> list1 = khachFunc.searchTen(s);
+        List<Khach> list1 = khachFunc.searchTen(s);
         for (Ve V : this.veList) {
-            for (Khach kh : list1){
-                if(V.getGhe().getKhachId().equals(kh.getId())){
+            for (Khach kh : list1) {
+                if (V.getGhe().getKhachId().equals(kh.getId())) {
                     list.add(V);
                 }
             }
-            
+
         }
         return list;
     }
-     
-     public List<Ve> SearchVitriVe(String s){
+
+    public List<Ve> SearchVitriVe(String s) {
         List<Ve> list = new ArrayList<>();
         for (Ve v : this.veList) {
-           if (v.getGhe().getViTri().contains(s)) {
-               list.add(v);
-           }
-        }
-        return list;
-    }
-     
-      public List<Ve> SearchLoaiGhe(String s){
-        List<Ve> list = new ArrayList<>();
-        for (Ve V : this.veList) {
-            if (V.getGhe().getLoai().contains(s) ) {               
-                list.add(V);
-            }
-        }
-        return list;
-    }
-      
-      public List<Ve> SearchThoiGian(String s){
-        List<Ve> list = new ArrayList<>();
-        for (Ve v : this.veList) {
-            if (v.getSuat().inThoiGianChieu().contains(s)) {               
+            if (v.getGhe().getViTri().contains(s)) {
                 list.add(v);
             }
         }
         return list;
     }
-      
-      
-      
-       //sort
+
+    public List<Ve> SearchLoaiGhe(String s) {
+        List<Ve> list = new ArrayList<>();
+        for (Ve V : this.veList) {
+            if (V.getGhe().getLoai().contains(s)) {
+                list.add(V);
+            }
+        }
+        return list;
+    }
+
+    public List<Ve> SearchThoiGian(String s) {
+        List<Ve> list = new ArrayList<>();
+        for (Ve v : this.veList) {
+            if (v.getSuat().inThoiGianChieu().contains(s)) {
+                list.add(v);
+            }
+        }
+        return list;
+    }
+
+    //sort
     public void sortVeByName(List<Khach> list) {
         Collections.sort(veList, new Comparator<Ve>() {
             public int compare(Ve ve1, Ve ve2) {
-                
+
                 return ve1.getKhachName(khachFunc.getKhachList()).compareTo(ve2.getKhachName(khachFunc.getKhachList()));
             }
         });
     }
+
     public void sortVeByPhim(List<Khach> list) {
         Collections.sort(veList, new Comparator<Ve>() {
             public int compare(Ve ve1, Ve ve2) {
-                
+
                 return ve1.getSuat().inPhim().compareTo(ve2.getSuat().inPhim());
             }
         });

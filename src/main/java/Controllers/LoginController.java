@@ -22,17 +22,12 @@ public class LoginController {
         loginView.setVisible(true);
     }
     
-    /**
-     * Lớp LoginListener chứa cài đặt cho sự kiện click button "Login"
-     * 
-     * @author viettuts.vn
-     */
     class LoginListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
             Admin admin = loginView.getAdmin();
             if (adminFunc.checkAdmin(admin)) {
-                // nếu đăng nhập thành công, mở màn hình quản lý sinh viên
+                // nếu đăng nhập thành công, mở màn hình quản lý rạp phim
                 managerView = new ManagerView();
                 ManagerController managerController = new ManagerController(managerView);
                 managerController.showManagerView();

@@ -21,6 +21,8 @@ import utils.FileUtils;
  *
  * @author Lenovo
  */
+
+// Lớp định nghĩa các hành vi làm việc với danh sách khách hàng
 public class KhachFunc {
 
     private static final String KHACH_FILE_NAME = "xml/Khach.xml";
@@ -31,18 +33,23 @@ public class KhachFunc {
         validateListXML();
     }
 
+    // kiểm tra danh sách khách đọc từ file xml
     public final void validateListXML() {
         if (khachList == null) {
             khachList = new ArrayList<>();
         }
     }
 
+    
+    // hành vi viết vào file xml
     public void writeListKhachs(List<Khach> khachs) {
         KhachListXML khachXML = new KhachListXML();
         khachXML.setKhach(khachs);
         FileUtils.writeXMLtoFile(KHACH_FILE_NAME, khachXML);
     }
 
+    
+    //hành vi đọc từ file xml
     public List<Khach> readListKhachs() {
         List<Khach> list = new ArrayList<>();
         KhachListXML khachListXML = (KhachListXML) FileUtils.readXMLFile(
@@ -53,6 +60,7 @@ public class KhachFunc {
         return list;
     }
 
+    
     public Khach taoKhach(String hoTen, String gioiTinh, String ns) {
         Khach k = new Khach();
         k.setHoTen(hoTen);
@@ -142,28 +150,11 @@ public class KhachFunc {
         this.khachList = khachList;
     }
 
-    // Khach method cua An
-    public void edit(Khach khach) {
-        int size = khachList.size();
-        for (int i = 0; i < size; i++) {
-            if (khachList.get(i).getId().equals(khach.getId())) {
-                khachList.get(i).setHoTen(khach.getHoTen());
-                khachList.get(i).setGioiTinh(khach.getGioiTinh());
-                //listKhach.get(i).setNgaySinh(khach.getNgaySinh().toString());
-                khachList.get(i).setSlVeDat(khach.getSlVeDat());
-                writeListKhachs(khachList);
-                break;
-            }
-        }
-    }
-
-    //
     public List<Khach> searchTen(String s) {
         List<Khach> list = new ArrayList<>();
         int size = khachList.size();
         for (int i = 0; i < size; i++) {
             if (khachList.get(i).getHoTen().contains(s)) {
-//                System.out.println("search");
                 list.add(khachList.get(i));
             }
         }
@@ -212,15 +203,10 @@ public class KhachFunc {
     }
 
     public void muaVe(Khach khach, Ve ve) {
-//        khach.dsVe.add(ve);
-//        khach.slVeDat++;
-//        khach.tongTien += ve.getGhe().getGia();
         khach = searchID(khach);
         xoaKhach(searchID(khach));
         khach.muaVe(ve);
         khachList.add(khach);
         writeListKhachs(khachList);
     }
-
-    //ket thuc
 }
