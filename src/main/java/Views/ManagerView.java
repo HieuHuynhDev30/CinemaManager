@@ -81,9 +81,6 @@ public class ManagerView extends javax.swing.JFrame {
 
         try {
             BufferedImage img = ImageIO.read(getClass().getResourceAsStream(imagePath));
-            if (img == null) {
-                System.out.println(imagePath);
-            }
             Image dimg = img.getScaledInstance(label.getWidth(), label.getHeight(), Image.SCALE_DEFAULT);
             ImageIcon imageIcon = new ImageIcon(dimg);
             return imageIcon;
@@ -214,7 +211,6 @@ public class ManagerView extends javax.swing.JFrame {
     
 //////// Quản lý phòng
     public void showListPhong(List<Phong> list, List<SuatChieu> schList) {
-        System.out.println("Show list phong");
         if (list != null) {
             int size = list.size();
             Object[][] phs = new Object[size][9];

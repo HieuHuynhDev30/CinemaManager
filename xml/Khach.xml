@@ -60,59 +60,6 @@
             </suat>
         </dsVe>
     </khach>
-    <khach id="K3">
-        <slVeDat>2</slVeDat>
-        <tongTien>400000</tongTien>
-        <hoTen>Trần Quốc Bảo</hoTen>
-        <gioiTinh>Nam</gioiTinh>
-        <ngaySinh>2003-04-27</ngaySinh>
-        <dsVe id="V9">
-            <ghe>
-                <gia>200000.0</gia>
-                <khachId>K3</khachId>
-                <loai>Doi</loai>
-                <viTri>P16C8</viTri>
-            </ghe>
-            <suat id="SCH228">
-                <phim id="Ph7">
-                    <ten>The Adventures of Maid Marian</ten>
-                    <theLoai>Hai huoc</theLoai>
-                    <doTuoi>16</doTuoi>
-                    <posterLink>/Images/maidmarian.jpg</posterLink>
-                    <dt>280000.0</dt>
-                    <thoiLuong>PT1H22M</thoiLuong>
-                    <TgKhoiChieu>2022-05-09</TgKhoiChieu>
-                </phim>
-                <phongId>P16</phongId>
-                <thoiGianChieu>22-05-2024 18:00</thoiGianChieu>
-                <dt>280000.0</dt>
-                <chieuXong>false</chieuXong>
-            </suat>
-        </dsVe>
-        <dsVe id="V44">
-            <ghe>
-                <gia>200000.0</gia>
-                <khachId>K3</khachId>
-                <loai>Doi</loai>
-                <viTri>P36D4</viTri>
-            </ghe>
-            <suat id="SCH202">
-                <phim id="Ph5">
-                    <ten>Heart Of Hunter</ten>
-                    <theLoai>Hanh dong</theLoai>
-                    <doTuoi>16</doTuoi>
-                    <posterLink>/Images/heartofhunter.jpg</posterLink>
-                    <dt>320000.0</dt>
-                    <thoiLuong>PT1H45M</thoiLuong>
-                    <TgKhoiChieu>2024-03-28</TgKhoiChieu>
-                </phim>
-                <phongId>P36</phongId>
-                <thoiGianChieu>22-04-2024 19:00</thoiGianChieu>
-                <dt>320000.0</dt>
-                <chieuXong>false</chieuXong>
-            </suat>
-        </dsVe>
-    </khach>
     <khach id="K6">
         <slVeDat>2</slVeDat>
         <tongTien>240000</tongTien>
@@ -344,6 +291,82 @@
                 <phongId>P25</phongId>
                 <thoiGianChieu>17-04-2024 17:00</thoiGianChieu>
                 <dt>320000.0</dt>
+                <chieuXong>false</chieuXong>
+            </suat>
+        </dsVe>
+    </khach>
+    <khach id="K3">
+        <slVeDat>3</slVeDat>
+        <tongTien>600000</tongTien>
+        <hoTen>Trần Quốc Bảo</hoTen>
+        <gioiTinh>Nam</gioiTinh>
+        <ngaySinh>2003-04-27</ngaySinh>
+        <dsVe id="V9">
+            <ghe>
+                <gia>200000.0</gia>
+                <khachId>K3</khachId>
+                <loai>Doi</loai>
+                <viTri>P16C8</viTri>
+            </ghe>
+            <suat id="SCH228">
+                <phim id="Ph7">
+                    <ten>The Adventures of Maid Marian</ten>
+                    <theLoai>Hai huoc</theLoai>
+                    <doTuoi>16</doTuoi>
+                    <posterLink>/Images/maidmarian.jpg</posterLink>
+                    <dt>280000.0</dt>
+                    <thoiLuong>PT1H22M</thoiLuong>
+                    <TgKhoiChieu>2022-05-09</TgKhoiChieu>
+                </phim>
+                <phongId>P16</phongId>
+                <thoiGianChieu>22-05-2024 18:00</thoiGianChieu>
+                <dt>280000.0</dt>
+                <chieuXong>false</chieuXong>
+            </suat>
+        </dsVe>
+        <dsVe id="V44">
+            <ghe>
+                <gia>200000.0</gia>
+                <khachId>K3</khachId>
+                <loai>Doi</loai>
+                <viTri>P36D4</viTri>
+            </ghe>
+            <suat id="SCH202">
+                <phim id="Ph5">
+                    <ten>Heart Of Hunter</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>16</doTuoi>
+                    <posterLink>/Images/heartofhunter.jpg</posterLink>
+                    <dt>320000.0</dt>
+                    <thoiLuong>PT1H45M</thoiLuong>
+                    <TgKhoiChieu>2024-03-28</TgKhoiChieu>
+                </phim>
+                <phongId>P36</phongId>
+                <thoiGianChieu>22-04-2024 19:00</thoiGianChieu>
+                <dt>320000.0</dt>
+                <chieuXong>false</chieuXong>
+            </suat>
+        </dsVe>
+        <dsVe id="V80">
+            <ghe>
+                <gia>200000.0</gia>
+                <khachId>K3</khachId>
+                <loai>Doi</loai>
+                <viTri>P81D2</viTri>
+            </ghe>
+            <suat id="SCH20">
+                <phim id="Ph4">
+                    <ten>Hard Hit</ten>
+                    <theLoai>Hanh dong</theLoai>
+                    <doTuoi>18</doTuoi>
+                    <posterLink>/Images/hardhit.jpg</posterLink>
+                    <dt>200000.0</dt>
+                    <thoiLuong>PT1H34M</thoiLuong>
+                    <TgKhoiChieu>2021-06-23</TgKhoiChieu>
+                </phim>
+                <phongId>P81</phongId>
+                <thoiGianChieu>23-04-2024 13:00</thoiGianChieu>
+                <dt>200000.0</dt>
                 <chieuXong>false</chieuXong>
             </suat>
         </dsVe>

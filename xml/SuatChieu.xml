@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <suatChieus>
-    <suatChieu id="SCH202">
-        <phim id="Ph5">
-            <ten>Heart Of Hunter</ten>
-            <theLoai>Hanh dong</theLoai>
+    <suatChieu id="SCH2">
+        <phim id="Ph1">
+            <ten>Alien Noid</ten>
+            <theLoai>Khoa hoc vien tuong</theLoai>
             <doTuoi>16</doTuoi>
-            <posterLink>/Images/heartofhunter.jpg</posterLink>
-            <dt>440000.0</dt>
-            <thoiLuong>PT1H45M</thoiLuong>
-            <TgKhoiChieu>2024-03-28</TgKhoiChieu>
+            <posterLink>/Images/aliennoid.jpg</posterLink>
+            <dt>120000.0</dt>
+            <thoiLuong>PT2H25M</thoiLuong>
+            <TgKhoiChieu>2022-07-20</TgKhoiChieu>
         </phim>
-        <phongId>P36</phongId>
-        <thoiGianChieu>22-04-2024 19:00</thoiGianChieu>
-        <dt>440000.0</dt>
+        <phongId>P49</phongId>
+        <thoiGianChieu>16-04-2024 15:00</thoiGianChieu>
+        <dt>120000.0</dt>
         <chieuXong>false</chieuXong>
     </suatChieu>
     <suatChieu id="SCH6">
@@ -28,6 +28,66 @@
         <phongId>P25</phongId>
         <thoiGianChieu>17-04-2024 17:00</thoiGianChieu>
         <dt>440000.0</dt>
+        <chieuXong>false</chieuXong>
+    </suatChieu>
+    <suatChieu id="SCH12">
+        <phim id="Ph3">
+            <ten>Dune: Part Two</ten>
+            <theLoai>Khoa hoc vien tuong</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/dune2.jpg</posterLink>
+            <dt>120000.0</dt>
+            <thoiLuong>PT2H45M</thoiLuong>
+            <TgKhoiChieu>2024-02-27</TgKhoiChieu>
+        </phim>
+        <phongId>P100</phongId>
+        <thoiGianChieu>18-04-2024 10:00</thoiGianChieu>
+        <dt>120000.0</dt>
+        <chieuXong>false</chieuXong>
+    </suatChieu>
+    <suatChieu id="SCH202">
+        <phim id="Ph5">
+            <ten>Heart Of Hunter</ten>
+            <theLoai>Hanh dong</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/heartofhunter.jpg</posterLink>
+            <dt>440000.0</dt>
+            <thoiLuong>PT1H45M</thoiLuong>
+            <TgKhoiChieu>2024-03-28</TgKhoiChieu>
+        </phim>
+        <phongId>P36</phongId>
+        <thoiGianChieu>22-04-2024 19:00</thoiGianChieu>
+        <dt>440000.0</dt>
+        <chieuXong>false</chieuXong>
+    </suatChieu>
+    <suatChieu id="SCH20">
+        <phim id="Ph4">
+            <ten>Hard Hit</ten>
+            <theLoai>Hanh dong</theLoai>
+            <doTuoi>18</doTuoi>
+            <posterLink>/Images/hardhit.jpg</posterLink>
+            <dt>400000.0</dt>
+            <thoiLuong>PT1H34M</thoiLuong>
+            <TgKhoiChieu>2021-06-23</TgKhoiChieu>
+        </phim>
+        <phongId>P81</phongId>
+        <thoiGianChieu>23-04-2024 13:00</thoiGianChieu>
+        <dt>400000.0</dt>
+        <chieuXong>false</chieuXong>
+    </suatChieu>
+    <suatChieu id="SCH214">
+        <phim id="Ph6">
+            <ten>Imaginary</ten>
+            <theLoai>Kinh di</theLoai>
+            <doTuoi>13</doTuoi>
+            <posterLink>/Images/imaginary.jpg</posterLink>
+            <dt>120000.0</dt>
+            <thoiLuong>PT1H45M</thoiLuong>
+            <TgKhoiChieu>2024-03-06</TgKhoiChieu>
+        </phim>
+        <phongId>P64</phongId>
+        <thoiGianChieu>24-04-2024 23:00</thoiGianChieu>
+        <dt>120000.0</dt>
         <chieuXong>false</chieuXong>
     </suatChieu>
     <suatChieu id="SCH228">
@@ -58,66 +118,6 @@
         <phongId>P4</phongId>
         <thoiGianChieu>23-05-2024 20:00</thoiGianChieu>
         <dt>200000.0</dt>
-        <chieuXong>false</chieuXong>
-    </suatChieu>
-    <suatChieu id="SCH20">
-        <phim id="Ph4">
-            <ten>Hard Hit</ten>
-            <theLoai>Hanh dong</theLoai>
-            <doTuoi>18</doTuoi>
-            <posterLink>/Images/hardhit.jpg</posterLink>
-            <dt>200000.0</dt>
-            <thoiLuong>PT1H34M</thoiLuong>
-            <TgKhoiChieu>2021-06-23</TgKhoiChieu>
-        </phim>
-        <phongId>P81</phongId>
-        <thoiGianChieu>23-04-2024 13:00</thoiGianChieu>
-        <dt>200000.0</dt>
-        <chieuXong>false</chieuXong>
-    </suatChieu>
-    <suatChieu id="SCH214">
-        <phim id="Ph6">
-            <ten>Imaginary</ten>
-            <theLoai>Kinh di</theLoai>
-            <doTuoi>13</doTuoi>
-            <posterLink>/Images/imaginary.jpg</posterLink>
-            <dt>120000.0</dt>
-            <thoiLuong>PT1H45M</thoiLuong>
-            <TgKhoiChieu>2024-03-06</TgKhoiChieu>
-        </phim>
-        <phongId>P64</phongId>
-        <thoiGianChieu>24-04-2024 23:00</thoiGianChieu>
-        <dt>120000.0</dt>
-        <chieuXong>false</chieuXong>
-    </suatChieu>
-    <suatChieu id="SCH12">
-        <phim id="Ph3">
-            <ten>Dune: Part Two</ten>
-            <theLoai>Khoa hoc vien tuong</theLoai>
-            <doTuoi>16</doTuoi>
-            <posterLink>/Images/dune2.jpg</posterLink>
-            <dt>120000.0</dt>
-            <thoiLuong>PT2H45M</thoiLuong>
-            <TgKhoiChieu>2024-02-27</TgKhoiChieu>
-        </phim>
-        <phongId>P100</phongId>
-        <thoiGianChieu>18-04-2024 10:00</thoiGianChieu>
-        <dt>120000.0</dt>
-        <chieuXong>false</chieuXong>
-    </suatChieu>
-    <suatChieu id="SCH2">
-        <phim id="Ph1">
-            <ten>Alien Noid</ten>
-            <theLoai>Khoa hoc vien tuong</theLoai>
-            <doTuoi>16</doTuoi>
-            <posterLink>/Images/aliennoid.jpg</posterLink>
-            <dt>120000.0</dt>
-            <thoiLuong>PT2H25M</thoiLuong>
-            <TgKhoiChieu>2022-07-20</TgKhoiChieu>
-        </phim>
-        <phongId>P49</phongId>
-        <thoiGianChieu>16-04-2024 15:00</thoiGianChieu>
-        <dt>120000.0</dt>
         <chieuXong>false</chieuXong>
     </suatChieu>
 </suatChieus>

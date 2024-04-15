@@ -200,8 +200,20 @@ public class PhongFunc {
         @Override
         public int compare(Phong o1, Phong o2) {
             if (!beLon) {
+                if (o2.getSuatChieu() == null) {
+                    return 1;
+                }
+                if (o1.getSuatChieu() == null) {
+                    return 1;
+                }
                 return o1.getSuatChieu().getPhim().getTen().compareTo(o2.getSuatChieu().getPhim().getTen());
             } else {
+                if (o2.getSuatChieu() == null) {
+                    return -1;
+                }
+                if (o1.getSuatChieu() == null) {
+                    return -1;
+                }
                 return o2.getSuatChieu().getPhim().getTen().compareTo(o1.getSuatChieu().getPhim().getTen());
             }
         }

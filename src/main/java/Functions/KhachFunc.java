@@ -77,7 +77,6 @@ public class KhachFunc {
         for (int i = 0; i < this.khachList.size(); i++) {
             Khach ph = this.khachList.get(i);
             if (ph.getId() == null ? p.getId() == null : ph.getId().equals(p.getId())) {
-                System.out.print("updated");
                 ph.setHoTen(p.getHoTen());
                 ph.setGioiTinh(p.getGioiTinh());
                 ph.setNgaySinh((CharSequence) p.inNgaySinh());
@@ -158,7 +157,6 @@ public class KhachFunc {
                 list.add(khachList.get(i));
             }
         }
-        System.out.println("search");
         return list;
     }
 
