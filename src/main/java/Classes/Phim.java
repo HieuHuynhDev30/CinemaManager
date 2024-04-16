@@ -43,7 +43,7 @@ public class Phim {
 
     public Phim(String ten, long thoiLuong, String theLoai, int doTuoi) {
         currId++;
-        id = "Ph" + currId;
+        this.id = "Ph" + currId;
         this.ten = ten;
         this.setThoiLuong(thoiLuong);
         this.theLoai = "Khong xac dinh";

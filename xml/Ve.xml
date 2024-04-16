@@ -322,4 +322,27 @@
             <chieuXong>false</chieuXong>
         </suat>
     </ve>
+    <ve id="V114">
+        <ghe>
+            <gia>80000.0</gia>
+            <khachId>K2</khachId>
+            <loai>Thuong</loai>
+            <viTri>P408A1</viTri>
+        </ghe>
+        <suat id="SCH1204">
+            <phim id="Ph2">
+                <ten>Baghead</ten>
+                <theLoai>Kinh di</theLoai>
+                <doTuoi>18</doTuoi>
+                <posterLink>/Images/baghead.jpg</posterLink>
+                <dt>440000.0</dt>
+                <thoiLuong>PT1H35M</thoiLuong>
+                <TgKhoiChieu>2023-12-28</TgKhoiChieu>
+            </phim>
+            <phongId>P408</phongId>
+            <thoiGianChieu>17-04-2024 10:00</thoiGianChieu>
+            <dt>0.0</dt>
+            <chieuXong>false</chieuXong>
+        </suat>
+    </ve>
 </ves>

@@ -75,7 +75,7 @@ public class ManagerView extends javax.swing.JFrame {
     public void showMessage(String message) {
         JOptionPane.showMessageDialog(this, message);
     }
-    
+
     // hàm đọc file ảnh giúp hiện thị ảnh theo đúng kích thước theo đối tượng giao diện chứa ảnh
     public ImageIcon getImage(String imagePath, JLabel label) {
 
@@ -203,12 +203,6 @@ public class ManagerView extends javax.swing.JFrame {
     }
 
 //////// end Trang chủ
-    
-    
-    
-    
-    
-    
 //////// Quản lý phòng
     public void showListPhong(List<Phong> list, List<SuatChieu> schList) {
         if (list != null) {
@@ -342,17 +336,12 @@ public class ManagerView extends javax.swing.JFrame {
     public void addSortPhongListener(ActionListener listener) {
         this.SortPhongButton.addActionListener(listener);
     }
-    
+
     public void addListPhongSelectionListener(ListSelectionListener listener) {
         this.PhongTable.getSelectionModel().addListSelectionListener(listener);
     }
 
 //////// end Quản lý phòng
-    
-    
-    
-    
-    
 /////// Quản lý phim
     public void showListPhim(List<Phim> list) {
         int size = list.size();
@@ -411,7 +400,9 @@ public class ManagerView extends javax.swing.JFrame {
         }
         try {
             Phim phim = new Phim();
-            phim.setId(IDPhimField.getText().trim());
+            if (!"".equals(IDPhimField.getText())) {
+                phim.setId(IDPhimField.getText().trim());
+            }
             phim.setTen(TenPhimField.getText().trim());
             phim.setTheLoai(theLoaiCombo.getSelectedItem().toString().trim());
             phim.setDoTuoi(Integer.parseInt((doTuoiSpinner.getValue().toString())));
@@ -464,7 +455,6 @@ public class ManagerView extends javax.swing.JFrame {
         return s;
     }
 
-    
     // Addlistener Quản lý phim
     public void addAddPhimListener(ActionListener listener) {
         AddPhimButton.addActionListener(listener);
@@ -491,11 +481,6 @@ public class ManagerView extends javax.swing.JFrame {
     }
 
     ////// end Quản lý phim
-    
-    
-    
-    
-    
 //////// Quản lý suất chiếu
     public void showListSuatChieu(List<SuatChieu> list) {
         int size = list.size();
@@ -664,10 +649,6 @@ public class ManagerView extends javax.swing.JFrame {
     }
 
 //////// end Quản lý suất chiếu
-    
-    
-    
-
     //////// Quản lý khách
     public void showListKhach(List<Khach> list) {
         int size = list.size();
@@ -780,8 +761,8 @@ public class ManagerView extends javax.swing.JFrame {
         // enable Add button
         AddKhach.setEnabled(true);
     }
-    
-     public int luachonKhachTK() {
+
+    public int luachonKhachTK() {
         if (TimKiemKhachField.getText().equals("") || TimKiemKhachField.getText() == null) {
             return -1;
         }
@@ -796,7 +777,6 @@ public class ManagerView extends javax.swing.JFrame {
         return s;
     }
 
-    
     ///// các hàm kiểm tra thông tin nhập trong quản lý Khách
     private boolean validateString(String str, JTextField field) {
         if (str == null || "".equals(str.trim())) {
@@ -870,10 +850,7 @@ public class ManagerView extends javax.swing.JFrame {
         return true;
     }
 
-   
-    
     /// Addlistener của Quản lý Khách
-
     public void addSearchKhachListener(ActionListener listener) {
         TimKhachbtn.addActionListener(listener);
     }
@@ -900,11 +877,6 @@ public class ManagerView extends javax.swing.JFrame {
     }
 
     ////// end Quản lý khách
-    
-    
-    
-    
-    
 /////// Doanh thu
     public void showDoanhThu(double dt) {
         this.tongDoanhThu.setText(dt + "đ");
@@ -1043,7 +1015,7 @@ public class ManagerView extends javax.swing.JFrame {
             this.DoanhThuSch.add(dtSchPanel);
         }
     }
-    
+
     public void showDtPhongList(List<Phong> list, List<Ve> ves) {
         if (list != null) {
             int size = list.size();
@@ -1071,7 +1043,7 @@ public class ManagerView extends javax.swing.JFrame {
     public boolean getDtPhongTangDan() {
         return this.tieuChiDtPhong.isSelected();
     }
-    
+
     public String getInforDtbegin() {
         if (!validateDouble(DoanhThuBegin.getText())) {
             return "0";
@@ -1094,7 +1066,7 @@ public class ManagerView extends javax.swing.JFrame {
             return false;
         }
     }
-    
+
     // Addlistener Quản lý Doanh thu
     public void addSortDoanhThuPhimListener(ActionListener listener) {
         this.sortDtPhimButton.addActionListener(listener);
@@ -1117,10 +1089,6 @@ public class ManagerView extends javax.swing.JFrame {
     }
 
     ///// end Quản lý Doanh thu
-
-   
-
-
     ////// Quản lý vé
     public void showListVe(List<Ve> list, List<Khach> khachs) {
         int size = list.size();
@@ -1194,9 +1162,9 @@ public class ManagerView extends javax.swing.JFrame {
         String s = SearchVe.getText().trim();
         return s;
     }
-    
+
     /// addListener Quản lý vé
-     public void addDeleteVeListener(ActionListener listener) {
+    public void addDeleteVeListener(ActionListener listener) {
         DeleteVeBtn.addActionListener(listener);
     }
 
@@ -1207,13 +1175,8 @@ public class ManagerView extends javax.swing.JFrame {
     public void addSortPhimVeListener(ActionListener listener) {
         SortbyPhimbtn.addActionListener(listener);
     }
- ////// end Quản lý vé   
-    
- 
-    
-    
-    
-    
+    ////// end Quản lý vé   
+
 /////// Đặt vé
     public String getIDVe() {
         String s = "";
@@ -1360,7 +1323,6 @@ public class ManagerView extends javax.swing.JFrame {
         return BangGhe.isEnabled();
     }
 
-    
     //// Addlistener Đặt vé
     public void addReloadListener(ActionListener listener) {
         reLoadButton.addActionListener(listener);
@@ -1368,7 +1330,8 @@ public class ManagerView extends javax.swing.JFrame {
 
     public void addSearchVeListener(ActionListener listener) {
         SearchVeBtn.addActionListener(listener);
-    }    
+    }
+
     public void addDatVeListener(ActionListener listener) {
         DatVebtn.addActionListener(listener);
     }
@@ -1386,12 +1349,7 @@ public class ManagerView extends javax.swing.JFrame {
         this.chonGheButton.addActionListener(listener);
     }
 /////// end Đặt vé
-    
-    
-    
-    
 
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
