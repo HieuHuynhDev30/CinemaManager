@@ -23,7 +23,6 @@ import utils.FileUtils;
  *
  * @author Lenovo
  */
-
 // Lớp định nghĩa các hành vi làm việc với danh sách suất chiếu
 public class SuatChieuFunc {
 
@@ -49,7 +48,6 @@ public class SuatChieuFunc {
         FileUtils.writeXMLtoFile(SCH_FILE_NAME, schXML);
     }
 
-
     // hành vi đọc từ file xml
     public List<SuatChieu> readListSuatChieus() {
         List<SuatChieu> list = new ArrayList<>();
@@ -70,8 +68,8 @@ public class SuatChieuFunc {
         }
         return list;
     }
-    
-      public List<Phong> readListPhongs() {
+
+    public List<Phong> readListPhongs() {
         List<Phong> list = new ArrayList<>();
         PhongListXML phongListXML = (PhongListXML) FileUtils.readXMLFile(
                 PHONG_FILE_NAME, PhongListXML.class);
@@ -122,14 +120,16 @@ public class SuatChieuFunc {
 
     public void xoaSuatChieu(SuatChieu p) {
         String pId = p.getId();
-        for (SuatChieu ph : this.suatChieuList) {
+        List<SuatChieu> list = new ArrayList<>();
+        list = this.getSuatChieuList();
+        for (SuatChieu ph : list) {
             if (ph.getId() == null ? pId == null : ph.getId().equals(pId)) {
-                System.out.println("da xoa");
-                this.suatChieuList.remove(ph);
-                this.writeListSuatChieus(suatChieuList);
+                list.remove(ph);
                 return;
             }
         }
+        this.setSuatChieuList(list);
+        this.writeListSuatChieus(suatChieuList);
     }
 
     public class SortIdSch implements Comparator<SuatChieu> {
@@ -209,9 +209,9 @@ public class SuatChieuFunc {
         this.writeListSuatChieus(list);
         return list;
     }
-    
+
     public void checkChieuXong() {
-        for (SuatChieu sch: this.suatChieuList) {
+        for (SuatChieu sch : this.suatChieuList) {
             if (sch.isChieuXong()) {
                 this.xoaSuatChieu(sch);
             }

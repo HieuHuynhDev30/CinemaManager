@@ -102,12 +102,15 @@ public class VeFunc {
 
     public void xoaVe(String s) {
         String veId = s;
-        for (Ve V : this.veList) {
+        List<Ve> list = new ArrayList<>();
+        list = this.getVeList();
+        for (Ve V : list) {
             if (V.getId() == null ? veId == null : V.getId().equals(veId)) {
-                this.veList.remove(V);
-                this.writeListVes(veList);
+                list.remove(V); 
             }
         }
+        this.setVeList(list);
+        this.writeListVes(veList);
     }
 
     public List<Ve> SearchTenPhim(String s) {
@@ -209,6 +212,7 @@ public class VeFunc {
     }
 
     public List<Ve> getVeList() {
+        this.setVeList(this.readListVes());
         return veList;
     }
 

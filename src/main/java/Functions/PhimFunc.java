@@ -77,11 +77,14 @@ public class PhimFunc {
 
     public void xoaPhim(Phim p) {
         String phimId = p.getId();
-        for (Phim ph : this.phimList) {
+        List<Phim> list = new ArrayList<>();
+        list = this.getPhimList();
+        for (Phim ph : list) {
             if (ph.getId() == null ? phimId == null : ph.getId().equals(phimId)) {
-                this.phimList.remove(ph);
+                list.remove(ph);
             }
         }
+        this.setPhimList(list);
         this.writeListPhims(phimList);
     }
 

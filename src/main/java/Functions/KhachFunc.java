@@ -87,16 +87,17 @@ public class KhachFunc {
         this.writeListKhachs(khachList);
     }
 
-    public boolean xoaKhach(Khach p) {
+    public void xoaKhach(Khach p) {
         String khachId = p.getId();
-        for (Khach ph : this.khachList) {
+        List<Khach> list = new ArrayList<>();
+        list = this.getKhachList();
+        for (Khach ph : list) {
             if (ph.getId() == null ? khachId == null : ph.getId().equals(khachId)) {
-                this.khachList.remove(ph);
-                this.writeListKhachs(khachList);
-                return true;
+                list.remove(ph); 
             }
         }
-        return false;
+        this.setKhachList(list);
+        this.writeListKhachs(khachList);
     }
 
     public void sapXepKhach(ArrayList<Khach> list, String tieuChi, boolean beLon) {

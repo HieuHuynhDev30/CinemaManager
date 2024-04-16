@@ -100,12 +100,15 @@ public class PhongFunc {
 
     public void xoaPhong(Phong p) {
         String pId = p.getId();
-        for (Phong ph : this.phongList) {
+        List<Phong> list = new ArrayList<>();
+        list = this.getPhongList();
+        for (Phong ph : list) {
             if (ph.getId() == null ? pId == null : ph.getId().equals(pId)) {
-                this.phongList.remove(ph);
+                list.remove(ph);
                 break;
             }
         }
+        this.setPhongList(list);
         this.writeListPhongs(phongList);
     }
 
