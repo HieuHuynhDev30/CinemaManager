@@ -6,28 +6,138 @@
             <theLoai>Hanh dong</theLoai>
             <doTuoi>16</doTuoi>
             <posterLink>/Images/nowayup.jpg</posterLink>
-            <dt>480000.0</dt>
+            <dt>0.0</dt>
             <thoiLuong>PT1H30M</thoiLuong>
             <TgKhoiChieu>2024-01-18</TgKhoiChieu>
         </phim>
         <phongId>P1</phongId>
-        <thoiGianChieu>17-04-2024 15:00</thoiGianChieu>
-        <dt>200000.0</dt>
-        <chieuXong>false</chieuXong>
-    </suatChieu>
-    <suatChieu id="SCH58">
-        <phim id="Ph1">
-            <ten>Alien Noid</ten>
-            <theLoai>Khoa hoc vien tuong</theLoai>
-            <doTuoi>16</doTuoi>
-            <posterLink>/Images/aliennoid.jpg</posterLink>
-            <dt>0.0</dt>
-            <thoiLuong>PT2H25M</thoiLuong>
-            <TgKhoiChieu>2022-07-20</TgKhoiChieu>
-        </phim>
-        <phongId>P1</phongId>
-        <thoiGianChieu>18-04-2024 16:00</thoiGianChieu>
+        <full>false</full>
+        <thoiGianChieu>18-04-2024 10:00</thoiGianChieu>
         <dt>0.0</dt>
         <chieuXong>false</chieuXong>
+        <dsGheThuong>
+            <entry>
+                <key>P1A1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P1A1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P1A2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P1A2</viTri>
+                </value>
+            </entry>
+        </dsGheThuong>
+        <dsGheVip>
+            <entry>
+                <key>P1A4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P1A4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P1A3</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P1A3</viTri>
+                </value>
+            </entry>
+        </dsGheVip>
+        <dsGheDoi>
+            <entry>
+                <key>P1A5</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P1A5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P1A6</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P1A6</viTri>
+                </value>
+            </entry>
+        </dsGheDoi>
+    </suatChieu>
+    <suatChieu id="SCH5">
+        <phim id="Ph6">
+            <ten>Imaginary</ten>
+            <theLoai>Kinh di</theLoai>
+            <doTuoi>13</doTuoi>
+            <posterLink>/Images/imaginary.jpg</posterLink>
+            <dt>0.0</dt>
+            <thoiLuong>PT1H45M</thoiLuong>
+            <TgKhoiChieu>2024-03-06</TgKhoiChieu>
+        </phim>
+        <phongId>P1</phongId>
+        <full>false</full>
+        <thoiGianChieu>24-04-2024 10:00</thoiGianChieu>
+        <dt>0.0</dt>
+        <chieuXong>false</chieuXong>
+        <dsGheThuong>
+            <entry>
+                <key>P1A1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P1A1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P1A2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P1A2</viTri>
+                </value>
+            </entry>
+        </dsGheThuong>
+        <dsGheVip>
+            <entry>
+                <key>P1A4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P1A4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P1A3</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P1A3</viTri>
+                </value>
+            </entry>
+        </dsGheVip>
+        <dsGheDoi>
+            <entry>
+                <key>P1A5</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P1A5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P1A6</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P1A6</viTri>
+                </value>
+            </entry>
+        </dsGheDoi>
     </suatChieu>
 </suatChieus>

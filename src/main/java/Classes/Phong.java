@@ -21,7 +21,6 @@ import javax.xml.bind.annotation.XmlElement;
 @XmlRootElement(name = "phong") // anotation xác định element được đọc vào file xml
 @XmlAccessorType(XmlAccessType.FIELD) // đọc dưới dạng trường, nhận các thuộc tính là một element
 public class Phong {
-
     private static int currId;
     private int slVip, slThuong, slDoi;
     @XmlAttribute // xác định cách đọc thuộc tính dưới dạng thuộc tính của element mẹ
@@ -29,8 +28,7 @@ public class Phong {
     private Map<String, GheThuong> dsGheThuong = new HashMap<>();
     private Map<String, GheVip> dsGheVip = new HashMap<>();
     private Map<String, GheDoi> dsGheDoi = new HashMap<>();
-    private boolean isFull;
-    private SuatChieu suatChieu;
+    private String nextPhim;
     private boolean isPlaying;
     private int columns;
     private char rows;
@@ -41,7 +39,6 @@ public class Phong {
         this.id = "P" + currId;
         rows = 'A';
         columns = 1;
-        this.isFull = false;
     }
 
     public void setId(String id) {
@@ -118,22 +115,14 @@ public class Phong {
             rows++;
         }
     }
-
-    public boolean getIsFull() {
-        return isFull;
+    public String getNextPhim() {
+        return nextPhim;
     }
 
-    public void setIsFull(boolean isFull) {
-        this.isFull = isFull;
+    public void setNextPhim(String nextPhim) {
+        this.nextPhim = nextPhim;
     }
 
-    public SuatChieu getSuatChieu() {
-        return suatChieu;
-    }
-
-    public void setSuatChieu(SuatChieu xuatChieu) {
-        this.suatChieu = xuatChieu;
-    }
 
     public boolean getIsPlaying() {
         return isPlaying;
@@ -294,33 +283,28 @@ public class Phong {
         return slThuong + slVip + slDoi;
     }
 
-    public void resetDsGhe() {
-        Map<String, GheThuong> newDsGt = new HashMap<>();
-        for (Entry<String, GheThuong> g : this.dsGheThuong.entrySet()) {
-            GheThuong ghe = new GheThuong();
-            ghe.setViTri(g.getKey());
-            newDsGt.put(ghe.getViTri(), ghe);
-        }
-        this.setDsGheThuong(newDsGt);
-        Map<String, GheVip> newDsGv = new HashMap<>();
-        for (Entry<String, GheVip> g : this.dsGheVip.entrySet()) {
-            GheVip ghe = new GheVip();
-            ghe.setViTri(g.getKey());
-            newDsGv.put(ghe.getViTri(), ghe);
-        }
-        this.setDsGheVip(newDsGv);
-        Map<String, GheDoi> newDsGd = new HashMap<>();
-        for (Entry<String, GheDoi> g : this.dsGheDoi.entrySet()) {
-            GheDoi ghe = new GheDoi();
-            ghe.setViTri(g.getKey());
-            newDsGd.put(ghe.getViTri(), ghe);
-        }
-        this.setDsGheDoi(newDsGd);
-    }
-
-    @Override
-    public String toString() {
-        return "Phong{" + "id=" + getId() + ", slVip=" + slVip + ", slThuong=" + slThuong + ", slDoi=" + slDoi + ", sucChua=" + getSucChua() + ", dsGhe=" + inDsGheTrong() + ", isFull=" + isFull + ", suatChieu=" + suatChieu + ", isPlaying=" + isPlaying + '}' + '\n';
-    }
+//    public void resetDsGhe() {
+//        Map<String, GheThuong> newDsGt = new HashMap<>();
+//        for (Entry<String, GheThuong> g : this.dsGheThuong.entrySet()) {
+//            GheThuong ghe = new GheThuong();
+//            ghe.setViTri(g.getKey());
+//            newDsGt.put(ghe.getViTri(), ghe);
+//        }
+//        this.setDsGheThuong(newDsGt);
+//        Map<String, GheVip> newDsGv = new HashMap<>();
+//        for (Entry<String, GheVip> g : this.dsGheVip.entrySet()) {
+//            GheVip ghe = new GheVip();
+//            ghe.setViTri(g.getKey());
+//            newDsGv.put(ghe.getViTri(), ghe);
+//        }
+//        this.setDsGheVip(newDsGv);
+//        Map<String, GheDoi> newDsGd = new HashMap<>();
+//        for (Entry<String, GheDoi> g : this.dsGheDoi.entrySet()) {
+//            GheDoi ghe = new GheDoi();
+//            ghe.setViTri(g.getKey());
+//            newDsGd.put(ghe.getViTri(), ghe);
+//        }
+//        this.setDsGheDoi(newDsGd);
+//    }
 
 }

@@ -22,17 +22,16 @@ import utils.FileUtils;
  *
  * @author Lenovo
  */
-
 // Lớp định nghĩa các hành vi làm việc với danh sách phòng
 public class PhongFunc {
 
     private static final String PHONG_FILE_NAME = "xml/Phong.xml";
     private List<Phong> phongList;
-    private SuatChieuFunc suatChieuFunc;
+//    private SuatChieuFunc suatChieuFunc;
 
     public PhongFunc() {
         this.phongList = readListPhongs();
-        this.suatChieuFunc = new SuatChieuFunc();
+//        this.suatChieuFunc = new SuatChieuFunc();
     }
 
     // hành vi viết vào file xml
@@ -74,6 +73,7 @@ public class PhongFunc {
             this.phongList = new ArrayList<>();
         }
         this.phongList.add(taoPhong(p));
+        System.out.println(phongList.toString());
         writeListPhongs(phongList);
     }
 
@@ -86,11 +86,11 @@ public class PhongFunc {
                 ph.setDsGheThuong(p.getDsGheThuong());
                 ph.setDsGheVip(p.getDsGheVip());
                 ph.setDsGheDoi(p.getDsGheDoi());
-                ph.setIsFull(p.getIsFull());
-                ph.setSuatChieu(p.getSuatChieu());
+//                ph.setIsFull(p.getIsFull());
+//                ph.setSuatChieu(p.getSuatChieu());
                 ph.setIsPlaying(p.getIsPlaying());
-                if (p.getSuatChieu() != null) {
-                    ph.setSuatChieu(p.getSuatChieu());
+                if (p.getNextPhim() != null) {
+                    ph.setNextPhim(p.getNextPhim());
                 }
             }
         }
@@ -168,31 +168,31 @@ public class PhongFunc {
         }
     }
 
-    public class SortPhongLd implements Comparator<Phong> {
-
-        private boolean beLon;
-
-        public SortPhongLd(boolean beLon) {
-            this.beLon = beLon;
-        }
-
-        @Override
-        public int compare(Phong o1, Phong o2) {
-            if (beLon) {
-                if (o1.getIsFull() == true) {
-                    return o2.getIsFull() == false ? 1 : 0;
-                } else {
-                    return o2.getIsFull() == true ? -1 : 0;
-                }
-            } else {
-                if (o1.getIsFull() == false) {
-                    return o2.getIsFull() == true ? 1 : 0;
-                } else {
-                    return o2.getIsFull() == false ? -1 : 0;
-                }
-            }
-        }
-    }
+//    public class SortPhongLd implements Comparator<Phong> {
+//
+//        private boolean beLon;
+//
+//        public SortPhongLd(boolean beLon) {
+//            this.beLon = beLon;
+//        }
+//
+//        @Override
+//        public int compare(Phong o1, Phong o2) {
+//            if (beLon) {
+//                if (o1.getIsFull() == true) {
+//                    return o2.getIsFull() == false ? 1 : 0;
+//                } else {
+//                    return o2.getIsFull() == true ? -1 : 0;
+//                }
+//            } else {
+//                if (o1.getIsFull() == false) {
+//                    return o2.getIsFull() == true ? 1 : 0;
+//                } else {
+//                    return o2.getIsFull() == false ? -1 : 0;
+//                }
+//            }
+//        }
+//    }
 
     public class SortPhongPhim implements Comparator<Phong> {
 
@@ -204,22 +204,10 @@ public class PhongFunc {
 
         @Override
         public int compare(Phong o1, Phong o2) {
-            if (!beLon) {
-                if (o2.getSuatChieu() == null) {
-                    return 1;
-                }
-                if (o1.getSuatChieu() == null) {
-                    return 1;
-                }
-                return o1.getSuatChieu().getPhim().getTen().compareTo(o2.getSuatChieu().getPhim().getTen());
+            if (beLon) {
+                return o1.getNextPhim().compareTo(o2.getNextPhim());
             } else {
-                if (o2.getSuatChieu() == null) {
-                    return -1;
-                }
-                if (o1.getSuatChieu() == null) {
-                    return -1;
-                }
-                return o2.getSuatChieu().getPhim().getTen().compareTo(o1.getSuatChieu().getPhim().getTen());
+                return o2.getNextPhim().compareTo(o1.getNextPhim());
             }
         }
     }
@@ -260,9 +248,9 @@ public class PhongFunc {
         if ("doanhthu".equals(tieuChi.toLowerCase())) {
             Collections.sort(list, new PhongFunc.SortDtPhong(beLon));
         }
-        if ("lấp đầy".equals(tieuChi.toLowerCase())) {
-            Collections.sort(list, new PhongFunc.SortPhongLd(beLon));
-        }
+//        if ("lấp đầy".equals(tieuChi.toLowerCase())) {
+//            Collections.sort(list, new PhongFunc.SortPhongLd(beLon));
+//        }
         if ("phim chiếu".equals(tieuChi.toLowerCase())) {
             Collections.sort(list, new PhongFunc.SortPhongPhim(beLon));
         }
@@ -272,9 +260,9 @@ public class PhongFunc {
         return list;
     }
 
-    public void addDt() {
+    public void addDt(List<SuatChieu> schList) {
         for (Phong ph : phongList) {
-            for (SuatChieu sch : suatChieuFunc.getSuatChieuList()) {
+            for (SuatChieu sch : schList) {
                 if (sch.getPhongId() == null ? ph.getId() == null : sch.getPhongId().equals(ph.getId())) {
                     ph.themDt(sch.getDt());
                 }
@@ -283,71 +271,74 @@ public class PhongFunc {
         this.writeListPhongs(phongList);
     }
 
-    public void checkPlaying() {
+    public void checkPlaying(SuatChieuFunc schFunc) {
+        List<SuatChieu> schList = schFunc.sapXepSuatChieu((ArrayList) schFunc.getSuatChieuList(), "thoigian", true);
         if (this.getPhongList() != null) {
             for (Phong ph : this.getPhongList()) {
-                if (ph.getSuatChieu() == null) {
+                if (ph.getNextPhim() == null) {
                     continue;
                 }
-                if (ph.getSuatChieu().getThoiGianChieu().isBefore(LocalDateTime.now())) {
-                    ph.setIsPlaying(true);
-                    Duration interval = Duration.between(LocalDateTime.now(), ph.getSuatChieu().getThoiGianChieu());
-                    long intervalAbs = Math.abs(interval.toMinutes());
-                    if (intervalAbs >= ph.getSuatChieu().getPhim().getThoiLuong().toMinutes() + 30) {
-                        ph.setIsPlaying(false);
-                    }
-                }
-                if (LocalDateTime.now().isAfter(ph.getSuatChieu().getThoiGianChieu().plusMinutes(ph.getSuatChieu().getPhim().getThoiLuong().toMinutes()))) {
-                    ph.resetDsGhe();
+                for (SuatChieu sch : schList) {
+                    if (sch.getPhim().getTen().equals(ph.getNextPhim())) {
+                        if (sch.getThoiGianChieu().isBefore(LocalDateTime.now())) {
+                            ph.setIsPlaying(true);
+                            Duration interval = Duration.between(LocalDateTime.now(), sch.getThoiGianChieu());
+                            long intervalAbs = Math.abs(interval.toMinutes());
+                            if (intervalAbs >= sch.getPhim().getThoiLuong().toMinutes() + 30) {
+                                ph.setIsPlaying(false);
+                            }
+                        }
+                        break;
+                    }                   
                 }
             }
         }
         this.writeListPhongs(phongList);
     }
 
-    public void checkIsFull() {
+//    public void checkIsFull() {
+//        if (this.getPhongList() != null) {
+//            for (Phong ph : this.getPhongList()) {
+//                if (ph.getDsGheTrong().isEmpty()) {
+//                    ph.setIsFull(true);
+//                }
+//            }
+//        }
+//        this.writeListPhongs(phongList);
+//    }
+
+    public void reSetPhong(List<SuatChieu> schList) {
         if (this.getPhongList() != null) {
             for (Phong ph : this.getPhongList()) {
-                if (ph.getDsGheTrong().isEmpty()) {
-                    ph.setIsFull(true);
+                if (ph.getNextPhim() != null) {
+                    updateSuatChieu(ph, schList);
                 }
-            }
-        }
-        this.writeListPhongs(phongList);
-    }
-
-    public void reSetPhong() {
-        if (this.getPhongList() != null) {
-            for (Phong ph : this.getPhongList()) {
-                if (ph.getSuatChieu() != null) {
-                    updateSuatChieu(ph);
-                }
-                if (ph.getSuatChieu() != null && ph.getSuatChieu().isChieuXong()) {
-                    ph.resetDsGhe();
-                    ph.setSuatChieu(null);
-//                    updateSuatChieu(ph);
-                }  
+//                if (ph.getSuatChieu() != null && ph.getSuatChieu().isChieuXong()) {
+//                    ph.resetDsGhe();
+//                    ph.setSuatChieu(null);
+////                    updateSuatChieu(ph);
+//                }  
             }
 
         }
         this.writeListPhongs(phongList);
     }
 
-    public void updateSuatChieu(Phong ph) {
-        if (suatChieuFunc.getSuatChieuList() != null) {
+    public void updateSuatChieu(Phong ph, List<SuatChieu> schList) {
+        if (schList != null) {
             LocalDateTime now = LocalDateTime.now();
             long wait = 0;
-            for (SuatChieu sch : suatChieuFunc.getSuatChieuList()) {
+            for (SuatChieu sch : schList) {
                 if (sch.getPhongId().equals(ph.getId())) {
                     wait = Duration.between(now, sch.getThoiGianChieu()).toMinutes();
                     break;
                 }
             }
-            for (SuatChieu sch : suatChieuFunc.getSuatChieuList()) {
+            for (SuatChieu sch : schList) {
                 if (sch.getPhongId().equals(ph.getId())) {
                     if (Duration.between(now, sch.getThoiGianChieu()).toMinutes() <= wait) {
                         wait = Duration.between(now, sch.getThoiGianChieu()).toMinutes();
-                        ph.setSuatChieu(sch);
+                        ph.setNextPhim(sch.getPhim().getTen());
                     }
                 }
             }
@@ -355,6 +346,7 @@ public class PhongFunc {
     }
 
     public List<Phong> getPhongList() {
+        this.setPhongList(this.readListPhongs());
         return phongList;
     }
 
@@ -362,3 +354,4 @@ public class PhongFunc {
         this.phongList = phongList;
     }
 }
+

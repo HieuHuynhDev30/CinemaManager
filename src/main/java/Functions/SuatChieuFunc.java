@@ -31,9 +31,11 @@ public class SuatChieuFunc {
     public final static DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
     private List<SuatChieu> suatChieuList;
     private Map<String, LocalDateTime[]> schIntervals;
+    private PhongFunc phongFunc;
 
     public SuatChieuFunc() {
         this.suatChieuList = this.readListSuatChieus();
+        phongFunc = new PhongFunc();
         this.schIntervals = new HashMap<>();
         for (SuatChieu sch : this.suatChieuList) {
             LocalDateTime tgKetThuc = sch.getThoiGianChieu().plusMinutes(sch.getPhim().getThoiLuong().toMinutes());
@@ -55,37 +57,34 @@ public class SuatChieuFunc {
                 SCH_FILE_NAME, SuatChieuListXML.class);
         if (schListXML != null && schListXML.getSuatChieu() != null) {
             list = schListXML.getSuatChieu();
-            List<Phong> phongList = readListPhongs();
-            if (phongList != null) {
-                for (SuatChieu sch : list) {
-                    for (Phong ph : phongList) {
-                        if (sch.getPhongId() == null ? ph.getId() == null : sch.getPhongId().equals(ph.getId())) {
-                            sch.setPhong(ph);
-                        }
-                    }
-                }
-            }
+//            List<Phong> phongList = phongFunc.getPhongList();
+//            if (phongList != null) {
+//                for (SuatChieu sch : list) {
+//                    for (Phong ph : phongList) {
+//                        if (sch.getPhongId() == null ? ph.getId() == null : sch.getPhongId().equals(ph.getId())) {
+//                            sch.setPhongId(ph.getId());
+//                        }
+//                    }
+//                }
+//            }
         }
         return list;
     }
 
-    public List<Phong> readListPhongs() {
-        List<Phong> list = new ArrayList<>();
-        PhongListXML phongListXML = (PhongListXML) FileUtils.readXMLFile(
-                PHONG_FILE_NAME, PhongListXML.class);
-        if (phongListXML != null) {
-            list = phongListXML.getPhong();
-        }
-        return list;
-    }
+//    public List<Phong> readListPhongs() {
+//        List<Phong> list = new ArrayList<>();
+//        PhongListXML phongListXML = (PhongListXML) FileUtils.readXMLFile(
+//                PHONG_FILE_NAME, PhongListXML.class);
+//        if (phongListXML != null) {
+//            list = phongListXML.getPhong();
+//        }
+//        return list;
+//    }
 
-    public SuatChieu taoSuatChieu(Phim phim, Phong ph, String tgChieu) {
+    public SuatChieu taoSuatChieu(Phim phim, String phId, String tgChieu) {
         LocalDateTime TgChieu = LocalDateTime.parse(tgChieu);
-        System.out.println(TgChieu.format(formatDateTime));
-        System.out.println(this.schIntervals.keySet().toString());
-        System.out.println(ph.getId());
         for (Map.Entry<String, LocalDateTime[]> dt : this.schIntervals.entrySet()) {
-            if (dt.getKey().equals(ph.getId())) {
+            if (dt.getKey().equals(phId)) {
                 if ((TgChieu.isEqual(dt.getValue()[0])) || (TgChieu.isAfter(dt.getValue()[0]) && TgChieu.isBefore(dt.getValue()[1].plusMinutes(phim.getThoiLuong().toMinutes())))) {
                     return null;
                 }
@@ -93,10 +92,20 @@ public class SuatChieuFunc {
         }
         SuatChieu sch = new SuatChieu();
         sch.setPhim(phim);
-        sch.setPhong(ph);
+        sch.setPhongId(phId);
+        List<Phong> phongList = phongFunc.getPhongList();
+        for (Phong ph : phongList) {
+            if (phId.equals(ph.getId())) {
+                System.out.println(ph.getId() + phId);
+                sch.setDsGheThuong(ph.getDsGheThuong());
+                sch.setDsGheVip(ph.getDsGheVip());
+                sch.setDsGheDoi(ph.getDsGheDoi());
+                break;
+            }
+        }
         sch.setThoiGianChieu(TgChieu.format(formatDateTime));
         LocalDateTime tgKetThuc = TgChieu.plusMinutes(sch.getPhim().getThoiLuong().toMinutes());
-        this.schIntervals.put(ph.getId(), new LocalDateTime[]{sch.getThoiGianChieu(), tgKetThuc});
+        this.schIntervals.put(phId, new LocalDateTime[]{sch.getThoiGianChieu(), tgKetThuc});
         return sch;
     }
 
@@ -110,9 +119,12 @@ public class SuatChieuFunc {
             SuatChieu ph = this.suatChieuList.get(i);
             if (ph.getId() == null ? p.getId() == null : ph.getId().equals(p.getId())) {
                 ph.setPhim(p.getPhim());
-                ph.setPhong(p.getPhong());
-                ph.setPhongId();
+//                ph.setPhong(p.getPhong());
+                ph.setPhongId(p.getPhongId());
                 ph.setThoiGianChieu((CharSequence) p.inThoiGianChieu());
+                ph.setDsGheThuong(p.getDsGheThuong());
+                ph.setDsGheVip(p.getDsGheVip());
+                ph.setDsGheDoi(p.getDsGheDoi());
                 ph.setDt(p.getDt());
             }
         }
@@ -216,6 +228,33 @@ public class SuatChieuFunc {
             }
         }
     }
+    
+        public class SortSchLd implements Comparator<SuatChieu> {
+
+        private boolean beLon;
+
+        public SortSchLd(boolean beLon) {
+            this.beLon = beLon;
+        }
+
+        @Override
+        public int compare(SuatChieu o1, SuatChieu o2) {
+            if (beLon) {
+                if (o1.isFull() == true) {
+                    return o2.isFull() == false ? 1 : 0;
+                } else {
+                    return o2.isFull() == true ? -1 : 0;
+                }
+            } else {
+                if (o1.isFull() == false) {
+                    return o2.isFull() == true ? 1 : 0;
+                } else {
+                    return o2.isFull() == false ? -1 : 0;
+                }
+            }
+        }
+    }
+
 
     public ArrayList<SuatChieu> sapXepSuatChieu(ArrayList<SuatChieu> list, String tieuChi, boolean beLon) {
         if ("id".equals(tieuChi.toLowerCase())) {
@@ -227,8 +266,22 @@ public class SuatChieuFunc {
         if ("thoigian".equals(tieuChi.toLowerCase())) {
             Collections.sort(list, new SortTgSch(beLon));
         }
+        if ("lapday".equals(tieuChi.toLowerCase())) {
+            Collections.sort(list, new SortSchLd(beLon));
+        }
         this.writeListSuatChieus(list);
         return list;
+    }
+    
+        public void checkIsFull() {
+        if (this.getSuatChieuList() != null) {
+            for (SuatChieu sch : this.getSuatChieuList()) {
+                if (sch.getDsGheTrong().isEmpty()) {
+                    sch.setFull(true);
+                }
+            }
+        }
+        this.writeListSuatChieus(this.suatChieuList);
     }
 
     public void checkChieuXong() {

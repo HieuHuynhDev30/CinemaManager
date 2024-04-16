@@ -132,25 +132,25 @@ public class ManagerView extends javax.swing.JFrame {
                 JLabel sucChuaLabel = new JLabel();
                 JLabel phimChieuLabel = new JLabel();
                 JLabel dangChieuLabel = new JLabel();
-                JLabel gheTrongLabel = new javax.swing.JLabel();
+//                JLabel gheTrongLabel = new javax.swing.JLabel();
                 phongLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
                 phongLabel.setText(ph.getId());
                 sucChuaLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
                 sucChuaLabel.setText("Sức chứa: " + ph.getSucChua() + " khách");
                 phimChieuLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
                 try {
-                    phimChieuLabel.setText(ph.getSuatChieu().getPhim().getTen());
+                    phimChieuLabel.setText(ph.getNextPhim());
                 } catch (Exception e) {
                     phimChieuLabel.setText("");
                 }
                 dangChieuLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
                 dangChieuLabel.setText(ph.getIsPlaying() ? "đang chiếu" : "đang rảnh");
-                gheTrongLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-                gheTrongLabel.setText(ph.getDsGheTrong().size() + " ghế trống");
-                phongPanel.setLayout(new java.awt.GridLayout(5, 0));
+//                gheTrongLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+//                gheTrongLabel.setText(ph.getDsGheTrong().size() + " ghế trống");
+                phongPanel.setLayout(new java.awt.GridLayout(4, 0));
                 phongPanel.add(phongLabel);
                 phongPanel.add(sucChuaLabel);
-                phongPanel.add(gheTrongLabel);
+//                phongPanel.add(gheTrongLabel);
                 phongPanel.add(phimChieuLabel);
                 phongPanel.add(dangChieuLabel);
                 phongPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -167,9 +167,9 @@ public class ManagerView extends javax.swing.JFrame {
 
             suatPanel.setLayout(new java.awt.GridLayout(1, 2));
             suatPanel.setPreferredSize(new java.awt.Dimension(300, 250));
-            infoPanel.setLayout(new java.awt.GridLayout(3, 1));
-            infoPanel.setSize(100, 250);
-            posterLabel.setSize(200, 250);
+            infoPanel.setLayout(new java.awt.GridLayout(4, 1));
+            infoPanel.setSize(180, 200);
+            posterLabel.setSize(180, 230);
 
             ImageIcon poster = this.getImage(ph.getPhim().getPosterLink(), posterLabel);
             posterLabel.setIcon(poster);
@@ -183,10 +183,14 @@ public class ManagerView extends javax.swing.JFrame {
             JLabel phong = new javax.swing.JLabel();
             phong.setVerticalAlignment(javax.swing.SwingConstants.TOP);
             phong.setText(ph.getPhongId());
+            JLabel gheTrongLabel = new javax.swing.JLabel();
+            gheTrongLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+            gheTrongLabel.setText(ph.inTongDat() + "/" + ph.getDsGheTrong().size() + " ghế");
             suatPanel.setLayout(new java.awt.GridLayout(0, 2));
             infoPanel.add(phim);
             infoPanel.add(thoiGian);
             infoPanel.add(phong);
+            infoPanel.add(gheTrongLabel);
             suatPanel.add(posterLabel);
             suatPanel.add(infoPanel);
             DsSuatPane.add(suatPanel);
@@ -214,17 +218,16 @@ public class ManagerView extends javax.swing.JFrame {
                 phs[i][2] = list.get(i).getSlVip();
                 phs[i][3] = list.get(i).getSlDoi();
                 phs[i][4] = list.get(i).getSlThuong() + list.get(i).getSlVip() + list.get(i).getSlDoi();
-                phs[i][5] = list.get(i).getIsFull() == true ? "Đã đầy" : "Chưa đầy";
-                phs[i][6] = list.get(i).getSucChua();
+                phs[i][5] = list.get(i).getSucChua();
                 try {
-                    phs[i][7] = list.get(i).getSuatChieu().getPhim().getTen();
+                    phs[i][6] = list.get(i).getNextPhim();
                 } catch (Exception e) {
-                    phs[i][7] = "";
+                    phs[i][6] = "";
                 }
-                phs[i][8] = list.get(i).getIsPlaying() == true ? "Đang chiếu" : "Đang rảnh";
+                phs[i][7] = list.get(i).getIsPlaying() == true ? "Đang chiếu" : "Đang rảnh";
             }
-            String[] columnNames = new String[9];
-            for (int i = 0; i < 9; i++) {
+            String[] columnNames = new String[8];
+            for (int i = 0; i < 8; i++) {
                 columnNames[i] = this.PhongTable.getColumnName(i);
             }
             this.PhongTable.setModel(new DefaultTableModel(phs, columnNames));
@@ -244,10 +247,9 @@ public class ManagerView extends javax.swing.JFrame {
     public void setPhongSortCombo(List<Phong> list, List<SuatChieu> schList) {
         String[] tieuChiStr = new String[5];
         tieuChiStr[0] = "Tổng số ghế";
-        tieuChiStr[1] = "Lấp đầy";
-        tieuChiStr[2] = "Sức chứa";
-        tieuChiStr[3] = "Phim chiếu";
-        tieuChiStr[4] = "Tình trạng";
+        tieuChiStr[1] = "Sức chứa";
+        tieuChiStr[2] = "Phim chiếu";
+        tieuChiStr[3] = "Tình trạng";
 
         this.TieuChiSortPhongCombo.setModel(new javax.swing.DefaultComboBoxModel<>(tieuChiStr));
     }
@@ -274,12 +276,12 @@ public class ManagerView extends javax.swing.JFrame {
                         if (ph.getIsPlaying() == false) {
                             phong.setId(ph.getId());
                             phong.setDt(ph.getDt());
-                            phong.setSuatChieu(ph.getSuatChieu());
-                            if (phong.getTongGhe() > ph.inTongDat()) {
-                                phong.setIsFull(false);
-                            } else {
-                                phong.setIsFull(true);
-                            }
+                            phong.setNextPhim(ph.getNextPhim());
+//                            if (phong.getTongGhe() > ph.inTongDat()) {
+//                                phong.setIsFull(false);
+//                            } else {
+//                                phong.setIsFull(true);
+//                            }
                         } else {
                             return null;
                         }
@@ -488,15 +490,16 @@ public class ManagerView extends javax.swing.JFrame {
         // khởi tạo mảng 2 chiều students, trong đó:
         // số hàng: là kích thước của list student 
         // số cột: là 5
-        Object[][] schs = new Object[size][4];
+        Object[][] schs = new Object[size][5];
         for (int i = 0; i < size; i++) {
             schs[i][0] = list.get(i).getId();
             schs[i][1] = list.get(i).getPhim().getTen();
             schs[i][2] = list.get(i).getPhongId();
             schs[i][3] = list.get(i).getThoiGianChieu().format(formatDateTime);
+            schs[i][4] = list.get(i).inTongDat() + "/" + list.get(i).getDsGheTrong().size() + " ghế";
         }
-        String[] columnNames = new String[4];
-        for (int i = 0; i < 4; i++) {
+        String[] columnNames = new String[5];
+        for (int i = 0; i < 5; i++) {
             columnNames[i] = suatChieuTable.getColumnName(i);
         }
         this.suatChieuTable.setModel(new DefaultTableModel(schs, columnNames));
@@ -505,7 +508,7 @@ public class ManagerView extends javax.swing.JFrame {
     public void showSuatChieu(SuatChieu sch) {
         this.IdField.setText("" + sch.getId());
         this.phimCombo.setSelectedItem(sch.getPhim().getTen());
-        this.phongCombo.setSelectedItem(sch.getPhong().getId());
+        this.phongCombo.setSelectedItem(sch.getPhongId());
         this.schDateTimeField.setText(sch.getThoiGianChieu().format(formatDateTime));
         // enable Edit and Delete buttons
         editButton.setEnabled(true);
@@ -589,12 +592,13 @@ public class ManagerView extends javax.swing.JFrame {
                     sch.setPhim(ph);
                 }
             }
-            for (Phong ph : phongList) {
-                if (this.phongCombo.getSelectedItem().toString() == null ? ph.getId() == null : this.phongCombo.getSelectedItem().toString().equals(ph.getId())) {
-                    sch.setPhong(ph);
-                    sch.setPhongId();
-                }
-            }
+//            for (Phong ph : phongList) {
+//                if (this.phongCombo.getSelectedItem().toString() == null ? ph.getId() == null : this.phongCombo.getSelectedItem().toString().equals(ph.getId())) {
+////                    sch.setPhong(ph);
+//                    sch.setPhongId();
+//                }
+//            }
+            sch.setPhongId(this.phongCombo.getSelectedItem().toString());
             sch.setThoiGianChieu(this.schDateTimeField.getText());
             return sch;
         } catch (Exception e) {
@@ -1130,8 +1134,13 @@ public class ManagerView extends javax.swing.JFrame {
             String[] phimSetStr = phimSet.toArray(phimArr);
 
             for (int i = 0; i < phongStr.length; i++) {
-                if (phongList.get(i).getSuatChieu() != null) {
-                    thoiluongStr[i] = "" + phongList.get(i).getSuatChieu().getPhim().inThoiLuong();
+                if (phongList.get(i).getNextPhim() != null) {
+                    for (SuatChieu sch : suatchieuList) {
+                        if (sch.getPhongId().equals(phongList.get(i).getId())) {
+                            thoiluongStr[i] = "" + sch.getPhim().inThoiLuong();
+                        }
+                    }
+
                 }
 
             }
@@ -1193,7 +1202,6 @@ public class ManagerView extends javax.swing.JFrame {
             for (Khach kh : khachs) {
                 if (kh.getHoTen().equals(khach.getHoTen())) {
                     return kh;
-
                 }
             }
 
@@ -1203,9 +1211,9 @@ public class ManagerView extends javax.swing.JFrame {
         return null;
     }
 
-    public Ghe getGheInfor(Phong phong) {
+    public Ghe getGheInfor(SuatChieu sch) {
         try {
-            List<Ghe> list = phong.getDsGheTrong();
+            List<Ghe> list = sch.getDsGheTrong();
 
             Ghe ghe = new Ghe();
             ghe.setViTri(ViTriField.getText());
@@ -1222,17 +1230,17 @@ public class ManagerView extends javax.swing.JFrame {
         return null;
     }
 
-    public void showListGhe(Phong phong) {
+    public void showListGhe(SuatChieu sch) {
 
         List<Ghe> list = new ArrayList<>();
-        list = phong.getDsGheTrong();
+        list = sch.getDsGheTrong();
         int size = list.size();
         String[] columnNames3 = new String[]{"Vị trí ghế", "Loại ghế", "Phòng", "Đơn giá"};
         Object[][] ghe = new Object[size][4];
         for (int i = 0; i < size; i++) {
             ghe[i][0] = list.get(i).InVitri();
             ghe[i][1] = list.get(i).getLoai();
-            ghe[i][2] = phong.getId();
+            ghe[i][2] = sch.getPhongId();
             ghe[i][3] = list.get(i).getGia();
 
         }
@@ -1266,7 +1274,7 @@ public class ManagerView extends javax.swing.JFrame {
     public void showSuatChieuDatVe(SuatChieu sch) {
         this.DatVeSchId.setText("" + sch.getId());
         this.phimCombo1.setSelectedItem(sch.getPhim().getTen());
-        this.phongDatVeCombo.setText(sch.getPhong().getId());
+        this.phongDatVeCombo.setText(sch.getPhongId());
         this.tgChieuField1.setText(sch.getThoiGianChieu().format(formatDateTime));
     }
 
@@ -1842,21 +1850,21 @@ public class ManagerView extends javax.swing.JFrame {
 
         PhongTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Id", "Số lượng ghế thường", "Số lượng ghế Vip", "Số lượng ghế đôi", "Tổng số ghế", "Lấp đầy", "Sức chứa", "Phim chiếu", "Tình trạng"
+                "Id", "Số lượng ghế thường", "Số lượng ghế Vip", "Số lượng ghế đôi", "Tổng số ghế", "Sức chứa", "Phim chiếu", "Tình trạng"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -2156,21 +2164,28 @@ public class ManagerView extends javax.swing.JFrame {
 
         suatChieuTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Id", "Phim", "Phòng", "Thời gian chiếu"
+                "Id", "Phim", "Phòng", "Thời gian chiếu", "Lấp đầy"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
         suatChieuTable.addMouseListener(new java.awt.event.MouseAdapter() {
