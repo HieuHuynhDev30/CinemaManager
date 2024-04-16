@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <suatChieus>
     <suatChieu id="SCH2">
-        <phim id="Ph10">
-            <ten>The Tear Smith</ten>
-            <theLoai>Tinh cam</theLoai>
+        <phim id="Ph8">
+            <ten>No Way Up</ten>
+            <theLoai>Hanh dong</theLoai>
             <doTuoi>16</doTuoi>
-            <posterLink>/Images/tearsmith.jpg</posterLink>
-            <dt>200000.0</dt>
-            <thoiLuong>PT1H56M</thoiLuong>
-            <TgKhoiChieu>2024-05-03</TgKhoiChieu>
+            <posterLink>/Images/nowayup.jpg</posterLink>
+            <dt>480000.0</dt>
+            <thoiLuong>PT1H30M</thoiLuong>
+            <TgKhoiChieu>2024-01-18</TgKhoiChieu>
         </phim>
-        <phongId>P4</phongId>
+        <phongId>P1</phongId>
         <thoiGianChieu>17-04-2024 15:00</thoiGianChieu>
         <dt>200000.0</dt>
+        <chieuXong>false</chieuXong>
+    </suatChieu>
+    <suatChieu id="SCH58">
+        <phim id="Ph1">
+            <ten>Alien Noid</ten>
+            <theLoai>Khoa hoc vien tuong</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/aliennoid.jpg</posterLink>
+            <dt>0.0</dt>
+            <thoiLuong>PT2H25M</thoiLuong>
+            <TgKhoiChieu>2022-07-20</TgKhoiChieu>
+        </phim>
+        <phongId>P1</phongId>
+        <thoiGianChieu>18-04-2024 16:00</thoiGianChieu>
+        <dt>0.0</dt>
         <chieuXong>false</chieuXong>
     </suatChieu>
 </suatChieus>

@@ -16,16 +16,19 @@ import java.util.List;
  *
  * @author Lenovo
  */
-
 // Lớp định nghĩa các hành vi làm việc với doanh thu
 public class DoanhThuFunc {
 
     private VeFunc veFunc;
     public PhongFunc phongFunc;
+    public PhimFunc phimFunc;
+    public SuatChieuFunc suatChieuFunc;
 
     public DoanhThuFunc() {
         veFunc = new VeFunc();
         phongFunc = new PhongFunc();
+        phimFunc = new PhimFunc();
+        suatChieuFunc = new SuatChieuFunc();
     }
 
     public double doanhThu(String tieuChi, Object... obs) {
@@ -54,19 +57,29 @@ public class DoanhThuFunc {
     }
 
     public void resetDt(List<Phim> phimList, List<SuatChieu> schList, List<Phong> phongList) {
-        for (Phim ph : phimList) {
-            ph.setDt(0);
+        if (phimList != null) {
+            for (Phim ph : phimList) {
+                ph.setDt(0);
+            }
+            phimFunc.writeListPhims(phimList);
         }
-        for (Phong ph : phongList) {
-            ph.setDt(0);
+        if (phongList != null) {
+            for (Phong ph : phongList) {
+                ph.setDt(0);
+            }
+            phongFunc.writeListPhongs(phongList);
         }
-        for (SuatChieu sch : schList) {
-            sch.setDt(0);
+
+        if (schList != null) {
+            for (SuatChieu sch : schList) {
+                sch.setDt(0);
+            }
+            suatChieuFunc.writeListSuatChieus(schList);
         }
     }
 
     public List<Phong> searchDoanhThuPhong(String s, String s1) {
-        List<Phong> list = new ArrayList<>(); 
+        List<Phong> list = new ArrayList<>();
         phongFunc.setPhongList(phongFunc.readListPhongs());
         List<Phong> phongList = phongFunc.getPhongList();
         list.addAll(phongList);

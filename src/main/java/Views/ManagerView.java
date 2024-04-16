@@ -715,13 +715,9 @@ public class ManagerView extends javax.swing.JFrame {
         }
         try {
             Khach khach = new Khach();
-            if (HoTenField.getText() != null) {
-
-            }
             if (IDField.getText() != null && !"".equals(IDField.getText())) {
                 khach.setId(IDField.getText().trim());
             }
-
             khach.setHoTen(HoTenField.getText().trim());
             khach.setGioiTinh(gioiTinhCombo.getSelectedItem().toString());
             khach.setNgaySinh(NgaySinhField.getText().trim());

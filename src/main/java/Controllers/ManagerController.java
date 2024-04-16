@@ -668,7 +668,7 @@ public class ManagerController {
             managerView.showListVe(veFunc.getVeList(), khachFunc.getKhachList());
             khachFunc.writeListKhachs(khachFunc.getKhachList());
             managerView.showListKhach(khachFunc.getKhachList());
-
+            managerView.showMessage("Xóa vé thành công");
         }
     }
 

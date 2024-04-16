@@ -86,8 +86,6 @@ public class SuatChieuFunc {
         System.out.println(ph.getId());
         for (Map.Entry<String, LocalDateTime[]> dt : this.schIntervals.entrySet()) {
             if (dt.getKey().equals(ph.getId())) {
-                System.out.println(dt.getKey());
-                System.out.println(dt.getValue()[0].format(formatDateTime));
                 if ((TgChieu.isEqual(dt.getValue()[0])) || (TgChieu.isAfter(dt.getValue()[0]) && TgChieu.isBefore(dt.getValue()[1].plusMinutes(phim.getThoiLuong().toMinutes())))) {
                     return null;
                 }
@@ -132,10 +130,28 @@ public class SuatChieuFunc {
                 break;
             }
         }
+        Map<String, LocalDateTime[]> newMap = new HashMap<>();
+        newMap = this.schIntervals;
+        for (Map.Entry<String, LocalDateTime[]> dt : this.schIntervals.entrySet()) {
+           if (dt.getValue()[0].equals(sch.getThoiGianChieu())) {
+               newMap.remove(dt.getKey(), dt.getValue());
+           } 
+        }
         list.remove(sch);
+        this.setSchIntervals(newMap);
         this.setSuatChieuList(list);
         this.writeListSuatChieus(suatChieuList);
     }
+
+    public Map<String, LocalDateTime[]> getSchIntervals() {
+        return schIntervals;
+    }
+
+    public void setSchIntervals(Map<String, LocalDateTime[]> schIntervals) {
+        this.schIntervals = schIntervals;
+    }
+    
+    
 
     public class SortIdSch implements Comparator<SuatChieu> {
 

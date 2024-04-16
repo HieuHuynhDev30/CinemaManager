@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <khachs>
-    <khach id="K4">
+    <khach id="K1">
         <slVeDat>2</slVeDat>
         <tongTien>200000</tongTien>
-        <hoTen>Lê Văn Lương</hoTen>
+        <hoTen>Lê Văn A</hoTen>
         <gioiTinh>Nam</gioiTinh>
-        <ngaySinh>2003-11-16</ngaySinh>
+        <ngaySinh>2003-04-16</ngaySinh>
         <dsVe id="V2">
             <ghe>
-                <gia>120000.0</gia>
-                <khachId>K4</khachId>
-                <loai>Vip</loai>
-                <viTri>P4B8</viTri>
+                <gia>80000.0</gia>
+                <khachId>K1</khachId>
+                <loai>Thuong</loai>
+                <viTri>P1A1</viTri>
             </ghe>
             <suat id="SCH2">
-                <phim id="Ph10">
-                    <ten>The Tear Smith</ten>
-                    <theLoai>Tinh cam</theLoai>
+                <phim id="Ph8">
+                    <ten>No Way Up</ten>
+                    <theLoai>Hanh dong</theLoai>
                     <doTuoi>16</doTuoi>
-                    <posterLink>/Images/tearsmith.jpg</posterLink>
-                    <dt>0.0</dt>
-                    <thoiLuong>PT1H56M</thoiLuong>
-                    <TgKhoiChieu>2024-05-03</TgKhoiChieu>
+                    <posterLink>/Images/nowayup.jpg</posterLink>
+                    <dt>280000.0</dt>
+                    <thoiLuong>PT1H30M</thoiLuong>
+                    <TgKhoiChieu>2024-01-18</TgKhoiChieu>
                 </phim>
-                <phongId>P4</phongId>
+                <phongId>P1</phongId>
                 <thoiGianChieu>17-04-2024 15:00</thoiGianChieu>
                 <dt>0.0</dt>
                 <chieuXong>false</chieuXong>
             </suat>
         </dsVe>
-        <dsVe id="V5">
+        <dsVe id="V14">
             <ghe>
-                <gia>80000.0</gia>
-                <khachId>K4</khachId>
-                <loai>Thuong</loai>
-                <viTri>P4A6</viTri>
+                <gia>120000.0</gia>
+                <khachId>K1</khachId>
+                <loai>Vip</loai>
+                <viTri>P1A3</viTri>
             </ghe>
             <suat id="SCH2">
-                <phim id="Ph10">
-                    <ten>The Tear Smith</ten>
-                    <theLoai>Tinh cam</theLoai>
+                <phim id="Ph8">
+                    <ten>No Way Up</ten>
+                    <theLoai>Hanh dong</theLoai>
                     <doTuoi>16</doTuoi>
-                    <posterLink>/Images/tearsmith.jpg</posterLink>
-                    <dt>200000.0</dt>
-                    <thoiLuong>PT1H56M</thoiLuong>
-                    <TgKhoiChieu>2024-05-03</TgKhoiChieu>
+                    <posterLink>/Images/nowayup.jpg</posterLink>
+                    <dt>360000.0</dt>
+                    <thoiLuong>PT1H30M</thoiLuong>
+                    <TgKhoiChieu>2024-01-18</TgKhoiChieu>
                 </phim>
-                <phongId>P4</phongId>
+                <phongId>P1</phongId>
                 <thoiGianChieu>17-04-2024 15:00</thoiGianChieu>
-                <dt>200000.0</dt>
+                <dt>80000.0</dt>
                 <chieuXong>false</chieuXong>
             </suat>
         </dsVe>

@@ -5,7 +5,7 @@
         <theLoai>Hanh dong</theLoai>
         <doTuoi>16</doTuoi>
         <posterLink>/Images/nowayup.jpg</posterLink>
-        <dt>0.0</dt>
+        <dt>480000.0</dt>
         <thoiLuong>PT1H30M</thoiLuong>
         <TgKhoiChieu>2024-01-18</TgKhoiChieu>
     </phim>
@@ -14,7 +14,7 @@
         <theLoai>Tinh cam</theLoai>
         <doTuoi>16</doTuoi>
         <posterLink>/Images/tearsmith.jpg</posterLink>
-        <dt>200000.0</dt>
+        <dt>0.0</dt>
         <thoiLuong>PT1H56M</thoiLuong>
         <TgKhoiChieu>2024-05-03</TgKhoiChieu>
     </phim>
@@ -23,7 +23,7 @@
         <theLoai>Hanh dong</theLoai>
         <doTuoi>16</doTuoi>
         <posterLink>/Images/wagesoffear.jpg</posterLink>
-        <dt>0.0</dt>
+        <dt>240000.0</dt>
         <thoiLuong>PT1H47M</thoiLuong>
         <TgKhoiChieu>2024-03-28</TgKhoiChieu>
     </phim>
@@ -32,7 +32,7 @@
         <theLoai>Khoa hoc vien tuong</theLoai>
         <doTuoi>16</doTuoi>
         <posterLink>/Images/aliennoid.jpg</posterLink>
-        <dt>120000.0</dt>
+        <dt>0.0</dt>
         <thoiLuong>PT2H25M</thoiLuong>
         <TgKhoiChieu>2022-07-20</TgKhoiChieu>
     </phim>

@@ -295,15 +295,27 @@ public class Phong {
     }
 
     public void resetDsGhe() {
+        Map<String, GheThuong> newDsGt = new HashMap<>();
         for (Entry<String, GheThuong> g : this.dsGheThuong.entrySet()) {
-            g.getValue().setKhachId("");
+            GheThuong ghe = new GheThuong();
+            ghe.setViTri(g.getKey());
+            newDsGt.put(ghe.getViTri(), ghe);
         }
+        this.setDsGheThuong(newDsGt);
+        Map<String, GheVip> newDsGv = new HashMap<>();
         for (Entry<String, GheVip> g : this.dsGheVip.entrySet()) {
-            g.getValue().setKhachId("");
+            GheVip ghe = new GheVip();
+            ghe.setViTri(g.getKey());
+            newDsGv.put(ghe.getViTri(), ghe);
         }
+        this.setDsGheVip(newDsGv);
+        Map<String, GheDoi> newDsGd = new HashMap<>();
         for (Entry<String, GheDoi> g : this.dsGheDoi.entrySet()) {
-            g.getValue().setKhachId("");
+            GheDoi ghe = new GheDoi();
+            ghe.setViTri(g.getKey());
+            newDsGd.put(ghe.getViTri(), ghe);
         }
+        this.setDsGheDoi(newDsGd);
     }
 
     @Override
