@@ -91,11 +91,14 @@ public class KhachFunc {
         String khachId = p.getId();
         List<Khach> list = new ArrayList<>();
         list = this.getKhachList();
-        for (Khach ph : list) {
+        Khach khach = new Khach();
+        for (Khach ph : this.getKhachList()) {
             if (ph.getId() == null ? khachId == null : ph.getId().equals(khachId)) {
-                list.remove(ph); 
+                khach = ph;
+                break;
             }
         }
+        list.remove(khach);
         this.setKhachList(list);
         this.writeListKhachs(khachList);
     }
@@ -202,10 +205,8 @@ public class KhachFunc {
     }
 
     public void muaVe(Khach khach, Ve ve) {
-        khach = searchID(khach);
-        xoaKhach(searchID(khach));
         khach.muaVe(ve);
-        khachList.add(khach);
+        this.editKhach(khach);
         writeListKhachs(khachList);
     }
 }

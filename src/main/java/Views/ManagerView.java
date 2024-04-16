@@ -1565,6 +1565,7 @@ public class ManagerView extends javax.swing.JFrame {
 
         jLabel32.setText("Vị trí ghế");
 
+        ViTriField.setEditable(false);
         ViTriField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ViTriFieldActionPerformed(evt);

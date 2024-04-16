@@ -79,11 +79,14 @@ public class PhimFunc {
         String phimId = p.getId();
         List<Phim> list = new ArrayList<>();
         list = this.getPhimList();
+        Phim phim = new Phim();
         for (Phim ph : list) {
             if (ph.getId() == null ? phimId == null : ph.getId().equals(phimId)) {
-                list.remove(ph);
+                phim = ph;
+                break;
             }
         }
+        list.remove(phim);
         this.setPhimList(list);
         this.writeListPhims(phimList);
     }

@@ -542,13 +542,11 @@ public class ManagerController {
 
         public void actionPerformed(ActionEvent e) {
             SuatChieu Sch = managerView.getDatVeSchInfo(suatChieuFunc.getSuatChieuList());
-            Ghe ghe = managerView.getGheInfor(Sch.getPhong());
-
+            Ghe ghe = managerView.getGheInfor(Sch.getPhong());   
             Ve ve = new Ve();
             Khach khach = managerView.getKhachInfor(khachFunc.getKhachList());
             ghe.setKhachId(khach.getId());
             ve.setSuat(Sch);
-
             ve.setGhe(ghe);
             khachFunc.muaVe(khach, ve);
             veFunc.themVe(ve);
@@ -587,7 +585,7 @@ public class ManagerController {
             managerView.showDoanhThuPhim(phimFunc.getPhimList(), veFunc.getVeList());
             managerView.showDtPhongList(phongFunc.getPhongList(), veFunc.getVeList());
             managerView.showDoanhThuSch(suatChieuFunc.getSuatChieuList(), veFunc.getVeList());
-        }
+            }
     }
 
     class ListSuatChieuDatVeSelectionListener implements ListSelectionListener {

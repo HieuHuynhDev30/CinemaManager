@@ -102,12 +102,14 @@ public class PhongFunc {
         String pId = p.getId();
         List<Phong> list = new ArrayList<>();
         list = this.getPhongList();
+        Phong phong = new Phong();
         for (Phong ph : list) {
             if (ph.getId() == null ? pId == null : ph.getId().equals(pId)) {
-                list.remove(ph);
+                phong = ph;
                 break;
             }
         }
+        list.remove(phong);
         this.setPhongList(list);
         this.writeListPhongs(phongList);
     }

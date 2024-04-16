@@ -81,11 +81,14 @@ public class SuatChieuFunc {
 
     public SuatChieu taoSuatChieu(Phim phim, Phong ph, String tgChieu) {
         LocalDateTime TgChieu = LocalDateTime.parse(tgChieu);
+        System.out.println(TgChieu.format(formatDateTime));
         System.out.println(this.schIntervals.keySet().toString());
+        System.out.println(ph.getId());
         for (Map.Entry<String, LocalDateTime[]> dt : this.schIntervals.entrySet()) {
             if (dt.getKey().equals(ph.getId())) {
-                if (TgChieu.isAfter(dt.getValue()[0]) && TgChieu.isBefore(dt.getValue()[1].plusMinutes(phim.getThoiLuong().toMinutes()))) {
-                    System.out.println("no sch");
+                System.out.println(dt.getKey());
+                System.out.println(dt.getValue()[0].format(formatDateTime));
+                if ((TgChieu.isEqual(dt.getValue()[0])) || (TgChieu.isAfter(dt.getValue()[0]) && TgChieu.isBefore(dt.getValue()[1].plusMinutes(phim.getThoiLuong().toMinutes())))) {
                     return null;
                 }
             }
@@ -122,12 +125,14 @@ public class SuatChieuFunc {
         String pId = p.getId();
         List<SuatChieu> list = new ArrayList<>();
         list = this.getSuatChieuList();
+        SuatChieu sch = new SuatChieu();
         for (SuatChieu ph : list) {
             if (ph.getId() == null ? pId == null : ph.getId().equals(pId)) {
-                list.remove(ph);
-                return;
+                sch = ph;
+                break;
             }
         }
+        list.remove(sch);
         this.setSuatChieuList(list);
         this.writeListSuatChieus(suatChieuList);
     }

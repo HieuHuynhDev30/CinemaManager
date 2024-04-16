@@ -104,11 +104,14 @@ public class VeFunc {
         String veId = s;
         List<Ve> list = new ArrayList<>();
         list = this.getVeList();
+        Ve ve = new Ve();
         for (Ve V : list) {
             if (V.getId() == null ? veId == null : V.getId().equals(veId)) {
-                list.remove(V); 
+                ve = V;
+                break;
             }
         }
+        list.remove(ve);
         this.setVeList(list);
         this.writeListVes(veList);
     }
@@ -217,7 +220,12 @@ public class VeFunc {
     }
 
     public void setVeList(List<Ve> veList) {
-        this.veList = veList;
+        if (veList != null) {
+            this.veList = veList;
+        } else {
+            List<Ve> newList = new ArrayList<>();
+            this.veList = newList;
+        }
     }
 
 }
