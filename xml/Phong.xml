@@ -62,7 +62,7 @@
         <isPlaying>false</isPlaying>
         <columns>7</columns>
         <rows>65</rows>
-        <dt>0.0</dt>
+        <dt>200000.0</dt>
     </phong>
     <phong id="P12">
         <slVip>2</slVip>

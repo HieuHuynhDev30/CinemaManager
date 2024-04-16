@@ -243,7 +243,7 @@
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="DsSuatScrollPane" alignment="0" max="32767" attributes="0"/>
-                              <Component id="DsPhongScrollPane" pref="987" max="32767" attributes="0"/>
+                              <Component id="DsPhongScrollPane" pref="1045" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Component id="HomepageTitle" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
@@ -688,7 +688,7 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane7" alignment="0" pref="989" max="32767" attributes="0"/>
+                              <Component id="jScrollPane7" alignment="0" pref="1047" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
@@ -815,7 +815,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="836" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="894" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
@@ -1169,7 +1169,7 @@
                   </AuxValues>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="0" y="40" width="530" height="810"/>
+                      <AbsoluteConstraints x="0" y="40" width="570" height="810"/>
                     </Constraint>
                   </Constraints>
 
@@ -1196,7 +1196,7 @@
                 <Container class="javax.swing.JPanel" name="SuatChieuControllers">
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="530" y="40" width="470" height="540"/>
+                      <AbsoluteConstraints x="570" y="40" width="480" height="540"/>
                     </Constraint>
                   </Constraints>
 
@@ -2004,7 +2004,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jPanel12" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="505" max="32767" attributes="0"/>
+                              <EmptySpace pref="563" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2169,7 +2169,7 @@
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="jLabel20" alignment="0" max="32767" attributes="0"/>
                               <Component id="jPanel8" alignment="0" max="32767" attributes="0"/>
-                              <Component id="quanLySuatChieu1" alignment="1" pref="987" max="32767" attributes="0"/>
+                              <Component id="quanLySuatChieu1" alignment="1" pref="1045" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -2245,7 +2245,7 @@
                                   </Group>
                                   <Component id="chonGheButton" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="380" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="438" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2496,7 +2496,7 @@
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="tongDoanhThu" min="-2" pref="165" max="-2" attributes="0"/>
-                              <EmptySpace pref="624" max="32767" attributes="0"/>
+                              <EmptySpace pref="682" max="32767" attributes="0"/>
                               <Component id="resetDTButton" min="-2" pref="162" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                           </Group>
@@ -2656,7 +2656,7 @@
                                               <Component id="sortDtSchButton" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="tieuChiDtSch" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="0" pref="305" max="32767" attributes="0"/>
+                                              <EmptySpace min="0" pref="334" max="32767" attributes="0"/>
                                           </Group>
                                           <Component id="jScrollPane5" alignment="1" max="32767" attributes="0"/>
                                       </Group>
@@ -2749,7 +2749,7 @@
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
-                              <Component id="jScrollPane6" alignment="0" pref="480" max="32767" attributes="0"/>
+                              <Component id="jScrollPane6" alignment="0" pref="509" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">

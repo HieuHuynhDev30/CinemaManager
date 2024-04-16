@@ -160,40 +160,65 @@ public class ManagerView extends javax.swing.JFrame {
     }
 
     public void showScrollSuatList(List<SuatChieu> list) {
-        for (SuatChieu ph : list) {
-            JPanel suatPanel = new javax.swing.JPanel();
+        for (SuatChieu sch : list) {
+            JPanel SchPanel = new javax.swing.JPanel();
+            JPanel infoSchPanel = new javax.swing.JPanel();
             JLabel posterLabel = new javax.swing.JLabel();
-            JPanel infoPanel = new JPanel();
 
-            suatPanel.setLayout(new java.awt.GridLayout(1, 2));
-            suatPanel.setPreferredSize(new java.awt.Dimension(300, 250));
-            infoPanel.setLayout(new java.awt.GridLayout(4, 1));
-            infoPanel.setSize(180, 200);
-            posterLabel.setSize(180, 230);
+            JLabel schId = new javax.swing.JLabel();
+            schId.setOpaque(false);
+            schId.setFocusable(false);
 
-            ImageIcon poster = this.getImage(ph.getPhim().getPosterLink(), posterLabel);
-            posterLabel.setIcon(poster);
-            JLabel phim = new javax.swing.JLabel();
-            phim.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-            phim.setText(ph.getPhim().getTen());
+            JTextArea phimSch = new javax.swing.JTextArea(2, 10);
+            phimSch.setWrapStyleWord(true);
+            phimSch.setLineWrap(true);
+            phimSch.setOpaque(false);
+            phimSch.setEditable(false);
+            phimSch.setFocusable(false);
 
-            JLabel thoiGian = new javax.swing.JLabel();
-            thoiGian.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-            thoiGian.setText(ph.getThoiGianChieu().format(formatDateTime));
-            JLabel phong = new javax.swing.JLabel();
-            phong.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-            phong.setText(ph.getPhongId());
+            JLabel phongSch = new javax.swing.JLabel();
+            phongSch.setOpaque(false);
+            phongSch.setFocusable(false);
+
+            JTextArea tgSch = new javax.swing.JTextArea(2, 10);
+            tgSch.setWrapStyleWord(true);
+            tgSch.setLineWrap(true);
+            tgSch.setOpaque(false);
+            tgSch.setEditable(false);
+            tgSch.setFocusable(false);
+
             JLabel gheTrongLabel = new javax.swing.JLabel();
-            gheTrongLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-            gheTrongLabel.setText(ph.inTongDat() + "/" + ph.getDsGheTrong().size() + " ghế");
-            suatPanel.setLayout(new java.awt.GridLayout(0, 2));
-            infoPanel.add(phim);
-            infoPanel.add(thoiGian);
-            infoPanel.add(phong);
-            infoPanel.add(gheTrongLabel);
-            suatPanel.add(posterLabel);
-            suatPanel.add(infoPanel);
-            DsSuatPane.add(suatPanel);
+            int tongGhe = sch.inTongDat() + sch.inTongTrong();
+            gheTrongLabel.setText(sch.inTongDat() + "/" + tongGhe + " ghế");
+            gheTrongLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+
+            SchPanel.setLayout(new java.awt.GridLayout(1, 2));
+            SchPanel.setPreferredSize(new java.awt.Dimension(200, 198));
+            infoSchPanel.setLayout(new java.awt.GridLayout(10, 1));
+            infoSchPanel.setSize(200, 198);
+            posterLabel.setSize(200, 198);
+
+            infoSchPanel.add(phimSch);
+            infoSchPanel.add(phongSch);
+            infoSchPanel.add(tgSch);
+            infoSchPanel.add(schId);
+            infoSchPanel.add(gheTrongLabel);
+
+            ImageIcon imageIcon = this.getImage(sch.getPhim().getPosterLink(), posterLabel);
+            posterLabel.setIcon(imageIcon);
+
+            schId.setText(sch.getId());
+
+            phimSch.setText(sch.getPhim().getTen());
+
+            phongSch.setText(sch.getPhongId());
+
+            tgSch.setText(sch.getThoiGianChieu().format(formatDateTime));
+
+            infoSchPanel.add(schId);
+            SchPanel.add(posterLabel);
+            SchPanel.add(infoSchPanel);
+            DsSuatPane.add(SchPanel);
         }
 
     }
@@ -486,17 +511,14 @@ public class ManagerView extends javax.swing.JFrame {
 //////// Quản lý suất chiếu
     public void showListSuatChieu(List<SuatChieu> list) {
         int size = list.size();
-        // với bảng studentTable có 5 cột, 
-        // khởi tạo mảng 2 chiều students, trong đó:
-        // số hàng: là kích thước của list student 
-        // số cột: là 5
         Object[][] schs = new Object[size][5];
         for (int i = 0; i < size; i++) {
             schs[i][0] = list.get(i).getId();
             schs[i][1] = list.get(i).getPhim().getTen();
             schs[i][2] = list.get(i).getPhongId();
             schs[i][3] = list.get(i).getThoiGianChieu().format(formatDateTime);
-            schs[i][4] = list.get(i).inTongDat() + "/" + list.get(i).getDsGheTrong().size() + " ghế";
+            int tongGhe = list.get(i).inTongDat() + list.get(i).inTongTrong();
+            schs[i][4] = list.get(i).inTongDat() + "/" + tongGhe + " ghế";
         }
         String[] columnNames = new String[5];
         for (int i = 0; i < 5; i++) {
@@ -1732,7 +1754,7 @@ public class ManagerView extends javax.swing.JFrame {
             .addGroup(HomepageLayout.createSequentialGroup()
                 .addGroup(HomepageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(DsSuatScrollPane)
-                    .addComponent(DsPhongScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 987, Short.MAX_VALUE)
+                    .addComponent(DsPhongScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1045, Short.MAX_VALUE)
                     .addGroup(HomepageLayout.createSequentialGroup()
                         .addComponent(HomepageTitle)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1881,7 +1903,7 @@ public class ManagerView extends javax.swing.JFrame {
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 989, Short.MAX_VALUE)
+            .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 1047, Short.MAX_VALUE)
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2052,7 +2074,7 @@ public class ManagerView extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addComponent(jLabel3)
-                .addGap(0, 836, Short.MAX_VALUE))
+                .addGap(0, 894, Short.MAX_VALUE))
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2195,7 +2217,7 @@ public class ManagerView extends javax.swing.JFrame {
         });
         suatChieuScroll.setViewportView(suatChieuTable);
 
-        quanLySuatChieu.add(suatChieuScroll, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 530, 810));
+        quanLySuatChieu.add(suatChieuScroll, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 570, 810));
 
         Id.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Id.setLabelFor(IdField);
@@ -2392,7 +2414,7 @@ public class ManagerView extends javax.swing.JFrame {
                 .addContainerGap(74, Short.MAX_VALUE))
         );
 
-        quanLySuatChieu.add(SuatChieuControllers, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 40, 470, 540));
+        quanLySuatChieu.add(SuatChieuControllers, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 40, 480, 540));
 
         jTabbedPane4.addTab("", quanLySuatChieu);
 
@@ -2724,7 +2746,7 @@ public class ManagerView extends javax.swing.JFrame {
             .addGroup(jPanel21Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(505, Short.MAX_VALUE))
+                .addContainerGap(563, Short.MAX_VALUE))
         );
         jPanel21Layout.setVerticalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2857,7 +2879,7 @@ public class ManagerView extends javax.swing.JFrame {
                             .addComponent(tgChieuField1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(phongDatVeCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(chonGheButton))
-                .addGap(0, 380, Short.MAX_VALUE))
+                .addGap(0, 438, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2940,7 +2962,7 @@ public class ManagerView extends javax.swing.JFrame {
                 .addGroup(ChonSuatChieuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(quanLySuatChieu1, javax.swing.GroupLayout.DEFAULT_SIZE, 987, Short.MAX_VALUE))
+                    .addComponent(quanLySuatChieu1, javax.swing.GroupLayout.DEFAULT_SIZE, 1045, Short.MAX_VALUE))
                 .addContainerGap())
         );
         ChonSuatChieuLayout.setVerticalGroup(
@@ -2973,7 +2995,7 @@ public class ManagerView extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(tongDoanhThu, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 624, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 682, Short.MAX_VALUE)
                 .addComponent(resetDTButton, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26))
         );
@@ -3052,7 +3074,7 @@ public class ManagerView extends javax.swing.JFrame {
                         .addComponent(sortDtSchButton)
                         .addGap(18, 18, 18)
                         .addComponent(tieuChiDtSch)
-                        .addGap(0, 305, Short.MAX_VALUE))
+                        .addGap(0, 334, Short.MAX_VALUE))
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
@@ -3151,7 +3173,7 @@ public class ManagerView extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(DoanhThuEnd, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
+            .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 509, Short.MAX_VALUE)
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
