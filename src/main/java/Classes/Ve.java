@@ -54,17 +54,15 @@ public class Ve {
         return suat.getPhongId();
     }
 
-    public String getKhachName(List<Khach> list, List<Ve> veList) {
+    public String getKhachName(List<Khach> list) {
         for (Khach kh : list) {
             if (this.getGhe().getKhachId().equals(kh.getId())) {
                 return kh.getHoTen();
             }
         }
-        for (Ve v : veList) {
-            if (this.getGhe().getKhachId().equals("no_mem")) {
-                System.out.println("no_mem");
-                return "no_mem";
-            }
+
+        if (this.getGhe().getKhachId().equals("no_mem")) {
+            return "no_mem";
         }
         return null;
     }

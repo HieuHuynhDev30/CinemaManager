@@ -360,8 +360,13 @@ public class ManagerController {
     class EditSuatChieuListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            SuatChieu sch = managerView.getSchInfo(phimFunc.getPhimList(), phongFunc.getPhongList());
+            SuatChieu sch = managerView.getSchInfo(phimFunc.getPhimList(), phongFunc.getPhongList(), suatChieuFunc.getSuatChieuList());
             if (sch != null) {
+                suatChieuFunc.removeSchIntervals(sch);
+                if (suatChieuFunc.checkTrungTg(sch.getThoiGianChieu(), sch.getPhongId(), sch.getPhim())) {
+                    managerView.showMessage("Thời gian chiếu trùng suất chiếu khác");
+                    return;
+                }
                 for (Phong ph : phongFunc.getPhongList()) {
                     if (ph.getId().equals(sch.getPhongId())) {
                         if (ph.getIsPlaying()) {
@@ -372,8 +377,8 @@ public class ManagerController {
                         phongFunc.editPhong(ph);
                     }
                 }
-                suatChieuFunc.editSuatChieu(sch);
                 managerView.showSuatChieu(sch);
+                suatChieuFunc.editSuatChieu(sch);
                 managerView.showListSuatChieu(suatChieuFunc.getSuatChieuList());
                 managerView.showMessage("Cập nhật thành công!");
                 showManagerView();
@@ -391,8 +396,7 @@ public class ManagerController {
     class AddSuatChieuListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            System.out.println("check sch");
-            SuatChieu infoSch = managerView.getSchInfo(phimFunc.getPhimList(), phongFunc.getPhongList());
+            SuatChieu infoSch = managerView.getSchInfo(phimFunc.getPhimList(), phongFunc.getPhongList(), suatChieuFunc.getSuatChieuList());
             if (infoSch == null) {
                 return;
             }
@@ -434,7 +438,7 @@ public class ManagerController {
     class DeleteSuatChieuListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            SuatChieu sch = managerView.getSchInfo(phimFunc.getPhimList(), phongFunc.getPhongList());
+            SuatChieu sch = managerView.getSchInfo(phimFunc.getPhimList(), phongFunc.getPhongList(), suatChieuFunc.getSuatChieuList());
             if (sch != null) {
                 if (phongFunc.getPhongList() != null) {
                     for (Phong ph : phongFunc.getPhongList()) {
@@ -731,14 +735,13 @@ public class ManagerController {
         public void actionPerformed(ActionEvent e) {
             veFunc.sortVeByName(khachFunc.getKhachList());
             managerView.showListVe(veFunc.getVeList(), khachFunc.getKhachList());
-
         }
     }
 
     class SortByPhimVeListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            veFunc.sortVeByPhim(khachFunc.getKhachList());
+            veFunc.sortVeByPhim();
             managerView.showListVe(veFunc.getVeList(), khachFunc.getKhachList());
         }
     }

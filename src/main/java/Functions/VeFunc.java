@@ -203,20 +203,22 @@ public class VeFunc {
     }
 
     //sort
-    public void sortVeByName(List<Khach> list) {
+    public void sortVeByName(List<Khach> khachList) {
         Collections.sort(veList, new Comparator<Ve>() {
             public int compare(Ve ve1, Ve ve2) {
-                return ve1.getKhachName(khachFunc.getKhachList(), getVeList()).compareTo(ve2.getKhachName(khachFunc.getKhachList(), getVeList()));
+                return ve1.getKhachName(khachList).compareTo(ve2.getKhachName(khachList));
             }
         });
+        this.writeListVes(veList);
     }
 
-    public void sortVeByPhim(List<Khach> list) {
+    public void sortVeByPhim() {
         Collections.sort(veList, new Comparator<Ve>() {
             public int compare(Ve ve1, Ve ve2) {
                 return ve1.getSuat().inPhim().compareTo(ve2.getSuat().inPhim());
             }
         });
+        this.writeListVes(veList);
     }
 
     public List<Ve> getVeList() {

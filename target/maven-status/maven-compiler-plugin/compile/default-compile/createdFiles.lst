@@ -63,6 +63,7 @@ Views\ManagerView$22.class
 Classes\SuatChieu$3.class
 Views\ManagerView$6.class
 Functions\PhongFunc$SortPhongPhim.class
+Views\ManagerView$29.class
 com\toedter\calendar\JMonthChooserBeanInfo.class
 XML\VeListXML.class
 Controllers\ManagerController$SapXepDtSchListener.class

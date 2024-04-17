@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <phims>
-    <phim id="Ph8">
-        <ten>No Way Up</ten>
-        <theLoai>Hanh dong</theLoai>
-        <doTuoi>16</doTuoi>
-        <posterLink>/Images/nowayup.jpg</posterLink>
-        <dt>520000.0</dt>
-        <thoiLuong>PT1H30M</thoiLuong>
-        <TgKhoiChieu>2024-01-18</TgKhoiChieu>
-    </phim>
     <phim id="Ph10">
         <ten>The Tear Smith</ten>
         <theLoai>Tinh cam</theLoai>
@@ -27,15 +18,6 @@
         <thoiLuong>PT1H47M</thoiLuong>
         <TgKhoiChieu>2024-03-28</TgKhoiChieu>
     </phim>
-    <phim id="Ph1">
-        <ten>Alien Noid</ten>
-        <theLoai>Khoa hoc vien tuong</theLoai>
-        <doTuoi>16</doTuoi>
-        <posterLink>/Images/aliennoid.jpg</posterLink>
-        <dt>400000.0</dt>
-        <thoiLuong>PT2H25M</thoiLuong>
-        <TgKhoiChieu>2022-07-20</TgKhoiChieu>
-    </phim>
     <phim id="Ph3">
         <ten>Dune: Part Two</ten>
         <theLoai>Khoa hoc vien tuong</theLoai>
@@ -44,24 +26,6 @@
         <dt>0.0</dt>
         <thoiLuong>PT2H45M</thoiLuong>
         <TgKhoiChieu>2024-02-27</TgKhoiChieu>
-    </phim>
-    <phim id="Ph6">
-        <ten>Imaginary</ten>
-        <theLoai>Kinh di</theLoai>
-        <doTuoi>13</doTuoi>
-        <posterLink>/Images/imaginary.jpg</posterLink>
-        <dt>920000.0</dt>
-        <thoiLuong>PT1H45M</thoiLuong>
-        <TgKhoiChieu>2024-03-06</TgKhoiChieu>
-    </phim>
-    <phim id="Ph9">
-        <ten>Penoza: The Final Chapter</ten>
-        <theLoai>Hanh dong</theLoai>
-        <doTuoi>16</doTuoi>
-        <posterLink>/Images/penzoa.jpg</posterLink>
-        <dt>0.0</dt>
-        <thoiLuong>PT1H55M</thoiLuong>
-        <TgKhoiChieu>2019-11-28</TgKhoiChieu>
     </phim>
     <phim id="Ph7">
         <ten>The Adventures of Maid Marian</ten>
@@ -90,6 +54,24 @@
         <thoiLuong>PT1H45M</thoiLuong>
         <TgKhoiChieu>2024-03-28</TgKhoiChieu>
     </phim>
+    <phim id="Ph15">
+        <ten>Annabella</ten>
+        <theLoai>Kinh di</theLoai>
+        <doTuoi>18</doTuoi>
+        <posterLink>/Images/no_poster.jpg</posterLink>
+        <dt>0.0</dt>
+        <thoiLuong>PT2H</thoiLuong>
+        <TgKhoiChieu>2024-04-18</TgKhoiChieu>
+    </phim>
+    <phim id="Ph9">
+        <ten>Penoza: The Final Chapter</ten>
+        <theLoai>Hanh dong</theLoai>
+        <doTuoi>16</doTuoi>
+        <posterLink>/Images/penzoa.jpg</posterLink>
+        <dt>0.0</dt>
+        <thoiLuong>PT1H55M</thoiLuong>
+        <TgKhoiChieu>2019-11-28</TgKhoiChieu>
+    </phim>
     <phim id="Ph2">
         <ten>Baghead</ten>
         <theLoai>Kinh di</theLoai>
@@ -99,13 +81,31 @@
         <thoiLuong>PT1H35M</thoiLuong>
         <TgKhoiChieu>2023-12-28</TgKhoiChieu>
     </phim>
-    <phim id="Ph15">
-        <ten>Annabella</ten>
-        <theLoai>Kinh di</theLoai>
-        <doTuoi>18</doTuoi>
-        <posterLink>/Images/no_poster.jpg</posterLink>
+    <phim id="Ph1">
+        <ten>Alien Noid</ten>
+        <theLoai>Khoa hoc vien tuong</theLoai>
+        <doTuoi>16</doTuoi>
+        <posterLink>/Images/aliennoid.jpg</posterLink>
         <dt>0.0</dt>
-        <thoiLuong>PT2H</thoiLuong>
-        <TgKhoiChieu>2024-04-18</TgKhoiChieu>
+        <thoiLuong>PT2H25M</thoiLuong>
+        <TgKhoiChieu>2022-07-20</TgKhoiChieu>
+    </phim>
+    <phim id="Ph8">
+        <ten>No Way Up</ten>
+        <theLoai>Hanh dong</theLoai>
+        <doTuoi>16</doTuoi>
+        <posterLink>/Images/nowayup.jpg</posterLink>
+        <dt>0.0</dt>
+        <thoiLuong>PT1H30M</thoiLuong>
+        <TgKhoiChieu>2024-01-18</TgKhoiChieu>
+    </phim>
+    <phim id="Ph6">
+        <ten>Imaginary</ten>
+        <theLoai>Kinh di</theLoai>
+        <doTuoi>13</doTuoi>
+        <posterLink>/Images/imaginary.jpg</posterLink>
+        <dt>0.0</dt>
+        <thoiLuong>PT1H45M</thoiLuong>
+        <TgKhoiChieu>2024-03-06</TgKhoiChieu>
     </phim>
 </phims>

@@ -88,6 +88,7 @@ public class LoginView extends javax.swing.JFrame  implements ActionListener {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cineverse Cinema");
+        setLocation(new java.awt.Point(550, 100));
         setName("LoginFrame"); // NOI18N
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());

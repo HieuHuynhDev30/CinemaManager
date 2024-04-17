@@ -901,4 +901,90 @@
             </suat>
         </dsVe>
     </khach>
+    <khach id="K7">
+        <slVeDat>1</slVeDat>
+        <tongTien>200000</tongTien>
+        <hoTen>Nguyễn Văn Tài Lương</hoTen>
+        <gioiTinh>Nam</gioiTinh>
+        <ngaySinh>2003-09-20</ngaySinh>
+        <dsVe id="V607">
+            <ghe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gheDoi">
+                <gia>200000.0</gia>
+                <khachId>K7</khachId>
+                <loai>Doi</loai>
+                <viTri>P12A5</viTri>
+            </ghe>
+            <suat id="SCH469">
+                <phim id="Ph2">
+                    <ten>Baghead</ten>
+                    <theLoai>Kinh di</theLoai>
+                    <doTuoi>18</doTuoi>
+                    <posterLink>/Images/baghead.jpg</posterLink>
+                    <dt>0.0</dt>
+                    <thoiLuong>PT1H35M</thoiLuong>
+                    <TgKhoiChieu>2023-12-28</TgKhoiChieu>
+                </phim>
+                <phongId>P12</phongId>
+                <full>false</full>
+                <thoiGianChieu>20-04-2024 20:00</thoiGianChieu>
+                <dt>0.0</dt>
+                <chieuXong>false</chieuXong>
+                <dsGheThuong>
+                    <entry>
+                        <key>P12A2</key>
+                        <value>
+                            <gia>80000.0</gia>
+                            <loai>Thuong</loai>
+                            <viTri>P12A2</viTri>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>P12A1</key>
+                        <value>
+                            <gia>80000.0</gia>
+                            <loai>Thuong</loai>
+                            <viTri>P12A1</viTri>
+                        </value>
+                    </entry>
+                </dsGheThuong>
+                <dsGheVip>
+                    <entry>
+                        <key>P12A4</key>
+                        <value>
+                            <gia>120000.0</gia>
+                            <loai>Vip</loai>
+                            <viTri>P12A4</viTri>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>P12A3</key>
+                        <value>
+                            <gia>120000.0</gia>
+                            <loai>Vip</loai>
+                            <viTri>P12A3</viTri>
+                        </value>
+                    </entry>
+                </dsGheVip>
+                <dsGheDoi>
+                    <entry>
+                        <key>P12A6</key>
+                        <value>
+                            <gia>200000.0</gia>
+                            <loai>Doi</loai>
+                            <viTri>P12A6</viTri>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>P12A5</key>
+                        <value>
+                            <gia>200000.0</gia>
+                            <khachId>K7</khachId>
+                            <loai>Doi</loai>
+                            <viTri>P12A5</viTri>
+                        </value>
+                    </entry>
+                </dsGheDoi>
+            </suat>
+        </dsVe>
+    </khach>
 </khachs>
