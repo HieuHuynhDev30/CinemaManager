@@ -654,12 +654,18 @@ public class ManagerController {
         public void actionPerformed(ActionEvent e) {
             Khach khach = managerView.getKhachInfor(khachFunc.getKhachList());
             SuatChieu Sch = managerView.getDatVeSchInfo(suatChieuFunc.getSuatChieuList());
-            if (khach != null && khach.getTuoi() < Sch.getPhim().getDoTuoi()) {
-                managerView.showMessage("Thành viên chưa đủ tuổi để xem phim này");
-                return;
+            if (Sch.getPhim() != null && khach != null) {
+                if (khach.getTuoi() < Sch.getPhim().getDoTuoi()) {
+                    managerView.showMessage("Thành viên chưa đủ tuổi để xem phim này");
+                    return;
+                }
             }
             Ve ve = new Ve();
             Ghe ghe = new Ghe();
+            if (Sch.getPhongId() == null) {
+                managerView.showMessage("Chọn suất chiếu trước khi chọn ghế");
+                return;
+            }
             if (!"".equals(Sch.getPhongId())) {
                 if (Sch.isFull()) {
                     managerView.showMessage("Suất chiếu đã hết ghế");
@@ -674,9 +680,7 @@ public class ManagerController {
                 managerView.showListGhe(Sch);
                 managerView.fillGheFromSelectedRow();
                 managerView.showSeatDialog();
-            } else {
-                managerView.showMessage("Chọn suất chiếu trước khi chọn ghế");
-            }
+            } 
         }
     }
 
