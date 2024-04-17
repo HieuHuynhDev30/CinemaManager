@@ -5,7 +5,7 @@
         <theLoai>Hanh dong</theLoai>
         <doTuoi>16</doTuoi>
         <posterLink>/Images/nowayup.jpg</posterLink>
-        <dt>200000.0</dt>
+        <dt>520000.0</dt>
         <thoiLuong>PT1H30M</thoiLuong>
         <TgKhoiChieu>2024-01-18</TgKhoiChieu>
     </phim>
@@ -32,7 +32,7 @@
         <theLoai>Khoa hoc vien tuong</theLoai>
         <doTuoi>16</doTuoi>
         <posterLink>/Images/aliennoid.jpg</posterLink>
-        <dt>0.0</dt>
+        <dt>400000.0</dt>
         <thoiLuong>PT2H25M</thoiLuong>
         <TgKhoiChieu>2022-07-20</TgKhoiChieu>
     </phim>
@@ -50,7 +50,7 @@
         <theLoai>Kinh di</theLoai>
         <doTuoi>13</doTuoi>
         <posterLink>/Images/imaginary.jpg</posterLink>
-        <dt>0.0</dt>
+        <dt>920000.0</dt>
         <thoiLuong>PT1H45M</thoiLuong>
         <TgKhoiChieu>2024-03-06</TgKhoiChieu>
     </phim>
@@ -106,6 +106,6 @@
         <posterLink>/Images/no_poster.jpg</posterLink>
         <dt>0.0</dt>
         <thoiLuong>PT2H</thoiLuong>
-        <TgKhoiChieu>2024-05-16</TgKhoiChieu>
+        <TgKhoiChieu>2024-04-18</TgKhoiChieu>
     </phim>
 </phims>

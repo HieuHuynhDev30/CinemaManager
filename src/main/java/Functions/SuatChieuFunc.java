@@ -263,10 +263,10 @@ public class SuatChieuFunc {
         if ("doanhthu".equals(tieuChi.toLowerCase())) {
             Collections.sort(list, new SortDtSch(beLon));
         }
-        if ("thoigian".equals(tieuChi.toLowerCase())) {
+        if ("thời gian chiếu".equals(tieuChi.toLowerCase())) {
             Collections.sort(list, new SortTgSch(beLon));
         }
-        if ("lapday".equals(tieuChi.toLowerCase())) {
+        if ("lắp đầy".equals(tieuChi.toLowerCase())) {
             Collections.sort(list, new SortSchLd(beLon));
         }
         this.writeListSuatChieus(list);

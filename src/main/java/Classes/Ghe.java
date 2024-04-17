@@ -64,7 +64,10 @@ public class Ghe{
     public void setKhachId(String khachId) {
         this.khachId = khachId;
     }
-
+    
+    public void setKhachLa() {
+        this.khachId = "no_mem";
+    } 
 
     @XmlTransient
     public LocalDateTime getThoiGianDat() {

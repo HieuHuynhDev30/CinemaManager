@@ -71,6 +71,7 @@ public class KhachFunc {
 
     public void themKhach(Khach kh) {
         this.khachList.add(kh);
+        this.writeListKhachs(khachList);
     }
 
     public void editKhach(Khach p) {

@@ -153,14 +153,21 @@ public class VeFunc {
 
     public List<Ve> SearchKhachVe(String s) {
         List<Ve> list = new ArrayList<>();
-        List<Khach> list1 = khachFunc.searchTen(s);
-        for (Ve V : this.veList) {
-            for (Khach kh : list1) {
-                if (V.getGhe().getKhachId().equals(kh.getId())) {
+        if (!"no_mem".equals(s)) {
+            List<Khach> list1 = khachFunc.searchTen(s);
+            for (Ve V : this.veList) {
+                for (Khach kh : list1) {
+                    if (V.getGhe().getKhachId().equals(kh.getId())) {
+                        list.add(V);
+                    }
+                }
+            }
+        } else {
+            for (Ve V : this.veList) {
+                if (V.getGhe().getKhachId().equals("no_mem")) {
                     list.add(V);
                 }
             }
-
         }
         return list;
     }
@@ -199,8 +206,7 @@ public class VeFunc {
     public void sortVeByName(List<Khach> list) {
         Collections.sort(veList, new Comparator<Ve>() {
             public int compare(Ve ve1, Ve ve2) {
-
-                return ve1.getKhachName(khachFunc.getKhachList()).compareTo(ve2.getKhachName(khachFunc.getKhachList()));
+                return ve1.getKhachName(khachFunc.getKhachList(), getVeList()).compareTo(ve2.getKhachName(khachFunc.getKhachList(), getVeList()));
             }
         });
     }
@@ -208,7 +214,6 @@ public class VeFunc {
     public void sortVeByPhim(List<Khach> list) {
         Collections.sort(veList, new Comparator<Ve>() {
             public int compare(Ve ve1, Ve ve2) {
-
                 return ve1.getSuat().inPhim().compareTo(ve2.getSuat().inPhim());
             }
         });

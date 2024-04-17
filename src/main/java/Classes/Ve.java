@@ -18,6 +18,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "ve") // anotation xác định element được đọc vào file xml
 @XmlAccessorType(XmlAccessType.FIELD) // đọc dưới dạng trường, nhận các thuộc tính là một element
 public class Ve {
+
     private static int currId;
     @XmlAttribute // xác định cách đọc thuộc tính dưới dạng thuộc tính của element mẹ
     private String id;
@@ -48,15 +49,21 @@ public class Ve {
     public void setSuat(SuatChieu suat) {
         this.suat = suat;
     }
-    
-    public String getPhong(){
+
+    public String getPhong() {
         return suat.getPhongId();
     }
-    
-    public String getKhachName(List <Khach> list){
-        for(Khach kh: list){
-            if(this.getGhe().getKhachId().equals(kh.getId())){
-                     return kh.getHoTen();
+
+    public String getKhachName(List<Khach> list, List<Ve> veList) {
+        for (Khach kh : list) {
+            if (this.getGhe().getKhachId().equals(kh.getId())) {
+                return kh.getHoTen();
+            }
+        }
+        for (Ve v : veList) {
+            if (this.getGhe().getKhachId().equals("no_mem")) {
+                System.out.println("no_mem");
+                return "no_mem";
             }
         }
         return null;
@@ -65,7 +72,7 @@ public class Ve {
     @Override
     public String toString() {
         String veStr = ghe.viTri;
-        return "Ve{" + "id=" + id + " ghe=" + veStr  + " suat=" + suat.toString() + '}';
+        return "Ve{" + "id=" + id + " ghe=" + veStr + " suat=" + suat.toString() + '}';
     }
-    
+
 }

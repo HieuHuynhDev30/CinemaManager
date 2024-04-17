@@ -352,6 +352,7 @@ public class PhongFunc {
 
     public void setPhongList(List<Phong> phongList) {
         this.phongList = phongList;
+        this.writeListPhongs(phongList);
     }
 }
 

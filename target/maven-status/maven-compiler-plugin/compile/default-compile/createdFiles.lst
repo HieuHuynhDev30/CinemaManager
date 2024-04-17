@@ -72,6 +72,7 @@ Classes\Ve.class
 Classes\Adaptaters\LocalDateTimeAdapter.class
 com\toedter\components\LocaleEditor.class
 Controllers\ManagerController$ClearPhongListener.class
+Controllers\ManagerController$ActivateThanhVien.class
 Views\ManagerView$17.class
 Classes\Ghe.class
 com\toedter\calendar\JDateChooser$2.class
@@ -125,6 +126,7 @@ Views\ManagerView$20.class
 Controllers\ManagerController$ClearPhimListener.class
 Views\ManagerView$13.class
 Functions\SuatChieuFunc$SortTgSch.class
+Controllers\ManagerController$ShowNKCDateListener.class
 Controllers\ManagerController$ListSuatChieuDatVeSelectionListener.class
 Views\LoginView.class
 Views\ManagerView$4.class

@@ -1,5 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <phongs>
+    <phong id="P12">
+        <slVip>2</slVip>
+        <slThuong>2</slThuong>
+        <slDoi>2</slDoi>
+        <dsGheThuong>
+            <entry>
+                <key>P12A2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P12A2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P12A1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P12A1</viTri>
+                </value>
+            </entry>
+        </dsGheThuong>
+        <dsGheVip>
+            <entry>
+                <key>P12A4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P12A4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P12A3</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P12A3</viTri>
+                </value>
+            </entry>
+        </dsGheVip>
+        <dsGheDoi>
+            <entry>
+                <key>P12A6</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P12A6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P12A5</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P12A5</viTri>
+                </value>
+            </entry>
+        </dsGheDoi>
+        <nextPhim>Alien Noid</nextPhim>
+        <isPlaying>false</isPlaying>
+        <columns>7</columns>
+        <rows>65</rows>
+        <dt>520000.0</dt>
+    </phong>
     <phong id="P1">
         <slVip>2</slVip>
         <slThuong>2</slThuong>
@@ -62,69 +126,6 @@
         <isPlaying>false</isPlaying>
         <columns>7</columns>
         <rows>65</rows>
-        <dt>200000.0</dt>
-    </phong>
-    <phong id="P12">
-        <slVip>2</slVip>
-        <slThuong>2</slThuong>
-        <slDoi>2</slDoi>
-        <dsGheThuong>
-            <entry>
-                <key>P12A2</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P12A2</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P12A1</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P12A1</viTri>
-                </value>
-            </entry>
-        </dsGheThuong>
-        <dsGheVip>
-            <entry>
-                <key>P12A4</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P12A4</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P12A3</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P12A3</viTri>
-                </value>
-            </entry>
-        </dsGheVip>
-        <dsGheDoi>
-            <entry>
-                <key>P12A6</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
-                    <viTri>P12A6</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P12A5</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
-                    <viTri>P12A5</viTri>
-                </value>
-            </entry>
-        </dsGheDoi>
-        <isPlaying>false</isPlaying>
-        <columns>7</columns>
-        <rows>65</rows>
-        <dt>0.0</dt>
+        <dt>1320000.0</dt>
     </phong>
 </phongs>
