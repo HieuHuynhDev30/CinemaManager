@@ -81,11 +81,11 @@ public class KhachFunc {
                 ph.setHoTen(p.getHoTen());
                 ph.setGioiTinh(p.getGioiTinh());
                 ph.setNgaySinh((CharSequence) p.inNgaySinh());
-                ph.setSlVeDat(p.getSlVeDat());
-                ph.setTongTien(p.getTongTien());
+                ph.setDsVe(p.getDsVe());
             }
         }
-        this.writeListKhachs(khachList);
+        this.setKhachList(khachList);
+        this.writeListKhachs(this.getKhachList());
     }
 
     public void xoaKhach(Khach p) {
@@ -120,8 +120,8 @@ public class KhachFunc {
         }
         if ("tongtien".equals(tieuChi.toLowerCase())) {
             Collections.sort(list, (Khach o1, Khach o2) -> {
-                int intId1 = o1.getTongTien();
-                int intId2 = o2.getTongTien();
+                double intId1 = o1.getTongTien();
+                double intId2 = o2.getTongTien();
                 if ((beLon && intId1 < intId2) || (!beLon && intId1 > intId2)) {
                     return 1;
                 }

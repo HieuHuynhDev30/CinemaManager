@@ -18,19 +18,21 @@ import java.util.List;
  */
 // Lớp định nghĩa các hành vi làm việc với doanh thu
 public class DoanhThuFunc {
-
+    
     private VeFunc veFunc;
     public PhongFunc phongFunc;
     public PhimFunc phimFunc;
     public SuatChieuFunc suatChieuFunc;
-
+    public KhachFunc khachFunc;
+    
     public DoanhThuFunc() {
         veFunc = new VeFunc();
         phongFunc = new PhongFunc();
         phimFunc = new PhimFunc();
         suatChieuFunc = new SuatChieuFunc();
+        khachFunc = new KhachFunc();
     }
-
+    
     public double doanhThu(String tieuChi, Object... obs) {
         double doanhThu = 0;
         veFunc.setVeList(veFunc.readListVes());
@@ -55,8 +57,8 @@ public class DoanhThuFunc {
         }
         return doanhThu;
     }
-
-    public void resetDt(List<Phim> phimList, List<SuatChieu> schList, List<Phong> phongList) {
+    
+    public void resetDt(List<Phim> phimList, List<SuatChieu> schList, List<Phong> phongList, List<Khach> khachList) {
         if (phimList != null) {
             for (Phim ph : phimList) {
                 ph.setDt(0);
@@ -69,15 +71,33 @@ public class DoanhThuFunc {
             }
             phongFunc.writeListPhongs(phongList);
         }
-
+        
         if (schList != null) {
             for (SuatChieu sch : schList) {
                 sch.setDt(0);
+                System.out.println(sch.getDt());
+                if (phongList != null) {
+                    for (Phong ph : phongList) {
+                        if (sch.getPhongId().equals(ph.getId())) {
+                            System.out.println("xoa ghe");
+                            sch.setDsGheThuong(ph.getDsGheThuong());
+                            sch.setDsGheVip(ph.getDsGheVip());
+                            sch.setDsGheDoi(ph.getDsGheDoi());
+                        }
+                    }
+                }
             }
             suatChieuFunc.writeListSuatChieus(schList);
         }
+        if (khachList != null) {
+            for (Khach kh : khachList) {
+                List<Ve> newVeList = new ArrayList<>();
+                kh.setDsVe(newVeList);
+            }
+            khachFunc.writeListKhachs(khachList);
+        }
     }
-
+    
     public List<Phong> searchDoanhThuPhong(String s, String s1) {
         List<Phong> list = new ArrayList<>();
         phongFunc.setPhongList(phongFunc.readListPhongs());

@@ -9,15 +9,6 @@
         <thoiLuong>PT1H56M</thoiLuong>
         <TgKhoiChieu>2024-05-03</TgKhoiChieu>
     </phim>
-    <phim id="Ph11">
-        <ten>The Wages Of Fear</ten>
-        <theLoai>Hanh dong</theLoai>
-        <doTuoi>16</doTuoi>
-        <posterLink>/Images/wagesoffear.jpg</posterLink>
-        <dt>0.0</dt>
-        <thoiLuong>PT1H47M</thoiLuong>
-        <TgKhoiChieu>2024-03-28</TgKhoiChieu>
-    </phim>
     <phim id="Ph3">
         <ten>Dune: Part Two</ten>
         <theLoai>Khoa hoc vien tuong</theLoai>
@@ -63,15 +54,6 @@
         <thoiLuong>PT2H</thoiLuong>
         <TgKhoiChieu>2024-04-18</TgKhoiChieu>
     </phim>
-    <phim id="Ph9">
-        <ten>Penoza: The Final Chapter</ten>
-        <theLoai>Hanh dong</theLoai>
-        <doTuoi>16</doTuoi>
-        <posterLink>/Images/penzoa.jpg</posterLink>
-        <dt>0.0</dt>
-        <thoiLuong>PT1H55M</thoiLuong>
-        <TgKhoiChieu>2019-11-28</TgKhoiChieu>
-    </phim>
     <phim id="Ph2">
         <ten>Baghead</ten>
         <theLoai>Kinh di</theLoai>
@@ -107,5 +89,23 @@
         <dt>0.0</dt>
         <thoiLuong>PT1H45M</thoiLuong>
         <TgKhoiChieu>2024-03-06</TgKhoiChieu>
+    </phim>
+    <phim id="Ph9">
+        <ten>Penoza: The Final Chapter</ten>
+        <theLoai>Hanh dong</theLoai>
+        <doTuoi>16</doTuoi>
+        <posterLink>/Images/penzoa.jpg</posterLink>
+        <dt>280000.0</dt>
+        <thoiLuong>PT1H55M</thoiLuong>
+        <TgKhoiChieu>2019-11-28</TgKhoiChieu>
+    </phim>
+    <phim id="Ph11">
+        <ten>The Wages Of Fear</ten>
+        <theLoai>Hanh dong</theLoai>
+        <doTuoi>16</doTuoi>
+        <posterLink>/Images/wagesoffear.jpg</posterLink>
+        <dt>840000.0</dt>
+        <thoiLuong>PT1H47M</thoiLuong>
+        <TgKhoiChieu>2024-03-28</TgKhoiChieu>
     </phim>
 </phims>

@@ -154,7 +154,7 @@
                 </value>
             </entry>
         </dsGheDoi>
-        <nextPhim>The Tear Smith</nextPhim>
+        <nextPhim></nextPhim>
         <isPlaying>false</isPlaying>
         <columns>9</columns>
         <rows>66</rows>
@@ -218,11 +218,11 @@
                 </value>
             </entry>
         </dsGheDoi>
-        <nextPhim></nextPhim>
+        <nextPhim>The Wages Of Fear</nextPhim>
         <isPlaying>false</isPlaying>
         <columns>7</columns>
         <rows>65</rows>
-        <dt>0.0</dt>
+        <dt>320000.0</dt>
     </phong>
     <phong id="P1">
         <slVip>2</slVip>
@@ -282,11 +282,11 @@
                 </value>
             </entry>
         </dsGheDoi>
-        <nextPhim></nextPhim>
+        <nextPhim>Penoza: The Final Chapter</nextPhim>
         <isPlaying>false</isPlaying>
         <columns>7</columns>
         <rows>65</rows>
-        <dt>0.0</dt>
+        <dt>200000.0</dt>
     </phong>
     <phong id="P130">
         <slVip>9</slVip>
@@ -474,6 +474,7 @@
                 </value>
             </entry>
         </dsGheDoi>
+        <nextPhim>The Adventures of Maid Marian</nextPhim>
         <isPlaying>false</isPlaying>
         <columns>3</columns>
         <rows>67</rows>

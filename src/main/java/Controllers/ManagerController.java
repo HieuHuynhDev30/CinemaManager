@@ -786,12 +786,13 @@ public class ManagerController {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            doanhThuFunc.resetDt(phimFunc.getPhimList(), suatChieuFunc.getSuatChieuList(), phongFunc.getPhongList());
-            veFunc.setVeList(new ArrayList<>());
+            doanhThuFunc.resetDt(phimFunc.getPhimList(), suatChieuFunc.getSuatChieuList(), phongFunc.getPhongList(), khachFunc.getKhachList());
+            List<Ve> newVeList = new ArrayList<>();
+            veFunc.setVeList(newVeList);
             veFunc.writeListVes(veFunc.getVeList());
-            phimFunc.writeListPhims(phimFunc.getPhimList());
-            suatChieuFunc.writeListSuatChieus(suatChieuFunc.getSuatChieuList());
-            phongFunc.writeListPhongs(phongFunc.getPhongList());
+//            phimFunc.writeListPhims(phimFunc.getPhimList());
+//            suatChieuFunc.writeListSuatChieus(suatChieuFunc.getSuatChieuList());
+//            phongFunc.writeListPhongs(phongFunc.getPhongList());
             new ReloadListener().actionPerformed(e);
         }
 

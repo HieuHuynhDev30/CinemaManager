@@ -233,6 +233,7 @@ public class VeFunc {
             List<Ve> newList = new ArrayList<>();
             this.veList = newList;
         }
+         this.writeListVes(veList);
     }
 
 }

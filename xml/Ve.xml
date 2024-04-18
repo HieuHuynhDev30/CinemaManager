@@ -1,2 +1,241 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ves/>
+<ves>
+    <ve id="V2">
+        <ghe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gheDoi">
+            <gia>200000.0</gia>
+            <khachId>K3</khachId>
+            <loai>Doi</loai>
+            <viTri>P1A6</viTri>
+        </ghe>
+        <suat id="SCH109">
+            <phim id="Ph9">
+                <ten>Penoza: The Final Chapter</ten>
+                <theLoai>Hanh dong</theLoai>
+                <doTuoi>16</doTuoi>
+                <posterLink>/Images/penzoa.jpg</posterLink>
+                <dt>80000.0</dt>
+                <thoiLuong>PT1H55M</thoiLuong>
+                <TgKhoiChieu>2019-11-28</TgKhoiChieu>
+            </phim>
+            <phongId>P1</phongId>
+            <full>false</full>
+            <thoiGianChieu>20-04-2024 18:00</thoiGianChieu>
+            <dt>0.0</dt>
+            <chieuXong>false</chieuXong>
+            <dsGheThuong>
+                <entry>
+                    <key>P1A1</key>
+                    <value>
+                        <gia>80000.0</gia>
+                        <loai>Thuong</loai>
+                        <viTri>P1A1</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P1A2</key>
+                    <value>
+                        <gia>80000.0</gia>
+                        <loai>Thuong</loai>
+                        <viTri>P1A2</viTri>
+                    </value>
+                </entry>
+            </dsGheThuong>
+            <dsGheVip>
+                <entry>
+                    <key>P1A4</key>
+                    <value>
+                        <gia>120000.0</gia>
+                        <loai>Vip</loai>
+                        <viTri>P1A4</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P1A3</key>
+                    <value>
+                        <gia>120000.0</gia>
+                        <loai>Vip</loai>
+                        <viTri>P1A3</viTri>
+                    </value>
+                </entry>
+            </dsGheVip>
+            <dsGheDoi>
+                <entry>
+                    <key>P1A5</key>
+                    <value>
+                        <gia>200000.0</gia>
+                        <loai>Doi</loai>
+                        <viTri>P1A5</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P1A6</key>
+                    <value>
+                        <gia>200000.0</gia>
+                        <khachId>K3</khachId>
+                        <loai>Doi</loai>
+                        <viTri>P1A6</viTri>
+                    </value>
+                </entry>
+            </dsGheDoi>
+        </suat>
+    </ve>
+    <ve id="V16">
+        <ghe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gheVip">
+            <gia>120000.0</gia>
+            <khachId>K4</khachId>
+            <loai>Vip</loai>
+            <viTri>P12A4</viTri>
+        </ghe>
+        <suat id="SCH125">
+            <phim id="Ph11">
+                <ten>The Wages Of Fear</ten>
+                <theLoai>Hanh dong</theLoai>
+                <doTuoi>16</doTuoi>
+                <posterLink>/Images/wagesoffear.jpg</posterLink>
+                <dt>520000.0</dt>
+                <thoiLuong>PT1H47M</thoiLuong>
+                <TgKhoiChieu>2024-03-28</TgKhoiChieu>
+            </phim>
+            <phongId>P12</phongId>
+            <full>false</full>
+            <thoiGianChieu>20-04-2024 21:00</thoiGianChieu>
+            <dt>0.0</dt>
+            <chieuXong>false</chieuXong>
+            <dsGheThuong>
+                <entry>
+                    <key>P12A2</key>
+                    <value>
+                        <gia>80000.0</gia>
+                        <loai>Thuong</loai>
+                        <viTri>P12A2</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A1</key>
+                    <value>
+                        <gia>80000.0</gia>
+                        <loai>Thuong</loai>
+                        <viTri>P12A1</viTri>
+                    </value>
+                </entry>
+            </dsGheThuong>
+            <dsGheVip>
+                <entry>
+                    <key>P12A4</key>
+                    <value>
+                        <gia>120000.0</gia>
+                        <khachId>K4</khachId>
+                        <loai>Vip</loai>
+                        <viTri>P12A4</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A3</key>
+                    <value>
+                        <gia>120000.0</gia>
+                        <loai>Vip</loai>
+                        <viTri>P12A3</viTri>
+                    </value>
+                </entry>
+            </dsGheVip>
+            <dsGheDoi>
+                <entry>
+                    <key>P12A6</key>
+                    <value>
+                        <gia>200000.0</gia>
+                        <loai>Doi</loai>
+                        <viTri>P12A6</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A5</key>
+                    <value>
+                        <gia>200000.0</gia>
+                        <loai>Doi</loai>
+                        <viTri>P12A5</viTri>
+                    </value>
+                </entry>
+            </dsGheDoi>
+        </suat>
+    </ve>
+    <ve id="V47">
+        <ghe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gheDoi">
+            <gia>200000.0</gia>
+            <khachId>no_mem</khachId>
+            <loai>Doi</loai>
+            <viTri>P12A5</viTri>
+        </ghe>
+        <suat id="SCH125">
+            <phim id="Ph11">
+                <ten>The Wages Of Fear</ten>
+                <theLoai>Hanh dong</theLoai>
+                <doTuoi>16</doTuoi>
+                <posterLink>/Images/wagesoffear.jpg</posterLink>
+                <dt>640000.0</dt>
+                <thoiLuong>PT1H47M</thoiLuong>
+                <TgKhoiChieu>2024-03-28</TgKhoiChieu>
+            </phim>
+            <phongId>P12</phongId>
+            <full>false</full>
+            <thoiGianChieu>20-04-2024 21:00</thoiGianChieu>
+            <dt>120000.0</dt>
+            <chieuXong>false</chieuXong>
+            <dsGheThuong>
+                <entry>
+                    <key>P12A2</key>
+                    <value>
+                        <gia>80000.0</gia>
+                        <loai>Thuong</loai>
+                        <viTri>P12A2</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A1</key>
+                    <value>
+                        <gia>80000.0</gia>
+                        <loai>Thuong</loai>
+                        <viTri>P12A1</viTri>
+                    </value>
+                </entry>
+            </dsGheThuong>
+            <dsGheVip>
+                <entry>
+                    <key>P12A4</key>
+                    <value>
+                        <gia>120000.0</gia>
+                        <khachId>K4</khachId>
+                        <loai>Vip</loai>
+                        <viTri>P12A4</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A3</key>
+                    <value>
+                        <gia>120000.0</gia>
+                        <loai>Vip</loai>
+                        <viTri>P12A3</viTri>
+                    </value>
+                </entry>
+            </dsGheVip>
+            <dsGheDoi>
+                <entry>
+                    <key>P12A6</key>
+                    <value>
+                        <gia>200000.0</gia>
+                        <loai>Doi</loai>
+                        <viTri>P12A6</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A5</key>
+                    <value>
+                        <gia>200000.0</gia>
+                        <khachId>no_mem</khachId>
+                        <loai>Doi</loai>
+                        <viTri>P12A5</viTri>
+                    </value>
+                </entry>
+            </dsGheDoi>
+        </suat>
+    </ve>
+</ves>

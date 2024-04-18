@@ -1,172 +1,149 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <suatChieus>
-    <suatChieu id="SCH647">
-        <phim id="Ph10">
-            <ten>The Tear Smith</ten>
-            <theLoai>Tinh cam</theLoai>
+    <suatChieu id="SCH125">
+        <phim id="Ph11">
+            <ten>The Wages Of Fear</ten>
+            <theLoai>Hanh dong</theLoai>
             <doTuoi>16</doTuoi>
-            <posterLink>/Images/tearsmith.jpg</posterLink>
-            <dt>0.0</dt>
-            <thoiLuong>PT1H56M</thoiLuong>
-            <TgKhoiChieu>2024-05-03</TgKhoiChieu>
+            <posterLink>/Images/wagesoffear.jpg</posterLink>
+            <dt>840000.0</dt>
+            <thoiLuong>PT1H47M</thoiLuong>
+            <TgKhoiChieu>2024-03-28</TgKhoiChieu>
         </phim>
-        <phongId>P31</phongId>
+        <phongId>P12</phongId>
         <full>false</full>
-        <thoiGianChieu>18-04-2024 15:00</thoiGianChieu>
-        <dt>0.0</dt>
+        <thoiGianChieu>20-04-2024 21:00</thoiGianChieu>
+        <dt>320000.0</dt>
         <chieuXong>false</chieuXong>
         <dsGheThuong>
             <entry>
-                <key>P31A2</key>
+                <key>P12A2</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P31A2</viTri>
+                    <viTri>P12A2</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P31A1</key>
+                <key>P12A1</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P31A1</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31A8</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P31A8</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31A7</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P31A7</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31A6</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P31A6</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31A5</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P31A5</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31A4</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P31A4</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31A3</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P31A3</viTri>
+                    <viTri>P12A1</viTri>
                 </value>
             </entry>
         </dsGheThuong>
         <dsGheVip>
             <entry>
-                <key>P31B3</key>
+                <key>P12A4</key>
                 <value>
                     <gia>120000.0</gia>
+                    <khachId>K4</khachId>
                     <loai>Vip</loai>
-                    <viTri>P31B3</viTri>
+                    <viTri>P12A4</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P31B2</key>
+                <key>P12A3</key>
                 <value>
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
-                    <viTri>P31B2</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31B1</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P31B1</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31A9</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P31A9</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31A10</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P31A10</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31B4</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P31B4</viTri>
+                    <viTri>P12A3</viTri>
                 </value>
             </entry>
         </dsGheVip>
         <dsGheDoi>
             <entry>
-                <key>P31B8</key>
+                <key>P12A6</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P31B8</viTri>
+                    <viTri>P12A6</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P31B7</key>
+                <key>P12A5</key>
                 <value>
                     <gia>200000.0</gia>
+                    <khachId>no_mem</khachId>
                     <loai>Doi</loai>
-                    <viTri>P31B7</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31B6</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
-                    <viTri>P31B6</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31B5</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
-                    <viTri>P31B5</viTri>
+                    <viTri>P12A5</viTri>
                 </value>
             </entry>
         </dsGheDoi>
     </suatChieu>
-    <suatChieu id="SCH1090">
+    <suatChieu id="SCH109">
+        <phim id="Ph9">
+            <ten>Penoza: The Final Chapter</ten>
+            <theLoai>Hanh dong</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/penzoa.jpg</posterLink>
+            <dt>280000.0</dt>
+            <thoiLuong>PT1H55M</thoiLuong>
+            <TgKhoiChieu>2019-11-28</TgKhoiChieu>
+        </phim>
+        <phongId>P1</phongId>
+        <full>false</full>
+        <thoiGianChieu>20-04-2024 18:00</thoiGianChieu>
+        <dt>200000.0</dt>
+        <chieuXong>false</chieuXong>
+        <dsGheThuong>
+            <entry>
+                <key>P1A1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P1A1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P1A2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P1A2</viTri>
+                </value>
+            </entry>
+        </dsGheThuong>
+        <dsGheVip>
+            <entry>
+                <key>P1A4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P1A4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P1A3</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P1A3</viTri>
+                </value>
+            </entry>
+        </dsGheVip>
+        <dsGheDoi>
+            <entry>
+                <key>P1A5</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P1A5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P1A6</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <khachId>K3</khachId>
+                    <loai>Doi</loai>
+                    <viTri>P1A6</viTri>
+                </value>
+            </entry>
+        </dsGheDoi>
+    </suatChieu>
+    <suatChieu id="SCH155">
         <phim id="Ph7">
             <ten>The Adventures of Maid Marian</ten>
             <theLoai>Hai huoc</theLoai>
@@ -176,324 +153,190 @@
             <thoiLuong>PT1H22M</thoiLuong>
             <TgKhoiChieu>2022-05-09</TgKhoiChieu>
         </phim>
-        <phongId>P31</phongId>
+        <phongId>P130</phongId>
         <full>false</full>
-        <thoiGianChieu>19-04-2024 00:00</thoiGianChieu>
+        <thoiGianChieu>21-04-2024 21:00</thoiGianChieu>
         <dt>0.0</dt>
         <chieuXong>false</chieuXong>
         <dsGheThuong>
             <entry>
-                <key>P31A2</key>
+                <key>P130A1</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P31A2</viTri>
+                    <viTri>P130A1</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P31A1</key>
+                <key>P130A2</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P31A1</viTri>
+                    <viTri>P130A2</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P31A8</key>
+                <key>P130A7</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P31A8</viTri>
+                    <viTri>P130A7</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P31A7</key>
+                <key>P130A8</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P31A7</viTri>
+                    <viTri>P130A8</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P31A6</key>
+                <key>P130A5</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P31A6</viTri>
+                    <viTri>P130A5</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P31A5</key>
+                <key>P130A6</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P31A5</viTri>
+                    <viTri>P130A6</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P31A4</key>
+                <key>P130A3</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P31A4</viTri>
+                    <viTri>P130A3</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P31A3</key>
+                <key>P130A4</key>
                 <value>
                     <gia>80000.0</gia>
                     <loai>Thuong</loai>
-                    <viTri>P31A3</viTri>
+                    <viTri>P130A4</viTri>
                 </value>
             </entry>
         </dsGheThuong>
         <dsGheVip>
             <entry>
-                <key>P31B3</key>
+                <key>P130B2</key>
                 <value>
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
-                    <viTri>P31B3</viTri>
+                    <viTri>P130B2</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P31B2</key>
+                <key>P130B3</key>
                 <value>
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
-                    <viTri>P31B2</viTri>
+                    <viTri>P130B3</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P31B1</key>
+                <key>P130B1</key>
                 <value>
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
-                    <viTri>P31B1</viTri>
+                    <viTri>P130B1</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P31A9</key>
+                <key>P130A10</key>
                 <value>
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
-                    <viTri>P31A9</viTri>
+                    <viTri>P130A10</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P31A10</key>
+                <key>P130A9</key>
                 <value>
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
-                    <viTri>P31A10</viTri>
+                    <viTri>P130A9</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P31B4</key>
+                <key>P130B6</key>
                 <value>
                     <gia>120000.0</gia>
                     <loai>Vip</loai>
-                    <viTri>P31B4</viTri>
+                    <viTri>P130B6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P130B7</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P130B7</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P130B4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P130B4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P130B5</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P130B5</viTri>
                 </value>
             </entry>
         </dsGheVip>
         <dsGheDoi>
             <entry>
-                <key>P31B8</key>
+                <key>P130C1</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P31B8</viTri>
+                    <viTri>P130C1</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P31B7</key>
+                <key>P130C2</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P31B7</viTri>
+                    <viTri>P130C2</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P31B6</key>
+                <key>P130B10</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P31B6</viTri>
+                    <viTri>P130B10</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P31B5</key>
+                <key>P130B8</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P31B5</viTri>
-                </value>
-            </entry>
-        </dsGheDoi>
-    </suatChieu>
-    <suatChieu id="SCH1929">
-        <phim id="Ph9">
-            <ten>Penoza: The Final Chapter</ten>
-            <theLoai>Hanh dong</theLoai>
-            <doTuoi>16</doTuoi>
-            <posterLink>/Images/penzoa.jpg</posterLink>
-            <dt>80000.0</dt>
-            <thoiLuong>PT1H55M</thoiLuong>
-            <TgKhoiChieu>2019-11-28</TgKhoiChieu>
-        </phim>
-        <phongId>P31</phongId>
-        <full>false</full>
-        <thoiGianChieu>18-04-2024 18:00</thoiGianChieu>
-        <dt>0.0</dt>
-        <chieuXong>false</chieuXong>
-        <dsGheThuong>
-            <entry>
-                <key>P31A2</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P31A2</viTri>
+                    <viTri>P130B8</viTri>
                 </value>
             </entry>
             <entry>
-                <key>P31A1</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P31A1</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31A8</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P31A8</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31A7</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P31A7</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31A6</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P31A6</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31A5</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P31A5</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31A4</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P31A4</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31A3</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P31A3</viTri>
-                </value>
-            </entry>
-        </dsGheThuong>
-        <dsGheVip>
-            <entry>
-                <key>P31B3</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P31B3</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31B2</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P31B2</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31B1</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P31B1</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31A9</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P31A9</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31A10</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P31A10</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31B4</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P31B4</viTri>
-                </value>
-            </entry>
-        </dsGheVip>
-        <dsGheDoi>
-            <entry>
-                <key>P31B8</key>
+                <key>P130B9</key>
                 <value>
                     <gia>200000.0</gia>
                     <loai>Doi</loai>
-                    <viTri>P31B8</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31B7</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
-                    <viTri>P31B7</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31B6</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
-                    <viTri>P31B6</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P31B5</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
-                    <viTri>P31B5</viTri>
+                    <viTri>P130B9</viTri>
                 </value>
             </entry>
         </dsGheDoi>

@@ -24,7 +24,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlAccessorType(XmlAccessType.FIELD) // đọc dưới dạng trường, nhận các thuộc tính là một element
 public class Khach {
     private static int currId;
-    private int slVeDat, tongTien;
+    private int slVeDat;
+    private double tongTien;
     @XmlAttribute // xác định cách đọc thuộc tính dưới dạng thuộc tính của element mẹ
     private String id;
     private String hoTen, gioiTinh;
@@ -55,26 +56,22 @@ public class Khach {
         return this.dsVe.size();
     }
 
-    public void setSlVeDat(int slVeDat) {
-        this.slVeDat = slVeDat;
-    }
+//    public void setSlVeDat(int slVeDat) {
+//        this.slVeDat = slVeDat;
+//    }
 
-    public void setTongTien(int tongTien) {
-        this.tongTien = tongTien;
-    }
+//    public void setTongTien(double tongTien) {
+//        this.tongTien = tongTien;
+//    }
 
-    public int getTongTien() {
-        return tongTien;
-    }
-    
-
-    public int inTongTien() {
+    public double getTongTien() {
         int tong = 0;
         if (!this.dsVe.isEmpty()) {
             for (int i = 0; i < this.dsVe.size(); i++) {
                 tong += this.dsVe.get(i).getGhe().getGia();
             }
         }
+        this.tongTien = tong;
         return tong;
     }
 
@@ -119,10 +116,14 @@ public class Khach {
         return dsVe;
     }
 
+    public void setDsVe(List<Ve> dsVe) {
+        this.dsVe = dsVe;
+    }
+
     public void muaVe(Ve ve) {
         this.dsVe.add(ve);
-        this.slVeDat++;
-        this.tongTien += ve.getGhe().getGia();
+//        this.slVeDat++;
+//        this.tongTien += ve.getGhe().getGia();
     }
 
     public String inDsVe() {
@@ -156,8 +157,8 @@ public class Khach {
         this.setNgaySinh(ns);
     }
 
-    @Override
-    public String toString() {
-        return "Khach{" + "id=" + id + ", tuoi=" + getTuoi() + ", slVeDat=" + getSlVeDat() + ", tongTien=" + getTongTien() + ", hoTen=" + hoTen + ", gioiTinh=" + gioiTinh + ", ngaySinh=" + toStringNS() + ", dsVe=" + inDsVe() + '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Khach{" + "id=" + id + ", tuoi=" + getTuoi() + ", slVeDat=" + getSlVeDat() + ", tongTien=" + getTongTien() + ", hoTen=" + hoTen + ", gioiTinh=" + gioiTinh + ", ngaySinh=" + toStringNS() + ", dsVe=" + inDsVe() + '}';
+//    }
 }

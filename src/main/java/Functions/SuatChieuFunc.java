@@ -143,8 +143,8 @@ public class SuatChieuFunc {
         this.getSchIntervals().put(new String[]{sch.getPhongId(), sch.getId()}, new LocalDateTime[]{sch.getThoiGianChieu(), tgKetThuc});
     }
 
-    public void xoaSuatChieu(SuatChieu p) {
-        String pId = p.getId();
+    public void xoaSuatChieu(SuatChieu Sch) {
+        String pId = Sch.getId();
         List<SuatChieu> list = new ArrayList<>();
         list = this.getSuatChieuList();
         SuatChieu sch = new SuatChieu();
@@ -301,7 +301,8 @@ public class SuatChieuFunc {
     }
 
     public List<SuatChieu> getSuatChieuList() {
-        return this.readListSuatChieus();
+        this.setSuatChieuList(this.readListSuatChieus());
+        return this.suatChieuList;
     }
 
     public void setSuatChieuList(List<SuatChieu> suatChieuList) {
