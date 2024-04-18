@@ -255,28 +255,12 @@ public class SuatChieu {
                 ds.add(g.getValue());
             }
         }
-        Collections.sort(ds, new Comparator<Ghe>() {
-            @Override
-            public int compare(Ghe o1, Ghe o2) {
-                int o1Int = Integer.parseInt(o1.getViTri().split(phongId)[1].substring(1));
-                int o2Int = Integer.parseInt(o2.getViTri().split(phongId)[1].substring(1));
-                return o1Int - o2Int;
-            }
-        });
         List<Ghe> dsVip = new ArrayList<>();
         for (Map.Entry<String, GheVip> g : this.dsGheVip.entrySet()) {
             if (g.getValue().getKhachId() == null) {
                 dsVip.add(g.getValue());
             }
         }
-        Collections.sort(dsVip, new Comparator<Ghe>() {
-            @Override
-            public int compare(Ghe o1, Ghe o2) {
-                int o1Int = Integer.parseInt(o1.getViTri().split(phongId)[1].substring(1));
-                int o2Int = Integer.parseInt(o2.getViTri().split(phongId)[1].substring(1));
-                return o1Int - o2Int;
-            }
-        });
         ds.addAll(dsVip);
         List<Ghe> dsDoi = new ArrayList<>();
         for (Map.Entry<String, GheDoi> g : this.dsGheDoi.entrySet()) {
@@ -284,16 +268,26 @@ public class SuatChieu {
                 dsDoi.add(g.getValue());
             }
         }
-        Collections.sort(dsDoi, new Comparator<Ghe>() {
+        ds.addAll(dsDoi);
+        Collections.sort(ds, new Comparator<Ghe>() {
             @Override
             public int compare(Ghe o1, Ghe o2) {
-                int o1Int = Integer.parseInt(o1.getViTri().split(phongId)[1].substring(1));
-                int o2Int = Integer.parseInt(o2.getViTri().split(phongId)[1].substring(1));
-                return o1Int - o2Int;
+                // Tách ký tự đầu tiên (chữ cái)
+                char c1 = o1.getViTri().split(phongId)[1].charAt(0);
+                char c2 = o2.getViTri().split(phongId)[1].charAt(0);
+
+                // Nếu chữ cái giống nhau, so sánh phần số
+                if (c1 == c2) {
+                    // Chuyển phần số thành integer và so sánh
+                    int num1 = Integer.parseInt(o1.getViTri().split(phongId)[1].substring(1));
+                    int num2 = Integer.parseInt(o2.getViTri().split(phongId)[1].substring(1));
+                    return Integer.compare(num1, num2);
+                } else {
+                    // So sánh chữ cái nếu chúng khác nhau
+                    return Character.compare(c1, c2);
+                }
             }
         });
-        ds.addAll(dsDoi);
-
         return ds;
     }
 

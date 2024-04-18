@@ -183,18 +183,7 @@ public class ManagerController {
 
         public void actionPerformed(ActionEvent e) {
             Phong phong = managerView.getPhongInfo(phongFunc.getPhongList());
-            for (int i = 0; i < phong.getSlThuong(); i++) {
-                GheThuong gt = new GheThuong();
-                phong.themGhe(gt);
-            }
-            for (int i = 0; i < phong.getSlVip(); i++) {
-                GheVip gv = new GheVip();
-                phong.themGhe(gv);
-            }
-            for (int i = 0; i < phong.getSlDoi(); i++) {
-                GheDoi gd = new GheDoi();
-                phong.themGhe(gd);
-            }
+            phong = phongFunc.taoPhong(phong);
             if (phong != null) {
                 phongFunc.editPhong(phong);
                 managerView.showPhong(phong);

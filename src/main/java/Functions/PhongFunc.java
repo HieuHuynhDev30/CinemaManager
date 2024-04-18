@@ -55,15 +55,27 @@ public class PhongFunc {
     public Phong taoPhong(Phong p) {
         for (int i = 0; i < p.getSlThuong(); i++) {
             GheThuong gt = new GheThuong();
-            p.themGhe(gt);
+            if (i == 0) {
+                p.themGhe(gt, true);
+                continue;
+            }
+            p.themGhe(gt, false);
         }
         for (int i = 0; i < p.getSlVip(); i++) {
             GheVip gv = new GheVip();
-            p.themGhe(gv);
+            if (i == 0) {
+                p.themGhe(gv, true);
+                continue;
+            }
+            p.themGhe(gv, false);
         }
         for (int i = 0; i < p.getSlDoi(); i++) {
             GheDoi gd = new GheDoi();
-            p.themGhe(gd);
+            if (i == 0) {
+                p.themGhe(gd, true);
+                continue;
+            }
+            p.themGhe(gd, false);
         }
         return p;
     }
@@ -193,7 +205,6 @@ public class PhongFunc {
 //            }
 //        }
 //    }
-
     public class SortPhongPhim implements Comparator<Phong> {
 
         private boolean beLon;
@@ -289,7 +300,7 @@ public class PhongFunc {
                             }
                         }
                         break;
-                    }                   
+                    }
                 }
             }
         }
@@ -306,7 +317,6 @@ public class PhongFunc {
 //        }
 //        this.writeListPhongs(phongList);
 //    }
-
     public void reSetPhong(List<SuatChieu> schList) {
         if (this.getPhongList() != null) {
             for (Phong ph : this.getPhongList()) {
@@ -355,4 +365,3 @@ public class PhongFunc {
         this.writeListPhongs(phongList);
     }
 }
-
