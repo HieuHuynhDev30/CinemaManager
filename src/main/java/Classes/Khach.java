@@ -39,9 +39,13 @@ public class Khach {
     private List<Ve> dsVe = new ArrayList<>();
 
     public Khach() {
+        this.diem = 0;
+        taoId();
+    }
+    
+    public void taoId() {
         currId++;
         this.id = "K" + currId;
-        this.diem = 0;
     }
 
     public String getId() {

@@ -26,6 +26,10 @@ public class Ve {
     private SuatChieu suat;
 
     public Ve() {
+        taoId();
+    }
+    
+    public void taoId() {
         currId++;
         this.id = "V" + currId;
     }

@@ -63,11 +63,11 @@ public class SuatChieuFunc {
     }
 
     public SuatChieu taoSuatChieu(Phim phim, String phId, String tgChieu) {
-        LocalDateTime TgChieu = LocalDateTime.parse(tgChieu);  
+        LocalDateTime TgChieu = LocalDateTime.parse(tgChieu);
         if (checkTrungTg(TgChieu, phId, phim)) {
             return null;
         }
-         SuatChieu sch = new SuatChieu();
+        SuatChieu sch = new SuatChieu();
         sch.setPhim(phim);
         sch.setPhongId(phId);
         List<Phong> phongList = phongFunc.getPhongList();
@@ -256,18 +256,8 @@ public class SuatChieuFunc {
             double rate2 = (o2.inTongDat() * 100) / (o1.inTongDat() + o1.inTongTrong());
             double diff = rate1 - rate2;
             if (beLon) {
-//                if (o1.isFull() == true) {
-//                    return o2.isFull() == false ? 1 : 0;
-//                } else {
-//                    return o2.isFull() == true ? -1 : 0;
-//                }
                 return (int) diff;
             } else {
-//                if (o1.isFull() == false) {
-//                    return o2.isFull() == true ? 1 : 0;
-//                } else {
-//                    return o2.isFull() == false ? -1 : 0;
-//                }
                 return (int) -diff;
             }
         }
@@ -287,6 +277,18 @@ public class SuatChieuFunc {
             Collections.sort(list, new SortSchLd(beLon));
         }
         this.writeListSuatChieus(list);
+        return list;
+    }
+
+    public List<SuatChieu> searchSchPhim(String tenPhim) {
+        List<SuatChieu> list = new ArrayList<>();
+        if (this.getSuatChieuList() != null) {
+            for (SuatChieu sch : this.getSuatChieuList()) {
+                if (sch.getPhim().getTen().equals(tenPhim)) {
+                    list.add(sch);
+                }
+            }
+        }
         return list;
     }
 

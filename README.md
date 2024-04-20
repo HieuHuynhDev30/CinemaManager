@@ -18,7 +18,7 @@ Nếu nhập sai sẽ hiện thông báo sai tên hoặc mật khẩu
 ##### Trang chủ
 Khi đăng nhập thành công, cửa sổ đầu tiên xuất hiện là Trang chủ
 
-***Góc trên bên phải là nút reload có chức năng tải lại chương trình sau khi thực hiện bất kỳ thay đổi với cơ sở dữ liệu***
+***Góc trên bên phải là nút reload có chức năng tải lại chương trình***
 
 Trang chủ hiện thị danh sách cuộn các phim đang có tạp rạp kèm poster, danh sách cuộn các suất chiếu đang có, danh sách các phòng chiếu đang có
 
@@ -43,13 +43,13 @@ Cửa sổ Quản lý suất chiếu bao gồm một bảng thông tin các su�
 
 Vùng chức năng gồm các ô nhập dữ liệu tương tự như Quản lý phòng. Riêng ô nhập thời gian chiếu, cần chọn ngày trong khung lịch hiển thị sẵn, chọn giờ và phút từ spinner. Ấn xác nhận để hiện thị thời gian đã chọn.
 
-Khi thêm suất chiếu cần lưu ý không đặt thời gian trùng với thời gian của suất khác, không đặt thời gian trong quá khứ và không bỏ trống ô thời gian chiếu. Khi vi phạm các điều trên, sẽ có bảng thông báo nhắc nhở.
+Khi thêm suất chiếu cần lưu ý không đặt thời gian chiếu hoặc kết thúc trùng với thời gian của suất khác, không đặt thời gian trong quá khứ và không bỏ trống ô thời gian chiếu. Khi vi phạm các điều trên, sẽ có bảng thông báo nhắc nhở.
 
 Khi đã hết thời gian chiếu của suất, sau khi ấn reload suất chiếu sẽ được tự động xóa.
 
 Vùng sắp xếp có thể sắp xếp theo id hoặc thời gian chiếu. Nếu chọn tăng dần để sắp xếp theo thời gian chiếu, suất chiếu đầu tiên sẽ là suất chiếu sớm nhất.
-##### Quản lý khách
-Cửa sổ Quản lý khách bao gồm một bảng thông tin các khách được thêm vào làm thành viên bao gồm các trường id, họ tên, ngày sinh, giới tính, số lượng vé đã đặt và tổng số tiền đã thanh toán
+##### Quản lý thành viên
+Cửa sổ Quản lý thành viên bao gồm một bảng thông tin các khách được thêm vào làm thành viên bao gồm các trường id, họ tên, ngày sinh, giới tính, số lượng vé đã đặt, tổng số tiền đã thanh toán và điểm đã tích lũy (điểm này có thể dùng để giảm giá vé khi đặt).
 
 Vùng chức năng gồm các ô nhập dữ liệu tương tự như Quản lý suất chiếu.
 
@@ -63,9 +63,15 @@ Vùng tìm kiếm tương tự như vùng tìm kiếm trong Quản lý phim.
 ##### Đặt vé
 Cửa sổ đặt vé bao gồm bảng thông tin suất chiếu hiện có tương tự như Quản lý suất chiếu
 
-Vùng chức năng bao gồm các menu sổ để chọn khách hàng đặt vé.
+Vùng chức năng bao gồm các ô nhận thông tin suất chiếu khi chọn, checkbox xác định thành viên đặt vé hoặc khách vãng lai, menu các phim có suất chiếu.
 
-Khi đặt vé, cần chọn suất chiếu trong bảng để các ô dữ liệu hiện thông tin suất chiếu được. Sau đó ấn vào Chọn ghế để chọn ghế. Sau khi chọn ghế, ấn đặt vé.
+Khi đặt vé, cần xác định khách vãng lai đặt hoặc thành viên đặt. Nếu là thành viên đặt thì chọn thành viên từ menu sổ.
+Sau đó lọc phim muốn xem theo menu sổ, chọn suất chiếu trong bảng để các ô dữ liệu hiện thông tin suất chiếu được nhập thông tin. 
+Tiếp theo, ấn vào Chọn ghế để chọn ghế. Sau khi chọn ghế, ấn đặt vé. Một bảng hội thoại Thông tin vé sẽ hiện ra.
+Hội thoại Thông tin vé gồm thông tin về khách đặt (nếu là khách vãng lai thì tên và id sẽ là "no_mem" - no member, chỉ có thông tin vé của khách vãng lai được hệ thống ghi nhận), thông tin suất chiếu, 
+ điểm tích lũy thành viên được cộng nếu đặt vé, khung Sử dụng điểm tích lũy, tổng số tiền thanh toán.
+Chỉ có thành viên của rạp phim mới được sử dụng khung Sử dụng điểm tích lũy. Khi ấn chọn sử dụng, số điểm tích lũy của thành viên sẽ hiện ra, nhập số điểm muốn sử dụng vào ô nhập và ấn Giảm giá. Nếu thành công số tiền thanh toán sẽ thay đổi.
+Khi đã sử dụng xong điểm tích lũy ấn Xác nhận thanh toán.
 
 Sau khi đặt vé, dữ liệu trong phần Doanh thu sẽ tự động cập nhật
 ##### Doanh thu
@@ -76,9 +82,3 @@ Vùng doanh thu theo phim và suất chiếu được thiết tương tự nhau 
 Vùng doanh thu theo phòng gồm một bảng có các trường id, sức chứa, số lượng vé đã đặt và doanh thu từng phòng. Chức năng gồm có sắp xếp và tìm kiếm phòng theo khoảng doanh thu
 
 Góc trên bên phải là nút Đặt lại doanh thi. Khi ấn tất cả các giá trị doanh thu sẽ về 0 trừ doanh thu theo phim, tất cả các vé sẽ bị xóa.
-##### Thoát
-Ấn nút Exit của cửa sổ để thoát và đăng xuất.
-
-
-### THANKS FOR USING
-### HAPPY CODING

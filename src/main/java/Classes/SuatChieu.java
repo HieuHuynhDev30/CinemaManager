@@ -46,9 +46,13 @@ public class SuatChieu {
     private Map<String, GheDoi> dsGheDoi = new HashMap<>();
 
     public SuatChieu() {
+        chieuXong = false;
+        taoId();
+    }
+    
+    public void taoId() {
         currId++;
         this.id = "SCH" + currId;
-        chieuXong = false;
     }
 
     public Phim getPhim() {

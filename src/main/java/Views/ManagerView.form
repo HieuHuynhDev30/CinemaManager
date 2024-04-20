@@ -1093,6 +1093,7 @@
                           <SubComponents>
                             <Component class="javax.swing.JTable" name="PhongTable">
                               <Properties>
+                                <Property name="autoCreateRowSorter" type="boolean" value="true"/>
                                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                                   <Table columnCount="8" rowCount="5">
                                     <Column editable="false" title="Id" type="java.lang.String"/>
@@ -1489,6 +1490,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JTable" name="BangPhim">
                       <Properties>
+                        <Property name="autoCreateRowSorter" type="boolean" value="true"/>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="6" rowCount="20">
                             <Column editable="false" title="ID" type="java.lang.Object"/>
@@ -1567,6 +1569,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JTable" name="suatChieuTable">
                       <Properties>
+                        <Property name="autoCreateRowSorter" type="boolean" value="true"/>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="5" rowCount="4">
                             <Column editable="false" title="Id" type="java.lang.String"/>
@@ -2568,6 +2571,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JTable" name="BangVe">
                       <Properties>
+                        <Property name="autoCreateRowSorter" type="boolean" value="true"/>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="8" rowCount="20">
                             <Column editable="true" title="ID" type="java.lang.Object"/>
@@ -2631,7 +2635,7 @@
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Component id="jPanel8" max="32767" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Component id="quanLySuatChieu1" pref="400" max="32767" attributes="0"/>
+                          <Component id="quanLySuatChieu1" pref="399" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -2662,46 +2666,54 @@
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="343" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel51" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                                          <Component id="jLabel53" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="tgChieuField1" min="-2" pref="153" max="-2" attributes="0"/>
+                                          <Component id="phongDatVeCombo" min="-2" pref="71" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="102" attributes="0">
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="jLabel55" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="Id1" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="DatVeSchId" min="-2" pref="98" max="-2" attributes="0"/>
-                                                  <Component id="ListKhachHang" min="-2" pref="210" max="-2" attributes="0"/>
-                                              </Group>
+                                              <Component id="jLabel48" min="-2" pref="62" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                                              <Component id="phimComboDatVe" min="-2" pref="210" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="thanhVienCheck" min="-2" pref="139" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" alignment="1" attributes="0">
+                                                          <Component id="jLabel55" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="Id1" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="DatVeSchId" min="-2" pref="98" max="-2" attributes="0"/>
+                                                      <Component id="ListKhachHang" min="-2" pref="210" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Component id="thanhVienCheck" min="-2" pref="139" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jLabel51" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                                                  <Component id="jLabel53" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="tgChieuField1" min="-2" pref="153" max="-2" attributes="0"/>
-                                                  <Component id="phongDatVeCombo" min="-2" pref="71" max="-2" attributes="0"/>
-                                              </Group>
+                                              <Component id="selectPhim" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="showAllSchBtn" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="chonGheButton" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel48" min="-2" pref="62" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                      <Component id="phimCombo1" min="-2" pref="161" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="0" pref="617" max="32767" attributes="0"/>
@@ -2740,7 +2752,9 @@
                               </Group>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel48" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="phimCombo1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="phimComboDatVe" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="selectPhim" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="showAllSchBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="128" max="32767" attributes="0"/>
                           </Group>
@@ -2787,7 +2801,7 @@
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JComboBox" name="phimCombo1">
+                    <Component class="javax.swing.JComboBox" name="phimComboDatVe">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                           <StringArray count="4">
@@ -2799,7 +2813,7 @@
                         </Property>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="phimCombo1ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="phimComboDatVeActionPerformed"/>
                       </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -2836,6 +2850,16 @@
                         <Property name="text" type="java.lang.String" value="Th&#xe0;nh vi&#xea;n &#x111;&#x1eb7;t v&#xe9;"/>
                       </Properties>
                     </Component>
+                    <Component class="javax.swing.JButton" name="selectPhim">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Ch&#x1ecd;n phim"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="showAllSchBtn">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="T&#x1ea5;t c&#x1ea3; su&#x1ea5;t chi&#x1ebf;u"/>
+                      </Properties>
+                    </Component>
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JLayeredPane" name="quanLySuatChieu1">
@@ -2858,7 +2882,7 @@
                           <Group type="102" attributes="0">
                               <Component id="SuatChieuManager1" min="-2" pref="40" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                              <Component id="suatChieuScroll2" pref="360" max="32767" attributes="0"/>
+                              <Component id="suatChieuScroll2" pref="359" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2881,6 +2905,7 @@
                       <SubComponents>
                         <Component class="javax.swing.JTable" name="suatChieuTable2">
                           <Properties>
+                            <Property name="autoCreateRowSorter" type="boolean" value="true"/>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                               <Table columnCount="4" rowCount="4">
                                 <Column editable="true" title="Id" type="java.lang.String"/>
@@ -3273,6 +3298,7 @@
                           <SubComponents>
                             <Component class="javax.swing.JTable" name="DtPhongTable">
                               <Properties>
+                                <Property name="autoCreateRowSorter" type="boolean" value="true"/>
                                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                                   <Table columnCount="4" rowCount="4">
                                     <Column editable="false" title="Id" type="java.lang.String"/>

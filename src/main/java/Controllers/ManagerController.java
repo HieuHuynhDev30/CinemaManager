@@ -104,6 +104,8 @@ public class ManagerController {
         managerView.addUseDiemTichLuy(new useDiemTlListener());
         managerView.addGiamGiaListener(new GiamGiaListener());
         managerView.addXacNhanttListener(new XacNhanDatVeListener());
+        managerView.addSearSuatChieuPhim(new SearchSuatChieuPhimListener());
+        managerView.showAllSchDatVe(new showAllSchDatVeListener());
         // ghế
         managerView.addselectSeatListener(new SelectSeatListener());
         managerView.addListGheSelectionListener(new ListGheSelectionListener());
@@ -186,13 +188,17 @@ public class ManagerController {
 
         public void actionPerformed(ActionEvent e) {
             Phong phong = managerView.getPhongInfo(phongFunc.getPhongList());
-            phong = phongFunc.taoPhong(phong);
-            if (phong != null) {
-                phongFunc.editPhong(phong);
-                managerView.showPhong(phong);
-                managerView.showListPhong(phongFunc.getPhongList(), suatChieuFunc.getSuatChieuList());
-                managerView.showMessage("Cập nhật thành công!\nTất cả các ghế đều trống");
-                showManagerView();
+            if (!phong.getIsPlaying()) {
+                phong = phongFunc.taoPhong(phong);
+                if (phong != null) {
+                    phongFunc.editPhong(phong);
+                    managerView.showPhong(phong);
+                    managerView.showListPhong(phongFunc.getPhongList(), suatChieuFunc.getSuatChieuList());
+                    managerView.showMessage("Cập nhật thành công!");
+                    showManagerView();
+                }
+            } else {
+                managerView.showMessage("Phòng chưa rảnh để chỉnh sửa");
             }
         }
     }
@@ -361,10 +367,10 @@ public class ManagerController {
                 }
                 for (Phong ph : phongFunc.getPhongList()) {
                     if (ph.getId().equals(sch.getPhongId())) {
-                        if (ph.getIsPlaying()) {
-                            managerView.showMessage("Phòng chưa rảnh");
-                            return;
-                        }
+//                        if (ph.getIsPlaying()) {
+//                            managerView.showMessage("Phòng chưa rảnh");
+//                            return;
+//                        }
                         ph.setNextPhim(sch.getPhim().getTen());
                         phongFunc.editPhong(ph);
                     }
@@ -395,16 +401,16 @@ public class ManagerController {
             SuatChieu newSch = suatChieuFunc.taoSuatChieu(infoSch.getPhim(), infoSch.getPhongId(),
                     infoSch.getThoiGianChieu().toString());
             if (newSch == null) {
-                managerView.showMessage("Thời gian chiếu trùng với suất chiếu khác");
+                managerView.showMessage("Thời gian chiếu hoặc thời gian kết thúc trùng với suất chiếu khác");
                 return;
             }
             if (phongFunc.getPhongList() != null) {
                 for (Phong ph : phongFunc.getPhongList()) {
                     if (ph.getId().equals(newSch.getPhongId())) {
-                        if (ph.getIsPlaying()) {
-                            managerView.showMessage("Phòng chưa rảnh");
-                            return;
-                        }
+//                        if (ph.getIsPlaying()) {
+//                            managerView.showMessage("Phòng chưa rảnh");
+//                            return;
+//                        }
                         if (ph.getNextPhim() == null) {
                             ph.setNextPhim(newSch.getPhim().getTen());
                             phongFunc.editPhong(ph);
@@ -459,8 +465,8 @@ public class ManagerController {
             suatChieuFunc.writeListSuatChieus(suatChieuFunc.getSuatChieuList());
         }
     }
-    // end Quản lý suất chiếu listener
 
+    // end Quản lý suất chiếu listener
     // Quản lý Khach listner
     class ShowNSDateListener implements ActionListener {
 
@@ -577,7 +583,7 @@ public class ManagerController {
             } else {
                 managerView.isActivatedUseDiemTL(khach, ghe);
             }
-            managerView.showVeDialog();
+            managerView.showVeDialog(ghe, khach);
         }
     }
 
@@ -647,6 +653,21 @@ public class ManagerController {
             managerView.closeVeDialog();
             managerView.showMessage("Đặt vé thành công!");
             showManagerView();
+        }
+    }
+
+    class SearchSuatChieuPhimListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            List<SuatChieu> searched = suatChieuFunc.searchSchPhim(managerView.getSelectedPhimDatVe());
+            managerView.showListSuatChieuDatVe(searched);
+        }
+    }
+
+    class showAllSchDatVeListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            managerView.showListSuatChieuDatVe(suatChieuFunc.getSuatChieuList());
         }
     }
 

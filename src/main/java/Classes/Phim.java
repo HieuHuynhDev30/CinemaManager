@@ -37,18 +37,21 @@ public class Phim {
     public static final DateTimeFormatter timeFormat = DateTimeFormatter.ofPattern("mm");
 
     public Phim() {
-        currId++;
-        id = "Ph" + currId;
+        taoId();
     }
 
     public Phim(String ten, long thoiLuong, String theLoai, int doTuoi) {
-        currId++;
-        this.id = "Ph" + currId;
+        taoId();
         this.ten = ten;
         this.setThoiLuong(thoiLuong);
         this.theLoai = "Khong xac dinh";
         setTheLoai(theLoai);
         this.doTuoi = doTuoi;
+    }
+    
+    public void taoId() {
+        currId++;
+        this.id = "Ph" + currId;
     }
 
     public void setId(int id) {

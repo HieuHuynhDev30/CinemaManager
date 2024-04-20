@@ -95,6 +95,7 @@ Views\ManagerView$1.class
 com\toedter\calendar\JYearChooserBeanInfo.class
 Functions\VeFunc.class
 Classes\GheThuong.class
+Controllers\ManagerController$showAllSchDatVeListener.class
 Controllers\ManagerController$SelectSeatListener.class
 Controllers\ManagerController$ShowSchDateTimeListener.class
 Views\ManagerView$19.class
@@ -127,6 +128,7 @@ Views\ManagerView$13.class
 Functions\SuatChieuFunc$SortTgSch.class
 Controllers\ManagerController$ShowNKCDateListener.class
 Controllers\ManagerController$ListSuatChieuDatVeSelectionListener.class
+Controllers\ManagerController$SearchSuatChieuPhimListener.class
 Views\LoginView.class
 Views\ManagerView$4.class
 Views\ManagerView$30.class

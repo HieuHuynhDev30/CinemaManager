@@ -85,7 +85,6 @@ public class PhongFunc {
             this.phongList = new ArrayList<>();
         }
         this.phongList.add(taoPhong(p));
-        System.out.println(phongList.toString());
         writeListPhongs(phongList);
     }
 
@@ -290,7 +289,7 @@ public class PhongFunc {
                     continue;
                 }
                 for (SuatChieu sch : schList) {
-                    if (sch.getPhim().getTen().equals(ph.getNextPhim())) {
+                    if (sch.getPhongId().equals(ph.getId()) && sch.getPhim().getTen().equals(ph.getNextPhim())) {
                         if (sch.getThoiGianChieu().isBefore(LocalDateTime.now())) {
                             ph.setIsPlaying(true);
                             Duration interval = Duration.between(LocalDateTime.now(), sch.getThoiGianChieu());
@@ -307,16 +306,7 @@ public class PhongFunc {
         this.writeListPhongs(phongList);
     }
 
-//    public void checkIsFull() {
-//        if (this.getPhongList() != null) {
-//            for (Phong ph : this.getPhongList()) {
-//                if (ph.getDsGheTrong().isEmpty()) {
-//                    ph.setIsFull(true);
-//                }
-//            }
-//        }
-//        this.writeListPhongs(phongList);
-//    }
+
     public void reSetPhong(List<SuatChieu> schList) {
         if (this.getPhongList() != null) {
             for (Phong ph : this.getPhongList()) {

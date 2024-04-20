@@ -35,10 +35,14 @@ public class Phong {
     private double dt;
 
     public Phong() {
-        currId++;
-        this.id = "P" + currId;
+        taoId();
         rows = '@';
         columns = 1;
+    }
+    
+    public void taoId() {
+        currId++;
+        this.id = "P" + currId;
     }
 
     public void setId(String id) {
