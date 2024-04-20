@@ -1457,7 +1457,7 @@ public class ManagerView extends javax.swing.JFrame {
     }
 
     public boolean isActivatedUseDiemTL(Khach kh, Ghe gh) {
-        if (useDiemCheck.isSelected()) {
+        if (kh != null && useDiemCheck.isSelected()) {
             this.diemTLLabel.setEnabled(true);
             this.diemTichLuyXnVe.setEnabled(true);
             this.fillUseDiemTL(kh);
@@ -1469,6 +1469,7 @@ public class ManagerView extends javax.swing.JFrame {
             return true;
         }
         this.diemTLLabel.setEnabled(false);
+        this.diemTichLuyXnVe.setText("0");
         this.diemTichLuyXnVe.setEnabled(false);
         this.useDiemLabel.setEnabled(false);
         this.inputDiemField.setEnabled(false);

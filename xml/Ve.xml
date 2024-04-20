@@ -1,5 +1,415 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ves>
+    <ve id="V141">
+        <ghe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gheThuong">
+            <gia>80000.0</gia>
+            <khachId>K10</khachId>
+            <loai>Thuong</loai>
+            <viTri>P12A2</viTri>
+        </ghe>
+        <suat id="SCH163">
+            <phim id="Ph2">
+                <ten>Baghead</ten>
+                <theLoai>Kinh di</theLoai>
+                <doTuoi>18</doTuoi>
+                <posterLink>/Images/baghead.jpg</posterLink>
+                <dt>0.0</dt>
+                <thoiLuong>PT1H35M</thoiLuong>
+                <TgKhoiChieu>2023-12-28</TgKhoiChieu>
+            </phim>
+            <phongId>P12</phongId>
+            <full>false</full>
+            <thoiGianChieu>21-04-2024 20:00</thoiGianChieu>
+            <dt>80000.0</dt>
+            <chieuXong>false</chieuXong>
+            <dsGheThuong>
+                <entry>
+                    <key>P12A2</key>
+                    <value>
+                        <gia>80000.0</gia>
+                        <khachId>K10</khachId>
+                        <loai>Thuong</loai>
+                        <viTri>P12A2</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A1</key>
+                    <value>
+                        <gia>80000.0</gia>
+                        <khachId>K10</khachId>
+                        <loai>Thuong</loai>
+                        <viTri>P12A1</viTri>
+                    </value>
+                </entry>
+            </dsGheThuong>
+            <dsGheVip>
+                <entry>
+                    <key>P12A4</key>
+                    <value>
+                        <gia>120000.0</gia>
+                        <loai>Vip</loai>
+                        <viTri>P12A4</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A3</key>
+                    <value>
+                        <gia>120000.0</gia>
+                        <loai>Vip</loai>
+                        <viTri>P12A3</viTri>
+                    </value>
+                </entry>
+            </dsGheVip>
+            <dsGheDoi>
+                <entry>
+                    <key>P12A6</key>
+                    <value>
+                        <gia>200000.0</gia>
+                        <loai>Doi</loai>
+                        <viTri>P12A6</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A5</key>
+                    <value>
+                        <gia>200000.0</gia>
+                        <loai>Doi</loai>
+                        <viTri>P12A5</viTri>
+                    </value>
+                </entry>
+            </dsGheDoi>
+        </suat>
+    </ve>
+    <ve id="V155">
+        <ghe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gheDoi">
+            <gia>200000.0</gia>
+            <khachId>K10</khachId>
+            <loai>Doi</loai>
+            <viTri>P12A5</viTri>
+        </ghe>
+        <suat id="SCH163">
+            <phim id="Ph2">
+                <ten>Baghead</ten>
+                <theLoai>Kinh di</theLoai>
+                <doTuoi>18</doTuoi>
+                <posterLink>/Images/baghead.jpg</posterLink>
+                <dt>80000.0</dt>
+                <thoiLuong>PT1H35M</thoiLuong>
+                <TgKhoiChieu>2023-12-28</TgKhoiChieu>
+            </phim>
+            <phongId>P12</phongId>
+            <full>false</full>
+            <thoiGianChieu>21-04-2024 20:00</thoiGianChieu>
+            <dt>160000.0</dt>
+            <chieuXong>false</chieuXong>
+            <dsGheThuong>
+                <entry>
+                    <key>P12A2</key>
+                    <value>
+                        <gia>80000.0</gia>
+                        <khachId>K10</khachId>
+                        <loai>Thuong</loai>
+                        <viTri>P12A2</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A1</key>
+                    <value>
+                        <gia>80000.0</gia>
+                        <khachId>K10</khachId>
+                        <loai>Thuong</loai>
+                        <viTri>P12A1</viTri>
+                    </value>
+                </entry>
+            </dsGheThuong>
+            <dsGheVip>
+                <entry>
+                    <key>P12A4</key>
+                    <value>
+                        <gia>120000.0</gia>
+                        <loai>Vip</loai>
+                        <viTri>P12A4</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A3</key>
+                    <value>
+                        <gia>120000.0</gia>
+                        <loai>Vip</loai>
+                        <viTri>P12A3</viTri>
+                    </value>
+                </entry>
+            </dsGheVip>
+            <dsGheDoi>
+                <entry>
+                    <key>P12A6</key>
+                    <value>
+                        <gia>200000.0</gia>
+                        <loai>Doi</loai>
+                        <viTri>P12A6</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A5</key>
+                    <value>
+                        <gia>200000.0</gia>
+                        <khachId>K10</khachId>
+                        <loai>Doi</loai>
+                        <viTri>P12A5</viTri>
+                    </value>
+                </entry>
+            </dsGheDoi>
+        </suat>
+    </ve>
+    <ve id="V176">
+        <ghe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gheVip">
+            <gia>120000.0</gia>
+            <khachId>K1</khachId>
+            <loai>Vip</loai>
+            <viTri>P12A4</viTri>
+        </ghe>
+        <suat id="SCH163">
+            <phim id="Ph2">
+                <ten>Baghead</ten>
+                <theLoai>Kinh di</theLoai>
+                <doTuoi>18</doTuoi>
+                <posterLink>/Images/baghead.jpg</posterLink>
+                <dt>480000.0</dt>
+                <thoiLuong>PT1H35M</thoiLuong>
+                <TgKhoiChieu>2023-12-28</TgKhoiChieu>
+            </phim>
+            <phongId>P12</phongId>
+            <full>false</full>
+            <thoiGianChieu>21-04-2024 20:00</thoiGianChieu>
+            <dt>560000.0</dt>
+            <chieuXong>false</chieuXong>
+            <dsGheThuong>
+                <entry>
+                    <key>P12A2</key>
+                    <value>
+                        <gia>80000.0</gia>
+                        <khachId>K10</khachId>
+                        <loai>Thuong</loai>
+                        <viTri>P12A2</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A1</key>
+                    <value>
+                        <gia>80000.0</gia>
+                        <khachId>K10</khachId>
+                        <loai>Thuong</loai>
+                        <viTri>P12A1</viTri>
+                    </value>
+                </entry>
+            </dsGheThuong>
+            <dsGheVip>
+                <entry>
+                    <key>P12A4</key>
+                    <value>
+                        <gia>120000.0</gia>
+                        <khachId>K1</khachId>
+                        <loai>Vip</loai>
+                        <viTri>P12A4</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A3</key>
+                    <value>
+                        <gia>120000.0</gia>
+                        <loai>Vip</loai>
+                        <viTri>P12A3</viTri>
+                    </value>
+                </entry>
+            </dsGheVip>
+            <dsGheDoi>
+                <entry>
+                    <key>P12A6</key>
+                    <value>
+                        <gia>200000.0</gia>
+                        <khachId>no_mem</khachId>
+                        <loai>Doi</loai>
+                        <viTri>P12A6</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A5</key>
+                    <value>
+                        <gia>200000.0</gia>
+                        <khachId>K10</khachId>
+                        <loai>Doi</loai>
+                        <viTri>P12A5</viTri>
+                    </value>
+                </entry>
+            </dsGheDoi>
+        </suat>
+    </ve>
+    <ve id="V339">
+        <ghe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gheDoi">
+            <gia>200000.0</gia>
+            <khachId>no_mem</khachId>
+            <loai>Doi</loai>
+            <viTri>P12A6</viTri>
+        </ghe>
+        <suat id="SCH163">
+            <phim id="Ph2">
+                <ten>Baghead</ten>
+                <theLoai>Kinh di</theLoai>
+                <doTuoi>18</doTuoi>
+                <posterLink>/Images/baghead.jpg</posterLink>
+                <dt>280000.0</dt>
+                <thoiLuong>PT1H35M</thoiLuong>
+                <TgKhoiChieu>2023-12-28</TgKhoiChieu>
+            </phim>
+            <phongId>P12</phongId>
+            <full>false</full>
+            <thoiGianChieu>21-04-2024 20:00</thoiGianChieu>
+            <dt>360000.0</dt>
+            <chieuXong>false</chieuXong>
+            <dsGheThuong>
+                <entry>
+                    <key>P12A2</key>
+                    <value>
+                        <gia>80000.0</gia>
+                        <khachId>K10</khachId>
+                        <loai>Thuong</loai>
+                        <viTri>P12A2</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A1</key>
+                    <value>
+                        <gia>80000.0</gia>
+                        <khachId>K10</khachId>
+                        <loai>Thuong</loai>
+                        <viTri>P12A1</viTri>
+                    </value>
+                </entry>
+            </dsGheThuong>
+            <dsGheVip>
+                <entry>
+                    <key>P12A4</key>
+                    <value>
+                        <gia>120000.0</gia>
+                        <loai>Vip</loai>
+                        <viTri>P12A4</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A3</key>
+                    <value>
+                        <gia>120000.0</gia>
+                        <loai>Vip</loai>
+                        <viTri>P12A3</viTri>
+                    </value>
+                </entry>
+            </dsGheVip>
+            <dsGheDoi>
+                <entry>
+                    <key>P12A6</key>
+                    <value>
+                        <gia>200000.0</gia>
+                        <khachId>no_mem</khachId>
+                        <loai>Doi</loai>
+                        <viTri>P12A6</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A5</key>
+                    <value>
+                        <gia>200000.0</gia>
+                        <khachId>K10</khachId>
+                        <loai>Doi</loai>
+                        <viTri>P12A5</viTri>
+                    </value>
+                </entry>
+            </dsGheDoi>
+        </suat>
+    </ve>
+    <ve id="V388">
+        <ghe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gheVip">
+            <gia>120000.0</gia>
+            <khachId>no_mem</khachId>
+            <loai>Vip</loai>
+            <viTri>P12A3</viTri>
+        </ghe>
+        <suat id="SCH163">
+            <phim id="Ph2">
+                <ten>Baghead</ten>
+                <theLoai>Kinh di</theLoai>
+                <doTuoi>18</doTuoi>
+                <posterLink>/Images/baghead.jpg</posterLink>
+                <dt>600000.0</dt>
+                <thoiLuong>PT1H35M</thoiLuong>
+                <TgKhoiChieu>2023-12-28</TgKhoiChieu>
+            </phim>
+            <phongId>P12</phongId>
+            <full>false</full>
+            <thoiGianChieu>21-04-2024 20:00</thoiGianChieu>
+            <dt>680000.0</dt>
+            <chieuXong>false</chieuXong>
+            <dsGheThuong>
+                <entry>
+                    <key>P12A2</key>
+                    <value>
+                        <gia>80000.0</gia>
+                        <khachId>K10</khachId>
+                        <loai>Thuong</loai>
+                        <viTri>P12A2</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A1</key>
+                    <value>
+                        <gia>80000.0</gia>
+                        <khachId>K10</khachId>
+                        <loai>Thuong</loai>
+                        <viTri>P12A1</viTri>
+                    </value>
+                </entry>
+            </dsGheThuong>
+            <dsGheVip>
+                <entry>
+                    <key>P12A4</key>
+                    <value>
+                        <gia>120000.0</gia>
+                        <khachId>K1</khachId>
+                        <loai>Vip</loai>
+                        <viTri>P12A4</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A3</key>
+                    <value>
+                        <gia>120000.0</gia>
+                        <khachId>no_mem</khachId>
+                        <loai>Vip</loai>
+                        <viTri>P12A3</viTri>
+                    </value>
+                </entry>
+            </dsGheVip>
+            <dsGheDoi>
+                <entry>
+                    <key>P12A6</key>
+                    <value>
+                        <gia>200000.0</gia>
+                        <khachId>no_mem</khachId>
+                        <loai>Doi</loai>
+                        <viTri>P12A6</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A5</key>
+                    <value>
+                        <gia>200000.0</gia>
+                        <khachId>K10</khachId>
+                        <loai>Doi</loai>
+                        <viTri>P12A5</viTri>
+                    </value>
+                </entry>
+            </dsGheDoi>
+        </suat>
+    </ve>
     <ve id="V202">
         <ghe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gheVip">
             <gia>120000.0</gia>
@@ -242,6 +652,90 @@
             </dsGheDoi>
         </suat>
     </ve>
+    <ve id="V130">
+        <ghe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gheThuong">
+            <gia>80000.0</gia>
+            <khachId>K10</khachId>
+            <loai>Thuong</loai>
+            <viTri>P12A1</viTri>
+        </ghe>
+        <suat id="SCH167">
+            <phim id="Ph3">
+                <ten>Dune: Part Two</ten>
+                <theLoai>Khoa hoc vien tuong</theLoai>
+                <doTuoi>16</doTuoi>
+                <posterLink>/Images/dune2.jpg</posterLink>
+                <dt>720000.0</dt>
+                <thoiLuong>PT2H45M</thoiLuong>
+                <TgKhoiChieu>2024-02-27</TgKhoiChieu>
+            </phim>
+            <phongId>P12</phongId>
+            <full>false</full>
+            <thoiGianChieu>21-04-2024 16:00</thoiGianChieu>
+            <dt>720000.0</dt>
+            <chieuXong>false</chieuXong>
+            <dsGheThuong>
+                <entry>
+                    <key>P12A2</key>
+                    <value>
+                        <gia>80000.0</gia>
+                        <khachId>K10</khachId>
+                        <loai>Thuong</loai>
+                        <viTri>P12A2</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A1</key>
+                    <value>
+                        <gia>80000.0</gia>
+                        <khachId>K10</khachId>
+                        <loai>Thuong</loai>
+                        <viTri>P12A1</viTri>
+                    </value>
+                </entry>
+            </dsGheThuong>
+            <dsGheVip>
+                <entry>
+                    <key>P12A4</key>
+                    <value>
+                        <gia>120000.0</gia>
+                        <khachId>K10</khachId>
+                        <loai>Vip</loai>
+                        <viTri>P12A4</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A3</key>
+                    <value>
+                        <gia>120000.0</gia>
+                        <khachId>no_mem</khachId>
+                        <loai>Vip</loai>
+                        <viTri>P12A3</viTri>
+                    </value>
+                </entry>
+            </dsGheVip>
+            <dsGheDoi>
+                <entry>
+                    <key>P12A6</key>
+                    <value>
+                        <gia>200000.0</gia>
+                        <khachId>K10</khachId>
+                        <loai>Doi</loai>
+                        <viTri>P12A6</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A5</key>
+                    <value>
+                        <gia>200000.0</gia>
+                        <khachId>K1</khachId>
+                        <loai>Doi</loai>
+                        <viTri>P12A5</viTri>
+                    </value>
+                </entry>
+            </dsGheDoi>
+        </suat>
+    </ve>
     <ve id="V211">
         <ghe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gheDoi">
             <gia>200000.0</gia>
@@ -317,6 +811,87 @@
                     <value>
                         <gia>200000.0</gia>
                         <khachId>K1</khachId>
+                        <loai>Doi</loai>
+                        <viTri>P12A5</viTri>
+                    </value>
+                </entry>
+            </dsGheDoi>
+        </suat>
+    </ve>
+    <ve id="V93">
+        <ghe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gheVip">
+            <gia>120000.0</gia>
+            <khachId>no_mem</khachId>
+            <loai>Vip</loai>
+            <viTri>P12A3</viTri>
+        </ghe>
+        <suat id="SCH167">
+            <phim id="Ph3">
+                <ten>Dune: Part Two</ten>
+                <theLoai>Khoa hoc vien tuong</theLoai>
+                <doTuoi>16</doTuoi>
+                <posterLink>/Images/dune2.jpg</posterLink>
+                <dt>200000.0</dt>
+                <thoiLuong>PT2H45M</thoiLuong>
+                <TgKhoiChieu>2024-02-27</TgKhoiChieu>
+            </phim>
+            <phongId>P12</phongId>
+            <full>false</full>
+            <thoiGianChieu>21-04-2024 16:00</thoiGianChieu>
+            <dt>200000.0</dt>
+            <chieuXong>false</chieuXong>
+            <dsGheThuong>
+                <entry>
+                    <key>P12A2</key>
+                    <value>
+                        <gia>80000.0</gia>
+                        <khachId>K10</khachId>
+                        <loai>Thuong</loai>
+                        <viTri>P12A2</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A1</key>
+                    <value>
+                        <gia>80000.0</gia>
+                        <loai>Thuong</loai>
+                        <viTri>P12A1</viTri>
+                    </value>
+                </entry>
+            </dsGheThuong>
+            <dsGheVip>
+                <entry>
+                    <key>P12A4</key>
+                    <value>
+                        <gia>120000.0</gia>
+                        <khachId>K10</khachId>
+                        <loai>Vip</loai>
+                        <viTri>P12A4</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A3</key>
+                    <value>
+                        <gia>120000.0</gia>
+                        <khachId>no_mem</khachId>
+                        <loai>Vip</loai>
+                        <viTri>P12A3</viTri>
+                    </value>
+                </entry>
+            </dsGheVip>
+            <dsGheDoi>
+                <entry>
+                    <key>P12A6</key>
+                    <value>
+                        <gia>200000.0</gia>
+                        <loai>Doi</loai>
+                        <viTri>P12A6</viTri>
+                    </value>
+                </entry>
+                <entry>
+                    <key>P12A5</key>
+                    <value>
+                        <gia>200000.0</gia>
                         <loai>Doi</loai>
                         <viTri>P12A5</viTri>
                     </value>
@@ -645,87 +1220,6 @@
                         <khachId>K1</khachId>
                         <loai>Doi</loai>
                         <viTri>P1A6</viTri>
-                    </value>
-                </entry>
-            </dsGheDoi>
-        </suat>
-    </ve>
-    <ve id="V93">
-        <ghe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gheVip">
-            <gia>120000.0</gia>
-            <khachId>no_mem</khachId>
-            <loai>Vip</loai>
-            <viTri>P12A3</viTri>
-        </ghe>
-        <suat id="SCH167">
-            <phim id="Ph3">
-                <ten>Dune: Part Two</ten>
-                <theLoai>Khoa hoc vien tuong</theLoai>
-                <doTuoi>16</doTuoi>
-                <posterLink>/Images/dune2.jpg</posterLink>
-                <dt>200000.0</dt>
-                <thoiLuong>PT2H45M</thoiLuong>
-                <TgKhoiChieu>2024-02-27</TgKhoiChieu>
-            </phim>
-            <phongId>P12</phongId>
-            <full>false</full>
-            <thoiGianChieu>21-04-2024 16:00</thoiGianChieu>
-            <dt>200000.0</dt>
-            <chieuXong>false</chieuXong>
-            <dsGheThuong>
-                <entry>
-                    <key>P12A2</key>
-                    <value>
-                        <gia>80000.0</gia>
-                        <khachId>K10</khachId>
-                        <loai>Thuong</loai>
-                        <viTri>P12A2</viTri>
-                    </value>
-                </entry>
-                <entry>
-                    <key>P12A1</key>
-                    <value>
-                        <gia>80000.0</gia>
-                        <loai>Thuong</loai>
-                        <viTri>P12A1</viTri>
-                    </value>
-                </entry>
-            </dsGheThuong>
-            <dsGheVip>
-                <entry>
-                    <key>P12A4</key>
-                    <value>
-                        <gia>120000.0</gia>
-                        <khachId>K10</khachId>
-                        <loai>Vip</loai>
-                        <viTri>P12A4</viTri>
-                    </value>
-                </entry>
-                <entry>
-                    <key>P12A3</key>
-                    <value>
-                        <gia>120000.0</gia>
-                        <khachId>no_mem</khachId>
-                        <loai>Vip</loai>
-                        <viTri>P12A3</viTri>
-                    </value>
-                </entry>
-            </dsGheVip>
-            <dsGheDoi>
-                <entry>
-                    <key>P12A6</key>
-                    <value>
-                        <gia>200000.0</gia>
-                        <loai>Doi</loai>
-                        <viTri>P12A6</viTri>
-                    </value>
-                </entry>
-                <entry>
-                    <key>P12A5</key>
-                    <value>
-                        <gia>200000.0</gia>
-                        <loai>Doi</loai>
-                        <viTri>P12A5</viTri>
                     </value>
                 </entry>
             </dsGheDoi>

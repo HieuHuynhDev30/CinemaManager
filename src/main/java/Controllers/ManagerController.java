@@ -574,6 +574,8 @@ public class ManagerController {
                 if (managerView.isActivatedUseDiemTL(khach, ghe)) {
                     managerView.fillUseDiemTL(khach);
                 }
+            } else {
+                managerView.isActivatedUseDiemTL(khach, ghe);
             }
             managerView.showVeDialog();
         }

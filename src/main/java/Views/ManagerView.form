@@ -239,12 +239,10 @@
                                   <Component id="idXnVe" alignment="0" max="32767" attributes="0"/>
                                   <Component id="phimXnVe" alignment="0" max="32767" attributes="0"/>
                                   <Component id="ngayGioXnVe" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="phongXnVe" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="vitriXnVe" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="diemCongXnVe" alignment="0" pref="141" max="32767" attributes="0"/>
-                                      <Component id="thanhTien" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="phongXnVe" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="vitriXnVe" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="diemCongXnVe" alignment="0" pref="141" max="32767" attributes="0"/>
+                                  <Component id="thanhTien" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="posterXnV" max="32767" attributes="0"/>
