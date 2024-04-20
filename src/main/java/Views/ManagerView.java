@@ -1418,13 +1418,15 @@ public class ManagerView extends javax.swing.JFrame {
         this.vitriXnVe.setText(gh.getViTri().split(sch.getPhongId())[1]);
         this.diemCongXnVe.setText(kh != null ? "5000" : "0");
         this.posterXnV.setSize(182, 230);
-//        JLabel schid = new JLabel();
-//        schid.setVisible(false);
-//        schid.setText(sch.getId());
         ImageIcon img = getImage(sch.getPhim().getPosterLink(), posterXnV);
         this.posterXnV.setIcon(img);
         this.thanhTien.setText(gh.getGia() + "đ");
         this.thanhToanXnVe.setText(String.valueOf(getThanhToan(gh, getDiemToUse(kh))) + "đ");
+    }
+    
+    public double getDiemCong() {
+        double cong = Double.parseDouble(this.diemCongXnVe.getText());
+        return cong;
     }
 
     public void showThanhToan(Ghe gh, Khach kh) {

@@ -597,7 +597,7 @@ public class ManagerController {
             ve.setGhe(ghe);
             if (khach != null) {
                 khach.doiDiem(managerView.getDiemToUse(khach));
-                khach.congDiem(5000);
+                khach.congDiem(managerView.getDiemCong());
                 khachFunc.muaVe(khach, ve);
             }
             veFunc.themVe(ve);
@@ -835,9 +835,6 @@ public class ManagerController {
             List<Ve> newVeList = new ArrayList<>();
             veFunc.setVeList(newVeList);
             veFunc.writeListVes(veFunc.getVeList());
-//            phimFunc.writeListPhims(phimFunc.getPhimList());
-//            suatChieuFunc.writeListSuatChieus(suatChieuFunc.getSuatChieuList());
-//            phongFunc.writeListPhongs(phongFunc.getPhongList());
             new ReloadListener().actionPerformed(e);
         }
 
