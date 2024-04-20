@@ -63,11 +63,11 @@ public class SuatChieuFunc {
     }
 
     public SuatChieu taoSuatChieu(Phim phim, String phId, String tgChieu) {
-        LocalDateTime TgChieu = LocalDateTime.parse(tgChieu);
+        LocalDateTime TgChieu = LocalDateTime.parse(tgChieu);  
         if (checkTrungTg(TgChieu, phId, phim)) {
             return null;
         }
-        SuatChieu sch = new SuatChieu();
+         SuatChieu sch = new SuatChieu();
         sch.setPhim(phim);
         sch.setPhongId(phId);
         List<Phong> phongList = phongFunc.getPhongList();
@@ -86,9 +86,19 @@ public class SuatChieuFunc {
     }
 
     public boolean checkTrungTg(LocalDateTime TgChieu, String phId, Phim phim) {
+        LocalDateTime TgKetThuc = TgChieu.plusMinutes(phim.getThoiLuong().toMinutes());
         for (Map.Entry<String[], LocalDateTime[]> dt : this.schIntervals.entrySet()) {
             if (dt.getKey()[0].equals(phId)) {
-                if ((TgChieu.isEqual(dt.getValue()[0])) || (TgChieu.isAfter(dt.getValue()[0]) && TgChieu.isBefore(dt.getValue()[1].plusMinutes(30)))) {
+                if ((TgChieu.isEqual(dt.getValue()[0]))) {
+                    return true;
+                }
+                if (TgChieu.isAfter(dt.getValue()[0]) && TgChieu.isBefore(dt.getValue()[1].plusMinutes(30))) {
+                    return true;
+                }
+                if (TgKetThuc.isAfter(dt.getValue()[0]) && TgKetThuc.isBefore(dt.getValue()[1].plusMinutes(30))) {
+                    return true;
+                }
+                if (TgChieu.isBefore(dt.getValue()[0]) && TgKetThuc.isAfter(dt.getValue()[1])) {
                     return true;
                 }
             }

@@ -228,4 +228,74 @@
             </entry>
         </dsGheDoi>
     </suatChieu>
+    <suatChieu id="SCH426">
+        <phim id="Ph9">
+            <ten>Penoza: The Final Chapter</ten>
+            <theLoai>Hanh dong</theLoai>
+            <doTuoi>16</doTuoi>
+            <posterLink>/Images/penzoa.jpg</posterLink>
+            <dt>1080000.0</dt>
+            <thoiLuong>PT1H55M</thoiLuong>
+            <TgKhoiChieu>2019-11-28</TgKhoiChieu>
+        </phim>
+        <phongId>P12</phongId>
+        <full>false</full>
+        <thoiGianChieu>21-04-2024 11:00</thoiGianChieu>
+        <dt>0.0</dt>
+        <chieuXong>false</chieuXong>
+        <dsGheThuong>
+            <entry>
+                <key>P12A2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P12A2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P12A1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P12A1</viTri>
+                </value>
+            </entry>
+        </dsGheThuong>
+        <dsGheVip>
+            <entry>
+                <key>P12A4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P12A4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P12A3</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P12A3</viTri>
+                </value>
+            </entry>
+        </dsGheVip>
+        <dsGheDoi>
+            <entry>
+                <key>P12A6</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P12A6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P12A5</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P12A5</viTri>
+                </value>
+            </entry>
+        </dsGheDoi>
+    </suatChieu>
 </suatChieus>
