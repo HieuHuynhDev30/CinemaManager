@@ -22,7 +22,7 @@ Khi đăng nhập thành công, cửa sổ đầu tiên xuất hiện là Trang 
 
 Trang chủ hiện thị danh sách cuộn các phim đang có tạp rạp kèm poster, danh sách cuộn các suất chiếu đang có, danh sách các phòng chiếu đang có
 
-Mỗi ô suất chiếu bao gồm tên phim, thời gian chiếu và phòng chiếu
+Mỗi ô suất chiếu bao gồm tên phim, thời gian chiếu, phòng chiếu, số ghế được đặt trên tổng số ghế.
 
 Mỗi ô phòng chiếu bao gồm id phòng, sức chứa, số ghế đang trống, phim đang chiếu hoặc chiếu gần nhất, tình trạng đang chiếu hay đang rảnh. Khi đến thời điểm chiếu hoặc hết thời lượng phim của suất chiếu, sau khi ấn reload trạng thái phòng sẽ được thay đối.
 ##### Quản lý phòng
@@ -77,8 +77,13 @@ Sau khi đặt vé, dữ liệu trong phần Doanh thu sẽ tự động cập n
 ##### Doanh thu
 Cửa sổ doanh thu bao gồm các vùng tổng doanh thu, doanh thu theo phim, doanh thu theo suât chiếu và doanh thu theo phòng.
 
-Vùng doanh thu theo phim và suất chiếu được thiết tương tự nhau với danh sách cuộn các ô thông tin phim và suất chiếu kèm poster. Nút sắp xếp có thể sắp xếp các phim hoặc suất chiếu theo doanh thu kiếm được theo chiếu tăng hay giảm dần.
+Vùng doanh thu theo phim và suất chiếu được thiết kế tương tự nhau với danh sách cuộn các ô thông tin phim và suất chiếu kèm poster. Nút sắp xếp có thể sắp xếp các phim hoặc suất chiếu theo doanh thu kiếm được theo chiếu tăng hay giảm dần.
 
 Vùng doanh thu theo phòng gồm một bảng có các trường id, sức chứa, số lượng vé đã đặt và doanh thu từng phòng. Chức năng gồm có sắp xếp và tìm kiếm phòng theo khoảng doanh thu
 
 Góc trên bên phải là nút Đặt lại doanh thu. Khi ấn tất cả các giá trị doanh thu sẽ về 0 trừ doanh thu theo phim, tất cả các vé sẽ bị xóa.
+
+***Tất cả các bảng trong chương trình có thể thực hiện sắp xếp các đối tượng theo trường thông tin bằng cách ấn vào tiêu đề cột được dùng làm tiêu chí sắp xếp đến khi xuất hiện tam giác xuôi hay ngược***
+
+### THANKS FOR USING
+### HAPPY CODING
