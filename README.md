@@ -81,4 +81,4 @@ Vùng doanh thu theo phim và suất chiếu được thiết tương tự nhau 
 
 Vùng doanh thu theo phòng gồm một bảng có các trường id, sức chứa, số lượng vé đã đặt và doanh thu từng phòng. Chức năng gồm có sắp xếp và tìm kiếm phòng theo khoảng doanh thu
 
-Góc trên bên phải là nút Đặt lại doanh thi. Khi ấn tất cả các giá trị doanh thu sẽ về 0 trừ doanh thu theo phim, tất cả các vé sẽ bị xóa.
+Góc trên bên phải là nút Đặt lại doanh thu. Khi ấn tất cả các giá trị doanh thu sẽ về 0 trừ doanh thu theo phim, tất cả các vé sẽ bị xóa.
