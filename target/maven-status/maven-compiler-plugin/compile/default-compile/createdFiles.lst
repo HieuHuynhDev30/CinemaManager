@@ -59,6 +59,7 @@ Controllers\ManagerController$DeletePhimListener.class
 Views\ManagerView$23.class
 Controllers\ManagerController$DeleteKhachListener.class
 Views\ManagerView$22.class
+Controllers\ManagerController$XacNhanDatVeListener.class
 Views\ManagerView$6.class
 Functions\PhongFunc$SortPhongPhim.class
 Views\ManagerView$29.class
@@ -102,6 +103,7 @@ Classes\GheVip.class
 Controllers\ManagerController$ListPhongSelectionListener.class
 Views\ManagerView$24.class
 Controllers\ManagerController$ListSuatChieuSelectionListener.class
+Controllers\ManagerController$GiamGiaListener.class
 com\toedter\components\JSpinField.class
 Controllers\ManagerController$AddPhimListener.class
 Controllers\ManagerController$SortByPhimVeListener.class
@@ -114,6 +116,7 @@ com\toedter\calendar\JYearChooser.class
 Views\ManagerView$3.class
 Functions\SuatChieuFunc$SortDtSch.class
 Controllers\ManagerController.class
+Controllers\ManagerController$useDiemTlListener.class
 com\mycompany\cinemamanager\CinemaManager$1.class
 Classes\SuatChieu$1.class
 com\mycompany\cinemamanager\CinemaManager.class
@@ -126,6 +129,7 @@ Controllers\ManagerController$ShowNKCDateListener.class
 Controllers\ManagerController$ListSuatChieuDatVeSelectionListener.class
 Views\LoginView.class
 Views\ManagerView$4.class
+Views\ManagerView$30.class
 com\toedter\calendar\JDateChooser$1.class
 Functions\PhongFunc$SortPhongSc.class
 Controllers\ManagerController$ListPhimSelectionListener.class

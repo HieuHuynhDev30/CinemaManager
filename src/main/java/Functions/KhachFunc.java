@@ -82,6 +82,7 @@ public class KhachFunc {
                 ph.setGioiTinh(p.getGioiTinh());
                 ph.setNgaySinh((CharSequence) p.inNgaySinh());
                 ph.setDsVe(p.getDsVe());
+                ph.setDiem(p.getDiem());
             }
         }
         this.setKhachList(khachList);

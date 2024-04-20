@@ -101,6 +101,9 @@ public class ManagerController {
         managerView.addDatVeListener(new DatVeListener());
         managerView.addListSuatChieuDatVeSelectionListener(new ListSuatChieuDatVeSelectionListener());
         managerView.addListGheSelectionListener(new ListGheSelectionListener());
+        managerView.addUseDiemTichLuy(new useDiemTlListener());
+        managerView.addGiamGiaListener(new GiamGiaListener());
+        managerView.addXacNhanttListener(new XacNhanDatVeListener());
         // ghế
         managerView.addselectSeatListener(new SelectSeatListener());
         managerView.addListGheSelectionListener(new ListGheSelectionListener());
@@ -563,6 +566,25 @@ public class ManagerController {
             Khach khach = managerView.getKhachInfor(khachFunc.getKhachList());
             SuatChieu Sch = managerView.getDatVeSchInfo(suatChieuFunc.getSuatChieuList());
             Ghe ghe = managerView.getGheInfor(Sch);
+            if (!managerView.toggleUseDiemTL(khach)) {
+                ghe.setKhachLa();
+            }
+            managerView.fillVeDialog(khach, Sch, ghe);
+            if (khach != null) {
+                if (managerView.isActivatedUseDiemTL(khach, ghe)) {
+                    managerView.fillUseDiemTL(khach);
+                }
+            }
+            managerView.showVeDialog();
+        }
+    }
+
+    class XacNhanDatVeListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            Khach khach = managerView.getKhachInfor(khachFunc.getKhachList());
+            SuatChieu Sch = managerView.getDatVeSchInfo(suatChieuFunc.getSuatChieuList());
+            Ghe ghe = managerView.getGheInfor(Sch);
             if (khach != null) {
                 ghe.setKhachId(khach.getId());
             } else {
@@ -572,6 +594,8 @@ public class ManagerController {
             ve.setSuat(Sch);
             ve.setGhe(ghe);
             if (khach != null) {
+                khach.doiDiem(managerView.getDiemToUse(khach));
+                khach.congDiem(5000);
                 khachFunc.muaVe(khach, ve);
             }
             veFunc.themVe(ve);
@@ -618,6 +642,7 @@ public class ManagerController {
             managerView.showDoanhThuPhim(phimFunc.getPhimList(), veFunc.getVeList());
             managerView.showDtPhongList(phongFunc.getPhongList(), veFunc.getVeList());
             managerView.showDoanhThuSch(suatChieuFunc.getSuatChieuList(), veFunc.getVeList());
+            managerView.closeVeDialog();
             managerView.showMessage("Đặt vé thành công!");
             showManagerView();
         }
@@ -669,7 +694,36 @@ public class ManagerController {
                 managerView.showListGhe(Sch);
                 managerView.fillGheFromSelectedRow();
                 managerView.showSeatDialog();
-            } 
+            }
+        }
+    }
+
+    class useDiemTlListener implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            Khach khach = managerView.getKhachInfor(khachFunc.getKhachList());
+            SuatChieu Sch = managerView.getDatVeSchInfo(suatChieuFunc.getSuatChieuList());
+            Ghe ghe = managerView.getGheInfor(Sch);
+            managerView.isActivatedUseDiemTL(khach, ghe);
+        }
+
+    }
+
+    class GiamGiaListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            Khach khach = managerView.getKhachInfor(khachFunc.getKhachList());
+            SuatChieu Sch = managerView.getDatVeSchInfo(suatChieuFunc.getSuatChieuList());
+            Ghe ghe = managerView.getGheInfor(Sch);
+            if (managerView.getDiemToUse(khach) > 0) {
+                double diem = managerView.getDiemToUse(khach);
+                managerView.setUseDiemTL(khach.getDiem() - diem);
+                managerView.showThanhToan(ghe, khach);
+                managerView.showMessageGiamGia("Giảm giá thành công", true);
+            } else {
+                managerView.showMessageGiamGia("Giá trị điểm sử dụng không đúng", false);
+            }
         }
     }
 

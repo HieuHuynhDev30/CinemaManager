@@ -1,5 +1,133 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <phongs>
+    <phong id="P1">
+        <slVip>2</slVip>
+        <slThuong>2</slThuong>
+        <slDoi>2</slDoi>
+        <dsGheThuong>
+            <entry>
+                <key>P1A1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P1A1</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P1A2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P1A2</viTri>
+                </value>
+            </entry>
+        </dsGheThuong>
+        <dsGheVip>
+            <entry>
+                <key>P1A4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P1A4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P1A3</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P1A3</viTri>
+                </value>
+            </entry>
+        </dsGheVip>
+        <dsGheDoi>
+            <entry>
+                <key>P1A5</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P1A5</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P1A6</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P1A6</viTri>
+                </value>
+            </entry>
+        </dsGheDoi>
+        <nextPhim>Penoza: The Final Chapter</nextPhim>
+        <isPlaying>false</isPlaying>
+        <columns>7</columns>
+        <rows>65</rows>
+        <dt>1000000.0</dt>
+    </phong>
+    <phong id="P12">
+        <slVip>2</slVip>
+        <slThuong>2</slThuong>
+        <slDoi>2</slDoi>
+        <dsGheThuong>
+            <entry>
+                <key>P12A2</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P12A2</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P12A1</key>
+                <value>
+                    <gia>80000.0</gia>
+                    <loai>Thuong</loai>
+                    <viTri>P12A1</viTri>
+                </value>
+            </entry>
+        </dsGheThuong>
+        <dsGheVip>
+            <entry>
+                <key>P12A4</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P12A4</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P12A3</key>
+                <value>
+                    <gia>120000.0</gia>
+                    <loai>Vip</loai>
+                    <viTri>P12A3</viTri>
+                </value>
+            </entry>
+        </dsGheVip>
+        <dsGheDoi>
+            <entry>
+                <key>P12A6</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P12A6</viTri>
+                </value>
+            </entry>
+            <entry>
+                <key>P12A5</key>
+                <value>
+                    <gia>200000.0</gia>
+                    <loai>Doi</loai>
+                    <viTri>P12A5</viTri>
+                </value>
+            </entry>
+        </dsGheDoi>
+        <nextPhim>Dune: Part Two</nextPhim>
+        <isPlaying>false</isPlaying>
+        <columns>7</columns>
+        <rows>65</rows>
+        <dt>1040000.0</dt>
+    </phong>
     <phong id="P31">
         <slVip>6</slVip>
         <slThuong>8</slThuong>
@@ -154,139 +282,10 @@
                 </value>
             </entry>
         </dsGheDoi>
-        <nextPhim></nextPhim>
         <isPlaying>false</isPlaying>
         <columns>9</columns>
         <rows>66</rows>
         <dt>0.0</dt>
-    </phong>
-    <phong id="P12">
-        <slVip>2</slVip>
-        <slThuong>2</slThuong>
-        <slDoi>2</slDoi>
-        <dsGheThuong>
-            <entry>
-                <key>P12A2</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P12A2</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P12A1</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P12A1</viTri>
-                </value>
-            </entry>
-        </dsGheThuong>
-        <dsGheVip>
-            <entry>
-                <key>P12A4</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P12A4</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P12A3</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P12A3</viTri>
-                </value>
-            </entry>
-        </dsGheVip>
-        <dsGheDoi>
-            <entry>
-                <key>P12A6</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
-                    <viTri>P12A6</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P12A5</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
-                    <viTri>P12A5</viTri>
-                </value>
-            </entry>
-        </dsGheDoi>
-        <nextPhim>The Wages Of Fear</nextPhim>
-        <isPlaying>false</isPlaying>
-        <columns>7</columns>
-        <rows>65</rows>
-        <dt>320000.0</dt>
-    </phong>
-    <phong id="P1">
-        <slVip>2</slVip>
-        <slThuong>2</slThuong>
-        <slDoi>2</slDoi>
-        <dsGheThuong>
-            <entry>
-                <key>P1A1</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P1A1</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P1A2</key>
-                <value>
-                    <gia>80000.0</gia>
-                    <loai>Thuong</loai>
-                    <viTri>P1A2</viTri>
-                </value>
-            </entry>
-        </dsGheThuong>
-        <dsGheVip>
-            <entry>
-                <key>P1A4</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P1A4</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P1A3</key>
-                <value>
-                    <gia>120000.0</gia>
-                    <loai>Vip</loai>
-                    <viTri>P1A3</viTri>
-                </value>
-            </entry>
-        </dsGheVip>
-        <dsGheDoi>
-            <entry>
-                <key>P1A5</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
-                    <viTri>P1A5</viTri>
-                </value>
-            </entry>
-            <entry>
-                <key>P1A6</key>
-                <value>
-                    <gia>200000.0</gia>
-                    <loai>Doi</loai>
-                    <viTri>P1A6</viTri>
-                </value>
-            </entry>
-        </dsGheDoi>
-        <nextPhim>Penoza: The Final Chapter</nextPhim>
-        <isPlaying>false</isPlaying>
-        <columns>7</columns>
-        <rows>65</rows>
-        <dt>200000.0</dt>
     </phong>
     <phong id="P130">
         <slVip>9</slVip>
@@ -474,7 +473,6 @@
                 </value>
             </entry>
         </dsGheDoi>
-        <nextPhim>The Adventures of Maid Marian</nextPhim>
         <isPlaying>false</isPlaying>
         <columns>3</columns>
         <rows>67</rows>
@@ -722,7 +720,6 @@
                 </value>
             </entry>
         </dsGheDoi>
-        <nextPhim>Baghead</nextPhim>
         <isPlaying>false</isPlaying>
         <columns>10</columns>
         <rows>67</rows>
@@ -962,7 +959,6 @@
                 </value>
             </entry>
         </dsGheDoi>
-        <nextPhim>Annabella</nextPhim>
         <isPlaying>false</isPlaying>
         <columns>5</columns>
         <rows>69</rows>

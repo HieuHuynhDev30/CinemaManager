@@ -20,23 +20,28 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *
  * @author Lenovo
  */
+// Lớp Khach được dùng như lớp thành viên trong chương trình, khách vãng lai có thể đặt vé nhưng được ghi nhận với id và họ tên là "no_mem"
+// và không được lưu vào xml của khach
 @XmlRootElement(name = "khach") // anotation xác định element được đọc vào file xml
 @XmlAccessorType(XmlAccessType.FIELD) // đọc dưới dạng trường, nhận các thuộc tính là một element
 public class Khach {
+
     private static int currId;
-    private int slVeDat;
-    private double tongTien;
-    @XmlAttribute // xác định cách đọc thuộc tính dưới dạng thuộc tính của element mẹ
-    private String id;
     private String hoTen, gioiTinh;
     @XmlJavaTypeAdapter(LocalDateAdapter.class) // gán adapter cho thuộc tính dạng ngày giờ để có thể đọc được vào trong file xml
     private LocalDate ngaySinh;
+    private int slVeDat;
+    private double tongTien;
+    private double diem;
+    @XmlAttribute // xác định cách đọc thuộc tính dưới dạng thuộc tính của element mẹ
+    private String id;
     public static final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy");
     private List<Ve> dsVe = new ArrayList<>();
 
     public Khach() {
         currId++;
         this.id = "K" + currId;
+        this.diem = 0;
     }
 
     public String getId() {
@@ -46,7 +51,6 @@ public class Khach {
     public void setId(String id) {
         this.id = id;
     }
-    
 
     public int getTuoi() {
         return LocalDate.now().getYear() - ngaySinh.getYear();
@@ -55,14 +59,6 @@ public class Khach {
     public int getSlVeDat() {
         return this.dsVe.size();
     }
-
-//    public void setSlVeDat(int slVeDat) {
-//        this.slVeDat = slVeDat;
-//    }
-
-//    public void setTongTien(double tongTien) {
-//        this.tongTien = tongTien;
-//    }
 
     public double getTongTien() {
         int tong = 0;
@@ -73,6 +69,22 @@ public class Khach {
         }
         this.tongTien = tong;
         return tong;
+    }
+
+    public double getDiem() {
+        return diem;
+    }
+
+    public void setDiem(double diem) {
+        this.diem = diem;
+    }
+
+    public void congDiem(double diem) {
+        this.diem += diem;
+    }
+
+    public void doiDiem(double diem) {
+        this.diem -= diem;
     }
 
     public String getHoTen() {
@@ -94,7 +106,7 @@ public class Khach {
     public LocalDate getNgaySinh() {
         return ngaySinh;
     }
-    
+
     public String inNgaySinh() {
         return this.ngaySinh.format(dateFormat);
     }
@@ -150,7 +162,6 @@ public class Khach {
         }
         return dsXoa;
     }
-    
 
     public void chinhSuaTk(String hoTen, int tuoi, CharSequence ns) {
         this.setHoTen(hoTen);
