@@ -91,16 +91,16 @@ public class ManagerView extends javax.swing.JFrame {
             return new ImageIcon();
         }
     }
-    
+
     // hàm định dạng hiển thị tiền, phân cách hàng nghìn
     public String FormatTien(double dt) {
-         
-            Locale localeEN = new Locale.Builder().setLanguage("en").setRegion("US").build();
-            NumberFormat en = NumberFormat.getInstance(localeEN);
-            String str1 = en.format(dt);
 
-            return str1;
-      
+        Locale localeEN = new Locale.Builder().setLanguage("en").setRegion("US").build();
+        NumberFormat en = NumberFormat.getInstance(localeEN);
+        String str1 = en.format(dt);
+
+        return str1;
+
     }
 
 //////// các hành vi dùng trong phần Trang chủ
@@ -715,8 +715,6 @@ public class ManagerView extends javax.swing.JFrame {
     public void addSortSuatChieuListener(ActionListener listener) {
         this.sortSchButton.addActionListener(listener);
     }
-    
-   
 
 //////// end Quản lý suất chiếu
     //////// Quản lý khách
@@ -795,7 +793,7 @@ public class ManagerView extends javax.swing.JFrame {
             Khach khach = new Khach();
             if (IDField.getText() != null && !"".equals(IDField.getText())) {
                 khach.setId(IDField.getText().trim());
-            } 
+            }
             khach.setHoTen(HoTenField.getText().trim());
             khach.setGioiTinh(gioiTinhCombo.getSelectedItem().toString());
             khach.setNgaySinh(NgaySinhField.getText().trim());
@@ -1347,7 +1345,13 @@ public class ManagerView extends javax.swing.JFrame {
         return false;
     }
 
-    public void showListSuatChieuDatVe(List<SuatChieu> list) {
+    public void showListSuatChieuDatVe(List<SuatChieu> schlist) {
+        List<SuatChieu> list = new ArrayList<>();
+        for (SuatChieu sch : schlist) {
+            if (sch.getThoiGianChieu().plusMinutes(20).isAfter(LocalDateTime.now())) {
+                list.add(sch);
+            }
+        }
         int size = list.size();
         Object[][] schs = new Object[size][4];
         for (int i = 0; i < size; i++) {
@@ -1381,7 +1385,7 @@ public class ManagerView extends javax.swing.JFrame {
 
         }
     }
-    
+
     public String getSelectedPhimDatVe() {
         return this.phimComboDatVe.getSelectedItem().toString();
     }
@@ -1410,8 +1414,6 @@ public class ManagerView extends javax.swing.JFrame {
         this.tgChieuField1.setText("");
         this.ViTriField.setText("");
     }
-    
-    
 
     public void fillGheFromSelectedRow() {
         // lấy chỉ số của hàng được chọn 
@@ -1443,7 +1445,7 @@ public class ManagerView extends javax.swing.JFrame {
         this.thanhTien.setText(FormatTien(gh.getGia()) + "đ");
         this.thanhToanXnVe.setText(FormatTien(getThanhToan(gh, getDiemToUse(kh))) + "đ");
     }
-    
+
     public double getDiemCong() {
         double cong = Double.parseDouble(this.diemCongXnVe.getText());
         return cong;
@@ -1503,7 +1505,7 @@ public class ManagerView extends javax.swing.JFrame {
         this.messageGiamGia.setEnabled(false);
         return false;
     }
-    
+
     public void resetUseDiemTL(Ghe gh, Khach kh) {
         this.diemTLLabel.setEnabled(false);
         this.diemTichLuyXnVe.setText("0");
@@ -1517,14 +1519,13 @@ public class ManagerView extends javax.swing.JFrame {
         this.messageGiamGia.setText("");
         this.messageGiamGia.setEnabled(false);
     }
-    
 
     public void fillUseDiemTL(Khach kh) {
         this.diemTichLuyXnVe.setText(FormatTien(kh.getDiem() > 0 ? kh.getDiem() : 0));
     }
-    
+
     public void setUseDiemTL(double diem) {
-         this.diemTichLuyXnVe.setText(FormatTien(diem));
+        this.diemTichLuyXnVe.setText(FormatTien(diem));
     }
 
     public double getDiemToUse(Khach kh) {
@@ -1552,16 +1553,16 @@ public class ManagerView extends javax.swing.JFrame {
         this.seatDialog.setVisible(false);
         this.veDialog.setVisible(true);
     }
-    
+
     public void closeVeDialog() {
         this.veDialog.setVisible(false);
     }
     //// Addlistener Đặt vé
-    
+
     public void addUseDiemTichLuy(ActionListener listener) {
         this.useDiemCheck.addActionListener(listener);
     }
-    
+
     public void showAllSchDatVe(ActionListener listener) {
         this.showAllSchBtn.addActionListener(listener);
     }
@@ -1594,17 +1595,16 @@ public class ManagerView extends javax.swing.JFrame {
     public void addselectSeatListener(ActionListener listener) {
         this.chonGheButton.addActionListener(listener);
     }
-    
+
     public void addXacNhanttListener(ActionListener listener) {
         this.xacNhanTt.addActionListener(listener);
     }
-    
-     public void addSearSuatChieuPhim(ActionListener listener) {
+
+    public void addSearSuatChieuPhim(ActionListener listener) {
         this.selectPhim.addActionListener(listener);
     }
-    
-/////// end Đặt vé
 
+/////// end Đặt vé
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

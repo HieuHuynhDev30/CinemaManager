@@ -173,7 +173,7 @@
         <isPlaying>false</isPlaying>
         <columns>6</columns>
         <rows>67</rows>
-        <dt>320000.0</dt>
+        <dt>400000.0</dt>
     </phong>
     <phong id="P14">
         <slVip>5</slVip>
@@ -481,11 +481,11 @@
                 </value>
             </entry>
         </dsGheDoi>
-        <nextPhim>The Adventures of Maid Marian</nextPhim>
+        <nextPhim>The Tear Smith</nextPhim>
         <isPlaying>true</isPlaying>
         <columns>6</columns>
         <rows>67</rows>
-        <dt>80000.0</dt>
+        <dt>280000.0</dt>
     </phong>
     <phong id="P76">
         <slVip>5</slVip>

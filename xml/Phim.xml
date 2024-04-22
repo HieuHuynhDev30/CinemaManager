@@ -23,7 +23,7 @@
         <theLoai>Tinh cam</theLoai>
         <doTuoi>16</doTuoi>
         <posterLink>/Images/tearsmith.jpg</posterLink>
-        <dt>0.0</dt>
+        <dt>200000.0</dt>
         <thoiLuong>PT1H56M</thoiLuong>
         <TgKhoiChieu>2024-05-03</TgKhoiChieu>
     </phim>
@@ -95,7 +95,7 @@
         <theLoai>Hanh dong</theLoai>
         <doTuoi>18</doTuoi>
         <posterLink>/Images/hardhit.jpg</posterLink>
-        <dt>160000.0</dt>
+        <dt>240000.0</dt>
         <thoiLuong>PT1H34M</thoiLuong>
         <TgKhoiChieu>2021-06-23</TgKhoiChieu>
     </phim>
