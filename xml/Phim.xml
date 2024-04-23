@@ -1,32 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <phims>
-    <phim id="Ph9">
-        <ten>Penoza: The Final Chapter</ten>
-        <theLoai>Hanh dong</theLoai>
-        <doTuoi>16</doTuoi>
-        <posterLink>/Images/penzoa.jpg</posterLink>
-        <dt>0.0</dt>
-        <thoiLuong>PT1H55M</thoiLuong>
-        <TgKhoiChieu>2019-11-28</TgKhoiChieu>
-    </phim>
-    <phim id="Ph11">
-        <ten>The Wages Of Fear</ten>
-        <theLoai>Hanh dong</theLoai>
-        <doTuoi>16</doTuoi>
-        <posterLink>/Images/wagesoffear.jpg</posterLink>
-        <dt>0.0</dt>
-        <thoiLuong>PT1H47M</thoiLuong>
-        <TgKhoiChieu>2024-03-28</TgKhoiChieu>
-    </phim>
-    <phim id="Ph10">
-        <ten>The Tear Smith</ten>
-        <theLoai>Tinh cam</theLoai>
-        <doTuoi>16</doTuoi>
-        <posterLink>/Images/tearsmith.jpg</posterLink>
-        <dt>200000.0</dt>
-        <thoiLuong>PT1H56M</thoiLuong>
-        <TgKhoiChieu>2024-05-03</TgKhoiChieu>
-    </phim>
     <phim id="Ph5">
         <ten>Heart Of Hunter</ten>
         <theLoai>Hanh dong</theLoai>
@@ -81,6 +54,15 @@
         <thoiLuong>PT1H45M</thoiLuong>
         <TgKhoiChieu>2024-03-06</TgKhoiChieu>
     </phim>
+    <phim id="Ph11">
+        <ten>The Wages Of Fear</ten>
+        <theLoai>Hanh dong</theLoai>
+        <doTuoi>16</doTuoi>
+        <posterLink>/Images/wagesoffear.jpg</posterLink>
+        <dt>160000.0</dt>
+        <thoiLuong>PT1H47M</thoiLuong>
+        <TgKhoiChieu>2024-03-28</TgKhoiChieu>
+    </phim>
     <phim id="Ph7">
         <ten>The Adventures of Maid Marian</ten>
         <theLoai>Hai huoc</theLoai>
@@ -89,6 +71,24 @@
         <dt>160000.0</dt>
         <thoiLuong>PT1H22M</thoiLuong>
         <TgKhoiChieu>2022-05-09</TgKhoiChieu>
+    </phim>
+    <phim id="Ph9">
+        <ten>Penoza: The Final Chapter</ten>
+        <theLoai>Hanh dong</theLoai>
+        <doTuoi>16</doTuoi>
+        <posterLink>/Images/penzoa.jpg</posterLink>
+        <dt>200000.0</dt>
+        <thoiLuong>PT1H55M</thoiLuong>
+        <TgKhoiChieu>2019-11-28</TgKhoiChieu>
+    </phim>
+    <phim id="Ph3">
+        <ten>Dune: Part Two</ten>
+        <theLoai>Khoa hoc vien tuong</theLoai>
+        <doTuoi>16</doTuoi>
+        <posterLink>/Images/dune2.jpg</posterLink>
+        <dt>200000.0</dt>
+        <thoiLuong>PT2H45M</thoiLuong>
+        <TgKhoiChieu>2024-02-27</TgKhoiChieu>
     </phim>
     <phim id="Ph4">
         <ten>Hard Hit</ten>
@@ -99,13 +99,13 @@
         <thoiLuong>PT1H34M</thoiLuong>
         <TgKhoiChieu>2021-06-23</TgKhoiChieu>
     </phim>
-    <phim id="Ph3">
-        <ten>Dune: Part Two</ten>
-        <theLoai>Khoa hoc vien tuong</theLoai>
+    <phim id="Ph10">
+        <ten>The Tear Smith</ten>
+        <theLoai>Tinh cam</theLoai>
         <doTuoi>16</doTuoi>
-        <posterLink>/Images/dune2.jpg</posterLink>
-        <dt>200000.0</dt>
-        <thoiLuong>PT2H45M</thoiLuong>
-        <TgKhoiChieu>2024-02-27</TgKhoiChieu>
+        <posterLink>/Images/tearsmith.jpg</posterLink>
+        <dt>400000.0</dt>
+        <thoiLuong>PT1H56M</thoiLuong>
+        <TgKhoiChieu>2024-05-03</TgKhoiChieu>
     </phim>
 </phims>

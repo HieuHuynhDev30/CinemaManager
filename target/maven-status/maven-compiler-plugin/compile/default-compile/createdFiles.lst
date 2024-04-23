@@ -122,7 +122,6 @@ com\mycompany\cinemamanager\CinemaManager$1.class
 Classes\SuatChieu$1.class
 com\mycompany\cinemamanager\CinemaManager.class
 Functions\PhongFunc.class
-Views\ManagerView$20.class
 Controllers\ManagerController$ClearPhimListener.class
 Views\ManagerView$13.class
 Functions\SuatChieuFunc$SortTgSch.class
