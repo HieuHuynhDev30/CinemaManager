@@ -211,6 +211,7 @@ public class ManagerView extends javax.swing.JFrame {
             infoSchPanel.setSize(150, 198);
             posterLabel.setSize(200, 198);
 
+
             infoSchPanel.add(phimSch);
             infoSchPanel.add(phongSch);
             infoSchPanel.add(tgSch);

@@ -24,7 +24,7 @@ Trang chủ hiện thị danh sách cuộn các phim đang có tại rạp kèm 
 
 Mỗi ô suất chiếu bao gồm tên phim, thời gian chiếu, phòng chiếu, số ghế được đặt trên tổng số ghế.
 
-Mỗi ô phòng chiếu bao gồm id phòng, sức chứa, số ghế đang trống, phim đang chiếu hoặc sắp chiếu, tình trạng đang chiếu hay đang rảnh. Khi đến thời điểm chiếu hoặc hết thời lượng phim của suất chiếu, sau khi ấn reload trạng thái phòng sẽ được thay đối.
+Mỗi ô phòng chiếu bao gồm id phòng, sức chứa, phim đang chiếu hoặc sắp chiếu, tình trạng đang chiếu hay đang rảnh. Khi đến thời điểm chiếu hoặc hết thời lượng phim của suất chiếu, sau khi ấn reload trạng thái phòng sẽ được thay đối.
 ##### Quản lý phòng
 Cửa sổ Quản lý phòng bao gồm một bảng thông tin các phòng đã tạo bao gồm các trường id, số lượng ghế các loại, tổng số ghế, sức chứa (tổng số khách có thể chứa, chú ý ghế đôi có thể chứa được 2 khách), phim đang chiếu hoặc sắp chiếu và tình trạng phòng.
 
@@ -43,7 +43,7 @@ Cửa sổ Quản lý suất chiếu bao gồm một bảng thông tin các su�
 
 Vùng chức năng gồm các ô nhập dữ liệu tương tự như Quản lý phòng. Riêng ô nhập thời gian chiếu, cần chọn ngày trong khung lịch hiển thị sẵn, chọn giờ và phút từ spinner. Ấn xác nhận để hiện thị thời gian đã chọn.
 
-Khi thêm suất chiếu cần lưu ý không đặt thời gian chiếu hoặc kết thúc trùng với thời gian của suất khác, không đặt thời gian trong quá khứ và không bỏ trống ô thời gian chiếu. Khi vi phạm các điều trên, sẽ có bảng thông báo nhắc nhở.
+Khi thêm suất chiếu cần lưu ý không đặt thời gian chiếu hoặc kết thúc trùng với thời gian của suất khác, không đặt thời gian trong quá khứ và không bỏ trống ô thời gian chiếu. Khi vi phạm các điều trên, sẽ có thông báo nhắc nhở.
 
 Khi đã hết thời gian chiếu của suất, sau khi ấn reload hay khi đăng nhập vào suất chiếu sẽ được tự động xóa.
 
@@ -76,7 +76,7 @@ Khi đã sử dụng xong điểm tích lũy ấn Xác nhận thanh toán.
 
 Sau khi đặt vé, dữ liệu trong phần Doanh thu sẽ tự động cập nhật
 ##### Doanh thu
-Cửa sổ doanh thu bao gồm các vùng tổng doanh thu, doanh thu theo phim, doanh thu theo suât chiếu và doanh thu theo phòng.
+Cửa sổ doanh thu bao gồm các vùng tổng doanh thu, doanh thu theo phim, doanh thu theo suất chiếu và doanh thu theo phòng.
 
 Vùng doanh thu theo phim và suất chiếu được thiết kế tương tự nhau với danh sách cuộn các ô thông tin phim và suất chiếu kèm poster. Nút sắp xếp có thể sắp xếp các phim hoặc suất chiếu theo doanh thu kiếm được theo chiếu tăng hay giảm dần.
 
