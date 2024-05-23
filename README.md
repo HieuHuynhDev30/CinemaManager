@@ -24,7 +24,7 @@ Trang chủ hiện thị danh sách cuộn các phim đang có tại rạp kèm 
 
 Mỗi ô suất chiếu bao gồm tên phim, thời gian chiếu, phòng chiếu, số ghế được đặt trên tổng số ghế.
 
-Mỗi ô phòng chiếu bao gồm id phòng, sức chứa, phim đang chiếu hoặc sắp chiếu, tình trạng đang chiếu hay đang rảnh. Khi đến thời điểm chiếu hoặc hết thời lượng phim của suất chiếu, sau khi nhấn reload trạng thái phòng sẽ được thay đối.
+Mỗi ô phòng chiếu bao gồm id phòng, sức chứa, phim đang chiếu hoặc sắp chiếu hoặc đã chiếu gần nhất, tình trạng đang chiếu hay đang rảnh. Khi đến thời điểm chiếu hoặc hết thời lượng phim của suất chiếu, sau khi nhấn reload trạng thái phòng sẽ được thay đối.
 ##### Quản lý phòng
 Cửa sổ Quản lý phòng bao gồm một bảng thông tin các phòng đã tạo bao gồm các trường id, số lượng ghế các loại, tổng số ghế, sức chứa (tổng số khách có thể chứa, chú ý ghế đôi có thể chứa được 2 khách), phim (đang chiếu hoặc sắp chiếu, nếu không có lịch chiếu thì hiển thị phim đã chiếu gần nhất) và tình trạng phòng.
 
@@ -47,9 +47,9 @@ Khi thêm suất chiếu cần lưu ý không đặt thời gian chiếu hoặc 
 
 Khi đã hết thời gian chiếu của suất, sau khi nhấn reload hay khi đăng nhập vào suất chiếu sẽ được tự động xóa.
 
-Vùng sắp xếp có thể sắp xếp theo id, thời gian chiếu, phần trăm ghế đã đặt. Nếu chọn tăng dần để sắp xếp theo thời gian chiếu, suất chiếu đầu tiên sẽ là suất chiếu sớm nhất.
+Vùng sắp xếp có thể sắp xếp theo id, thời gian chiếu, tỷ lệ ghế đã đặt. Nếu chọn tăng dần để sắp xếp theo thời gian chiếu, suất chiếu đầu tiên sẽ là suất chiếu sớm nhất.
 ##### Quản lý thành viên
-Cửa sổ Quản lý thành viên bao gồm một bảng thông tin các khách được thêm vào làm thành viên bao gồm các trường id, họ tên, ngày sinh, giới tính, số lượng vé đã đặt, tổng số tiền đã thanh toán và điểm đã chọn lũy (điểm này có thể dùng để giảm giá vé khi đặt).
+Cửa sổ Quản lý thành viên bao gồm một bảng thông tin các khách được thêm vào làm thành viên bao gồm các trường id, họ tên, ngày sinh, giới tính, số lượng vé đã đặt, tổng số tiền đã thanh toán và điểm đã tích lũy (điểm này có thể dùng để giảm giá vé khi đặt).
 
 Vùng chức năng gồm các ô nhập dữ liệu tương tự như Quản lý suất chiếu.
 
@@ -70,9 +70,9 @@ Vùng chức năng bao gồm các ô nhận thông tin suất chiếu khi chọn
 Khi đặt vé, cần xác định khách vãng lai đặt hoặc thành viên đặt. Nếu là thành viên đặt thì chọn thành viên từ menu sổ.
 Sau đó lọc phim muốn xem theo menu sổ, chọn suất chiếu trong bảng để các ô dữ liệu hiện thông tin suất chiếu được nhập thông tin. 
 Tiếp theo, nhấn vào Chọn ghế để chọn ghế. Sau khi chọn ghế, nhấn đặt vé. Một bảng hội thoại Thông tin vé sẽ hiện ra.
-Hội thoại Thông tin vé gồm thông tin về khách đặt (nếu là khách vãng lai thì tên và id sẽ là "no_mem" - no member, hệ thống sẽ ghi nhận thông tin vé của khách vãng lai nhưng không ghi nhận đối tượng khách vãng lai), thông tin suất chiếu, điểm chọn lũy thành viên được cộng nếu đặt vé, khung Sử dụng điểm chọn lũy, tổng số tiền thanh toán.
-Chỉ có thành viên của rạp phim mới được sử dụng khung Sử dụng điểm chọn lũy. Khi nhấn chọn sử dụng, số điểm chọn lũy của thành viên sẽ hiện ra, nhập số điểm muốn sử dụng vào ô nhập và nhấn Giảm giá. Nếu thành công số tiền thanh toán sẽ thay đổi.
-Khi đã sử dụng xong điểm chọn lũy nhấn Xác nhận thanh toán.
+Hội thoại Thông tin vé gồm thông tin về khách đặt (nếu là khách vãng lai thì tên và id sẽ là "no_mem" - no member, hệ thống sẽ ghi nhận thông tin vé của khách vãng lai nhưng không ghi nhận đối tượng khách vãng lai), thông tin suất chiếu, điểm tích lũy thành viên được cộng nếu đặt vé, khung Sử dụng điểm tích lũy, tổng số tiền thanh toán.
+Chỉ có thành viên của rạp phim mới được sử dụng khung Sử dụng điểm tích lũy. Khi nhấn chọn sử dụng, số điểm tích lũy của thành viên sẽ hiện ra, nhập số điểm muốn sử dụng vào ô nhập và nhấn Giảm giá. Nếu thành công số tiền thanh toán sẽ thay đổi.
+Khi đã sử dụng xong điểm tích lũy nhấn Xác nhận thanh toán.
 
 Sau khi đặt vé, dữ liệu trong phần Doanh thu sẽ tự động cập nhật
 ##### Doanh thu
