@@ -26,7 +26,7 @@ Mỗi ô suất chiếu bao gồm tên phim, thời gian chiếu, phòng chiếu
 
 Mỗi ô phòng chiếu bao gồm id phòng, sức chứa, phim đang chiếu hoặc sắp chiếu, tình trạng đang chiếu hay đang rảnh. Khi đến thời điểm chiếu hoặc hết thời lượng phim của suất chiếu, sau khi nhấn reload trạng thái phòng sẽ được thay đối.
 ##### Quản lý phòng
-Cửa sổ Quản lý phòng bao gồm một bảng thông tin các phòng đã tạo bao gồm các trường id, số lượng ghế các loại, tổng số ghế, sức chứa (tổng số khách có thể chứa, chú ý ghế đôi có thể chứa được 2 khách), phim đang chiếu hoặc sắp chiếu và tình trạng phòng.
+Cửa sổ Quản lý phòng bao gồm một bảng thông tin các phòng đã tạo bao gồm các trường id, số lượng ghế các loại, tổng số ghế, sức chứa (tổng số khách có thể chứa, chú ý ghế đôi có thể chứa được 2 khách), phim (đang chiếu hoặc sắp chiếu, nếu không có lịch chiếu thì hiển thị phim đã chiếu gần nhất) và tình trạng phòng.
 
 Vùng chức năng gồm các ô nhập dữ liệu phòng và các nút chức năng. Nút sắp xếp có thể sắp xếp theo các trường được chọn thông tin trong menu sổ, ô chọn để xác định chiều sắp xếp (không chọn là giảm dần)
 Khi cần cập nhật phòng nào, cần click vào hàng của phòng trong bảng để cấc ô nhập dữ liệu nhận thông tin từ phòng rồi bắt đầu sửa. Sau khi sửa, nhấn nút cập nhật để lưu.
